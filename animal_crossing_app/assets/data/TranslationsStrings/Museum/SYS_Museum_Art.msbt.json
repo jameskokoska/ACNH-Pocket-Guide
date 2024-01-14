@@ -1,0 +1,1722 @@
+﻿[
+  {
+    "label": "art_00002",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "雪中猎人\n彼得·勃鲁盖尔／作\n1565年　[油画·木板]",
+      "EUde": "Die Jäger im Schnee\nPieter Bruegel der Ältere, 1565\nÖl auf Eichenholz",
+      "EUen": "The Hunters in the Snow\n 　  Pieter Brueghel the Elder, 1565\n 　 　 　Oil on wood panel",
+      "EUes": "Los cazadores en la nieve\nPieter Brueghel el Viejo, 1565\nÓleo sobre tabla",
+      "EUfr": "Les Chasseurs dans la neige\nPieter Brueghel l'Ancien, 1565\nHuile sur panneau de bois",
+      "EUit": "Cacciatori nella Neve\nPieter Bruegel il Vecchio, 1565\nOlio su tavola",
+      "EUnl": "Jagers in de sneeuw\nPieter Bruegel de Oude, 1565\nOlieverf op hout",
+      "EUru": "Охотники на снегу\nПитер Брейгель Старший, 1565\nДерево, масло",
+      "JPja": "雪中の狩人\nピーテル・ブリューゲル／作\n1565年　[油彩・板]",
+      "KRko": "눈 속의 사냥꾼\n피터르 브뤼헐 작품\n1565년　[유채・패널]",
+      "TWzh": "雪中獵人\n老彼得‧布勒哲爾\n1565年　[油彩‧木板]",
+      "USen": "The Hunters in the Snow\n 　  Pieter Brueghel the Elder, 1565\n 　 　 　Oil on wood panel",
+      "USes": "Los cazadores en la nieve\nPieter Brueghel el Viejo, 1565\nÓleo sobre tabla",
+      "USfr": "Les chasseurs dans la neige\nPieter Brueghel l'Ancien, 1565\nHuile sur panneau de bois"
+    }
+  },
+  {
+    "label": "art_00002_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "勃鲁盖尔是文艺复兴后期的风景画家，\n因为大多以农民的生活为题材\n而被人称为“农民”画家。\n近处描绘了狩猎失败而精疲力尽的猎人们，\n远景则是在冰冻的池塘上愉快滑冰的人们，\n这种对比的描绘意味深长。",
+      "EUde": "Bruegel war ein Landschaftsmaler\naus der Spätrenaissance, auch\nbekannt als „Bauern-Bruegel“.\nDiesen Titel erhielt er aufgrund\nseiner Vorliebe für ländliche Szenen,\nwie der hier gezeigten.\nDie müden Jäger in dieser Szene\nstehen im starken Kontrast zu den\nvergnügten Eisläufern auf dem See.",
+      "EUen": "A landscape artist from the late\nRenaissance period, Brueghel was\nknown as the \"Peasant Artist.\"\nHe earned the title for depicting\nscenes from common peasant life,\nsuch as the moment captured here.\nNote the contrast between the\nweary hunters and the people\nfrolicking below on icy ponds.",
+      "EUes": "Brueghel fue un pintor de paisajes\ndel renacimiento tardío.\nSus representaciones de la vida\ncampesina le valieron el apodo de\n«Brueghel el Campesino».\nEn esta obra destaca el contraste\nentre los agotados cazadores y los\nrelajados patinadores del fondo.",
+      "EUfr": "Peintre des paysages de la fin de\nla Renaissance, Brueghel était\ncélèbre pour ses toiles bucoliques.\nIl excellait notamment pour\nreprésenter la vie des champs,\ncomme sur le présent tableau.\nOn notera le contraste entre les\nchasseurs épuisés et les villageois\nfolâtrant sur les mares gelées.",
+      "EUit": "Bruegel fu un paesaggista del\nperiodo tardo rinascimentale.\nLe sue rappresentazioni della vita di\ncampagna gli valsero il soprannome\ndi \"pittore contadino\".\nIn quest'opera si può ammirare il\ncontrasto tra i cacciatori esausti e\ni pattinatori rilassati sullo sfondo.",
+      "EUnl": "Bruegel, een landschapsschilder uit\nde late renaissance, wordt ook wel\n\"Boeren-Bruegel\" genoemd.\nDeze naam kreeg hij vanwege zijn\nvoorliefde voor taferelen uit het\nboerenleven, zoals in dit voorbeeld.\nLet op het contrast tussen de\nvermoeide jagers en de mensen\ndie zich op het ijs vermaken.",
+      "EUru": "Брейгель — художник-пейзажист\nпоздней эпохи Возрождения.\nЧасто рисовал сельскую жизнь,\nза что и получил прозвище\n«мужицкий».\nОбратите внимание на контраст\nмежду усталыми охотниками\nи веселящимися внизу людьми.",
+      "JPja": "ブリューゲルはルネサンス後期の風景画家で\n題材に農民の暮らしが多いことから、\n「農民画家」と呼ばれることもある。\n手前に狩りに失敗して疲れ果てた狩人たち、\n遠景には凍った池でスケートを楽しむ人々が\n描かれており、その対比が味わい深い。",
+      "KRko": "브뤼헐은 르네상스 후기의 풍경화 화가로\n그림에 농민의 생활을 많이 담아\n'농민 화가'로 불리기도 한다.\n사냥에 실패해서 지쳐 있는 앞쪽의 사냥꾼들과\n꽁꽁 언 호수에서 스케이트를 즐기는 뒤쪽\n사람들의 대비에서 독특한 정서가 느껴진다.",
+      "TWzh": "布勒哲爾是文藝復興後期的風景畫家，\n多以農民生活為題材，\n因此也有人稱之為「農民畫家」。\n近處描繪了打獵失敗而疲憊不堪的獵人們，\n遠處則是在結冰的湖面上開心滑冰的人們，\n這樣的對比相當耐人尋味。",
+      "USen": "A landscape artist from the late\nRenaissance period, Brueghel was\nknown as the \"Peasant Artist.\"\nHe earned the title for depicting\nscenes from common peasant life,\nsuch as the moment captured here.\nNote the contrast between the\nweary hunters and the people\nfrolicking below on icy ponds.",
+      "USes": "Brueghel fue un pintor de paisajes\ndel renacimiento tardío.\nSus representaciones de la vida\ncampesina le otorgaron el apodo de\n\"Brueghel el Campesino\".\nEn esta obra se destaca el contraste\nentre los agotados cazadores y la\ngente relajada patinando en el fondo.",
+      "USfr": "Peintre des paysages de la fin de\nla Renaissance, Brueghel était\ncélèbre pour ses toiles bucoliques.\nIl excellait notamment pour\nreprésenter la vie des champs,\ncomme sur le présent tableau.\nOn notera le contraste entre les\nchasseurs épuisés et les villageois\ns'amusant sur les étangs gelés."
+    }
+  },
+  {
+    "label": "art_00006",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "回眸美人图\n菱川师宣／作\n17世纪　[绢本着色]",
+      "EUde": "Zurückblickende Schönheit\nHishikawa Moronobu, 17. Jh.\nSeidenmalerei",
+      "EUen": "Beauty Looking Back\n Hishikawa Moronobu, 17th century\n　 　 　Color on silk",
+      "EUes": "Mujer mirando hacia atrás\nHishikawa Moronobu, siglo XVII\nEstampado sobre seda",
+      "EUfr": "Beauté se retournant\nHishikawa Moronobu, XVIIe siècle\nCouleur sur soie",
+      "EUit": "La beltà si volta indietro\nHishikawa Moronobu, XVII sec.\nColore su seta",
+      "EUnl": "Omkijkende schone\nHishikawa Moronobu, 17e eeuw\nGekleurde zijde",
+      "EUru": "Оглядывающаяся красавица\nХисикава Моронобу, XVII век\nЖивопись по шелку",
+      "JPja": "見返り美人図\n菱川師宣／作\n17世紀　[絹本着色]",
+      "KRko": "뒤돌아보는 미인\n히시카와 모로노부 작품\n17세기　[견본 착색]",
+      "TWzh": "回眸美人圖\n菱川師宣\n17世紀　[絹本著色]",
+      "USen": "Beauty Looking Back\n Hishikawa Moronobu, 17th century\n　 　 　Color on silk",
+      "USes": "Mujer mirando hacia atrás\nHishikawa Moronobu, siglo XVII\nEstampado sobre seda",
+      "USfr": "Beauté se retournant\nHishikawa Moronobu, XVIIe siècle\nCouleur sur soie"
+    }
+  },
+  {
+    "label": "art_00006_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "江户时代前期的浮世绘创始者菱川师宣\n所创作，并非版画，而是手绘的浮世绘。\n　\n描绘了身穿当时盛行服装的女性\n蓦然回首时的动人身姿。",
+      "EUde": "Ein handgemaltes Stück des\nKünstlers Hishikawa Moronobu, der\ndas Ukiyo-e-Genre populär machte.\nDieses bewegende Gemälde zeigt\neine modisch gekleidete Frau, die\nüber ihre Schulter zurückblickt.",
+      "EUen": "A hand-painted piece by Hishikawa\nMoronobu, an artist known for\npopularizing the ukiyo-e style.\nThis stirring painting depicts a\nfashionable woman glancing back\nover her shoulder.",
+      "EUes": "Obra de Hishikawa Moronobu,\nartista que popularizó el estilo\nukiyo-e.\nEn esta hermosa imagen vemos\na una elegante mujer que mira\natrás sobre su hombro.",
+      "EUfr": "Ce tableau a été peint à la main par\nHishikawa Moronobu, célèbre peintre\nreprésentant du mouvement ukiyo-e.\nIl capture sur le vif le mouvement\nd'une femme élégante jetant un coup\nd'œil derrière son épaule.",
+      "EUit": "Opera colorata a mano da Hishikawa\nMoronobu, un artista noto per aver\nportato alla ribalta lo stile ukiyo-e.\nQuesto dipinto armonioso ritrae una\ndonna vestita secondo la moda del\ntempo nell'atto di guardarsi indietro.",
+      "EUnl": "Een schilderwerk van Hishikawa\nMoronobu, die de ukiyo-e-stijl in\nde bekendheid heeft gebracht.\nDit indrukwekkende schilderij toont\neen modieus geklede vrouw die\nachterom over haar schouder kijkt.",
+      "EUru": "Шедевр, созданный руками\nХисикава Моронобу, который был\nкрупнейшим мастером укиё-э.\nНа картине изображена модница,\nсмотрящая через плечо.",
+      "JPja": "江戸時代前期の浮世絵の創始者、菱川師宣に\nよる、版画ではなく手描きの浮世絵。\n　\n当時のイケイケな最新ファッションに\n身を包んだ女性が、ふと振り返った瞬間の\nエモーショナルな姿が描かれている。",
+      "KRko": "에도 시대 전기의 일본 풍속화 창시자인\n히시카와 모로노부가 그렸다.\n판화가 아닌 손으로 직접 그린 풍속화이다.\n당시에 최신 유행하는 옷으로 몸을 감싼 여인이\n살짝 뒤를 돌아보는 순간의\n감각적인 모습이 그려져 있다.",
+      "TWzh": "這幅畫為江戶時代前期浮世繪始祖\n菱川師宣的手繪浮世繪作品，並非版畫。\n描繪一名優雅自信的女性，\n身上穿著當時盛行的服飾，\n回眸一看的瞬間，其姿態極富情感。",
+      "USen": "A hand-painted piece by Hishikawa\nMoronobu, an artist known for\npopularizing the ukiyo-e style.\nThis stirring painting depicts a\nfashionable woman glancing back\nover her shoulder.",
+      "USes": "Obra de Hishikawa Moronobu,\nartista que popularizó el estilo\nukiyo-e.\nEn esta hermosa imagen vemos\na una elegante mujer que mira\natrás sobre su hombro.",
+      "USfr": "Ce tableau a été peint à la main par\nHishikawa Moronobu, célèbre peintre\nreprésentant du mouvement ukiyo-e.\nIl capture sur le vif le mouvement\nd'une femme élégante jetant un coup\nd'œil derrière son épaule."
+    }
+  },
+  {
+    "label": "art_00010",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "倒牛奶的女仆\n约翰内斯·维米尔／作\n1658年左右　[油画·布面]",
+      "EUde": "Dienstmagd mit Milchkrug\nJan Vermeer, um 1658\nÖl auf Leinwand",
+      "EUen": "The Milkmaid\n 　Johannes Vermeer, circa 1658\n 　 　 Oil on canvas",
+      "EUes": "La lechera\nJohannes Vermeer, hacia 1658\nÓleo sobre lienzo",
+      "EUfr": "La Laitière\nJohannes Vermeer, vers 1658\nHuile sur toile",
+      "EUit": "Lattaia\nJan Vermeer, 1658 ca.\nOlio su tela",
+      "EUnl": "Het melkmeisje\nJohannes Vermeer, omstreeks 1658\nOlieverf op doek",
+      "EUru": "Молочница\nЯн Вермеер, около 1658\nХолст, масло",
+      "JPja": "牛乳を注ぐ女\nヨハネス・フェルメール／作\n1658年頃　[油彩・キャンバス]",
+      "KRko": "우유 따르는 하녀\n요하네스 페르메이르 작품\n1658년경　[유채・캔버스]",
+      "TWzh": "倒牛奶的女僕\n約翰尼斯‧維梅爾\n1658年左右　[油彩‧畫布]",
+      "USen": "The Milkmaid\n 　Johannes Vermeer, circa 1658\n 　 　 Oil on canvas",
+      "USes": "La lechera\nJohannes Vermeer, hacia 1658\nÓleo sobre lienzo",
+      "USfr": "La laitière\nJohannes Vermeer, vers 1658\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00010_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "因为精心计算过的构图和巧妙的光影表现力\n而被称为光影大师的维米尔25岁时的作品。\n没想到这么小。",
+      "EUde": "Dieses Stück brachte Vermeer den\nTitel „Maler des Lichts“ ein und\nbesticht durch Kontrast und Tiefe.\nVermeer fertigte es im Alter von 25\nJahren an. Besonders auffallend ist\ndie geringe Größe des Originals.",
+      "EUen": "This piece earned Vermeer the\nnickname \"Master of Light\" thanks to\nits exquisite contrast and depth.\nVermeer painted this masterpiece at\nonly 25 years of age. Many note that\nit is surprisingly small in real life.",
+      "EUes": "Este cuadro le valió a Vermeer\nel sobrenombre de «maestro de\nla luz».\nEs fácil imaginarse por qué,\na la vista del exquisito contraste\ny profundidad de la obra.\nEl pintor creó esta indudable obra\nmaestra a la temprana edad de\n25 años.\nA día de hoy, muchos se sorprenden\nde su diminuto tamaño al admirarlo\nen persona.",
+      "EUfr": "Les contrastes délicats que l'on peut\nadmirer ici valurent parfois à Vermeer\nle surnom de « maître de la lumière ».\nIl peignit ce chef-d'œuvre alors qu'il\nn'avait que 25 ans. On est souvent\nsurpris par la petitesse du cadre.",
+      "EUit": "La profondità e lo squisito gioco di\nluci di quest'opera valsero a Vermeer\nil titolo di \"maestro della luce\".\nÈ un quadro sorprendentemente\npiccolo, che l'artista dipinse quando\naveva solo 25 anni.",
+      "EUnl": "Dankzij het fijne contrast en de\ndiepte in dit werk kreeg Vermeer de\nbijnaam 'meester van het licht'.\nVermeer schilderde dit meesterwerk\ntoen hij 25 jaar oud was. In het echt\nis het schilderij verrassend klein.",
+      "EUru": "За детальную передачу света и\nкомпозицию в этой работе Вермеер\nпрослыл «мастером света».\nОн написал эту картину в возрасте\nоколо 25 лет. Картина неожиданно\nмаленькая.",
+      "JPja": "計算された構図や、巧みな光の表現力から\n「光の画家」とも呼ばれたフェルメールの、\n25歳頃の作品。意外と小さい。",
+      "KRko": "계산된 구도와 정교한 빛의 표현으로\n'빛의 화가'라고 불리던 페르메이르가\n25세 즈음에 그린 작품. 크기가 의외로 작다.",
+      "TWzh": "維梅爾擅長以精準的構圖和巧妙的光影來表現，\n因此又被稱為「光的畫家」。\n此為其25歲時的作品。沒想到如此年輕。",
+      "USen": "This piece earned Vermeer the\nnickname \"Master of Light\" thanks to\nits exquisite contrast and depth.\nVermeer painted this masterpiece at\nonly 25 years of age. Many note that\nit is surprisingly small in real life.",
+      "USes": "Este cuadro le otorgó a Vermeer\nel sobrenombre de \"maestro de\nla luz\".\nEs fácil imaginarse por qué,\nal observar el exquisito contraste\ny la profundidad de la obra.\nEl pintor creó esta indudable obra\nmaestra a la temprana edad de\n25 años.\nAl día de hoy, muchos se sorprenden\ndel diminuto tamaño del cuadro\nal admirarlo en persona.",
+      "USfr": "Les contrastes délicats que l'on peut\nadmirer ici valurent parfois à Vermeer\nle surnom de « maître de la lumière ».\nIl peignit ce chef-d'œuvre alors qu'il\nn'avait que 25 ans. On est souvent\nsurpris par la petitesse du cadre."
+    }
+  },
+  {
+    "label": "art_00014",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "蓝衣少年\n托马斯·庚斯博罗／作\n1770年　[油画·布面]",
+      "EUde": "Knabe in Blau\nThomas Gainsborough, 1770\nÖl auf Leinwand",
+      "EUen": "The Blue Boy\n 　 Thomas Gainsborough, 1770\n 　 　 　Oil on canvas",
+      "EUes": "El niño azul\nThomas Gainsborough, 1770\nÓleo sobre lienzo",
+      "EUfr": "Garçon en bleu\nThomas Gainsborough, 1770\nHuile sur toile",
+      "EUit": "Ragazzo in blu\nThomas Gainsborough, 1770\nOlio su tela",
+      "EUnl": "Jongen in het blauw\nThomas Gainsborough, 1770\nOlieverf op doek",
+      "EUru": "Мальчик в голубом\nТомас Гейнсборо, 1770\nХолст, масло",
+      "JPja": "青衣の少年\nトマス・ゲインズバラ／作\n1770年　[油彩・キャンバス]",
+      "KRko": "파란 옷을 입은 소년\n토마스 게인즈버러 작품\n1770년　[유채・캔버스]",
+      "TWzh": "穿藍衣的少年\n托馬斯‧庚斯博羅\n1770年　[油彩‧畫布]",
+      "USen": "The Blue Boy\n 　 Thomas Gainsborough, 1770\n 　 　 　Oil on canvas",
+      "USes": "El niño azul\nThomas Gainsborough, 1770\nÓleo sobre lienzo",
+      "USfr": "L'enfant bleu\nThomas Gainsborough, 1770\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00014_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "庚斯博罗没有使用传统的肖像画技法，\n而是采用革新的用色技巧创作了许多肖像画。\n《蓝衣少年》就是其中之一。\n他曾说，画肖像画是为了钱，而风景画\n才是为了兴趣。但讽刺的是，他的肖像画\n对近代英国绘画产生了极大的影响。",
+      "EUde": "Gainsborough wurde durch den\ninnovativen Einsatz von Farben in\nPorträts wie diesem hier bekannt.\nObwohl er eine Vorliebe für die\nLandschaftsmalerei hegte, fertigte\ner in erster Linie Porträts an.",
+      "EUen": "Gainsborough was known for his\ninnovative use of colors in his\ntraditional portraits, like this one.\nAlthough he preferred painting\nlandscapes, his portraits would be\nthe defining work of his career.",
+      "EUes": "Gainsborough destacó por hacer\nun uso innovador del color en\nretratos tradicionales como este.\nAunque tenía preferencia por\nlos paisajes, los retratos fueron\nel rasgo definitorio de su carrera.",
+      "EUfr": "Gainsborough est célèbre pour son\nusage innovant des couleurs dans\nles portraits tels que celui-ci.\nMême s'il préférait peindre les\npaysages, ce sont ses portraits\nqui définiront son style.",
+      "EUit": "Gainsborough era noto per un uso\ninnovativo del colore applicato ai\nsuoi tipici ritratti, come questo.\nSebbene preferisse dipingere\npaesaggi, fu come ritrattista che\nraggiunse l'apice della sua carriera.",
+      "EUnl": "Gainsborough is bekend om zijn\nvernieuwende gebruik van kleuren in\nzijn traditionele portretten, zoals dit.\nHoewel hij de voorkeur gaf aan\nlandschappen, waren zijn portretten\nbepalend voor zijn carrière.",
+      "EUru": "Гейнсборо прославился своей\nноваторской работой с цветом\nв портретах, например, в этом.\nПортреты определили его\nтворчество, хотя он сам\nпредпочитал рисовать пейзажи.",
+      "JPja": "ゲインズバラは、伝統的な肖像画のお作法に\n反した革新的な色使いで、多くの肖像画を\n残した。「青衣の少年」もそのひとつ。\n「肖像画は金の為に、風景画は楽しみの為に\n描く」と語った彼の肖像画は、皮肉にも\n近代イギリス絵画に多大な影響を与えた。",
+      "KRko": "게인즈버러는 전통적인 초상화의 기법에 반한\n혁명적인 색의 사용으로 많은 초상화 작품을\n남겼다. '파란 옷을 입은 소년'도 그중에 하나.\n'초상화는 돈을 위해, 풍경화는 즐거움을 위해\n그린다'고 말한 그의 초상화는, 아이러니하게도\n근대 영국 미술에 지대한 영향을 끼쳤다.",
+      "TWzh": "庚斯博羅留有多幅肖像畫，\n經常使用有別於傳統肖像畫的新穎顏色。\n《穿藍衣的少年》為其中之一。\n庚斯博羅說過「肖像畫是為了賺錢，\n風景畫才是愛好」，但諷刺的是，\n其肖像畫對近代英國繪畫卻有極大的影響。",
+      "USen": "Gainsborough was known for his\ninnovative use of colors in his\ntraditional portraits, like this one.\nAlthough he preferred painting\nlandscapes, his portraits would be\nthe defining work of his career.",
+      "USes": "Gainsborough se destacó por hacer\nun uso innovador del color en\nretratos tradicionales como este.\nAunque tenía preferencia por\nlos paisajes, los retratos fueron\nel rasgo definitorio de su carrera.",
+      "USfr": "Gainsborough est célèbre pour son\nusage innovant des couleurs dans\nles portraits tels que celui-ci.\nMême s'il préférait peindre les\npaysages, ce sont ses portraits\nqui définiront son style."
+    }
+  },
+  {
+    "label": "art_00018",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "蒙娜丽莎\n列奥纳多·达·芬奇／作\n1503年左右　[油画·木板]",
+      "EUde": "Mona Lisa\nLeonardo da Vinci, um 1503\nÖl auf Pappelholz",
+      "EUen": "Mona Lisa\n 　Leonardo da Vinci, circa 1503\n 　 　 　Oil on poplar",
+      "EUes": "La Mona Lisa\nLeonardo da Vinci, hacia 1503\nÓleo sobre tabla",
+      "EUfr": "La Joconde\nLéonard de Vinci, vers 1503 - 1506\nHuile sur bois de peuplier",
+      "EUit": "La Gioconda\nLeonardo da Vinci, 1503 ca.\nOlio su pioppo",
+      "EUnl": "Mona Lisa\nLeonardo da Vinci, omstreeks 1503\nOlieverf op populierenhout",
+      "EUru": "Мона Лиза\nЛеонардо да Винчи, около 1503\nДревесина тополя, масло ",
+      "JPja": "モナ・リザ\nレオナルド・ダ・ヴィンチ／作\n1503年頃　[油彩・板]",
+      "KRko": "모나리자\n레오나르도 다 빈치 작품\n1503년경　[유채・패널]",
+      "TWzh": "蒙娜麗莎\n李奧納多‧達文西\n1503年左右　[油彩‧木板]",
+      "USen": "Mona Lisa\n 　Leonardo da Vinci, circa 1503\n 　 　 　Oil on poplar",
+      "USes": "La Mona Lisa\nLeonardo da Vinci, hacia 1503\nÓleo sobre tabla",
+      "USfr": "La Joconde\nLéonard de Vinci, vers 1503\nHuile sur bois de peuplier"
+    }
+  },
+  {
+    "label": "art_00018_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "全世界最有名的微笑。据说达芬奇\n直至临终都没放下这幅画。\n　\n即使是现在，大家仍然想要靠近，\n发现并解开各种各样的谜团。\n就是这样一幅充满魅力的绘画。",
+      "EUde": "Das weltberühmteste Lächeln. An-\ngeblich hielt da Vinci dieses Gemälde\nbis zu seinem Tod unter Verschluss...\nAngesichts der Macht, die es noch\nJahrhunderte später auf Betrachter\nausübt, ist dies nur verständlich.",
+      "EUen": "The world's most famous smile. It's\nsaid that da Vinci kept this painting\nfor himself until the very end...\nGiven its power to beguile visitors\nall these years later, it's easy to\nsee why.",
+      "EUes": "La sonrisa más famosa del mundo.\nSe dice que da Vinci conservó este\nretrato hasta el fin de sus días.\nNo es de extrañar, dada la capacidad\nque sigue teniendo de embelesar a\nquien lo contempla, aún a día de hoy.",
+      "EUfr": "Le sourire le plus célèbre du monde.\nOn raconte que de Vinci conserva ce\ntableau jusqu'à son dernier souffle.\nCe n'est guère étonnant, considérant\nle pouvoir d'attraction qu'il continue\nd'exercer des siècles plus tard.",
+      "EUit": "Il sorriso più famoso del mondo. Si\nnarra che Leonardo conservò questo\nritratto fino agli ultimi istanti di vita...\nE non è difficile capirne il motivo,\nconsiderando il fascino che esercita\ntuttora su chi vi poggia lo sguardo.",
+      "EUnl": "De beroemdste glimlach ter wereld.\nMen zegt dat Da Vinci dit werk tot\nzijn dood zelf heeft gehouden...\nGelet op de invloed die het op\ntoeschouwers heeft, is het niet\nmoeilijk te raden waarom.",
+      "EUru": "Самая знаменитая улыбка в мире.\nГоворят, да Винчи не расставался\nс этим полотном до самого конца.\nНеудивительно, если учесть\nвоздействие этой картины даже\nстолько лет спустя.",
+      "JPja": "世界で最も有名な微笑み。ダ・ヴィンチは、\n最期までこの絵を手放さなかったという。\n　\n今でもなお、みんなで寄ってたかって様々な\n謎を見つけ出し、解き明かそうとしている。\nそれだけ魅力のある絵といえよう。",
+      "KRko": "세계에서 가장 유명한 미소.\n다 빈치는 마지막까지 이 작품을\n아무에게도 넘기지 않았다고 한다.\n여전히 많은 사람들이 이 그림의 수많은\n수수께끼를 찾아내고, 해결하려고 하고 있다.\n그만큼 매력적인 그림이라고 할 수 있을 것이다.",
+      "TWzh": "世界上最有名的微笑。達文西\n直到臨終前都不願放手的名作。\n直到現在，仍有一大群人\n想找出並解開這幅畫的種種謎團。\n可說是相當具有魅力的畫作。",
+      "USen": "The world's most famous smile. It's\nsaid that da Vinci kept this painting\nfor himself until the very end...\nGiven its power to beguile visitors\nall these years later, it's easy to\nsee why.",
+      "USes": "La sonrisa más famosa del mundo.\nSe dice que da Vinci conservó este\nretrato hasta el fin de sus días.\nNo es de extrañar, dada la capacidad\nque sigue teniendo de cautivar al\nque lo contemple, aún al día de hoy.",
+      "USfr": "Le sourire le plus célèbre du monde.\nOn raconte que de Vinci conserva ce\ntableau jusqu'à son dernier souffle.\nCe n'est guère étonnant, considérant\nle pouvoir d'attraction qu'il continue\nd'exercer des siècles plus tard."
+    }
+  },
+  {
+    "label": "art_00020",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "苹果与橘子\n保罗·塞尚／作\n1899年左右　[油画·布面]",
+      "EUde": "Stillleben mit Äpfeln und Orangen\nPaul Cézanne, um 1899\nÖl auf Leinwand",
+      "EUen": "Apples and Oranges\n 　 　 Paul Cézanne, circa 1899\n 　 　 　Oil on canvas",
+      "EUes": "Manzanas y naranjas\nPaul Cézanne, hacia 1899\nÓleo sobre lienzo",
+      "EUfr": "Pommes et oranges\nPaul Cézanne, vers 1899\nHuile sur toile",
+      "EUit": "Natura morta con mele e arance\nPaul Cézanne, 1899 ca.\nOlio su tela",
+      "EUnl": "Appels en sinaasappels\nPaul Cézanne, omstreeks 1899\nOlieverf op doek",
+      "EUru": "Яблоки и апельсины\nПоль Сезанн, около 1899\nХолст, масло",
+      "JPja": "リンゴとオレンジ\nポール・セザンヌ／作\n1899年頃　[油彩・キャンバス]",
+      "KRko": "사과와 오렌지\n폴 세잔 작품\n1899년경　[유채・캔버스]",
+      "TWzh": "蘋果和柳橙的靜物\n保羅‧塞尚\n1899年左右　[油彩‧畫布]",
+      "USen": "Apples and Oranges\n 　 　 Paul Cézanne, circa 1899\n 　 　 　Oil on canvas",
+      "USes": "Manzanas y naranjas\nPaul Cézanne, hacia 1899\nÓleo sobre lienzo",
+      "USfr": "Pommes et oranges\nPaul Cézanne, vers 1899\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00020_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "给以毕加索为开端的后期画家们\n产生深远影响的“近代绘画之父”\n塞尚所描绘的静物画。\n不只是写实地描绘所见到的景物，\n还会从多视角带来造型的美感。\n　\n连景物所散发的氛围及观者的内心\n也描绘出来，是此前所未曾有过的绘画。",
+      "EUde": "Dieses Stillleben beeinflusste maß-\ngeblich die Arbeiten vieler anderer\nKünstler, darunter Pablo Picasso.\nAuch wenn der Gedanke naheliegt –\nCézanne wollte mit seinem Werk kein\nnaturgetreues Abbild erschaffen.\nSein Ziel war es, die Schönheit der\nFormen aus verschiedenen Winkeln\nauf die Leinwand zu bannen.",
+      "EUen": "This still life is known to have\ninspired the work of many other\nartists, including Pablo Picasso.\nRather than trying to recreate an\nimage, Cézanne captured the beauty\nof shapes from many angles.\nWith this work, Cézanne draws on\nboth the atmosphere of his subjects\nand the spirit of its beholders.",
+      "EUes": "Este bodegón sirvió de inspiración\na muchos otros artistas posteriores,\nentre los que se cuenta Picasso.\nMás que recrear una imagen real,\nCézanne quiso capturar la belleza de\nlas formas desde múltiples ángulos.\nEsta obra juega tanto con la\natmósfera del tema pictórico como\ncon el espíritu del observador.",
+      "EUfr": "Cette célèbre nature morte a inspiré\nde nombreux peintres, dont Pablo\nPicasso.\nPlutôt que de chercher à reproduire\nune image, l'artiste a saisi la beauté\ndes formes sous différents angles.\nÀ travers cette toile, Cézanne rend\nparfaitement l'atmosphère du sujet\ntout en interpellant le visiteur.",
+      "EUit": "Questa natura morta fu d'ispirazione\nper numerosi altri artisti, compreso\nPablo Picasso.\nPiù che riprodurre un'immagine,\nCézanne volle catturare la bellezza\ndelle forme da diverse angolazioni.\nCon quest'opera, l'artista gioca sia\ncon l'atmosfera del tema raffigurato\nche con lo spirito degli osservatori.",
+      "EUnl": "Dit stilleven heeft vele andere\nkunstenaars geïnspireerd,\nonder wie Pablo Picasso.\nHet was niet Cézannes doel om\nzijn onderwerp natuurgetrouw\nweer te geven.\nHij wilde de schoonheid van de\nvormen vanuit verschillende hoeken\nop het doek vastleggen.",
+      "EUru": "Известно, что этот натюрморт\nвдохновлял многих художников,\nв том числе Пабло Пикассо.\nСезанн старался выразить красоту\nформ многомерно, не копируя\nмодель в точности.\nВ этой работе Сезанн передает\nсуть предметов и дополняет ее\nнастроением самих смотрящих.",
+      "JPja": "ピカソをはじめ、後の画家たちに多大な影響\nを与えた「近代絵画の父」セザンヌが描いた\n静物画。\n見たままを写実的に描くのではなく、多角的\nな視点から、造形の美しさに迫っている。\n　\n対象物が漂わせる雰囲気や、見る者の内面を\nも描こうとする、これまでになかった絵画。",
+      "KRko": "피카소를 비롯, 후세 화가들에게\n막대한 영향을 끼친\n'근대 회화의 아버지' 세잔이 그린 정물화.\n눈에 보이는 대로 사실적으로 그림을\n그린 것이 아니라, 다각적인 시점에서\n조형의 아름다움을 추구한 그림이다.\n대상물이 뿜어내고 있는 분위기와\n보는 사람의 내면까지도 그려내려고 했던\n당시까지는 없었던 작품.",
+      "TWzh": "「近代繪畫之父」塞尚與畢卡索同為\n對後代影響深遠的畫家。\n而這幅靜物畫正是塞尚所繪製的。\n此畫作並非將眼前所見真實地描繪出來，\n而是從不同視角表現出結構之美。\n不只讓人有靜物漂浮的感受，同時也描繪出\n觀賞者的內心，是一幅前所未有的畫作。",
+      "USen": "This still life is known to have\ninspired the work of many other\nartists, including Pablo Picasso.\nRather than trying to recreate an\nimage, Cézanne captured the beauty\nof shapes from many angles.\nWith this work, Cézanne draws on\nboth the atmosphere of his subjects\nand the spirit of its beholders.",
+      "USes": "Esta obra de naturaleza muerta sirvió\nde inspiración a muchos artistas\nposteriores, incluyendo Picasso.\nMás que recrear una imagen real,\nCézanne quiso capturar la belleza de\nlas formas desde múltiples ángulos.\nEsta obra juega tanto con la\natmósfera del tema pictórico como\ncon el espíritu del observador.",
+      "USfr": "Cette célèbre nature morte a inspiré\nde nombreux peintres, dont Pablo\nPicasso.\nPlutôt que de chercher à reproduire\nune image, l'artiste a saisi la beauté\ndes formes sous différents angles.\nÀ travers cette toile, Cézanne rend\nparfaitement l'atmosphère du sujet\ntout en interpellant le visiteur."
+    }
+  },
+  {
+    "label": "art_00024",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "抱银鼠的女子\n列奥纳多·达·芬奇／作\n1490年左右　[油画·木板]",
+      "EUde": "Dame mit dem Hermelin\nLeonardo da Vinci, um 1490\nÖl und Tempera auf Holz",
+      "EUen": "Lady with an Ermine\n 　Leonardo da Vinci, circa 1490\n 　 　 Oil on wood panel",
+      "EUes": "La dama del armiño\nLeonardo da Vinci, hacia 1490\nÓleo sobre tabla",
+      "EUfr": "La Dame à l'hermine\nLéonard de Vinci, vers 1490\nHuile sur panneau de bois",
+      "EUit": "Dama con l'ermellino\nLeonardo da Vinci, 1490 ca.\nOlio su tavola",
+      "EUnl": "De dame met de hermelijn\nLeonardo da Vinci, omstreeks 1490\nOlieverf op hout",
+      "EUru": "Дама с горностаем\nЛеонардо да Винчи, около 1490\nДерево, масло",
+      "JPja": "白貂を抱く貴婦人\nレオナルド・ダ・ヴィンチ／作\n1490年頃　[油彩・板]",
+      "KRko": "담비를 안고 있는 여인\n레오나르도 다 빈치 작품\n1490년경　[유채・패널]",
+      "TWzh": "抱銀貂的女子\n李奧納多‧達文西\n1490年左右　[油彩‧木板]",
+      "USen": "Lady with an Ermine\n 　Leonardo da Vinci, circa 1490\n 　 　 Oil on wood panel",
+      "USes": "La dama del armiño\nLeonardo da Vinci, hacia 1490\nÓleo sobre tabla",
+      "USfr": "La dame à l'hermine\nLéonard de Vinci, vers 1490\nHuile sur panneau de bois"
+    }
+  },
+  {
+    "label": "art_00024_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "达芬奇创作的女性肖像画，\n连《蒙娜丽莎》在内只有4幅，\n而这就是其中之一。\n也有说法，怀抱着的其实并非银鼠，\n而是白毛的貂。",
+      "EUde": "Eines von nur vier Porträts, die von\nda Vinci angefertigt wurden. Das\nwohl bekannteste ist die „Mona Lisa“.\nManche behaupten, der Hermelin\nauf diesem Bild sei in Wahrheit ein\nweißes Frettchen!",
+      "EUen": "One of only four portraits of women\npainted by da Vinci, one of which is\nthe \"Mona Lisa.\"\nSome believe that the \"ermine\" is not\nactually an ermine, but rather a white\nferret!",
+      "EUes": "Da Vinci solamente pintó cuatro\nretratos de mujeres, uno de los\ncuales es «La Mona Lisa».\nAlgunos creen que el armiño no es\ntal en realidad, sino un hurón blanco.",
+      "EUfr": "Un des quatre portraits de femme\nque nous a laissés de Vinci, l'un\nd'entre eux étant la Joconde.\nCertains avancent que l'hermine\ndépeinte n'en est pas une et qu'il\ns'agit en fait d'un furet blanc.",
+      "EUit": "Uno degli unici quattro ritratti di\ndonna realizzati da Leonardo, tra\ncui la \"Gioconda\".\nAlcuni credono che l'animale non sia\naffatto un ermellino, bensì un furetto\nbianco.",
+      "EUnl": "Een van de slechts vier vrouwen-\nportretten geschilderd door Da Vinci,\nwaartoe ook de Mona Lisa behoort.\nSommigen denken dat de hermelijn in\nwerkelijkheid een witte fret is.",
+      "EUru": "Один из всего четырех женских\nпортретов, написанных да Винчи.\nК ним относится и «Мона Лиза».\nНекоторые считают, что горностай\nна самом деле является белым\nхорьком.",
+      "JPja": "ダ・ヴィンチが描いたとされる女性の肖像画は\n「モナ・リザ」を含めて4作品しかないが、\nそのうちのひとつ。\n抱いているのは実はシロテンではなく、\n白い毛のフェレットだという説もある。",
+      "KRko": "다 빈치가 그린 여성의 초상화는\n'모나리자'를 포함해서 4작품밖에 없다고 하며,\n이 그림은 그중 하나이다.\n안고 있는 동물은 사실 흰 담비가 아니라\n흰 털을 가진 페럿이라는 설도 있다.",
+      "TWzh": "達文西創作的女性肖像畫，\n包含《蒙娜麗莎》在內，僅有四幅。\n這是其中一幅。\n也有人說抱著的其實不是銀貂，\n而是白毛的雪貂。",
+      "USen": "One of only four portraits of women\npainted by da Vinci, one of which is\nthe \"Mona Lisa.\"\nSome believe that the \"ermine\" is not\nactually an ermine, but rather a white\nferret!",
+      "USes": "Da Vinci solamente pintó cuatro\nretratos de mujeres, uno de los\ncuales fue \"La Mona Lisa\".\nAlgunos creen que el armiño no\nes uno real, sino un hurón blanco.",
+      "USfr": "Un des quatre portraits de femme\nque nous a laissés de Vinci, l'un\nd'entre eux étant la Joconde.\nCertains avancent que l'hermine\ndépeinte n'en est pas une et qu'il\ns'agit en fait d'un furet blanc."
+    }
+  },
+  {
+    "label": "art_00028",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "戴珍珠耳环的少女\n约翰内斯·维米尔／作\n1665年左右　[油画·布面]",
+      "EUde": "Das Mädchen mit dem\nPerlenohrgehänge\nJan Vermeer, um 1665, Öl auf Leinwand",
+      "EUen": "Girl with a Pearl Earring\n　 Johannes Vermeer, circa 1665\n 　 　 Oil on canvas",
+      "EUes": "La joven de la perla\nJohannes Vermeer, hacia 1665\nÓleo sobre lienzo",
+      "EUfr": "La Jeune Fille à la perle\nJohannes Vermeer, vers 1665\nHuile sur toile",
+      "EUit": "Ragazza con l'orecchino di perla\nJan Vermeer, 1665 ca.\nOlio su tela",
+      "EUnl": "Meisje met de parel\nJohannes Vermeer, omstreeks 1665\nOlieverf op doek",
+      "EUru": "Девушка с жемчужной сережкой\nЯн Вермеер, около 1665\nХолст, масло",
+      "JPja": "真珠の耳飾りの少女\nヨハネス・フェルメール／作\n1665年頃　[油彩・キャンバス]",
+      "KRko": "진주 귀고리를 한 소녀\n요하네스 페르메이르 작품\n1665년경　[유채・캔버스]",
+      "TWzh": "戴珍珠耳環的少女\n約翰尼斯‧維梅爾\n1665年左右　[油彩‧畫布]",
+      "USen": "Girl with a Pearl Earring\n　 Johannes Vermeer, circa 1665\n 　 　 Oil on canvas",
+      "USes": "La joven de la perla\nJohannes Vermeer, hacia 1665\nÓleo sobre lienzo",
+      "USfr": "La jeune fille à la perle\nJohannes Vermeer, vers 1665\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00028_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "毫不吝啬地使用了当时的高价颜料\n群青的明艳蓝色引人注目，\n也被称为“蓝色头巾的少女”。\n也有说法，那耳饰其实并非珍珠。",
+      "EUde": "Dieses Gemälde mag vielen auch\nbekannt sein unter dem Titel „Das\nMädchen mit dem blauen Turban“.\nVermeer verwendete unter anderem\ndie Farbe Ultramarin, ein damals\nungemein teurer Farbstoff.\nDie Investition scheint sich jedoch\ngelohnt zu haben, denn das leuch-\ntende Blau ist ein wahrer Blickfang.\nManch einer mag sich jedoch fragen,\nob es sich bei dem Ohrring um eine\nechte Perle gehandelt hat...",
+      "EUen": "Also known as \"Girl with a Turban,\"\nthis piece uses ultramarine paint,\nwhich was expensive at the time.\nIt seems the expense was worth it, as\nthe vivid blue colors draw the eye\nand help make the piece a classic.\nThe only question is... Is that a real\npearl earring? Or something else...",
+      "EUes": "Esta obra también se conoce\ncon el título de «Muchacha con\nturbante».\nEn ella, Vermeer utiliza pintura\nde color ultramarino, muy cara\nen la época.\nSin embargo, resultó ser una gran\ninversión, puesto que el vívido color\nazulado atrae el ojo del espectador.\nCon todo, una pregunta sigue sin\nresolverse: ¿el pendiente es una\nperla real u... otra cosa?",
+      "EUfr": "Aussi appelée La Jeune Fille au\nturban, ce tableau utilise un pigment\nbleu outremer, onéreux à l'époque.\nCette dépense n'a pas été réalisée\nen vain, puisque ce bleu vif attire l'œil\net contribue au chef-d'œuvre.\nUne seule question demeure en\nsuspens... Est-ce une véritable\nperle ? Ou quelque chose d'autre...",
+      "EUit": "Quest'opera è anche nota con\nil titolo di \"Ragazza col turbante\".\nPer realizzarla, Vermeer utilizzò\nil blu oltremare, un colore che\nall'epoca era molto costoso.\nNe valse tuttavia la pena, perché\nquesta tinta così vivida attrae lo\nsguardo ed esalta il capolavoro.\nUna sola domanda rimane in\nsospeso: l'orecchino è una\nperla vera o... qualcos'altro?",
+      "EUnl": "Voor dit werk, ook bekend als \"Meisje\nmet tulband\", is de kleur ultramarijn\ngebruikt, die destijds erg duur was.\nDe prijs lijkt het echter waard te zijn\ngeweest, want het levendige blauw\nmaakt dit werk een ware blikvanger.\nBlijft de vraag of dat een echte\npareloorbel is...",
+      "EUru": "Другое название: «Девушка\nв тюрбане». Художник использовал\nдорогой в то время ультрамарин.\nЯрко-синий цвет сразу привлекает\nвнимание, что тоже сыграло роль\nв популярности картины.\nНо вопрос в следующем: это\nсережка из натурального жемчуга\nили что-то другое?..",
+      "JPja": "当時は高価だった絵の具、ウルトラマリンを\n惜しみなく使った鮮やかな青色が目をひき、\n「青いターバンの少女」とも呼ばれる。\nそもそも、この耳飾りは真珠ではないという\n説もあるらしい。",
+      "KRko": "당시 고가 그림물감이었던\n울트라마린 색상을 아낌없이 사용,\n선명한 푸른색이 눈길을 끈다.\n사실 그림 속 귀고리는 진주가 아니라는\n설도 있다고 한다.",
+      "TWzh": "這幅畫作不惜使用當時要價不斐的群青色顏料\n畫出格外引人注目的鮮豔藍色，\n因此也有人稱之為《藍色頭巾的少女》。\n據說也有人認為\n那副耳環原本並非真的珍珠。",
+      "USen": "Also known as \"Girl with a Turban,\"\nthis piece uses ultramarine paint,\nwhich was expensive at the time.\nIt seems the expense was worth it, as\nthe vivid blue colors draw the eye\nand help make the piece a classic.\nThe only question is... Is that a real\npearl earring? Or something else...",
+      "USes": "A esta obra también se la conoce\ncon el título de \"Muchacha con\nturbante\".\nEn ella, Vermeer utiliza pintura\nde color ultramarino, muy cara\nen la época.\nSin embargo, resultó ser una gran\ninversión, puesto que el vívido color\nazulado atrae el ojo del espectador.\nSin embargo, una pregunta sigue sin\nresolverse: ¿el pendiente es una\nperla real u... otra cosa?",
+      "USfr": "Aussi appelé La jeune fille au\nturban, ce tableau utilise un pigment\nbleu outremer, onéreux à l'époque.\nCette dépense n'a pas été réalisée\nen vain, puisque ce bleu vif attire l'œil\net contribue au chef-d'œuvre.\nUne seule question demeure en\nsuspens... Est-ce une véritable\nperle? Ou quelque chose d'autre..."
+    }
+  },
+  {
+    "label": "art_00032",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "维纳斯的诞生\n桑德罗·波提切利／作\n1485年左右　[蛋彩画·布面]",
+      "EUde": "Die Geburt der Venus\nSandro Botticelli, um 1485\nTempera auf Leinwand",
+      "EUen": "The Birth of Venus\n 　 　Sandro Botticelli, circa 1485\n　 　 　Tempera on canvas",
+      "EUes": "El nacimiento de Venus\nSandro Botticelli, hacia 1485\nTemple sobre lienzo",
+      "EUfr": "La Naissance de Vénus\nSandro Botticelli, vers 1485\nTempera",
+      "EUit": "Nascita di Venere\nSandro Botticelli, 1485 ca.\nTempera su tela",
+      "EUnl": "De geboorte van Venus\nSandro Botticelli, omstreeks 1485\nTempera op doek",
+      "EUru": "Рождение Венеры\nСандро Боттичелли, около 1485\nХолст, темпера",
+      "JPja": "ヴィーナスの誕生\nサンドロ・ボッティチェリ／作\n1485年頃　[テンペラ・キャンバス]",
+      "KRko": "비너스의 탄생\n산드로 보티첼리 작품\n1485년경　[템페라・캔버스]",
+      "TWzh": "維納斯的誕生\n山德羅·波提且利\n1485年左右　[蛋彩‧畫布]",
+      "USen": "The Birth of Venus\n 　 　Sandro Botticelli, circa 1485\n　 　 　Tempera on canvas",
+      "USes": "El nacimiento de Venus\nSandro Botticelli, hacia 1485\nTemple sobre lienzo",
+      "USfr": "La naissance de Vénus\nSandro Botticelli, vers 1485\nTempera"
+    }
+  },
+  {
+    "label": "art_00032_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "描绘了希腊神话中的女神维纳斯\n乘着贝壳从海中诞生的样子。\n　\n波提切利其实是外号，原意“小桶”，\n是从酒桶一样胖的哥哥那儿继承的名号。\n至于为何会继承哥哥的名号还是个谜。\n这是一幅著名的画作，\n资深设计师对它似乎特别的熟稔。",
+      "EUde": "Ein Gemälde der römischen Göttin\nVenus, die nach ihrer Geburt in einer\nJakobsmuschel auf dem Meer treibt.\nMan sagt, der Name „Botticelli“ sei\ndem Bruder des Künstlers aufgrund\nseines Körperbaus verliehen worden.\nAngeblich soll seine Statur ein wenig\nan ein „Fässchen“ erinnert haben.\nDoch wieso sein Bruder Sandro\ndiesen Spitznamen übernommen hat,\nbleibt wohl für immer ein Rätsel...",
+      "EUen": "A painting of the Roman goddess\nVenus riding a scallop shell after\nbeing born in the ocean.\nThe name Botticelli is said to actually\nbe a nickname given to the artist's\nbrother, who was built like a barrel.\nWhy this nickname was transferred\nbetween siblings is a mystery lost\nto the ages.",
+      "EUes": "Este lienzo representa a Venus,\nla diosa romana, naciendo sobre\nuna concha en medio del mar.\nSe dice que el nombre de Botticelli\nera en realidad el apodo que\nle habían dado su hermano.\nDicho sobrenombre se debería\na su aspecto, similar al de un\nbarril.\nA día de hoy, sigue siendo todo\nun misterio por qué el apodo pasó\nde un hermano a otro.",
+      "EUfr": "Ce tableau représente la déesse\nromaine Vénus voguant sur une\nconque à sa naissance dans l'océan.\nBotticelli serait le sobriquet donné au\nfrère de l'artiste, dont la corpulence\névoquait la forme d'un tonneau.\nLa raison pour laquelle ce surnom\na été transmis à son frère demeure\nun mystère.",
+      "EUit": "Questo dipinto rappresenta la dea\nromana Venere che fluttua su una\nconchiglia in mare dopo essere nata.\nPare che il nome Botticelli fosse\nin realtà un soprannome dato al\nfratello dell'artista.\nTale nomignolo sarebbe da attribuire\nalla sua corporatura, simile a una\nbotte.\nAncora oggi permane il mistero sul\nmotivo per cui questo soprannome\nsia passato da un fratello all'altro.",
+      "EUnl": "Een schilderij van de Romeinse godin\nVenus op een sint-jakobsschelp na\nhaar geboorte in zee.\nMen zegt dat \"Botticelli\" eigenlijk de\nbijnaam van de broer van de schilder\nwas vanwege zijn lichaamsbouw.\nWaarom deze bijnaam is\novergedragen op de schilder zal\nwel altijd een raadsel blijven.",
+      "EUru": "Римская богиня, скользящая по\nводе в раковине после своего\nрождения в пучинах океана.\nПо слухам, прозвище «Боттичелли»\nперешло к художнику от брата,\nкоторый был толстяком.\nТолько непонятно, почему\nбочонком прозвали самого\nхудожника, а не брата...",
+      "JPja": "ギリシャ・ローマ神話の女神 ヴィーナスが\n帆立貝の貝がらに乗り、海から誕生した姿が\n描かれている。\nボッティチェリは実は通称で、酒樽のように\n太った兄の、あだ名からきているのだとか。\nなぜ、兄のあだ名を受け継いだのかは謎。\nよく知られた絵だが、ベテラン・デザイナー\nのひとには、特に馴染み深いらしい。",
+      "KRko": "그리스 로마 신화의 여신 비너스가\n조개껍질을 타고 바다에서 탄생하는\n모습이 그려져 있다.\n보티첼리는 사실 실명이 아니며,\n술통처럼 살찐 형의 별명에서 따왔다고 한다.\n왜 형의 별명으로 그림을 그렸는지는 의문이다.\n일반인들에게도 널리 알려진 그림이지만,\n베테랑 디자이너들에게는\n특히 익숙한 그림이라고 한다.",
+      "TWzh": "這幅畫描繪了希臘羅馬神話中的\n女神維納斯站在貝殼上從海面誕生的姿態。\n波提且利原本是一個外號，來自\n他那位胖得跟酒桶一樣的哥哥。不過，\n為什麼會繼承哥哥的外號，就不得而知了。\n這是一幅知名的畫作，\n相信資深設計師對它尤其熟悉。",
+      "USen": "A painting of the Roman goddess\nVenus riding a scallop shell after\nbeing born in the ocean.\nThe name Botticelli is said to actually\nbe a nickname given to the artist's\nbrother, who was built like a barrel.\nWhy this nickname was transferred\nbetween siblings is a mystery lost\nto the ages.",
+      "USes": "Este lienzo representa a Venus,\nla diosa romana, naciendo sobre una\nconcha marina en el medio del mar.\nSe dice que el nombre de Botticelli\nera en realidad el apodo que\nle habían dado a su hermano.\nDicho sobrenombre se debería\na su aspecto, similar al de un\nbarril.\nAl día de hoy, sigue siendo todo\nun misterio por qué el apodo pasó\nde un hermano a otro.",
+      "USfr": "Ce tableau montre la déesse romaine\nVénus voguant sur un coquillage\nà sa naissance dans l'océan.\nBotticelli serait le sobriquet donné au\nfrère de l'artiste, dont la corpulence\névoquait la forme d'un tonneau.\nLa raison pour laquelle ce surnom\na été transmis à son frère demeure\nun mystère."
+    }
+  },
+  {
+    "label": "art_00034",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "着衣的玛哈\n弗朗西斯科·何塞·德·戈雅／作\n1805年左右　[油画·布面]",
+      "EUde": "Die bekleidete Maja\nFrancisco de Goya, um 1805\nÖl auf Leinwand",
+      "EUen": "The Clothed Maja\n 　Francisco de Goya, circa 1805\n 　 　 Oil on canvas",
+      "EUes": "La maja vestida\nFrancisco de Goya, hacia 1805\nÓleo sobre lienzo",
+      "EUfr": "La Maja vêtue\nFrancisco de Goya, vers 1805\nHuile sur toile",
+      "EUit": "La maja vestida\nFrancisco de Goya, 1805 ca.\nOlio su tela",
+      "EUnl": "De geklede maja\nFrancisco de Goya, omstreeks 1805\nOlieverf op doek",
+      "EUru": "Маха одетая\nФрансиско де Гойя, около 1805\nХолст, масло",
+      "JPja": "着衣のマハ\nフランシスコ・デ・ゴヤ／作\n1805年頃　[油彩・キャンバス]",
+      "KRko": "옷을 입은 마하\n프란시스코 데 고야 작품\n1805년경　[유채・캔버스]",
+      "TWzh": "著衣的馬哈\n法蘭西斯科‧哥雅\n1805年左右　[油彩‧畫布]",
+      "USen": "The Clothed Maja\n 　Francisco de Goya, circa 1805\n 　 　 Oil on canvas",
+      "USes": "La maja vestida\nFrancisco de Goya, hacia 1805\nÓleo sobre lienzo",
+      "USfr": "La Maja vêtue\nFrancisco de Goya, vers 1805\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00034_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "戈雅是活跃于18世纪后半叶至\n19世纪前半叶的西班牙巨匠。\n　\n相对于《着衣的玛哈》，还有一幅\n与之相反的作品叫《裸体的玛哈》，\n据说是为了掩饰而描绘的。\n“玛哈”是时尚的西班牙名媛的意思，\n并非人名。",
+      "EUde": "Dieses Gemälde soll eine etwas\ndiskretere Variante des früheren\nWerkes „Die nackte Maja“ darstellen.\nAuch soll sich einigen Quellen\nzufolge Francisco de Goya zu seiner\nZeit großer Beliebtheit erfreut haben.\nOb dies seiner Persönlichkeit oder\nseinem freizügigem Kunstwerk ge-\nschuldet war, lässt sich nur vermuten.\n„Maja“ ist übrigens nicht der Name\ndes Modells, sondern bezeichnet\neine modische Einwohnerin Madrids.",
+      "EUen": "It is said that this painting is a more\ndiscreet version of an earlier work\nknown as \"The Nude Maja.\"\nIt is also known that Francisco de\nGoya was quite popular in his own\ntime. Could these facts be related?\nA third, unrelated fact—the word\n\"maja\" refers to a \"stylish young\nlady of Madrid.\"",
+      "EUes": "Se dice que esta obra es la versión\ndiscreta de un lienzo previo,\n«La maja desnuda».\nY también se sabe que Francisco de\nGoya era muy popular en su época.\n¿Habrá alguna relación?\nComo último apunte, la palabra\n«maja» se refiere a las jóvenes\nde categoría que vivían en Madrid.",
+      "EUfr": "Cette toile serait une version\nchaste d'une œuvre antérieure\nintitulée la Maja nue.\nLe succès venu, il était peut-être\ndevenu inconvenant pour Goya\nd'afficher des œuvres impudiques.\nEnfin, notons que la « maja » du titre\ndésigne une jeune femme élégante\nde Madrid.",
+      "EUit": "Si dice che questo dipinto sia\nla versione pudica di un'opera\nprecedente, \"La maja desnuda\".\nSi dice anche che Francisco de\nGoya fosse molto popolare al tempo.\nChe le due cose siano collegate?\nInfine, il termine \"maja\" si riferisce\nalle giovani donne di alto rango che\nvivevano a Madrid.",
+      "EUnl": "Men gelooft dat dit schilderij een\ningetogenere versie is van een\neerder werk, \"De naakte maja\".\nFrancisco de Goya was in zijn tijd erg\npopulair. Is er een verband?\nHet woord \"maja\" betekent \"een\nelegante jonge vrouw uit Madrid\".",
+      "EUru": "Это целомудренная версия более\nранней картины под названием\n«Маха обнаженная».\nИзвестно, что Франсиско Гойя\nпользовался популярностью уже\nв свое время.\nСлово «маха» означает\n«молоденькая модница из\nМадрида».",
+      "JPja": "ゴヤは 18世紀後半から19世紀前半にかけて\n活躍したスペインの巨匠。\n　\n「着衣のマハ」には「裸のマハ」という対に\nなる作品があり、それのカムフラージュの\nために描かれたという説がある。\n「マハ」とは「小粋なマドリッド娘」という\n意味の言葉で、人名ではない。",
+      "KRko": "고야는 18세기 후반에서 19세기 전반에 걸쳐\n활약했던 스페인의 거장.\n \n'옷을 입은 마하'는 '옷을 벗은 마하'라는\n쌍을 이루는 작품을 숨기기 위해\n그려졌다는 설이 있다.\n'마하'는 '매력적인 여자'라는 뜻으로,\n사람의 이름은 아니다.",
+      "TWzh": "哥雅是活躍於18世紀後半到19世紀前半的\n西班牙大畫家。\n《著衣的馬哈》與另一幅《裸體的馬哈》，\n兩幅畫是一對的作品。\n據說當時是為了掩飾而畫的。\n「馬哈」的意思是「漂亮的馬德里姑娘」，\n並非人名。",
+      "USen": "It is said that this painting is a more\ndiscreet version of an earlier work\nknown as \"The Nude Maja.\"\nIt is also known that Francisco de\nGoya was quite popular in his own\ntime. Could these facts be related?\nA third, unrelated fact—the word\n\"maja\" refers to a \"stylish young\nlady of Madrid.\"",
+      "USes": "Se dice que esta obra es la versión\ndiscreta de un lienzo previo,\n\"La maja desnuda\".\nY también se sabe que Francisco de\nGoya era muy popular en su época.\n¿Habrá relación entre estos datos?\nComo último dato, la palabra\n\"maja\" se refiere a las jóvenes\nde categoría que vivían en Madrid.",
+      "USfr": "Cette toile serait une version\nchaste d'une œuvre antérieure\nintitulée la Maja nue.\nLe succès venu, il était peut-être\ndevenu inconvenant pour Goya\nd'afficher des œuvres impudiques.\nEnfin, notons que le titre « maja » \ndésigne une jeune femme élégante\nde Madrid."
+    }
+  },
+  {
+    "label": "art_00038",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "富岳三十六景　神奈川冲浪里\n葛饰北斋／作\n1831年左右　[木版画]",
+      "EUde": "36 Ansichten des Berges Fuji\nDie große Welle von Kanagawa\nKatsushika Hokusai, um 1831, Farbholzschnitt",
+      "EUen": "Thirty-Six Views of Mount Fuji\n The Great Wave off Kanagawa\n Katsushika Hokusai, circa 1831, Woodblock print",
+      "EUes": "Treinta y seis vistas del monte Fuji\nLa gran ola de Kanagawa\nKatsushika Hokusai, hacia 1831. Xilografía",
+      "EUfr": "Trente-six vues du Mont Fuji\nLa Grande vague de Kanagawa\nKatsushika Hokusai, vers 1831, estampe sur bois",
+      "EUit": "36 vedute del Monte Fuji\nLa grande onda di Kanagawa\nKatsushika Hokusai, 1831 ca. Xilografia",
+      "EUnl": "36 gezichten op de berg Fuji\nDe grote golf bij Kanagawa\nKatsushika Hokusai, omstreeks 1831, houtsnede",
+      "EUru": "Тридцать шесть видов Фудзи:\nбольшая волна в Канагаве\nКацусика Хокусай, ок. 1831, гравюра на дереве",
+      "JPja": "冨嶽三十六景　神奈川沖浪裏\n葛飾北斎／作\n1831年頃　[木版画]",
+      "KRko": "후가쿠 36경 중 가나가와 해변 높은 파도 아래\n가쓰시카 호쿠사이 작품\n1831년경　[목판화]",
+      "TWzh": "富嶽三十六景 神奈川沖浪裏\n葛飾北齋\n1831年左右　[木版畫]",
+      "USen": "Thirty-Six Views of Mount Fuji\n The Great Wave off Kanagawa\n Katsushika Hokusai, circa 1831, Woodblock print",
+      "USes": "Treinta y seis vistas del monte Fuji\nLa gran ola de Kanagawa\nKatsushika Hokusai, hacia 1831. Xilografía",
+      "USfr": "Trente-six vues du mont Fuji\nLa grande vague de Kanagawa\nKatsushika Hokusai, vers 1831, estampe sur bois"
+    }
+  },
+  {
+    "label": "art_00038_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "江户时代后期的代表性浮世绘大师\n葛饰北斋，60岁以后手绘系列中的\n代表性作品之一。\n虽然名为三十六景，但加上后来追加的\n10幅作品，总计有46幅作品。",
+      "EUde": "Das wohl bekannteste Werk des\ndamals über 60-jährigen Ukiyo-e-\nKünstlers Katsushika Hokusai.\nObwohl im Titel von „36 Ansichten“\ndie Rede ist, erhöhte er die Anzahl\num 10 weitere auf insgesamt 46.",
+      "EUen": "The signature piece of ukiyo-e artist\nKatsushika Hokusai, painted as part\nof a series when he was in his 60s.\nAlthough it is dubbed \"Thirty-Six\nViews,\" he eventually added 10 more\nto make 46 in total.",
+      "EUes": "Esta icónica obra del estilo ukiyo-e\nforma parte de una serie que\nHokusai pintó en sus años tardíos.\nA pesar de que dicha serie se llama\n«Treinta y seis vistas», acabó\npintando un total de cuarenta y seis.",
+      "EUfr": "L'artiste ukiyo-e Katsushika Hokusai\na réalisé cette toile emblématique de\nson œuvre à plus de 60 ans.\nElle s'inscrit dans une série intitulée\n36 vues du mont Fuji qui, comme son\nnom ne l'indique pas, inclut 46 toiles.",
+      "EUit": "L'artista ukiyo-e Katsushika Hokusai\nrealizzò questa opera iconica come\nparte di una serie a più di 60 anni.\nNonostante il titolo faccia riferimento\na 36 vedute, alla fine ne aggiunse\naltre 10, per un totale di 46.",
+      "EUnl": "Een typerend werk van de ukiyo-e-\nkunstenaar Katsushika Hokusai, uit\neen serie die hij na zijn 60e maakte.\nHoewel de serie '36 gezichten' wordt\ngenoemd, maakte hij er later nog 10,\nwat het totale aantal op 46 brengt.",
+      "EUru": "Известная работа мастера укиё-э\nКацусика Хокусая из серии гравюр,\nсозданных, когда ему было за 60.\nСерия хоть и называлась\n«36 видов Фудзи», он, скорее,\nсоздал даже 46.",
+      "JPja": "江戸時代後期の代表的な浮世絵師、葛飾北斎\nが、60歳を超えてから手掛けたシリーズの\n代表的な一枚。\n三十六景とあるが、10作が追加で作られて\n全部で46作存在する。",
+      "KRko": "에도 시대 후기의 대표적인 일본 풍속화 화가,\n가쓰시카 호쿠사이가 60세 이후에 시작한\n시리즈 작품의 대표적인 그림.\n36경이라고 이름 지어져 있지만\n실제로는 10점이 추가로 그려져서,\n총 46점의 작품이 존재한다.",
+      "TWzh": "這是江戶時代後期極具代表性的浮世繪畫家\n葛飾北齋於60歲後開始著手的系列中\n最具代表性的一幅。\n原有三十六景，後來又追加了十景，\n共有四十六景。",
+      "USen": "The signature piece of ukiyo-e artist\nKatsushika Hokusai, painted as part\nof a series when he was in his 60s.\nAlthough it is dubbed \"Thirty-Six\nViews,\" he eventually added 10 more\nto make 46 in total.",
+      "USes": "Esta icónica obra del estilo ukiyo-e\nforma parte de una serie que\nHokusai pintó en sus años tardíos.\nA pesar de que dicha serie se llama\n\"Treinta y seis vistas\", acabó\npintando un total de cuarenta y seis.",
+      "USfr": "L'artiste ukiyo-e Katsushika Hokusai\na réalisé cette toile emblématique de\nson œuvre à plus de 60 ans.\nElle fait partie d'une série intitulée\n36 vues du mont Fuji. Contrairement à son nom, la série inclut 46 toiles."
+    }
+  },
+  {
+    "label": "art_00042",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "四季“夏季”\n朱塞佩·阿尔钦博托／作\n1573年左右　[油画·布面]",
+      "EUde": "Der Sommer\nGiuseppe Arcimboldo, um 1563\nÖl auf Leinwand",
+      "EUen": "Summer\n Giuseppe Arcimboldo, circa 1563\n 　 　 Oil on canvas",
+      "EUes": "Verano\nGiuseppe Arcimboldo, 1563\nÓleo sobre lienzo",
+      "EUfr": "L'Été\nGiuseppe Arcimboldo, vers 1563\nHuile sur toile",
+      "EUit": "Estate\nGiuseppe Arcimboldo, 1563 ca.\nOlio su tela",
+      "EUnl": "Zomer\nGiuseppe Arcimboldo, omstreeks 1563\nOlieverf op doek",
+      "EUru": "Лето\nДжузеппе Арчимбольдо, около 1563\nХолст, масло",
+      "JPja": "四季「夏」\nジュゼッペ・アルチンボルド／作\n1573年頃　[油彩・キャンバス]",
+      "KRko": "여름\n주세페 아르침볼도 작품\n1573년경　[유채・캔버스]",
+      "TWzh": "四季「夏季」\n朱塞佩·阿爾欽博托\n1573年左右　[油彩‧畫布]",
+      "USen": "Summer\n Giuseppe Arcimboldo, circa 1563\n 　 　 Oil on canvas",
+      "USes": "Verano\nGiuseppe Arcimboldo, 1563\nÓleo sobre lienzo",
+      "USfr": "L'été\nGiuseppe Arcimboldo, vers 1563\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00042_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "16世纪后半叶意大利奇想画家\n阿尔钦博托所得意的神奇肖像画。\n　\n仔细看的话，会发现这张人的侧脸\n是由水果和蔬菜组合后描绘成的。",
+      "EUde": "Dieses eigentümliche Porträt wurde\nvom italienischen Maler Giuseppe\nArcimboldo im späten 16. Jh. gemalt.\nSelbst Kunstlaien dürfte es auffallen,\ndass die Person auf dem Gemälde\nnur aus Obst und Gemüse besteht...",
+      "EUen": "A curious portrait by Giuseppe\nArcimboldo, an Italian painter from\nthe late 16th century.\nIt doesn't take a particularly sharp\neye to see that the entire portrait\nis composed of fresh produce.",
+      "EUes": "Este curioso retrato es obra de\nGiuseppe Arcimboldo, un artista\nitaliano de finales del siglo XVI.\nNo hace falta ser muy avispado para\ndarse cuenta de que la imagen se\ncompone de frutas y verduras.",
+      "EUfr": "Ce curieux portrait est signé\nGiuseppe Arcimboldo, peintre\nitalien de la fin du XVIe siècle.\nComme vous le constatez, le tableau\nest intégralement composé de fruits\net de légumes frais.",
+      "EUit": "Questo curioso ritratto è opera di\nGiuseppe Arcimboldo, un artista\nitaliano del tardo XVI secolo.\nCome si può facilmente constatare,\nil quadro è composto interamente da\nfrutta e verdure fresche.",
+      "EUnl": "Een eigenaardig portret geschilderd\ndoor Giuseppe Arcimboldo, een\nItaliaanse schilder uit de 16e eeuw.\nEen oplettende toeschouwer ziet\nmeteen dat het hele portret uit\ngroente en fruit bestaat.",
+      "EUru": "Необычный портрет, написанный\nДжузеппе Арчимбольдо во второй\nполовине XVI века.\nДаже издалека видно, что весь\nпортрет состоит из овощей\nи фруктов.",
+      "JPja": "16世紀後半イタリアの奇想の画家、\nアルチンボルドが得意とする不思議な肖像画。\n　\nよく見ると、果物や野菜を組み合わせて\n人の横顔が描かれている。",
+      "KRko": "16세기 후반 이탈리아의 개성적인 화가,\n아르침볼도의 주특기였던 기괴한 초상화.\n \n자세히 보면 과일과 채소의 조합이\n사람의 옆모습을 이루고 있음을 알 수 있다.",
+      "TWzh": "這是16世紀後半義大利的奇想畫家\n阿爾欽博托最擅長的奇幻風格肖像畫。\n仔細一看會發現這張人的側臉\n是由水果和蔬菜組合而成的。",
+      "USen": "A curious portrait by Giuseppe\nArcimboldo, an Italian painter from\nthe late 16th century.\nIt doesn't take a particularly sharp\neye to see that the entire portrait\nis composed of fresh produce.",
+      "USes": "Este curioso retrato es obra de\nGiuseppe Arcimboldo, un artista\nitaliano de finales del siglo XVI.\nNo hace falta ser muy avispado para\ndarse cuenta de que la imagen se\ncompone de frutas y verduras.",
+      "USfr": "Ce curieux portrait est signé\nGiuseppe Arcimboldo, peintre\nitalien de la fin du XVIe siècle.\nComme vous le constatez, le tableau\nest intégralement composé de fruits\net de légumes frais."
+    }
+  },
+  {
+    "label": "art_00044",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "拾穗者\n让-弗朗索瓦·米勒／作\n1857年　[油画·布面]",
+      "EUde": "Die Ährenleserinnen\nJean-François Millet, 1857\nÖl auf Leinwand",
+      "EUen": "The Gleaners\n 　 Jean-François Millet, 1857\n 　 　Oil on canvas",
+      "EUes": "Las espigadoras\nJean-François Millet, 1857\nÓleo sobre lienzo",
+      "EUfr": "Des Glaneuses\nJean-François Millet, 1857\nHuile sur toile",
+      "EUit": "Le spigolatrici\nJean-François Millet, 1857\nOlio su tela",
+      "EUnl": "De arenleessters\nJean-François Millet, 1857\nOlieverf op doek",
+      "EUru": "Сборщицы колосьев\nЖан-Франсуа Милле, 1857\nХолст, масло",
+      "JPja": "落穂拾い\nジャン＝フランソワ・ミレー／作\n1857年　[油彩・キャンバス]",
+      "KRko": "이삭 줍는 여인들\n장 프랑수아 밀레 작품\n1857년　[유채・캔버스]",
+      "TWzh": "拾穗\n尚-法蘭索瓦‧米勒\n1857年　[油彩‧畫布]",
+      "USen": "The Gleaners\n 　 Jean-François Millet, 1857\n 　 　Oil on canvas",
+      "USes": "Las espigadoras\nJean-François Millet, 1857\nÓleo sobre lienzo",
+      "USfr": "Des glaneuses\nJean-François Millet, 1857\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00044_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "经常描绘贫穷农民日常生活的\n19世纪法国画家米勒的代表作。\n　\n远景描绘了农场主与佃农们收获的风景，\n而近景则是贫穷的人们捡拾掉落在田地的\n麦穗的画面。\n据说当时为了贫穷的人们，会有故意落一些\n麦穗在田里的习惯。",
+      "EUde": "Berühmtes Werk von Millet, der\nbekannt war für die Darstellung des\nbürgerlichen Lebens im 19. Jh.\nAuffallend ist die üppige Getreide-\nmenge im Hintergrund, während die\nArbeiterinnen nur Halme auflesen.\nMillet schuf dieses Kunstwerk als\nKritik an der damals herrschenden\nsozialen Ungleichheit.",
+      "EUen": "The signature piece from Millet, who\nwas known for depicting the lives of\ncommoners in the 19th century.\nNotice the abundant crops visible in\nthe background relative to the\nmeager wheat remaining for workers.\nThis art served as social commentary\nin a time of great inequality.",
+      "EUes": "La obra más famosa de Millet, pintor\nque reflejó en su arte la vida del\npueblo llano en el siglo XIX.\nLa abundante cosecha del fondo\ncontrasta con el escaso trigo que\nlas campesinas recogen para ellas.\nEsta obra puede entenderse como\nuna denuncia social en una época\nde grandes desigualdades.",
+      "EUfr": "L'œuvre emblématique de Millet,\nconnu pour ses représentations de\nla vie quotidienne du XIXe siècle.\nOn comparera les récoltes\nabondantes à l'arrière-plan et la\nmaigre pitance laissée aux ouvriers.\nCette toile constitue ainsi un\ntémoignage d'une ère de grande\ninégalité sociale.",
+      "EUit": "Opera maestra di Millet, artista del\nXIX secolo, noto per i suoi dipinti\nincentrati sulla vita agreste.\nSpicca evidente il contrasto tra il\nraccolto abbondante sullo sfondo\ne la misera porzione delle contadine.\nLa sua produzione artistica si pose\ncome una critica sociale in un'epoca\ndi forti disuguaglianze.",
+      "EUnl": "Een typerend schilderij van de hand\nvan Millet, die in de 19e eeuw de\nlevens van het gewone volk weergaf.\nLet op de rijke oogst op de achter-\ngrond in tegenstelling tot de geringe\nresterende aren voor de armen.\nDeze kunst vervulde een rol als\nsociale kritiek in een tijd van grote\nongelijkheid.",
+      "EUru": "Работа, характерная для Милле,\nкоторый часто писал картины из\nжизни простых людей XIX века.\nБросается в глаза разница\nв размере снопов на заднем плане\nи снопов для работников.\nТак искусство разоблачало\nсоциальные проблемы во времена\nвопиющего неравенства.",
+      "JPja": "貧しい農民の日常を多く描いた　19世紀の\nフランスの画家、ミレーの代表作。\n　\n遠景の農場主と小作人たちによる収穫風景と\n対象的な、貧しい人々が畑に落ちている麦の\n穂を拾い集める様子が描かれている。\n当時は貧しい人のために、収穫時に麦の穂を\nわざと残しておく習慣があったという。",
+      "KRko": "빈곤한 농민의 일상을 자주 그렸던\n19세기의 프랑스 화가 밀레의 대표작.\n \n배경에는 농장주와 소작민들의 수확 풍경이,\n앞쪽에는 가난한 사람들이 바닥에 떨어져 있는\n보리 이삭을 줍는 대칭적인 모습이 그려져 있다.\n당시에는 빈곤했던 사람을 위해 \n수확을 할 때 이삭을 일부러 남겨 두는\n습관이 있었다고 한다.",
+      "TWzh": "這是19世紀法國畫家米勒的代表作品。\n其畫作多以農民貧窮的日常生活為題材。\n遠處是農場地主和佃農們的收穫情景，\n而近處則是描繪貧窮的人們\n撿拾掉落在田地上的麥穗。\n據說當時會為了貧窮的人們\n故意在收穫時留下一點麥穗。",
+      "USen": "The signature piece from Millet, who\nwas known for depicting the lives of\ncommoners in the 19th century.\nNotice the abundant crops visible in\nthe background relative to the\nmeager wheat remaining for workers.\nThis art served as social commentary\nin a time of great inequality.",
+      "USes": "La obra más famosa de Millet, pintor\nque reflejó en su arte la vida de\nla plebe en el siglo XIX.\nLa abundante cosecha del fondo\ncontrasta con el escaso trigo que\nlas campesinas recogen para ellas.\nEsta obra puede entenderse como\nuna denuncia social en una época\nde grandes desigualdades.",
+      "USfr": "L'œuvre emblématique de Millet,\nconnu pour ses représentations de\nla vie quotidienne du XIXe siècle.\nOn comparera les récoltes\nabondantes à l'arrière-plan et la\nmaigre pitance laissée aux ouvriers.\nCette toile constitue ainsi un\ntémoignage d'une ère de grande\ninégalité sociale."
+    }
+  },
+  {
+    "label": "art_00046",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "女神游乐厅的吧台\n爱德华·马奈／作\n1882年左右　[油画·布面]",
+      "EUde": "Bar in den Folies Bergère\nÉdouard Manet, um 1882\nÖl auf Leinwand",
+      "EUen": "A Bar at the Folies-Bergère　\n　 　 Édouard Manet, circa 1882\n　 　 　 Oil on canvas",
+      "EUes": "Un bar del Folies-Bergère\nÉdouard Manet, hacia 1882\nÓleo sobre lienzo",
+      "EUfr": "Un Bar aux Folies Bergère\nÉdouard Manet, vers 1882\nHuile sur toile",
+      "EUit": "Il bar delle Folies-Bergère\nÉdouard Manet, 1882\nOlio su tela",
+      "EUnl": "Een bar in de Folies-Bergère　\nÉdouard Manet, omstreeks 1882\nOlieverf op doek",
+      "EUru": "Бар в «Фоли-Бержер»\nЭдуард Мане, около 1882\nХолст, масло",
+      "JPja": "フォリー・ベルジェールのバー\nエドゥアール・マネ／作\n1882年頃　[油彩・キャンバス]",
+      "KRko": "폴리베르제르 바\n에두아르 마네 작품\n1882년경　[유채・캔버스]",
+      "TWzh": "女神遊樂廳的吧檯\n愛德華‧馬奈\n1882年左右　[油彩‧畫布]",
+      "USen": "A Bar at the Folies-Bergère　\n　 　 Édouard Manet, circa 1882\n　 　 　 Oil on canvas",
+      "USes": "Un bar del Folies-Bergère\nÉdouard Manet, hacia 1882\nÓleo sobre lienzo",
+      "USfr": "Un bar aux Folies Bergère\nÉdouard Manet, vers 1882\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00046_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "女性身后的大镜子里映出了\n前来剧院的人们热闹的样子。\n　\n仔细看的话，镜中女性身后的\n位置关系和物体的配置等矛盾颇多，\n蕴藏着许多谜。\n这是组合了多个视角构图而成的\n马奈的最后杰作。他在完成这幅作品的\n第二年就去世了，享年51岁。",
+      "EUde": "Bei näherer Betrachtung des\nSpiegels im Hintergrund fallen sofort\neinige Ungereimtheiten ins Auge.\nManet entschied sich dazu, das\nGeschehen aus unterschiedlichen\nPerspektiven zu malen.\nDieser Umstand erklärt auch die\nungewöhnliche Platzierung einiger\nGegenstände im Gemälde.\nManet, der im Alter von 51 Jahren\nverstarb, schuf dieses letzte Werk\nein Jahr vor seinem Tod.",
+      "EUen": "Close inspection of the mirror behind\nthis painting's subject reveals many\nmysteries and paradoxes...\nIn fact, the painting is based on\nmultiple perspectives, which explains\nthe unusual placement of some items.\nSadly, this is Manet's last major work.\nHe passed away a year after it was\ncomplete, at age 51.",
+      "EUes": "Una mirada cuidadosa al espejo\ndetrás de la figura central revela\nvarios misterios y paradojas...\nLas múltiples perspectivas del\ncuadro son el origen de la inusual\ndisposición de algunos objetos.\nEsta fue la última gran obra de\nManet, quien falleció un año después\nde completarla, a los 51 años.",
+      "EUfr": "Une observation minutieuse du miroir\nderrière le sujet soulève nombre de\nmystères et de paradoxes.\nEn fait, la toile cumule plusieurs\nperspectives différentes, d'où le\nplacement curieux de certains objets.\nHélas, il s'agit là de la dernière\ngrande œuvre de Manet, disparu un\nan après son achèvement, à 51 ans.",
+      "EUit": "Un'attenta analisi dello specchio alle\nspalle del soggetto del dipinto rivela\nun mondo di misteri e paradossi...\nL'opera si basa infatti su prospettive\nmultiple, il che spiega la posizione\ninsolita di alcuni elementi.\nQuesto fu l'ultimo dipinto realizzato\nda Manet. L'artista scomparve un\nanno più tardi, a 51 anni.",
+      "EUnl": "Wie goed naar de spiegel achter de\nhoofdpersoon kijkt, bemerkt veel\nraadsels en tegenstellingen...\nHet schilderij bevat meerdere\nperspectieven, wat de aparte\nplaatsing van voorwerpen verklaart.\nDit was Manets laatste grote werk.\nHij stierf een jaar na de voltooiing\nervan, toen hij 51 jaar oud was.",
+      "EUru": "В зеркале за спиной у главного\nперсонажа кроются загадки\nи парадоксы...\nВ основу картины легли различные\nперспективы, оттого и необычное\nрасположение предметов.\nЭто последняя крупная работа\nМане, который скончался спустя\nгод. Ему исполнилось всего 51.",
+      "JPja": "女性の後ろの大鏡に、劇場に来ている人々の\nにぎやかな様子が映し出されている。\n　\nよく見ると、鏡に映った女性の後ろ姿の位置\n関係をはじめ物の配置などの矛盾点が多く、\nたくさんの謎が隠されている。\n複数の視点を組み合わせて構成された、マネ\n最後の傑作。彼はこの作品が完成した翌年、\n51歳でこの世を去った。",
+      "KRko": "여성 뒤편에 있는 커다란 거울을 통해\n바를 찾은 사람들로 붐비는 모습이\n비춰지고 있다.\n자세히 보면 거울에 비친 여성의 뒷모습\n위치를 비롯, 물건의 배치 등에 모순점이 많아\n많은 의문점이 남겨져 있는 작품이다.\n복수의 시점을 조합하여 구성된 마네 최후의\n걸작이다. 그는 이 작품이 완성된 이듬해,\n51세의 나이로 세상을 떠났다.",
+      "TWzh": "女子身後的大鏡子裡映照出\n來劇場的人們熱鬧喧囂的樣子。\n仔細一看，鏡中反照出這名女子的背面，\n其位置關係和物品配置上有諸多矛盾，\n暗藏著許多謎團。\n這是馬奈結合多方視角所構圖而成的\n最後大作。在此畫完成後的隔一年，\n馬奈逝世，享年51歲。",
+      "USen": "Close inspection of the mirror behind\nthis painting's subject reveals many\nmysteries and paradoxes...\nIn fact, the painting is based on\nmultiple perspectives, which explains\nthe unusual placement of some items.\nSadly, this is Manet's last major work.\nHe passed away a year after it was\ncomplete, at age 51.",
+      "USes": "Una mirada cuidadosa al espejo\ndetrás de la figura central revela\nvarios misterios y paradojas...\nLas múltiples perspectivas del\ncuadro son el origen de la inusual\ndisposición de algunos objetos.\nEsta fue la última gran obra de\nManet, quien falleció un año después\nde completarla, a los 51 años.",
+      "USfr": "Une observation minutieuse du miroir\nderrière le sujet soulève nombre de\nmystères et de paradoxes.\nEn fait, la toile cumule plusieurs\nperspectives différentes, d'où le\nplacement curieux de certains objets.\nHélas, il s'agit là de la dernière\ngrande œuvre de Manet, disparu un\nan après son achèvement, à 51 ans."
+    }
+  },
+  {
+    "label": "art_00048",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "吹短笛的男孩\n爱德华·马奈／作\n1866年　[油画·布面]",
+      "EUde": "Pfeifer\nÉdouard Manet, 1866\nÖl auf Leinwand",
+      "EUen": "The Fifer\n 　Édouard Manet, 1866\n 　 　 Oil on canvas",
+      "EUes": "El pífano\nÉdouard Manet, 1866\nÓleo sobre lienzo",
+      "EUfr": "Le Fifre\nÉdouard Manet, 1866\nHuile sur toile",
+      "EUit": "Il pifferaio\nÉdouard Manet, 1866\nOlio su tela",
+      "EUnl": "De fluitspeler\nÉdouard Manet, 1866\nOlieverf op doek",
+      "EUru": "Флейтист\nЭдуард Мане, 1866\nХолст, масло",
+      "JPja": "笛を吹く少年\nエドゥアール・マネ／作\n1866年　[油彩・キャンバス]",
+      "KRko": "피리 부는 소년\n에두아르 마네 작품\n1866년　[유채・캔버스]",
+      "TWzh": "吹笛子的少年\n愛德華‧馬奈\n1866年　[油彩‧畫布]",
+      "USen": "The Fifer\n 　Édouard Manet, 1866\n 　 　 Oil on canvas",
+      "USes": "El pífano\nÉdouard Manet, 1866\nÓleo sobre lienzo",
+      "USfr": "Le fifre\nÉdouard Manet, 1866\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00048_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "马奈的早期作品，描绘了穿着军服\n吹奏笛子的少年。在空无一物的背景里\n配置人物的构图是受到了委拉斯凯兹的影响。\n他的作品没有远近感，只靠强烈对比的色块\n构成，对后来的画家也产生了巨大的影响，\n被称为“印象派之父”。\n另外，画中吹奏的是横笛，\n从手指位置来看，发出的音是“嗦”。",
+      "EUde": "Dieses frühe Gemälde von Manet\nzeigt einen jungen Flötisten in\nMilitäruniform.\nManets Werke sind bekannt dafür,\ndass sie lineare Perspektive und\nstarke Kontraste vermissen lassen.\nDies brachte ihm den Titel „Vater des\nImpressionismus“ und auch einige\nVergleiche mit Vélazquez ein.\nFlötenspielern ist es angeblich\nmöglich, anhand des Bildes die Note\nzu erkennen, die der Junge spielt.",
+      "EUen": "One of Manet's earlier works, this\npainting depicts a young flautist\ndressed in military uniform.\nManet's works are notable for their\nlack of linear perspective and strong\ncolor contrast.\nThese attributes led some to call him\n\"The Father of Impressionism\" and\nmake comparisons to Vélazquez.\nFun fact—flautists can determine\nwhat note the boy is playing just\nby studying the painting closely.",
+      "EUes": "Esta obra temprana de Manet nos\nenseña a un joven flautista vestido\ncon un uniforme militar.\nLa pintura de Manet destaca por\nla ausencia de perspectiva lineal\ny un fuerte contraste de colores.\nPor ello, a veces se lo ha tenido por\nantecesor del impresionismo o aun\nse lo ha comparado con Velázquez.\nQuien sepa tocar la flauta podrá\nreconocer, si observa con cuidado,\nqué nota está tocando el niño.",
+      "EUfr": "Cette œuvre de jeunesse de Manet\nreprésente un jeune joueur de flûte\nvêtu d'un uniforme militaire.\nLe travail de Manet est caractérisé\npar l'absence de perspective nette\net les forts contrastes.\nCes traits conduisent certains à le\ncomparer à Velázquez et à en faire\nle père de l'impressionnisme.\nQuant aux musiciens, il leur suffit\nde bien regarder le tableau pour\nconnaître la note que joue le fifre.",
+      "EUit": "Una delle prime opere di Manet,\nche ritrae un giovane suonatore\ndi flauto in uniforme militare.\nI dipinti di Manet sono noti per la\nmancanza di prospettiva lineare\ne per i forti contrasti cromatici.\nQuesto spinse molti ad accomunarlo\na Vélazquez e gli valse il soprannome\ndi \"padre dell'impressionismo\".\nPiccola curiosità: i flautisti riescono\na capire che nota sta suonando il\ngiovane solo esaminando il dipinto.",
+      "EUnl": "Dit schilderij, een van Manets vroege\nwerken, toont een jonge fluitspeler in\neen militair uniform.\nManets werken worden gekenmerkt\ndoor het ontbreken van lineair per-\nspectief en een sterk kleurcontrast.\nDaarom noemen sommigen hem de\nvader van het impressionisme en\nwordt hij vergeleken met Velázquez.\nLeuk weetje: door goed naar het\nschilderij te kijken kunnen fluitisten\nzien welke noot de jongen speelt.",
+      "EUru": "Одна из ранних работ Мане, на\nкоторой изображен юный флейтист\nв военной форме.\nРаботы Мане всегда отличались\nотсутствием линейной перспективы\nи сильным цветовым контрастом.\nПоэтому его иногда сравнивают\nс Веласкесом.\nЗабавно, но флейтисты могут\nраспознать, какую именно ноту\nиграет мальчик.",
+      "JPja": "軍服姿で笛を演奏する少年が描かれた、マネ\n初期の作品。何もない背景に人物像を配した\n構図は、ベラスケスの影響によるもの。\n遠近感がなくコントラストの強い色面で構成\nされた彼の作品が、後の画家に与えた影響は\n大きく、「印象派の父」とも呼ばれている。\nちなみに吹いているのはファイフという笛で\nこの指使いだと「ソ」の音が鳴るらしい。",
+      "KRko": "군복 차림으로 피리를 부는 소년을 그린\n마네의 초기 작품. 텅 빈 배경에 인물을 배치한\n구도는 벨라스케스의 영향을 받은 것이다.\n원근감이 없고 대비가 강한 색으로 구성된\n그의 작품은 후대의 화가들에게 지대한 영향을\n미쳐 '인상파의 아버지'로 불린다.\n참고로 소년이 불고 있는 것은 '파이프'라는\n이름의 피리로, 그림 속의 손가락 모양을 하면\n'솔'의 음이 연주된다고 한다.",
+      "TWzh": "這是馬奈初期的作品，描繪一名穿軍服的少年\n正在吹奏笛子。人物像搭配空無一物的背景，\n這種構圖方式是受到維拉斯奎茲的影響。\n馬奈這種毫無遠近感，只以強烈對比的色塊\n構成的作品，對後代的畫家有很大的影響，\n同時也被稱之為「印象派之父」。\n順帶一提，畫中正在吹奏的是橫笛，\n依手指位置來看，他正在吹的音是「So」。",
+      "USen": "One of Manet's earlier works, this\npainting depicts a young flautist\ndressed in military uniform.\nManet's works are notable for their\nlack of linear perspective and strong\ncolor contrast.\nThese attributes led some to call him\n\"The Father of Impressionism\" and\nmake comparisons to Vélazquez.\nFun fact—flautists can determine\nwhat note the boy is playing just\nby studying the painting closely.",
+      "USes": "Esta obra temprana de Manet nos\nmuestra a un joven flautista vestido\ncon un uniforme militar.\nLa pintura de Manet se destaca por\nla ausencia de perspectiva lineal\ny un fuerte contraste de colores.\nPor eso, se lo destaca como un\nantecesor del impresionismo o se\nlo compara con Velázquez.\nQuien sepa tocar la flauta podrá\nreconocer, si observa con cuidado,\nqué nota está tocando el niño.",
+      "USfr": "Cette œuvre de jeunesse de Manet\nreprésente un jeune joueur de flûte\nvêtu d'un uniforme militaire.\nLe travail de Manet est caractérisé\npar l'absence de perspective nette\net les forts contrastes.\nCes traits conduisent certains à le\ncomparer à Velásquez et à en faire\nle père de l'impressionnisme.\nQuant aux musiciens, il leur suffit\nde bien regarder le tableau pour\nconnaître la note que joue le fifre."
+    }
+  },
+  {
+    "label": "art_00050",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "向日葵\n文森特·威廉·梵高／作\n1888年左右　[油画·布面]",
+      "EUde": "Fünfzehn Sonnenblumen\nVincent van Gogh, um 1888\nÖl auf Leinwand",
+      "EUen": "Sunflowers\n 　 Vincent van Gogh, circa 1888\n 　 　 Oil on canvas",
+      "EUes": "Girasoles\nVincent van Gogh, 1888\nÓleo sobre lienzo",
+      "EUfr": "Les Tournesols\nVincent van Gogh, vers 1888\nHuile sur toile",
+      "EUit": "Girasoli\nVincent van Gogh, 1888 ca.\nOlio su tela",
+      "EUnl": "Zonnebloemen\nVincent van Gogh, omstreeks 1888\nOlieverf op doek",
+      "EUru": "Подсолнухи\nВинсент Ван Гог, около 1888\nХолст, масло",
+      "JPja": "ひまわり\nフィンセント・ファン・ゴッホ／作\n1888年頃　[油彩・キャンバス]",
+      "KRko": "해바라기\n빈센트 반 고흐 작품\n1888년경　[유채・캔버스]",
+      "TWzh": "向日葵\n文森‧威廉‧梵谷\n1888年左右　[油彩‧畫布]",
+      "USen": "Sunflowers\n 　 Vincent van Gogh, circa 1888\n 　 　 Oil on canvas",
+      "USes": "Girasoles\nVincent van Gogh, 1888\nÓleo sobre lienzo",
+      "USfr": "Les tournesols\nVincent van Gogh, vers 1888\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00050_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "这是作者为了追求鲜艳的色彩，\n搬到法国南部阿尔勒时期的作品。\n黄色是梵高最爱的颜色。\n梵高在阿尔勒时绘制了7幅向日葵作品，\n现存6幅。其中1幅在东京。",
+      "EUde": "Van Gogh schuf dieses Werk nach\nseiner Ankunft in Südfrankreich, auf\nder Suche nach lebhafteren Farben.\nGelb war Van Goghs Lieblingsfarbe.\nInsgesamt malte er sieben Bilder,\ndie Sonnenblumen zeigten.",
+      "EUen": "Van Gogh painted this piece when he\nmoved to the south of France in\nsearch of more vibrant colors.\nYellow was Van Gogh's favorite color,\nand he made seven paintings that\nfeatured sunflowers during this time.",
+      "EUes": "Van Gogh pintó este cuadro en\nel sur de Francia, adonde se mudó\nen busca de colores más vivos.\nDe ese periodo son siete cuadros\ncon motivos de girasoles, que dejan\npatente su gusto por el amarillo.",
+      "EUfr": "Van Gogh a réalisé cette œuvre alors\nqu'il arpentait le sud de la France à la\nrecherche de nuances plus vives.\nLe jaune demeure la couleur favorite\nde l'artiste, qui peignit sept toiles de\ntournesols durant cette période.",
+      "EUit": "Van Gogh dipinse tale opera quando\nsi trasferì nel sud della Francia alla\nricerca di colori più vividi.\nIl giallo era il suo colore preferito\ne in quel periodo realizzò ben 7\ndipinti con protagonisti i girasoli.",
+      "EUnl": "Van Gogh schilderde dit werk na zijn\nverhuizing naar Zuid-Frankrijk, op\nzoek naar levendigere kleuren.\nGeel was Van Goghs lievelingskleur.\nIn deze periode maakte hij zeven\nschilderijen met zonnebloemen.",
+      "EUru": "Ван Гог написал этот шедевр после\nпереезда на юг Франции в поисках\nярких цветов.\nЖелтый цвет Ван Гог любил больше\nвсего. В этот период он написал\nсемь картин с подсолнечниками.",
+      "JPja": "鮮やかな色彩を求めて、南フランスのアルル\nへ移住した時に描かれた作品。黄色はゴッホ\nが最も愛した色。\nゴッホがアルルで描いたひまわりの絵は7点\nあり、6点が現存。そのうちの1点は東京に\nある。",
+      "KRko": "선명한 색채를 찾아 남프랑스 아를로\n이주했을 당시에 그린 작품.\n노란색은 고흐가 가장 사랑했던 색이라고 한다.\n고흐가 아를에서 그린 해바라기 그림은\n총 7점이며 그중 6개 작품이\n현재까지 남아 있다.",
+      "TWzh": "這幅畫是梵谷為了追求鮮豔的色彩，\n移居南法亞爾時所創作的作品。\n黃色是梵谷最愛的顏色。\n梵谷在亞爾繪製的向日葵畫作共有七件，\n現存六件，其中一件在東京。",
+      "USen": "Van Gogh painted this piece when he\nmoved to the south of France in\nsearch of more vibrant colors.\nYellow was Van Gogh's favorite color,\nand he made seven paintings that\nfeatured sunflowers during this time.",
+      "USes": "Van Gogh pintó este cuadro en\nel sur de Francia, adonde se mudó\nen busca de colores más vivos.\nDe ese periodo son siete cuadros\ncon motivos de girasoles, que dejan\npatente su gusto por el amarillo.",
+      "USfr": "Van Gogh a réalisé cette œuvre alors\nqu'il arpentait le sud de la France à la\nrecherche de nuances plus vives.\nLe jaune demeure la couleur favorite\nde l'artiste, qui peignit sept toiles de\ntournesols durant cette période."
+    }
+  },
+  {
+    "label": "art_00052",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "播种者\n让-弗朗索瓦·米勒／作\n1850年左右　[油画·布面]",
+      "EUde": "Sämann\nJean-François Millet, um 1850\nÖl auf Leinwand",
+      "EUen": "The Sower\n 　Jean-François Millet, circa 1850\n 　 　 Oil on canvas",
+      "EUes": "El sembrador\nJean-François Millet, hacia 1850\nÓleo sobre lienzo",
+      "EUfr": "Le Semeur\nJean-François Millet, vers 1850\nHuile sur toile",
+      "EUit": "Il seminatore\nJean-François Millet, 1850\nOlio su tela",
+      "EUnl": "De zaaier\nJean-François Millet, omstreeks 1850\nOlieverf op doek",
+      "EUru": "Сеятель\nЖан-Франсуа Милле, около 1850\nХолст, масло",
+      "JPja": "種まく人\nジャン＝フランソワ・ミレー／作\n1850年頃　[油彩・キャンバス]",
+      "KRko": "씨 뿌리는 사람\n장 프랑수아 밀레 작품\n1850년경　[유채・캔버스]",
+      "TWzh": "播種者\n尚-法蘭索瓦‧米勒\n1857年　[油彩‧畫布]",
+      "USen": "The Sower\n 　Jean-François Millet, circa 1850\n 　 　 Oil on canvas",
+      "USes": "El sembrador\nJean-François Millet, hacia 1850\nÓleo sobre lienzo",
+      "USfr": "Le semeur\nJean-François Millet, vers 1850\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00052_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "这幅作品描绘了在田间播麦种的农民的样子。\n是作者从巴黎移居到农村后绘制的。\n　\n与大地共生的农民那强而有力的样子，\n也包含着宗教的意味在内。\n对之后的画家，包括梵高，也很有影响。",
+      "EUde": "Dieses Gemälde von Millet zeigt\neinen Bauern, der auf einem Feld\nWeizensamen aussät.\nEs entstand, nachdem Millet Paris\nden Rücken kehrte, um aufs Land\nzu ziehen.\nDie Ähnlichkeit mit Werken von Van\nGogh ist kein Zufall, denn Van Gogh\nließ sich von diesem Bild inspirieren!",
+      "EUen": "Millet painted this piece of a farmer\nsowing wheat seeds in a field after\nmoving to the countryside from Paris.\nIf the piece reminds you of Van\nGogh, that's likely because Van\nGogh himself was inspired by it!",
+      "EUes": "Tras mudarse de París al campo,\nMillet pintó este cuadro de un\ncampesino sembrando trigo.\nSi esta obra recuerda a Van Gogh...\n¡es porque Van Gogh se inspiró\nen ella!",
+      "EUfr": "C'est après avoir quitté Paris pour la\ncampagne que Millet peignit ce\nfermier en train de semer.\nCette toile vous fait penser à van\nGogh ? C'est normal : van Gogh\nlui-même s'en est inspiré !",
+      "EUit": "Millet dipinse questo ritratto di un\ncontadino che semina del grano\ndopo essersi trasferito in campagna.\nSe quest'opera ricorda Van Gogh,\nprobabilmente è perché lo stesso\nartista olandese ne fu ispirato.",
+      "EUnl": "Millet maakte dit schilderij van een\nzaaiende boer op een akker nadat\nhij naar het platteland was verhuisd.\nAls het je aan een schilderij van Van\nGogh doet denken, komt dat doordat\nVan Gogh erdoor was geïnspireerd!",
+      "EUru": "Милле написал крестьянина,\nкоторый сеет пшеницу, переехав\nиз Парижа в провинцию.\nЕсли эта картина напоминает вам\nВан Гога, то Ван Гог на самом деле\nбыл вдохновлен этим шедевром!",
+      "JPja": "畑に麦の種をまく農民の姿。パリから移住し\nた先の、農村で描いた作品。\n　\n大地とともに生きる農民の力強い姿に、宗教\n的な意味合いも込められている。\n後の画家、ゴッホにも影響を与えた。",
+      "KRko": "밭에 보리씨를 뿌리는 농부의 모습.\n파리에서 농촌으로 이주한 무렵에 그린 작품.\n \n대지와 함께 살아가는 농민의 굳센 모습에는\n종교적인 의미가 내포되어 있다고 한다.\n후대의 화가 고흐에게도 영향을 주었다.",
+      "TWzh": "這幅畫是從巴黎搬到農村後，\n描繪農民朝田地撒種的樣子。\n畫中除了描繪與大地共生的農民\n強而有力的樣貌外，還包含了宗教的意義。\n對後代的畫家，包括梵谷，有深遠的影響。",
+      "USen": "Millet painted this piece of a farmer\nsowing wheat seeds in a field after\nmoving to the countryside from Paris.\nIf the piece reminds you of Van\nGogh, that's likely because Van\nGogh himself was inspired by it!",
+      "USes": "Luego de mudarse de París al campo,\nMillet pintó este cuadro de un\ncampesino sembrando trigo.\nSi esta obra recuerda a Van Gogh...\n¡es porque Van Gogh se inspiró\nen ella!",
+      "USfr": "C'est après avoir quitté Paris pour la\ncampagne que Millet peignit ce\nfermier en train de semer.\nCette toile vous fait penser à van\nGogh? C'est normal : van Gogh\nlui-même s'en est inspiré!"
+    }
+  },
+  {
+    "label": "art_00056",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "夜巡\n伦勃朗·哈尔曼松·凡·莱因／作\n1642年　[油画·布面]",
+      "EUde": "Die Nachtwache\nRembrandt van Rijn, 1642\nÖl auf Leinwand",
+      "EUen": "The Night Watch\n 　 Rembrandt van Rijn, 1642\n 　 　 Oil on canvas",
+      "EUes": "La ronda de noche\nRembrandt van Rijn, 1642\nÓleo sobre lienzo",
+      "EUfr": "La Ronde de nuit\nRembrandt van Rijn, 1642\nHuile sur toile",
+      "EUit": "Ronda di notte\nRembrandt van Rijn, 1642\nOlio su tela",
+      "EUnl": "De Nachtwacht\nRembrandt van Rijn, 1642\nOlieverf op doek",
+      "EUru": "Ночной дозор\nРембрандт ван Рейн, 1642\nХолст, масло",
+      "JPja": "夜警\nレンブラント・ファン・レイン／作\n1642年　[油彩・キャンバス]",
+      "KRko": "야경\n렘브란트 반 레인 작품\n1642년　[유채・캔버스]",
+      "TWzh": "夜巡\n林布蘭‧哈爾曼松‧范‧萊因\n1642年　[油彩‧畫布]",
+      "USen": "The Night Watch\n 　 Rembrandt van Rijn, 1642\n 　 　 Oil on canvas",
+      "USes": "La ronda de noche\nRembrandt van Rijn, 1642\nÓleo sobre lienzo",
+      "USfr": "La ronde de nuit\nRembrandt van Rijn, 1642\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00056_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "17世纪荷兰画家伦勃朗描绘\n民兵队出巡的最高杰作。\n　\n当时的肖像画通常都是直立不动的，\n而这幅画却以生动的动作以及巧妙的\n光影技巧，描绘出了戏剧化的场景。\n原本以为描绘的是漫长黑夜的光景，\n但修复后才知道是因为保护画面的漆\n发黑才看起来暗沉，实际是白天的光景。",
+      "EUde": "Im 17. Jahrhundert entstandenes\nMeisterwerk des niederländischen\nKünstlers Rembrandt.\nDieses Gemälde, das ein Treffen\neiniger Soldaten zeigt, stellte eine\nRevolution in der Malerei dar.\nBis zu diesem Zeitpunkt nämlich\nwurden Personen in Porträts nie\nin Bewegung gemalt.\nKunstgelehrte gingen lange Zeit\ndavon aus, dass das Gemälde eine\nnächtliche Szene zeigt.\nDoch wie sich bei einer Restauration\nherausstellte, handelte es sich um\neine dunkle, schützende Lackschicht.\nHeute können wir die dynamischen\nPosen und Lichteffekte so sehen,\nwie vom Künstler beabsichtigt.",
+      "EUen": "This masterpiece, painted by 17th\ncentury Dutch artist Rembrandt,\ndepicts a military gathering.\nAt the time, portraits usually showed\ntheir subjects standing still. So this\nwas a leap forward in technique.\nFor many years, art scholars thought\nthe painting was set at night, but a\nrestoration revealed a dark varnish.\nWe can now see the dynamic poses\nand lighting as they were meant to\nbe seen—in the daytime!",
+      "EUes": "Rembrandt, el gran pintor holandés\ndel siglo XVII, representó en esta\nobra maestra una reunión militar.\nEl dinamismo de esta obra supone\nuna gran novedad para su tiempo, en\nque los retratos solían ser estáticos.\nSu nombre se debe a que durante\naños los expertos pensaron que\nse trataba de una escena nocturna.\nSin embargo, una posterior\nrestauración reveló la presencia\nen el lienzo de un barniz oscuro.\n¡Ahora sabemos que el juego\nde luces y sombras buscaba\nreproducir una imagen diurna!",
+      "EUfr": "Ce chef-d'œuvre, peint au XVIIe\nsiècle par le néerlandais Rembrandt,\nreprésente un attroupement militaire.\nÀ l'époque, les sujets des portraits\nétaient statiques. Il s'agit donc d'une\nœuvre de précurseur.\nOn a longtemps cru que la scène se\ndéroulait de nuit, mais une couche\nde vernis sombre avait été appliquée.\nAprès restauration, nous pouvons\nenfin admirer ces poses expressives\nainsi que l'artiste les avait voulues.",
+      "EUit": "Capolavoro realizzato da Rembrandt,\nartista olandese del XVII secolo, che\nritrae un raduno di militari.\nAl tempo, i soggetti venivano resi\nsempre in posizione statica, quindi\ntale opera fu rivoluzionaria.\nPer anni, gli studiosi di arte\nritennero che il dipinto fosse\nambientato di notte.\nTuttavia, in seguito a un intervento\ndi restauro, venne riportato alla luce\nuno strato scuro.\nCiò dimostrò che l'illuminazione e le\npose plastiche erano state concepite\nper un'ambientazione diurna.",
+      "EUnl": "Dit meesterwerk van de 17e-eeuwse\nschilder Rembrandt toont een\nschutterscompagnie.\nDestijds werden mensen meestal\nstilstaand geportretteerd, dus dit\nwerk is qua techniek zijn tijd vooruit.\nLang dacht men dat het een nacht-\ntafereel was, maar later bleek dat de\nvernislaag donker was geworden.\nWe kunnen nu de dynamische\nhoudingen en de lichtval zien zoals\nze bedoeld waren: bij daglicht!",
+      "EUru": "На этой картине XVII в. Рембрандт,\nголландский художник, изобразил\nвыступление военного отряда.\nВ то время на портретах рисовали\nнеподвижных людей. Эта работа\nбыла новым словом в живописи.\nСюжет картины долго считался\nночным, но в ходе реставрации\nбыл удален потемневший лак.\nСейчас мы видим динамичные позы\nи освещение так, как они были\nзадуманы — в дневное время.",
+      "JPja": "17世紀のオランダの画家、レンブラントが\n市民警備隊の姿を描いた最高傑作。\n　\n当時の肖像画は直立不動が常識だったが、今\nにも動きだしそうなポーズや光と影を巧みに\n使い、ドラマチックな情景を描いている。\n長らく夜の光景と思われていたが、画面を保\n護するニスが黒ずんで暗く見えていただけで\n実は昼の光景であることが修復でわかった。",
+      "KRko": "17세기의 네덜란드 화가 렘브란트가\n시민 경비대의 모습을 그린 최고의 걸작.\n \n당시의 초상화는 부동자세가 보통이었으나\n당장이라도 움직일 듯한 포즈나 빛과 그림자의\n절묘한 활용이 드라마틱하게 그려졌다.\n오랫동안 밤의 풍경으로 알려져 있었으나 실은\n그림을 보호하는 니스가 검게 변했을 뿐이며,\n실은 낮이었다는 사실이 복원을 통해 밝혀졌다.",
+      "TWzh": "這幅畫是17世紀荷蘭畫家林布蘭\n描繪民兵隊出巡的最高傑作。\n當時的肖像畫普遍還是直立不動的，\n但此畫作卻生動地描繪民兵的動作，\n巧妙地搭配光影，呈現出戲劇化的場景。\n原本以為這幅畫是描繪黑夜中的情景，\n直到修復畫作時，才知道應該是白天，\n只因畫作上的漆發黑，才會看起來暗暗的。",
+      "USen": "This masterpiece, painted by 17th\ncentury Dutch artist Rembrandt,\ndepicts a military gathering.\nAt the time, portraits usually showed\ntheir subjects standing still. So this\nwas a leap forward in technique.\nFor many years, art scholars thought\nthe painting was set at night, but a\nrestoration revealed a dark varnish.\nWe can now see the dynamic poses\nand lighting as they were meant to\nbe seen—in the daytime!",
+      "USes": "Rembrandt, el gran pintor holandés\ndel siglo XVII, representó en esta\nobra maestra una reunión militar.\nEl dinamismo de esta obra significó\nuna gran novedad para su tiempo, en\nque los retratos solían ser estáticos.\nSu nombre se debe a que durante\naños los expertos pensaron que\nse trataba de una escena nocturna.\nSin embargo, una posterior\nrestauración reveló la presencia\nen el lienzo de un barniz oscuro.\n¡Ahora sabemos que el juego\nde luces y sombras buscaba\nreproducir una imagen diurna!",
+      "USfr": "Ce chef-d'œuvre, peint au XVIIe\nsiècle par le néerlandais Rembrandt,\nreprésente un attroupement militaire.\nÀ l'époque, les sujets des portraits\nétaient statiques. Il s'agit donc d'une\nœuvre de précurseur.\nOn a longtemps cru que la scène se\ndéroulait de nuit, mais une couche\nde vernis sombre avait été appliquée.\nAprès restauration, nous pouvons\nenfin admirer ces poses expressives\nainsi que l'artiste les avait voulues."
+    }
+  },
+  {
+    "label": "art_00066",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "三世大谷鬼次的奴江户兵卫\n东洲斋写乐／作\n1794年　[木版画]",
+      "EUde": "Ōtani Oniji III. als Yakko Edobei\nTōshūsai Sharaku, 1794\nHolzblockdruck",
+      "EUen": "Ōtani Oniji the 3rd as Yakko Edobei\n 　Tōshūsai Sharaku, 1794\n 　 Woodblock print",
+      "EUes": "Otani Oniji III como Yakko Edobei\nToshusai Sharaku, 1794\nXilografía",
+      "EUfr": "Ōtani Oniji III dans le rôle\nde Yakko Edobei\nTōshūsai Sharaku, 1794, estampe sur bois",
+      "EUit": "L'attore Ōtani Oniji III\ncome Yakko Edobei\nTōshūsai Sharaku, 1794, Xilografia",
+      "EUnl": "Ōtani Oniji III als Yakko Edobei\nTōshūsai Sharaku, 1794\nHoutsnede",
+      "EUru": "Отани Онидзи III в роли Эдобэя\nТосюсай Сяраку, 1794\nГравюра на дереве",
+      "JPja": "三世大谷鬼次の奴江戸兵衛\n東洲斎写楽／作\n1794年　[木版画]",
+      "KRko": "3대 오타니 오니지의 얏코에도베\n도슈사이 샤라쿠 작품\n1794년　[목판화]",
+      "TWzh": "三世大谷鬼次 奴江戶兵衛\n東洲齋寫樂\n1794年　[木版畫]",
+      "USen": "Ōtani Oniji the 3rd as Yakko Edobei\n 　Tōshūsai Sharaku, 1794\n 　 Woodblock print",
+      "USes": "Otani Oniji III como Yakko Edobei\nToshusai Sharaku, 1794\nXilografía",
+      "USfr": "Otani Oniji III dans le rôle\nde Yakko Edobei\nTōshūsai Sharaku, 1794, estampe sur bois"
+    }
+  },
+  {
+    "label": "art_00066_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "江户时代中期的浮世绘大师东洲斋写乐\n所描绘的演员画像。写乐留下了大约140幅\n浮世绘，而他的活跃期只有10个月。",
+      "EUde": "Ein Druck des Künstlers Tōshūsai\nSharaku aus der Edo-Zeit, der einen\nberühmten Schauspieler zeigt.\nSharaku fertigte ungefähr 140 Ukiyo-\ne-Drucke während seiner Karriere an,\ndie jedoch nur 10 Monate andauerte!",
+      "EUen": "A print from the mid-Edo period by\nTōshūsai Sharaku depicting a famous\nactor of the time.\nSharaku made roughly 140 ukiyo-e\nprints in his career, even though it\nonly spanned around 10 months!",
+      "EUes": "En esta xilografía de mediados \ndel período Edo, Sharaku retrató\na un famoso actor de la época.\nEl artista realizó unas 140 obras de\nukiyo-e durante su carrera, ¡que solo\nduró unos 10 meses!",
+      "EUfr": "Cette estampe du milieu de l'époque\nd'Edo signée Tōshūsai Sharaku\nreprésente un célèbre acteur.\nSharaku réalisa environ\n140 estampes ukiyo-e au cours de sa\ncourte carrière... qui dura 10 mois !",
+      "EUit": "Stampa del periodo Edo che ritrae\nun famoso attore del tempo, opera\ndi Tōshūsai Sharaku.\nSharaku realizzò circa 140 stampe\nukiyo-e nel corso della sua carriera,\nche durò... solo 10 mesi!",
+      "EUnl": "Een houtsnede van Tōshūsai Sharaku\nuit de Edoperiode, die een\nberoemde toneelspeler afbeeldt.\nSharaku maakte tijdens zijn carrière\nruim 140 ukiyo-e-houtsnedes, hoewel\nhij slechts 10 maanden actief was!",
+      "EUru": "Гравюра середины периода Эдо,\nсозданная Тосюсаем Сяраку. На\nней изображен знаменитый актер.\nНа протяжении всего 10 месяцев\nСяраку создал около 140 гравюр\nв стиле укиё-э!",
+      "JPja": "江戸時代中期の浮世絵師、東洲斎写楽が描い\nた役者絵。写楽は140枚ほどの浮世絵を残し\nたが、活動期間は約10か月だけだった。",
+      "KRko": "에도 시대 중기 풍속화 화가 도슈사이 샤라쿠가\n그린 배우. 샤라쿠는 140장 정도의 풍속화를\n남겼는데 활동 기간은 약 10개월이었다고 한다.",
+      "TWzh": "這幅畫為江戶時代中期的浮世繪畫師東洲齋寫樂\n所畫的演員肖像。寫樂留有140張浮世繪於世，\n但其活躍期間卻僅約10個月。",
+      "USen": "A print from the mid-Edo period by\nTōshūsai Sharaku depicting a famous\nactor of the time.\nSharaku made roughly 140 ukiyo-e\nprints in his career, even though it\nonly spanned around 10 months!",
+      "USes": "En esta xilografía de mediados \ndel periodo Edo, Sharaku retrató\na un famoso actor de la época.\nEl artista realizó unas 140 obras de\nukiyo-e durante su carrera, ¡que solo\nduró unos 10 meses!",
+      "USfr": "Cette estampe du milieu de l'époque\nd'Edo signée Tōshūsai Sharaku\nreprésente un célèbre acteur.\nSharaku réalisa environ\n140 estampes ukiyo-e au cours de sa\ncourte carrière... qui dura 10 mois!"
+    }
+  },
+  {
+    "label": "art_00068",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "自由引导人民\n欧仁·德拉克洛瓦／作\n1830年　[油画·布面]",
+      "EUde": "Die Freiheit führt das Volk\nEugène Delacroix, 1830\nÖl auf Leinwand",
+      "EUen": "Liberty Leading the People\n 　 Eugène Delacroix, 1830\n 　 　 Oil on canvas",
+      "EUes": "La Libertad guiando al pueblo\nEugène Delacroix, 1830\nÓleo sobre lienzo",
+      "EUfr": "La Liberté guidant le peuple\nEugène Delacroix, 1830\nHuile sur toile",
+      "EUit": "La Libertà che guida il popolo\nEugène Delacroix, 1830\nOlio su tela",
+      "EUnl": "De Vrijheid leidt het volk\nEugène Delacroix, 1830\nOlieverf op doek",
+      "EUru": "Свобода, ведущая народ\nЭжен Делакруа, 1830\nХолст, масло",
+      "JPja": "民衆を導く自由の女神\nウジェーヌ・ドラクロワ／作\n1830年　[油彩・キャンバス]",
+      "KRko": "민중을 이끄는 자유의 여신\n외젠 들라크루아 작품\n1830년　[유채・캔버스]",
+      "TWzh": "自由引導人民\n歐仁‧德拉克羅瓦\n1830年　[油彩‧畫布]",
+      "USen": "Liberty Leading the People\n 　 Eugène Delacroix, 1830\n 　 　 Oil on canvas",
+      "USes": "La Libertad guiando al pueblo\nEugène Delacroix, 1830\nÓleo sobre lienzo",
+      "USfr": "La liberté guidant le peuple\nEugène Delacroix, 1830\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00068_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "德拉克洛瓦是19世纪法国浪漫主义的\n代表画家，受感于法国1830年发起的\n七月革命，并于同年绘制了这幅作品。\n中间的女性被错认为是“圣女贞德”，\n但实际是以虚构的女性\n“玛丽安娜”为原型的。",
+      "EUde": "Gemalt von Delacroix, einem der\nführenden Maler der Romantik\ndes 19. Jahrhunderts.\nDieses Werk entstand im Jahr der\nfranzösischen Julirevolution.\nBei der Frau in der Mitte handelt es\nsich nicht um Jeanne d'Arc, sondern\num die fiktive Person „Marianne“.",
+      "EUen": "Painted by leading 19th century\nRomantic artist Delacroix in the\nsame year as a French revolution.\nThe woman in the center is often\nmistaken for Joan of Arc, but she is\nactually the fictional \"Marianne.\"",
+      "EUes": "Delacroix, uno de los pintores más\ndestacados del romanticismo, pintó\neste cuadro en 1830.\nLa figura central no es Juana\nde Arco, sino una mujer ficticia\nconocida como «Marianne».",
+      "EUfr": "Cette toile fut peinte au XIXe siècle,\nen pleine révolution de Juillet, par le\nchef de file du romantisme Delacroix.\nContrairement à ce qu'on entend\nparfois, le tableau ne dépeint donc\npas la Révolution de 1789.",
+      "EUit": "Tra i pittori più rappresentativi del\nRomanticismo, Delacroix realizzò\nquest'opera nel 1830.\nLa figura al centro non è Giovanna\nd'Arco come si pensa, ma una donna\nfittizia di nome \"Marianne\".",
+      "EUnl": "Een werk van Delacroix, een 19e-\neeuwse kunstenaar uit de romantiek,\nuit het jaar van de Franse Revolutie.\nDe vrouw in het midden wordt vaak\naangezien voor Jeanne d'Arc, maar\nis eigenlijk de fictieve Marianne.",
+      "EUru": "Автор этой картины — Делакруа,\nведущий художник направления\nромантизма XIX века.\nОн написал эту картину в тот же\nгод, когда произошла Французская\nреволюция.\nЖенщину в центре часто считают\nЖанной Д'Арк, но на самом деле\nэто вымышленная Марианна.",
+      "JPja": "19世紀フランスのロマン主義の代表的画家\nドラクロワが、フランスで1830年に起きた\n7月革命を受けて、同じ年に描いた。\n中央の女性は「ジャンヌ・ダルク」だと勘違\nいされがちだが、架空の女性「マリアンヌ」\nがモデルである。",
+      "KRko": "19세기 프랑스 낭만주의의 대표적 화가\n들라크루아가 프랑스에서 1830년에 일어난\n7월 혁명을 배경으로 같은 해에 그린 그림.\n중앙에 있는 여성은 '잔다르크'라는 오해를\n받고 있지만 실은 가공의 여성인\n'마리안느'가 모델이라고 한다.",
+      "TWzh": "19世紀法國浪漫主義代表畫家德拉克羅瓦\n於1830年經歷法國7月革命後，\n同年繪製了這幅畫。\n正中間的女子經常被誤認為「聖女貞德」，\n但其實她的形象是來自於\n一位架空的女性「瑪莉安」。",
+      "USen": "Painted by leading 19th century\nRomantic artist Delacroix in the\nsame year as a French revolution.\nThe woman in the center is often\nmistaken for Joan of Arc, but she is\nactually the fictional \"Marianne.\"",
+      "USes": "Delacroix, uno de los pintores más\ndestacados del romanticismo, pintó\neste cuadro en 1830.\nLa figura central no es Juana\nde Arco, sino una mujer ficticia\nconocida como \"Marianne\".",
+      "USfr": "Cette toile fut peinte au XIXe siècle,\nen pleine révolution de Juillet, par le\nchef de file du romantisme Delacroix.\nContrairement à ce qu'on entend\nparfois, le tableau ne dépeint donc\npas la Révolution de 1789."
+    }
+  },
+  {
+    "label": "art_00072",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "宫娥\n迭戈·委拉斯凯兹／作\n1656年左右　[油画·布面]",
+      "EUde": "Las Meninas\nDiego Velázquez, um 1656\nÖl auf Leinwand",
+      "EUen": "Las Meninas\n 　 Diego Velázquez, circa 1656\n 　 　 Oil on canvas",
+      "EUes": "Las meninas\nDiego Velázquez, hacia 1656\nÓleo sobre lienzo",
+      "EUfr": "Les Ménines\nDiego Velázquez, vers 1656\nHuile sur toile",
+      "EUit": "Las meninas\nDiego Velázquez, 1656 ca.\nOlio su tela",
+      "EUnl": "Las Meninas\nDiego Velázquez, omstreeks 1656\nOlieverf op doek",
+      "EUru": "Менины\nДиего Веласкес, около 1656\nХолст, масло",
+      "JPja": "ラス・メニーナス\nディエゴ・ベラスケス／作\n1656年頃　[油彩・キャンバス]",
+      "KRko": "라스메니나스\n디에고 벨라스케스 작품\n1656년경　[유채・캔버스]",
+      "TWzh": "侍女\n迪亞哥‧維拉斯奎茲\n1656年左右　[油彩‧畫布]",
+      "USen": "Las Meninas\n 　 Diego Velázquez, circa 1656\n 　 　 Oil on canvas",
+      "USes": "Las meninas\nDiego Velázquez, hacia 1656\nÓleo sobre lienzo",
+      "USfr": "Les ménines\nDiego Velázquez, vers 1656\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_00072_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "效力于西班牙王宫的委拉斯凯兹的名作。\n描绘了小公主和陪伴在她身旁的女官们，\n以“宫娥”为主题创作的作品。\n画面左侧的画家是委拉斯凯兹自己，\n右边镜中映照的其实是国王和王妃。\n　\n也就是说，这幅画是国王眼中看到的\n画家在为国王和王后作画的场景。",
+      "EUde": "Velázquez, der am spanischen Hofe\ndiente, lehrt uns mit diesem berühm-\nten Werk etwas über Perspektive.\nEs zeigt eine junge Königstochter\nmit ihren „Hoffräulein“. Der Künstler\nselbst ist links zu sehen.\nDer König und die Königin sind in\ndem Spiegel zu erkennen, der sich\nrechts vom Künstler befindet.\nWir betrachten das Geschehen\ndemnach aus den Augen des Königs-\npaares, welches sich malen lässt.",
+      "EUen": "This famous piece by Velázquez, who\nserved the Spanish court, shows us\nsomething about perspective.\nIt depicts a young princess with her\n\"ladies-in-waiting.\" The artist himself\nis seen to the left.\nThe king and queen are reflected in\nthe mirror to the artist's right, so\nthe perspective is that of the king.\nThe king...watching the artist...paint\nthe king and the queen...",
+      "EUes": "Velázquez, que fue pintor de la corte,\nrealizó en esta famosa obra un\ninteresante ejercicio de perspectiva.\nEl cuadro muestra a la infanta\nMargarita con sus «meninas» y al\npropio pintor situado a la izquierda.\nEl rey y la reina aparecen a la\nderecha del artista, reflejados\nen el espejo.\nAsí, el punto de vista es el del rey,\nque observa al artista... pintando\na la reina y el rey.",
+      "EUfr": "Cette célèbre toile de Vélasquez,\nmembre de la cour du roi d'Espagne,\nprésente un angle de vue original.\nOn y voit l'infante accompagnée de\nses demoiselles d'honneur. L'artiste\ns'est représenté lui-même à gauche.\nLe roi et la reine apparaissent dans\nle miroir à droite du peintre. La scène\nest donc vue à travers leurs yeux.\nLa reine et le roi regardent l'artiste...\nen train de les peindre.",
+      "EUit": "Questa famosa tela di Velázquez, che\nfu pittore di corte in Spagna, è un\ninteressante esercizio di prospettiva.\nIl quadro ritrae l'infanta Margarita\ncon le sue damigelle d'onore e il\npittore stesso, situato sulla sinistra.\nIl re e la regina appaiono alla destra\ndell'artista, riflessi nello specchio.\nIn questo modo, il punto di vista è\nquello del re, che osserva l'artista\nmentre... ritrae il re e la regina.",
+      "EUnl": "Een beroemd werk van Velázquez,\ndie aan het Spaanse hof diende.\nHet perspectief is opvallend.\nHet toont een prinses en haar hof-\ndames. De schilder is links te zien.\nDe koning en de koningin zijn te zien\nin de spiegel.\nHet tafereel is afgebeeld vanuit het\ngezichtspunt van de koning, die\ntoekijkt terwijl Velázquez schildert.",
+      "EUru": "Это знаменитое полотно\nДиего Веласкеса, служившего\nпри испанском дворе.\nОно прекрасно демонстрирует\nперспективу. На нем изображена\nинфанта со свитой.\nСлева стоит сам художник.\nА в зеркале справа от него\nотражаются король и королева.\nТак что картина изображена\nкак бы из перспективы короля.\nКоторый... смотрит, как художник...\nрисует короля и королеву.",
+      "JPja": "スペイン王宮に仕えた、ベラスケスの名作。\n小さい王女と、つきそいの女官達が描かれ、\n「女官たち」という意味の題がつけられた。\n画面左の画家はベラスケス自身で、その右側\nの鏡に映っているのは、実は国王と王妃。\n　\nつまりこの絵は、ベラスケスが国王と王妃を\n描いている様子を、国王の目から見たシーン\nなのである。",
+      "KRko": "스페인 왕국에서 일하던 벨라스케스의 명작.\n어린 공주와 시중을 드는 여인들이 등장해서\n'시녀들'이라는 의미의 제목이 붙여졌다.\n그림 왼쪽의 화가는 벨라스케스 본인이며\n그 오른쪽의 거울에 비친 인물은\n국왕과 왕비이다.\n결국 이 그림은 벨라스케스가\n국왕과 왕비를 그리고 있는 모습을\n국왕의 시선으로 그린 장면인 것이다.",
+      "TWzh": "這是任職於西班牙宮廷的維拉斯奎茲的名作。\n由於畫出小公主和身旁侍女們的樣子，\n因此被命名為「侍女」。\n畫面左側是畫家維拉斯奎茲本人，右側的鏡中\n則是映照著國王和皇后的身影。\n其實這幅畫是從國王視角\n看向維拉斯奎茲在為國王和皇后作畫的情景。",
+      "USen": "This famous piece by Velázquez, who\nserved the Spanish court, shows us\nsomething about perspective.\nIt depicts a young princess with her\n\"ladies-in-waiting.\" The artist himself\nis seen to the left.\nThe king and queen are reflected in\nthe mirror to the artist's right, so\nthe perspective is that of the king.\nThe king...watching the artist...paint\nthe king and the queen...",
+      "USes": "Velázquez, que fue pintor de la corte,\nrealizó en esta famosa obra un\ninteresante ejercicio de perspectiva.\nEl cuadro muestra a la infanta\nMargarita con sus \"meninas\" y al\npropio pintor situado a la izquierda.\nEl rey y la reina aparecen a la\nderecha del artista, reflejados\nen el espejo.\nAsí, el punto de vista es el del rey,\nque observa al artista... pintando\na la reina y el rey.",
+      "USfr": "Cette célèbre toile de Vélasquez,\nmembre de la cour du roi d'Espagne,\nprésente un angle de vue original.\nOn y voit l'infante accompagnée de\nses demoiselles d'honneur. L'artiste\ns'est représenté lui-même à gauche.\nLe roi et la reine apparaissent dans\nle miroir à droite du peintre. La scène\nest donc vue à travers leurs yeux.\nLa reine et le roi regardent l'artiste...\nen train de les peindre."
+    }
+  },
+  {
+    "label": "art_00076",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "风神雷神图屏风（风神）\n俵屋宗达／作\n宽永年间左右　[纸本金地着色]",
+      "EUde": "Wandschirm mit Fūjin und Raijin (R)\nTawaraya Sōtatsu, 17. Jh.\nBlattgold und Tusche auf Papier",
+      "EUen": "Folding Screen of Fūjin and Raijin (R)\n Tawaraya Sōtatsu, 17th century\n Gold leaf and ink on paper",
+      "EUes": "Biombo de Fūjin y Raijin (derecha)\nTawaraya Sōtatsu, siglo XVII\nOro y tinta sobre papel",
+      "EUfr": "Paravent de Fūjin et Raijin (D)\nTawaraya Sōtatsu, XVIIe siècle\nFeuille d'or et encre sur papier",
+      "EUit": "Paravento di Fūjin e Raijin (parte dx)\nTawaraya Sōtatsu, XVII sec.\nFoglie d'oro e inchiostro su carta",
+      "EUnl": "Vouwscherm met Fūjin en Raijin (r)\nTawaraya Sōtatsu, 17e eeuw\nBladgoud en inkt op papier",
+      "EUru": "Фудзин и Райдзин: боги ветра\nи грома (правая часть)\nТаварая Сотацу, XVII век, тушь, золото, бумага",
+      "JPja": "風神雷神図屏風（風神）\n俵屋宗達／作\n寛永年間頃　[紙本金地著色]",
+      "KRko": "풍신뇌신도 병풍(풍신)\n다와라야 소타쓰 작품\n칸에이 시대　[금지 설채]",
+      "TWzh": "風神雷神圖屏風（風神）\n俵屋宗達\n寛永年間左右　[紙本金地著色]",
+      "USen": "Folding Screen of Fūjin and Raijin (R)\n Tawaraya Sōtatsu, 17th century\n Gold leaf and ink on paper",
+      "USes": "Biombo de Fūjin y Raijin (derecha)\nTawaraya Sōtatsu, siglo XVII\nOro y tinta sobre papel",
+      "USfr": "Paravent de Fūjin et Raijin (D)\nTawaraya Sōtatsu, XVIIe siècle\nFeuille d'or et encre sur papier"
+    }
+  },
+  {
+    "label": "art_00076_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "用金箔涂满背景，以充满跃动感的笔触\n描绘出风神雷神的二曲一双屏风图，\n是江户时代初期画家俵屋宗达的杰作。\n题材的简略化与形式化，省略背景的\n设计感风格被后来的尾形光琳继承，\n作为琳派流传到现代。",
+      "EUde": "Dieser Wandschirm zeigt eine\nSzene mit Fūjin und Raijin auf\neinem Hintergrund aus Blattgold.\nEr gilt als das Meisterwerk von\nTawaraya Sōtatsu, einem Künstler\naus der frühen Edo-Zeit.\nDer hier zum Einsatz kommende Stil\nder vereinfachten Darstellung wurde\nmaßgeblich von Ogata Kōrin geprägt.\nDieser Stil, genannt Rinpa, ist auch\nheute noch Bestandteil der Schule\nder japanischen Malerei.",
+      "EUen": "This folding screen shows dynamic\nbrushwork of Fūjin and Raijin on\na gold-leaf background.\nIt is thought to be the masterpiece of\nTawaraya Sōtatsu, an early-Edo-\nperiod artist.\nThe simplification of the subjects is\na style that was carried on by\nOgata Kōrin.\nIt's a style still in use today in the\nRinpa school of Japanese painting.",
+      "EUes": "Este biombo muestra, con pinceladas\ndinámicas, a los dioses Fūjin y Raijin\nsobre un fondo de pan de oro.\nMuchos lo consideran la obra\nmaestra de Tawaraya Sōtatsu, quien\nvivió a principios del periodo Edo.\nLa simplificación de los motivos\npictóricos es un estilo que luego\ncontinuó Ogata Korin.\nRinpa, una de las escuelas más\nimportantes de pintura japonesa,\nsigue usando ese estilo aún hoy.",
+      "EUfr": "Il s'agit d'une représentation très\ndynamique de Fūjin et Raijin sur fond\nde feuille d'or.\nOn considère que c'est là le chef-\nd'œuvre de Tawaraya Sōtatsu, un\nartiste du début de l'époque d'Edo.\nLa simplification des sujets constitue\nun style initié par Ogata Kōrin.\nIl est toujours en vogue de nos jours\ndans l'école de peinture japonaise\nRinpa.",
+      "EUit": "Questo paravento ritrae, con delle\npennellate dinamiche, gli dei Fūjin\ne Raijin su uno sfondo di foglie d'oro.\nÈ considerata da molti come l'opera\nmaestra di Tawaraya Sōtatsu, che\nvisse agli inizi del periodo Edo.\nLa semplificazione dei soggetti\nincarna uno stile che venne\nripreso poi da Ogata Kōrin.\nÈ ancora in voga ai giorni nostri\nnella scuola di pittura giapponese\nRinpa.",
+      "EUnl": "Dit vouwscherm toont in dynamische\npenseelstreken Fūjin and Raijin op\neen achtergrond van bladgoud.\nHet wordt als het meesterwerk\ngezien van Tawaraya Sōtatsu, die\nleefde in de vroege Edoperiode.\nDe stijl waarin onderwerpen\nvereenvoudigd worden afgebeeld, is\nvoortgezet door Ogata Kōrin.\nDeze stijl wordt nog steeds gebruikt\ndoor de Japanse Rinpa-school van\nde schilderkunst.",
+      "EUru": "На этой ширме на позолоченном\nфоне изображены бог ветра\nи бог грома.\nОна считается шедевром Тавараи\nСотацу, художника раннего\nпериода Эдо.\nПозже такое упрощенное\nизображение персонажей\nперенял Огата Корин.\nЭтот стиль до сих пор\nиспользуется японской\nшколой Ринпа.",
+      "JPja": "背景を金箔で埋め尽くし、躍動感ある筆致で\n風神雷神を配した二曲一双の屏風図は、江戸\n時代初期の画家、俵屋宗達による傑作。\n題材の簡略化やパターン化、背景を省略した\nデザイン的なスタイルは後の尾形光琳に受け\n継がれ、琳派として現代にも繋がっている。",
+      "KRko": "배경을 금박으로 가득 채우고 역동적인 필치로\n풍신과 뇌신을 그린 한 쌍의 병풍. 에도 시대\n초기의 화가인 다와라야 소타쓰의 걸작이다.\n주제의 간략화 및 패턴화, 배경을 생략하는\n디자인 기법은 후에 오가타 고린이 계승하여,\n린파라는 화풍으로 이어졌다.",
+      "TWzh": "這是江戶時代初期畫家俵屋宗達的大作，\n在兩扇一對的屏風上貼滿金箔作為背景，\n以流動感強烈的筆鋒畫上風神和雷神。\n題材簡略化、形式化和省略背景的設計風格\n為之後的尾形光琳所繼承，\n並以「琳派」流傳到現代。",
+      "USen": "This folding screen shows dynamic\nbrushwork of Fūjin and Raijin on\na gold-leaf background.\nIt is thought to be the masterpiece of\nTawaraya Sōtatsu, an early-Edo-\nperiod artist.\nThe simplification of the subjects is\na style that was carried on by\nOgata Kōrin.\nIt's a style still in use today in the\nRinpa school of Japanese painting.",
+      "USes": "Este biombo muestra, con pinceladas\ndinámicas, a los dioses Fūjin y Raijin\nsobre un fondo de pan de oro.\nMuchos lo consideran la obra\nmaestra de Tawaraya Sōtatsu, quien\nvivió a principios del periodo Edo.\nLa simplificación de los motivos\npictóricos es un estilo que luego\ncontinuó Ogata Kōrin.\nRinpa, una de las escuelas más\nimportantes de pintura japonesa,\nsigue usando ese estilo aún hoy.",
+      "USfr": "Il s'agit d'une représentation très\ndynamique de Fūjin et Raijin sur fond\nde feuille d'or.\nOn considère que c'est là le chef-\nd'œuvre de Tawaraya Sōtatsu, un\nartiste du début de l'époque d'Edo.\nLa simplification des sujets constitue\nun style initié par Ogata Kōrin.\nIl est toujours en vogue de nos jours\ndans l'école de peinture japonaise\nRinpa."
+    }
+  },
+  {
+    "label": "art_00078",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "大碗岛的星期天下午\n乔治·修拉／作\n1885年左右　[油画·布面]",
+      "EUde": "Ein Sonntagnachmittag auf\nder Insel La Grande Jatte\nGeorges Seurat, um 1885, Öl auf Leinwand",
+      "EUen": "A Sunday Afternoon\n on the Island of La Grande Jatte \n Georges Seurat, circa 1885, Oil on canvas",
+      "EUes": "Tarde de domingo\nen la isla de la Grande Jatte\nGeorges Seurat, hacia 1885. Óleo sobre lienzo",
+      "EUfr": "Un Dimanche après-midi à l'île\nde la Grande Jatte\nGeorges Seurat, vers 1885, huile sur toile",
+      "EUit": "Una domenica pomeriggio\nall'isola della Grande-Jatte\nGeorges Seurat, 1885, Olio su tela",
+      "EUnl": "Zondagmiddag\nop het eiland La Grande Jatte\nGeorges Seurat, circa 1885, olieverf op doek",
+      "EUru": "Воскресный день на острове\nГранд-Жатт\nЖорж Сёра, около 1885, холст, масло",
+      "JPja": "グランド・ジャット島の日曜日の午後\nジョルジュ・スーラ／作\n1885年頃　[油彩・キャンバス]",
+      "KRko": "그랑드자트 섬의 일요일 오후\n조르주 쇠라 작품\n1885년경　[유채・캔버스]",
+      "TWzh": "大碗島的星期天下午\n喬治‧秀拉\n1885年左右　[油彩‧畫布]",
+      "USen": "A Sunday Afternoon\n on the Island of La Grande Jatte \n Georges Seurat, circa 1885, Oil on canvas",
+      "USes": "Tarde de domingo\nen la isla de la Grande Jatte\nGeorges Seurat, hacia 1885. Óleo sobre lienzo",
+      "USfr": "Un dimanche après-midi à l'île\nde la Grande Jatte\nGeorges Seurat, vers 1885, huile sur toile"
+    }
+  },
+  {
+    "label": "art_00078_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "新印象派的创始者修拉发明了\n不使用混合色来表现鲜艳色彩的技法，\n只用细微的笔触描绘出了这幅作品。\n为了描绘在法国塞纳河中的岛上\n愉快度过休息日的人们，\n花费了整整2年的时光。",
+      "EUde": "Seurat, auch bekannt als Gründer\ndes Neo-Impressionismus, erfand die\nMalweise „Pointillismus“.\nDiese Art des Malens, bei der Farb-\npigmente nicht vermischt werden,\nerfordert allerdings einiges an Zeit.\nFür das hier ausgestellte Werk\nbenötigte Seurat zwei Jahre.\nEs zeigt eine Gruppe Menschen,\ndie ihre Freizeit an der Seine, einem\nFluss in Frankreich, verbringen.",
+      "EUen": "Seurat, known as the founder of\nneo-impressionism, invented the use\nof brightly colored dots.\nHis method, which does not involve\nmixing pigments, took time. This\npiece, for instance, took two years.\nIt shows a crowd enjoying a day off\nat the river Seine in France.",
+      "EUes": "Seurat, considerado el fundador del\nneoimpresionismo, creó la técnica\nde usar puntos de colores brillantes.\nComo los matices de color se logran\npor la cercanía de los puntos, es un\nmétodo que requiere mucho tiempo.\nEste cuadro, por ejemplo, que\nrepresenta un día de ocio junto\nal Sena, le llevó dos años pintarlo.",
+      "EUfr": "Seurat, connu comme le fondateur\ndu néo-impressionnisme, a inventé\nla technique du pointillisme.\nCette méthode, qui ne fait pas appel\nau mélange de pigments, prend par\ncontre énormément de temps.\nAinsi, cette toile représentant la\nfoule profitant des bords de Seine\na nécessité deux ans de travail.",
+      "EUit": "Seurat, considerato il padre del\nneoimpressionismo, creò la tecnica\ndel puntinismo.\nQuesto metodo, che non prevede\nla mescolazione di pigmenti, richiede\nmolto tempo.\nQuesto quadro, ad esempio, che\nrappresenta un giorno di svago lungo\nla Senna, richiese due anni di lavoro.",
+      "EUnl": "Een werk van Seurat, die aan de wieg\nvan het neo-impressionisme stond en\nmet felgekleurde stippen schilderde.\nZijn methode, zonder gebruik van\ngemengde pigmenten, is tijdrovend.\nZo kostte dit werk twee jaar.\nHet schilderij toont een menigte\nmensen die zich vermaken aan de\noever van de Seine.",
+      "EUru": "Сёра известен как основоположник\nнеоимпрессионизма. Он впервые\nиспользовал разноцветные точки.\nИзобретенный им способ\nне требовал смешивания красок,\nно был медленным.\nНаписание этой картины,\nнапример, заняло два года.\nНа ней изображена толпа,\nнаслаждающаяся выходным на\nберегу реки Сены во Франции.",
+      "JPja": "新印象派の創始者であるスーラが、絵の具を\n混ぜることなく鮮やかな色を表現するための\n技法を発明し、細かい点だけで描いた作品。\nフランス、セーヌ川の中にある島で休日を\n楽しむ人々のこの光景を描き終えるのに、\n2年の歳月を要した。",
+      "KRko": "신인상파의 창시자인 쇠라가 물감을 섞지 않고도\n선명하게 색을 표현하는 기법을 발명,\n점만 사용해서 섬세하게 그린 작품.\n프랑스 센강에 있는 섬에서\n휴일을 즐기는 사람들의 광경을\n구체적이면서도 섬세하게 그려낸 점묘화.",
+      "TWzh": "這幅畫是新印象派創始人秀拉\n僅以小圓點所創作的作品。秀拉還發明了\n為呈現鮮明的色彩而不將顏料混色的技法。\n這幅人們在法國塞納河中的一座小島上\n開心度假的情景，費時兩年才完成。",
+      "USen": "Seurat, known as the founder of\nneo-impressionism, invented the use\nof brightly colored dots.\nHis method, which does not involve\nmixing pigments, took time. This\npiece, for instance, took two years.\nIt shows a crowd enjoying a day off\nat the river Seine in France.",
+      "USes": "Seurat, considerado el fundador del\nneoimpresionismo, creó la técnica\nde usar puntos de colores brillantes.\nComo los matices de color se logran\npor la cercanía de los puntos, es un\nmétodo que requiere mucho tiempo.\nEste cuadro, por ejemplo, que\nrepresenta un día de ocio junto\nal Sena, le llevó dos años pintarlo.",
+      "USfr": "Seurat, connu comme le fondateur\ndu néo-impressionnisme, a inventé\nla technique du pointillisme.\nCette méthode, qui ne fait pas appel\nau mélange de pigments, prend par\ncontre énormément de temps.\nAinsi, cette toile représentant la\nfoule profitant des bords de Seine\na nécessité deux ans de travail."
+    }
+  },
+  {
+    "label": "art_01331",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "母狼像\n作者不明\n公元前5世纪左右　[青铜]",
+      "EUde": "Kapitolinische Wölfin\nUnbekannt, 5. Jh. v. Chr.\nBronze",
+      "EUen": "Capitoline Wolf\n 　 Artist Unknown, 5th century BCE\n 　 Bronze",
+      "EUes": "Loba capitolina\nAnónimo, siglo V a. C.\nBronce",
+      "EUfr": "Louve capitoline\nArtiste inconnu, Ve siècle av. è. c.\nBronze",
+      "EUit": "Lupa capitolina\nArtista sconosciuto, XI-XII sec. d. C.\nBronzo",
+      "EUnl": "Capitolijnse wolvin\nOnbekende kunstenaar, 11e-12e eeuw n.C.\nBrons",
+      "EUru": "Капитолийская волчица\nНеизвестный скульптор, V век до н. э.\nБронза",
+      "JPja": "カピトリーノの雌狼\n作者不明\n紀元前５世紀頃　[ブロンズ]",
+      "KRko": "카피톨리나 늑대상\n작자 미상\n기원전 5세기경　[청동]",
+      "TWzh": "母狼乳嬰\n作者不明\n西元前５世紀左右　[青銅]",
+      "USen": "Capitoline Wolf\n 　 Artist Unknown, 5th century BCE\n 　 Bronze",
+      "USes": "Loba capitolina\nAnónimo, siglo V a. C.\nBronce",
+      "USfr": "Louve capitoline\nArtiste inconnu, Ve siècle av. è. c.\nBronze"
+    }
+  },
+  {
+    "label": "art_01331_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "古罗马传说中养育着双胞胎的狼。\n双胞胎是15世纪加上去的，\n但狼的铜像是公元前5世纪的历史杰作……\n虽然是这么认为，但最近的研究中又有说\n这是11～12世纪的铜像。（本馆的展示暂且\n保留公元前5世纪左右的说法。）",
+      "EUde": "Diese Wölfin aus der römischen\nMythologie, die ein Zwillingspaar auf-\nzog, war Grund einiger Kontroversen.\nDie Originalskulptur der Wölfin aus\nBronze gilt als Meisterwerk aus dem\n5. Jahrhundert vor Christus.\nDie Zwillinge wurden nachträglich\nim 15. Jahrhundert hinzugefügt.\nEs gibt allerdings auch die Theorie,\ndass auch die Wölfin erst im 11. oder\n12. Jh. entstanden sein könnte.",
+      "EUen": "This wolf from Roman mythology\nraises a pair of twins, along with\nsome controversy.\nThe original bronze sculpture of the\nwolf is a masterpiece that dates back\nto 5th century BCE.\nThe twins were added during the\n15th century...or so it was thought.\nRecent research has given rise to\nspeculation that the original piece\nmay be from the 11th or 12th century.\n(We will, however, stick with the 5th\ncentury BCE estimate for now.)",
+      "EUes": "Esta legendaria loba romana que\ncrio a dos gemelos está envuelta\nen cierta polémica.\nLa escultura original de la loba,\nde bronce, es una obra maestra\nque se remonta al siglo V a. C.\nPosteriormente, en el siglo XV,\nse le añadieron los gemelos.\nO eso se pensaba...\nHasta que investigaciones recientes\nsugirieron que la estatua original\npodría datar de los siglos XI o XII.\nDe todos modos, nosotros daremos\npor buena, al menos de momento,\nla datación del siglo V a. C.",
+      "EUfr": "La louve issue de la mythologie\nromaine est au centre de cette\nsculpture... et d'une polémique.\nLa louve de bronze elle-même est\nun chef-d'œuvre datant du Ve siècle\navant J.-C.\nQuant aux jumeaux, ils auraient été\najoutés au XVe siècle... Ou du moins,\nc'est ce qu'on a longtemps cru.\nDes recherches récentes suggèrent\nque l'œuvre originale daterait en\nréalité du XIe ou XIIe siècle.",
+      "EUit": "Questa leggendaria lupa romana\nche alleva una coppia di gemelli\nè al centro di un'aspra polemica.\nLa scultura originale della lupa,\ndi bronzo, è un capolavoro che\nrisale al V secolo a. C.\nSuccessivamente, nel XV secolo,\nvennero aggiunti i gemelli. O così\nsi pensava...\nStudi recenti suggeriscono che la\nstatua originale potrebbe in realtà\nrisalire all'XI o al XII secolo.",
+      "EUnl": "Deze wolvin uit de Romeinse\nmythologie, die een tweeling voedt,\nheeft voor veel discussie gezorgd.\nLange tijd werd gedacht dat de\nwolvin uit de 5e eeuw v.C. stamt\nen de tweeling uit de 15e eeuw n.C.\nRecent onderzoek duidt er echter op\ndat het beeld van de wolvin uit de\n11e of 12e eeuw n.C. stamt.",
+      "EUru": "Согласно древнеримской легенде\nэта волчица взрастила двух\nмальчиков-близнецов.\nНо сама скульптура взрастила,\nскорее, целое поле разнообразных\nтеорий.\nБронзовая скульптура волчицы —\nшедевр V века до н. э.\nБлизнецы были добавлены к ней\nв XV веке... по крайней мере,\nтак считалось.\nПотому что недавние исследования\nдали повод полагать, что и волчица\nмогла быть отлита в XI–XII веках.\n(Но мы пока что считаем, что\nона была сделана в V веке до н. э.)",
+      "JPja": "ローマの伝説にある、双子を育てる狼。双子\nは15世紀に後付けされたが、狼のブロンズ像\nのほうは紀元前５世紀の歴史的な傑作…\nと思われていたが、最近の研究で11～12世紀\nの像という説が浮上した。（当館での表示は\nひとまず紀元前５世紀頃のままとする）",
+      "KRko": "로마의 전설에 나오는 쌍둥이를 키운 늑대.\n쌍둥이는 15세기에 만들어 붙였지만, 늑대는\n기원전 5세기에 만들어진 역사 깊은 걸작…\n으로 알려졌지만 최근 연구로 11～12세기\n작품이라는 설이 제기되었다.(본 박물관에서는\n그대로 기원전 5세기경으로 표기한다)",
+      "TWzh": "這是羅馬神話裡養育雙胞胎的狼。\n雙胞胎是於15世紀時才加上去的，\n而狼的銅像則是西元前5世紀的歷史性傑作。\n話雖如此，但最近又有研究顯示\n這是11～12世紀的銅像。（本館的展示\n暫且保留西元前5世紀左右的說法。）",
+      "USen": "This wolf from Roman mythology\nraises a pair of twins, along with\nsome controversy.\nThe original bronze sculpture of the\nwolf is a masterpiece that dates back\nto 5th century BCE.\nThe twins were added during the\n15th century...or so it was thought.\nRecent research has given rise to\nspeculation that the original piece\nmay be from the 11th or 12th century.\n(We will, however, stick with the 5th\ncentury BCE estimate for now.)",
+      "USes": "Esta legendaria loba romana que\ncrio a dos gemelos está envuelta\nen cierta polémica.\nLa escultura original de la loba,\nde bronce, es una obra maestra\nque se remonta al siglo V a. C.\nPosteriormente, en el siglo XV,\nse le añadieron los gemelos.\nO eso se pensaba...\nHasta que investigaciones recientes\nsugirieron que la estatua original que\npodría datar de los siglos XI o XII.\nDe todos modos, nosotros daremos\npor válida, al menos por el momento,\nla datación del siglo V a. C.",
+      "USfr": "La louve issue de la mythologie\nromaine est au centre de cette\nsculpture... et d'une polémique.\nLa louve de bronze elle-même est\nun chef-d'œuvre datant du Ve siècle\navant J.-C.\nQuant aux jumeaux, ils auraient été\najoutés au XVe siècle... Ou du moins,\nc'est ce qu'on a longtemps cru.\nDes recherches récentes suggèrent\nque l'œuvre originale daterait en\nréalité du XIe ou XIIe siècle."
+    }
+  },
+  {
+    "label": "art_01333",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "大卫像\n米开朗基罗·博那罗蒂／作\n1504年左右　[大理石]",
+      "EUde": "David\nMichelangelo, um 1504\nMarmor",
+      "EUen": "David\n 　 　Michelangelo, circa 1504\n　 　 　 Marble",
+      "EUes": "David\nMiguel Ángel, hacia 1504\nMármol",
+      "EUfr": "David\nMichel-Ange, vers 1504\nMarbre",
+      "EUit": "David\nMichelangelo, 1504 ca.\nMarmo",
+      "EUnl": "David\nMichelangelo, omstreeks 1504\nMarmer",
+      "EUru": "Давид\nМикеланджело, около 1504\nМрамор",
+      "JPja": "ダビデ像\nミケランジェロ・ブオナローティ ／作\n1504年頃　[大理石]",
+      "KRko": "다비드상\n미켈란젤로 부오나로티 작품\n1504년경　[대리석]",
+      "TWzh": "大衛像\n米開朗基羅‧博納羅蒂 \n1504年左右　 [大理石]",
+      "USen": "David\n 　 　Michelangelo, circa 1504\n　 　 　 Marble",
+      "USes": "David\nMiguel Ángel, hacia 1504\nMármol",
+      "USfr": "David\nMichel-Ange, vers 1504\nMarbre"
+    }
+  },
+  {
+    "label": "art_01333_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "瞪着敌人，手里拿着用来投石的布的\n少年大卫像。由米开朗基罗耗时3年多\n制作而成。\n仔细看那眼睛，瞳孔被雕成了心形，\n但当时还没有心形的概念，所以被认为\n是用来表现映入瞳孔的光。不过也太大了吧。",
+      "EUde": "Diese Statue zeigt den jungen David,\nwie er mit einer Schleuder über der\nSchulter seine Gegner erblickt.\nMichelangelo benötigte mehr als\ndrei Jahre für die Fertigstellung\ndieses Meisterwerks.\nBetrachtet man die Augen näher,\nerkennt man kleine Herzen, die wohl\nden Lichteinfall darstellen sollen.\nDamals galten Herzen übrigens\nnoch nicht als Liebessymbole...",
+      "EUen": "Young David glares at his enemies,\nsling slung over his shoulder.\nIt took Michelangelo more than three\nyears to sculpt this piece.\nClose inspection shows heart-\nshaped eyes, but that's probably\nmeant to depict light hitting them.\nHearts didn't have the lovey-dovey\nsymbolism back then that they do\ntoday.",
+      "EUes": "Con la honda colgando sobre\nel hombro, David observa a\nsu enemigo.\nA Miguel Ángel le llevó más\nde tres años completar esta\ngran escultura.\nVistos de cerca, se aprecia que los\nojos tienen forma de corazón, quizá\npara representar el reflejo de la luz.\nPor entonces los corazones no\ntenían el significado romántico\nque tienen hoy en día.",
+      "EUfr": "Le jeune David toise ses ennemis,\nsa fronde reposant sur son épaule.\nTrois années auront été nécessaires\nà Michel-Ange pour sculpter ce\nchef-d'œuvre.\nEn regardant de près, on voit que les\nyeux sont en forme de cœur, afin de\nfigurer la lumière dans son regard.\nIl est important de noter que le cœur\nn'avait pas la symbolique amoureuse\nqu'on lui prête de nos jours.",
+      "EUit": "Con la fionda poggiata sulla spalla, il\ngiovane David osserva i suoi nemici.\nA Michelangelo servirono più di tre\nanni per completare questa magnifica\nscultura.\nOsservandola da vicino, si nota che\ngli occhi sono a forma di cuore, forse\nper raffigurare il riflesso della luce.\nAl tempo, infatti, i cuori non avevano\nil significato romantico che gli viene\nattribuito oggigiorno.",
+      "EUnl": "Met zijn slinger over zijn schouder\nkijkt de jonge David zijn vijanden\nfier aan.\nMichelangelo heeft drie jaar aan dit\nbeeld gewerkt.\nWie goed kijkt, ziet dat hij\nhartvormige ogen heeft, maar dat\nduidt waarschijnlijk de lichtval aan.\nHarten waren destijds niet het\nliefdessymbool dat ze vandaag\nde dag zijn.",
+      "EUru": "Молодой Давид с пращой\nна плече бесстрашно смотрит\nна своих врагов.\nМикеланджело работал над\nэтой статуей более трех лет.\nВблизи заметно, что зрачки Давида\nв виде сердечек. Но это, видимо,\nпросто способ изобразить блики.\nВ те времена к форме сердечка\nеще не было привязано столько\nсимволизма.",
+      "JPja": "敵をにらみつけ、石を投げつけるための布を\n持った少年ダビデの像。ミケランジェロが、\n3年以上の歳月をかけて制作した。\n目をよく見ると瞳がハート型に彫られている\nが、当時はまだハートマークの概念はなく、\n瞳に映り込んだ光の表現だと思われる。\nそれにしても大きい。",
+      "KRko": "적을 노려보며 전투를 위해 돌을 던지려는\n소년 다비드의 모습을 나타냈다. 미켈란젤로가\n3년 이상의 세월에 걸쳐 만들었다고 한다.\n눈을 잘 보면 눈동자가 하트 모양인데\n당시에는 하트 마크의 개념이 없었기 때문에\n눈동자의 빛을 표현한 것으로 추정되고 있다.\n그나저나 엄청 크다.",
+      "TWzh": "這是雙眼怒視敵人，手拿布條，\n準備朝敵人投出石頭的少年大衛像。\n米開朗基羅費時三年多才製作完成。\n仔細看眼睛會發現瞳孔被刻成愛心的形狀，\n但因為當時還沒有愛心符號的概念，\n所以被認為是一種光線映入瞳孔的表現。\n不過，也太大了吧。",
+      "USen": "Young David glares at his enemies,\nsling slung over his shoulder.\nIt took Michelangelo more than three\nyears to sculpt this piece.\nClose inspection shows heart-\nshaped eyes, but that's probably\nmeant to depict light hitting them.\nHearts didn't have the lovey-dovey\nsymbolism back then that they do\ntoday.",
+      "USes": "Con la honda colgando sobre\nel hombro, David observa a\nsu enemigo.\nA Miguel Ángel le llevó más\nde tres años completar esta\ngran escultura.\nAl ver los ojos de cerca se aprecia\nque tienen forma de corazón, quizá\npara representar el reflejo de la luz.\nPor entonces los corazones no\ntenían el significado romántico\nque tienen hoy en día.",
+      "USfr": "Le jeune David toise ses ennemis,\nsa fronde reposant sur son épaule.\nTrois années auront été nécessaires\nà Michel-Ange pour sculpter ce\nchef-d'œuvre.\nEn regardant de près, on voit que les\nyeux sont en forme de cœur, afin de\nfigurer la lumière dans son regard.\nIl est important de noter que le cœur\nn'avait pas la symbolique amoureuse\nqu'on lui prête de nos jours.\nEn tout cas, c'est là une statue\nproprement monumentale."
+    }
+  },
+  {
+    "label": "art_01335",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "掷铁饼者\n作者不明\n2世纪左右　[大理石]",
+      "EUde": "Diskobolus\nUnbekannt, 2. Jh.\nMarmor",
+      "EUen": "Discobolus\n 　 Artist Unknown, 2nd century CE\n　 Marble",
+      "EUes": "Discóbolo\nAnónimo, siglo II\nMármol",
+      "EUfr": "Discobole\nArtiste inconnu, IIe siècle\nMarbre",
+      "EUit": "Discobolo\nArtista sconosciuto, II sec.\nMarmo",
+      "EUnl": "Discuswerper\nOnbekende kunstenaar, 2e eeuw n.C.\nMarmer",
+      "EUru": "Дискобол\nНеизвестный скульптор, II век\nМрамор",
+      "JPja": "円盤投げ像\n作者不明\n2世紀頃　[大理石]",
+      "KRko": "원반 던지는 사람\n작자 미상\n2세기경　[대리석]",
+      "TWzh": "擲鐵餅者\n作者不明\n2世紀左右　[大理石]",
+      "USen": "Discobolus\n 　 Artist Unknown, 2nd century CE\n　 Marble",
+      "USes": "Discóbolo\nAnónimo, siglo II\nMármol",
+      "USfr": "Discobole\nArtiste inconnu, IIe siècle\nMarbre"
+    }
+  },
+  {
+    "label": "art_01335_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "以古希腊雕刻家米隆的作品为原型，\n在古代的罗马制作而成的雕像。\n是表现人体美的作品，无论哪个角度都美。",
+      "EUde": "Dieser altrömischen Statue diente\neine von Myron erschaffene grie-\nchische Bronzestatue als Vorlage.\nSie gilt als ein Zeugnis der Herrlich-\nkeit des menschlichen Körpers und\nerscheint rundherum makellos.",
+      "EUen": "This ancient Roman statue is based\non the ancient Greek statue crafted\nby Myron.\nIt's a piece that shows the grandeur\nof the human body, beautiful from\nany angle.",
+      "EUes": "Esta antigua estatua romana está\ninspirada en otra griega, cuyo\nautor fue el escultor Mirón.\nSe mire por donde se mire, enseña\nla belleza del cuerpo humano en\ntodo su esplendor.",
+      "EUfr": "Cette statue de la Rome antique est\ninspirée d'une œuvre du sculpteur\ngrec Myron.\nElle constitue une ode à la beauté\ndu corps humain, que l'on peut ainsi\nadmirer sous tous les angles.",
+      "EUit": "Questa antica statua romana si ispira\na un'altra opera realizzata dallo\nscultore greco Mirone.\nRappresenta un'ode alla bellezza del\ncorpo umano, che si può apprezzare\nda ogni angolazione.",
+      "EUnl": "Dit oud-Romeinse standbeeld is\ngebaseerd op een oud-Grieks\nstandbeeld van de hand van Myron.\nHet toont de verhevenheid van het\nmenselijk lichaam en is vanuit elke\nhoek prachtig om te zien.",
+      "EUru": "Эта древнеримская статуя —\nкопия древнегреческой статуи,\nизваянной Мироном.\nОна превосходно передает\nвеликолепие человеческого тела,\nпрекрасного под любым углом.",
+      "JPja": "古代ギリシャの彫刻家ミュロンの作品をもと\nに古代ローマで作られた像。人体の美しさを\n表現した作品。どの角度から見ても美しい。",
+      "KRko": "고대 그리스의 조각가인 미론의 작품을 본떠\n만들어진 고대 로마의 작품. 인체의 아름다움을\n잘 표현하고 있어 어느 각도에서 봐도 아름답다.",
+      "TWzh": "這是以古希臘雕刻家米隆的作品為原型，\n於羅馬製作的雕像。是一個展現人體美的\n作品。無論從哪個角度觀看都很美。",
+      "USen": "This ancient Roman statue is based\non the ancient Greek statue crafted\nby Myron.\nIt's a piece that shows the grandeur\nof the human body, beautiful from\nany angle.",
+      "USes": "Esta antigua estatua romana está\ninspirada en otra de origen griego,\ncuyo autor fue el escultor Mirón.\nSe mire por donde se mire, muestra\nla belleza del cuerpo humano en\ntodo su esplendor.",
+      "USfr": "Cette statue de la Rome antique est\ninspirée d'une œuvre du sculpteur\ngrec Myron.\nElle constitue une ode à la beauté\ndu corps humain, que l'on peut ainsi\nadmirer sous tous les angles."
+    }
+  },
+  {
+    "label": "art_01337",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "遮光器土偶\n作者不明\n公元前1000年～400年左右　[素烧陶器]",
+      "EUde": "Dogū-Figur aus der Jōmon-Zeit\nShakōki-Dogū\nUnbekannt, 1000-400 v. Chr., Gebrannter Ton",
+      "EUen": "Jōmon Period \"Dogū\" Figurine\n Shakōki-dogū \n Artist Unknown, 1000-400 BCE, Fired pottery",
+      "EUes": "Estatuilla dogu del periodo Jomon\nShakoki-dogu\nAnónimo, entre 1000-400 a. C. Arcilla",
+      "EUfr": "Statuette dogū de l'époque Jōmon\nShakōki-dogū\nArtiste inconnu, 1000-400 av. è. c., terre cuite",
+      "EUit": "Statuetta Shakōki-dogū\nArtista sconosciuto, 1000 - 400 a. C.\nTerracotta",
+      "EUnl": "Dogū-figuur uit de Jōmonperiode\nShakōki-dogū \nOnbekende kunstenaar, 1000-400 v.C., keramiek",
+      "EUru": "Сякоки-догу периода Дзёмон\nНеизвестный скульптор, 1000—400 до н. э.\nГлина",
+      "JPja": "遮光器土偶\n作者不明\n紀元前1000年～400年頃　[素焼き]",
+      "KRko": "차광기토우\n작자 미상\n기원전 1000년～400년경　[설구이]",
+      "TWzh": "遮光器土偶\n作者不明\n西元前1000年～400年左右　[素燒陶器]",
+      "USen": "Jōmon Period \"Dogū\" Figurine\n Shakōki-dogū \n Artist Unknown, 1000-400 BCE, Fired pottery",
+      "USes": "Estatuilla dogu del periodo Jōmon\nShakōki-dogū\nAnónimo, entre 1000-400 a. C. Arcilla",
+      "USfr": "Statuette dogū de l'époque Jōmon\nShakōki-dogū\nArtiste inconnu, 1000-400 av. è. c., terre cuite"
+    }
+  },
+  {
+    "label": "art_01337_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "绳文时代用土捏制并烧成的，\n神秘而又形状奇特的人偶。\n　\n那大大的圆眼睛就像是\n可以遮住光的护目镜，\n所以被称为“遮光器”土偶。",
+      "EUde": "Diese mysteriöse, faszinierende\nFigur aus der Jōmon-Zeit besteht\naus unglasiertem Ton.\nIhr Name beruht auf ihren großen,\nrunden Augen, die an eine vor Licht\nschützende Brille erinnern.\n„Shakōki-Dogū“ bedeutet „Dogū mit\nlichtabfangender Brille“. Und „Dogū“\nbezeichnet die Tonfigur selbst.",
+      "EUen": "A mysterious, riveting doll made from\nkneaded, unglazed dirt during the\nJōmon period.\nIts large round eyes resemble\ngoggles that intercept light, so its\nname should come as no surprise.\n\"Shakōki\" means \"light-intercepting\ngoggles,\" and a dogū is a small\nanimal figurine.",
+      "EUes": "Esta misteriosa figura llena de ribetes\nestá moldeada con barro y se\nelaboró en el periodo Jomon.\nSus ojos, enormes y redondos,\nse asemejan a gafas que quisieran\nresguardar de la luz.\nEso es lo que significa «Shakoki»,\nmientras que «dogu», en general,\nson pequeñas figuras de animales.",
+      "EUfr": "Cette poupée de terre cuite non\nvernissée, aussi mystérieuse que\nfascinante, date de l'époque Jōmon.\nSes grands yeux ronds évoquent des\nbinocles interceptant la lumière, ce\nqui explique son nom, « Shakōki ».\nIl signifie en effet « lunettes\ninterceptant la lumière » (le dogū\nétant une statuette d'animal).",
+      "EUit": "Tanto misteriosa quanto affascinante,\nquesta bambolina in terracotta non\nsmaltata risale al periodo Jōmon.\nI suoi grandi occhi rotondi ricordano\ndegli occhiali che proteggono dalla\nluce, da cui il nome.\n\"Shakōki\" indica infatti un dogū \"con\nocchiali protettivi contro la luce\" (il\ndogū è la statuina di un animale).",
+      "EUnl": "Een mysterieus, fascinerend figuur\nuit de Jōmonperiode dat van\nongeglazuurde klei is gemaakt.\nDe grote, ronde ogen hebben iets\nweg van een verduisteringsbril, dus\nde naam is niet verrassend.\n\"Shakōki\" betekent \"dogū met\nlichtwerende bril\". (Een dogū is\neen dierfiguurtje.)",
+      "EUru": "Загадочная фигурка, сделанная\nиз неглазурованной глины\nв Японии в периоде Дзёмон.\nЕе выпученные глаза похожи на\nсолнцезащитные очки, так что ее\nяпонское название оправдано.\n«Сякоки» означает «догу в солнце-\nзащитных очках», а «Догу» — это\nмаленькая фигурка животного.",
+      "JPja": "縄文時代の、土をこねて素焼きで作られた、\n神秘的で不思議な形の人形。\n　\n大きく丸い目元が、光をさえぎるゴーグルに\n似ているところから「遮光器」土偶と呼ばれ\nている。",
+      "KRko": "흙을 빚고 그대로 구워 만든 조몬 시대의 인형.\n신비로운 느낌을 자아낸다.\n \n크고 동그란 눈매가 빛을 차단하는 고글과\n닮았다고 하여 '차광기'토우라고 불린다.",
+      "TWzh": "這是繩文時代出土的神秘人形土偶，\n以泥土捏製並素燒而成。\n大大圓圓的眼睛\n猶如可以遮光的護目鏡，\n因此被叫做「遮光器」土偶。",
+      "USen": "A mysterious, riveting doll made from\nkneaded, unglazed dirt during the\nJōmon period.\nIts large round eyes resemble\ngoggles that intercept light, so its\nname should come as no surprise.\n\"Shakōki\" means \"light-intercepting\ngoggles,\" and a dogū is a small\nanimal figurine.",
+      "USes": "Esta misteriosa figura llena de ribetes\nestá moldeada con barro y se\nelaboró en el periodo Jōmon.\nSus ojos, enormes y redondos se\nasemejan a lentes que resguardan\nde la luz.\nEso es lo que significa \"Shakōki\",\nmientras que \"dogū\", en general,\nson pequeñas figuras de animales.",
+      "USfr": "Cette poupée de terre cuite non\nvernissée, aussi mystérieuse que\nfascinante, date de l'époque Jōmon.\nSes grands yeux ronds évoquent des\nbinocles interceptant la lumière, ce\nqui explique son nom, « Shakōki ».\nIl signifie en effet « lunettes\ninterceptant la lumière » (le dogū\nétant une statuette d'animal)."
+    }
+  },
+  {
+    "label": "art_01339",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "卡美哈梅哈国王铜像\n托马斯·里奇韦·古尔德\n1883年　[青铜]",
+      "EUde": "König Kamehameha I.\nThomas Ridgeway Gould, um 1883\nBronze",
+      "EUen": "King Kamehameha I\n Thomas Ridgeway Gould, circa 1883\n　 Bronze",
+      "EUes": "Rey Kamehameha I\nThomas Ridgeway Gould, hacia 1883\nBronce",
+      "EUfr": "Roi Kamehameha Ier.\nThomas Ridgeway Gould, vers 1883\nBronze",
+      "EUit": "Re Kamehameha I\nThomas Ridgeway Gould, 1883 ca.\nBronzo",
+      "EUnl": "Koning Kamehameha I\nThomas Ridgeway Gould, omstreeks 1883\nBrons",
+      "EUru": "Камеамеа I\nТомас Риджуэй Гулд, около 1883\nБронза",
+      "JPja": "カメハメハ大王像\nトーマス・R・グールド／作\n1883年　[ブロンズ]",
+      "KRko": "카메하메하 대왕 동상\n토머스 R 굴드 작품\n1883년　[청동]",
+      "TWzh": "卡美哈梅哈大帝像\n湯瑪斯‧R‧古爾德\n1883年　[青銅]",
+      "USen": "King Kamehameha I\n Thomas Ridgeway Gould, circa 1883\n　 Bronze",
+      "USes": "Rey Kamehameha I\nThomas Ridgeway Gould, hacia 1883\nBronce",
+      "USfr": "Roi Kamehameha Ier\nThomas Ridgeway Gould, vers 1883\nBronze"
+    }
+  },
+  {
+    "label": "art_01339_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "1810年统一夏威夷，建立夏威夷王朝的\n卡美哈梅哈国王的铜像。\n　\n在每年6月11日的卡美哈梅哈日，\n会被人们戴上许多的花环。",
+      "EUde": "Eine Bronzeskulptur von König\nKamehameha I, der 1810 das\nKönigreich Hawaii gründete.\nTraditionell wird die Skulptur jedes\nJahr pünktlich zum 11. Juli mit un-\nzähligen Blumenketten geschmückt.",
+      "EUen": "A bronze sculpture of King\nKamehameha I, who founded the\nKingdom of Hawaii in 1810.\nTraditionally, the sculpture is\ndraped with many leis every\nyear on June 11th.",
+      "EUes": "Esta escultura de bronce representa\nal rey Kamehameha I, quien fundó\nel Reino de Hawái en 1810.\nCada 11 de junio, la estatua se\ndecora con las tradicionales\nguirnaldas hawaianas.",
+      "EUfr": "Cette statue de bronze représente\nle roi Kamehameha Ier, fondateur du\nroyaume d'Hawaï en 1810.\nUne tradition consiste à couvrir cette\nstatue de colliers de fleurs le 11 juin.",
+      "EUit": "Questa scultura di bronzo raffigura\nil re Kamehameha I, fondatore del\nregno delle Hawaii nel 1810.\nOgni 11 giugno, come da tradizione,\nla scultura viene decorata con le\ntipiche corone di fiori hawaiane.",
+      "EUnl": "Een bronzen standbeeld van koning\nKamehameha I, die in 1810 het\nkoninkrijk Hawaï heeft gesticht.\nElk jaar op 11 juni wordt het beeld\nomhangen met leis, traditionele\nbloemenkransen.",
+      "EUru": "Бронзовая скульптура короля\nКамеамеа I, который в 1810 году\nосновал Гавайское королевство.\nПо традиции 11 июня на статую\nнадевают множество гавайских\nцветочных венков лей.",
+      "JPja": "1810年にハワイを統一し、ハワイ王朝を築\nいたカメハメハ大王の銅像。\n　\n毎年6月11日のカメハメハデーには、多くの\nレイがかけられるのだとか。",
+      "KRko": "1810년에 하와이를 통일하여\n하와이 왕조를 세운 카메하메하 대왕의 동상.\n \n매년 6월 11일 카메하메하 데이에는\n많은 사람들이 레이를 걸어 둔다고 한다.",
+      "TWzh": "這是1810年夏威夷統一時，\n建立夏威夷王朝的卡美哈梅哈大帝的銅像。\n每年6月11日卡美哈梅哈大帝節時，\n上面都會被掛上很多花圈。",
+      "USen": "A bronze sculpture of King\nKamehameha I, who founded the\nKingdom of Hawaii in 1810.\nTraditionally, the sculpture is\ndraped with many leis every\nyear on June 11th.",
+      "USes": "Esta escultura de bronce representa\nal rey Kamehameha I, quien fundó\nel Reino de Hawái en 1810.\nCada 11 de junio, la estatua se\ndecora con las tradicionales\nguirnaldas hawaianas.",
+      "USfr": "Cette statue de bronze représente\nle roi Kamehameha Ier, fondateur du\nroyaume d'Hawaï en 1810.\nUne tradition consiste à couvrir cette\nstatue de colliers de fleurs le 11 juin."
+    }
+  },
+  {
+    "label": "art_01341",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "米洛斯的维纳斯\n作者不明\n公元前130年左右　[大理石]",
+      "EUde": "Venus von Milo\nUnbekannt, um 130 v. Chr.\nMarmor",
+      "EUen": "Venus de Milo\n　 Artist Unknown, circa 130 BCE\n　 　 Marble",
+      "EUes": "Venus de Milo\nAnónimo, hacia 130 a. C.\nMármol",
+      "EUfr": "Vénus de Milo\nArtiste inconnu, vers 130 av. è. c.\nMarbre",
+      "EUit": "Venere di Milo\nArtista sconosciuto, 130 a. C. ca.\nMarmo",
+      "EUnl": "Venus van Milo\nOnbekende kunstenaar, omstreeks 130 v.C.\nMarmer",
+      "EUru": "Венера Милосская\nНеизвестный скульптор, около 130 до н. э.\nМрамор",
+      "JPja": "ミロのヴィーナス\n作者不明\n紀元前130年頃　[大理石]",
+      "KRko": "밀로의 비너스\n작자 미상\n기원전 130년경　[대리석]",
+      "TWzh": "米洛的維納斯\n作者不明\n西元前130年左右　[大理石]",
+      "USen": "Venus de Milo\n　 Artist Unknown, circa 130 BCE\n　 　 Marble",
+      "USes": "Venus de Milo\nAnónimo, hacia 130 a. C.\nMármol",
+      "USfr": "Vénus de Milo\nArtiste inconnu, vers 130 av. è. c.\nMarbre"
+    }
+  },
+  {
+    "label": "art_01341_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "在米洛斯岛发现的爱与美的女神\n维纳斯的雕像。人们对于这尊美丽的雕像\n原本是何姿态，有着诸多的想象。",
+      "EUde": "Diese Statue der römischen Liebes-\nund Schönheitsgöttin Venus wurde\nauf der Insel Milo gefunden.\nMan fragt sich, was wohl einst ihre\nOriginalpose war...",
+      "EUen": "A statue of the Roman goddess of\nlove and beauty, Venus was found on\nthe island of Milos.\nThis beautiful sculpture makes many\nwonder what her original pose might\nhave been.",
+      "EUes": "Esta estatua de Venus, diosa romana\ndel amor y la belleza, fue hallada en\nla isla de Milo.\nLa belleza de la estatua invita\na imaginar cómo sería la pose\noriginal en su momento.",
+      "EUfr": "Cette statue de Vénus, déesse\nromaine de l'amour et de la beauté,\na été trouvée sur l'île de Milos.\nNombreux sont ceux qui demeurent\nrêveurs en la contemplant, tâchant\nd'imaginer la pose d'origine.",
+      "EUit": "Questa statua di Venere, dea romana\ndell'amore e della bellezza, venne\nrinvenuta sull'isola di Milo.\nMolti si domandano quale fosse la\nposa originaria di questa magnifica\nopera.",
+      "EUnl": "Een beeld van Venus, de Romeinse\ngodin van de liefde en schoonheid,\ngevonden op het eiland Melos.\nEen prachtige sculptuur waarbij\nvelen zich afvragen wat haar\noorspronkelijke pose was.",
+      "EUru": "Эта статуя римской богини любви\nи красоты Венеры была найдена\nна острове Милос.\nКрасота этой статуи заставляет\nмногих гадать, как она выглядела\nцеликом.",
+      "JPja": "ミロ島で発見された愛と美の女神ヴィーナス\nの像。元はどんなポーズだったのか、人々の\n想像をかきたてる美しい彫刻。",
+      "KRko": "밀로 섬에서 발견된 사랑과 미의 여신\n비너스의 조각. 원래는 어떤 포즈였을지\n보는 이의 상상력을 자극한다.",
+      "TWzh": "這座愛與美的女神維納斯的石像\n是在米洛島上發現的。這座美麗的雕塑\n究竟本來是什麼姿勢，引起大家無限想像。",
+      "USen": "A statue of the Roman goddess of\nlove and beauty, Venus was found on\nthe island of Milos.\nThis beautiful sculpture makes many\nwonder what her original pose might\nhave been.",
+      "USes": "Esta estatua de Venus, diosa romana\ndel amor y la belleza, fue hallada en\nla isla de Milo.\nLa belleza de la estatua invita\na imaginar cómo sería la pose\noriginal en su momento.",
+      "USfr": "Cette statue de Vénus, déesse\nromaine de l'amour et de la beauté,\na été trouvée sur l'île de Milos.\nNombreux sont ceux qui demeurent\nrêveurs en la contemplant, tâchant\nd'imaginer la pose d'origine."
+    }
+  },
+  {
+    "label": "art_01343",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "娜芙蒂蒂胸像\n图特摩斯／作\n公元前1345年左右　[石灰岩]",
+      "EUde": "Büste der Nofretete\nThutmosis, um 1345 v. Chr.\nKalkstein",
+      "EUen": "Bust of Nefertiti\n　 Thutmose, circa 1345 BCE\n　 　 Limestone",
+      "EUes": "Busto de Nefertiti\nTutmose, hacia 1345 a. C.\nPiedra caliza",
+      "EUfr": "Buste de Néfertiti\nThoutmôsis, vers 1345 av. è. c.\nCalcaire",
+      "EUit": "Busto di Nefertiti\nThutmose, 1345 a. C.\nPietra calcarea",
+      "EUnl": "Buste van Nefertiti\nToetmoses, omstreeks 1345 v.C.\nKalksteen",
+      "EUru": "Бюст Нефертити\nМастерская Тутмоса, около 1345 до н. э.\nИзвестняк",
+      "JPja": "ネフェルティティの胸像\nトトメス／作\n紀元前1345年頃　[石灰岩]",
+      "KRko": "네페르티티 흉상\n투트메스 작품\n기원전 1345년경　[석회암]",
+      "TWzh": "娜芙蒂蒂胸像\n圖特摩斯\n西元前1345年左右　[石灰岩]",
+      "USen": "Bust of Nefertiti\n　 Thutmose, circa 1345 BCE\n　 　 Limestone",
+      "USes": "Busto de Nefertiti\nTutmose, hacia 1345 a. C.\nPiedra caliza",
+      "USfr": "Buste de Néfertiti\nThoutmôsis, vers 1345 av. è. c.\nCalcaire"
+    }
+  },
+  {
+    "label": "art_01343_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "名字本身含有“美人已然来临”的意思，\n是古埃及三大美女之一的\n娜芙蒂蒂王后的胸像。\n左眼缺失是因为嵌入物被取走了，\n还是作品尚未完成呢？\n谜题至今尚未解开。",
+      "EUde": "Eine Büste der Nofretete, deren\nNamen übersetzt so viel bedeutet\nwie „die Schöne ist gekommen“.\nKönigin Nofretete zählte damals\nzu den drei schönsten Frauen\ndes alten Ägyptens.\nEs ist bis heute unklar, ob ihr linkes\nAuge abhanden kam oder der\nKünstler seine Arbeit nie beendete.",
+      "EUen": "A bust of Nefertiti, whose name\nmeans \"the beautiful one has come.\"\nA \"royal wife,\" she was known as one\nof the three most beautiful women in\nancient Egypt.\nIt is not known whether the left eye\nis missing because it fell out, or\nbecause it was never completed.",
+      "EUes": "El nombre de Nefertiti significa\n«la bella ha llegado».\nFue una gran esposa real;\nes decir, esposa de un faraón.\nEn su época se la consideró una de\nlas tres mujeres más hermosas del\nantiguo Egipto.\nNo se sabe si el ojo que le falta se\ndesprendió o si el artista lo dejó\ninconcluso.",
+      "EUfr": "Il s'agit du buste de Néfertiti, dont\nle nom signifie « l'arrivée de la plus\nbelle ».\nCette « grande épouse royale » est\nconsidérée comme une des trois plus\nbelles femmes de l'ancienne Égypte.\nOn ignore si l'œil gauche est tombé\nou s'il n'a jamais été sculpté.",
+      "EUit": "Il nome Nefertiti ha come significato\n\"la bella donna è arrivata\".\nFu una grande sposa reale, ossia\nconsorte di un faraone.\nNella sua epoca, era considerata\nuna delle tre donne più belle\ndell'antico Egitto.\nNon si sa se l'occhio sinistro manchi\nperché andato perduto o perché non\nfu mai scolpito.",
+      "EUnl": "Een buste van Nefertiti. Haar\nnaam betekent \"de schoonheid\nis gekomen\".\nDeze koningin stond bekend als een\nvan de drie mooiste vrouwen in het\noude Egypte.\nHet is niet bekend of het linkeroog\nontbreekt door beschadiging of door\nhet onvoltooid blijven van het beeld.",
+      "EUru": "Бюст Нефертити, чье имя означает\n«красавица пришла».\nОна была супругой фараона\nи одной из трех самых красивых\nженщин Древнего Египта.\nНеизвестно, был ли левый глаз\nэтого бюста утерян или попросту\nне закончен.",
+      "JPja": "名前が「やって来た美しい人」という意味を\n持つ、古代エジプト三大美女のひとりとされ\nる、ネフェルティティ王妃の胸像。\n左目の欠落は、はめ込んでいたものが取れて\nしまったのか、それとも未完成のままなのか\nまだ解明されていない。",
+      "KRko": "'미녀가 왔다'는 뜻의 이름에 걸맞게\n고대 이집트의 3대 미녀 중 하나로 꼽히는\n네페르티티 왕비의 흉상.\n왼쪽 눈은, 원래는 있었으나 사라진 것인지\n처음부터 미완성이었던 것인지\n아직 밝혀지지 않았다.",
+      "TWzh": "這是古埃及三大美女之一娜芙蒂蒂的胸像，\n其名字含有「難得一見的美人」之意。\n左眼的缺陷究竟是嵌入物被人取出，\n還是尚未完成，目前仍不得而知。",
+      "USen": "A bust of Nefertiti, whose name\nmeans \"the beautiful one has come.\"\nA \"royal wife,\" she was known as one\nof the three most beautiful women in\nancient Egypt.\nIt is not known whether the left eye\nis missing because it fell out, or\nbecause it was never completed.",
+      "USes": "El nombre de Nefertiti significa\n\"la bella ha llegado\".\nFue una gran esposa real;\nes decir, esposa de un faraón.\nEn su época se la consideró una de\nlas tres mujeres más hermosas del\nantiguo Egipto.\nNo se sabe si el ojo que le falta se\ndesprendió o si el artista lo dejó\ninconcluso.",
+      "USfr": "Il s'agit du buste de Néfertiti, dont\nle nom signifie « l'arrivée de la plus\nbelle ».\nCette « grande épouse royale » est\nconsidérée comme une des trois plus\nbelles femmes de l'ancienne Égypte.\nOn ignore si l'œil gauche est tombé\nou s'il n'a jamais été sculpté."
+    }
+  },
+  {
+    "label": "art_01345",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "胜利女神像\n作者不明\n公元前190年左右　[大理石]",
+      "EUde": "Nike von Samothrake\nUnbekannt, um 190 v. Chr.\nMarmor",
+      "EUen": "Nike of Samothrace\n　 Artist Unknown, circa 190 BCE\n　 　 Marble",
+      "EUes": "Victoria de Samotracia\nAnónimo, hacia 190 a. C.\nMármol",
+      "EUfr": "Victoire de Samothrace\nArtiste inconnu, vers 190 av. è. c.\nMarbre",
+      "EUit": "Nike di Samotracia\nArtista sconosciuto, 190 a. C. ca.\nMarmo",
+      "EUnl": "Nikè van Samothrake\nOnbekende kunstenaar, omstreeks 190 v.C.\nMarmer",
+      "EUru": "Ника Самофракийская\nНеизвестный скульптор, около 190 до н. э.\nМрамор",
+      "JPja": "サモトラケのニケ\n作者不明\n紀元前190年頃　[大理石]",
+      "KRko": "사모트라케의 니케\n작자 미상\n기원전 190년경　[대리석]",
+      "TWzh": "薩莫色雷斯的勝利女神\n作者不明\n西元前190年左右　[大理石]",
+      "USen": "Nike of Samothrace\n　 Artist Unknown, circa 190 BCE\n　 　 Marble",
+      "USes": "Victoria de Samotracia\nAnónimo, hacia 190 a. C.\nMármol",
+      "USfr": "Victoire de Samothrace\nArtiste inconnu, vers 190 av. è. c.\nMarbre"
+    }
+  },
+  {
+    "label": "art_01345_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "发现于萨莫色雷斯岛的像。\n表现出了胜利女神尼姬\n飘落在船头的样子。\n雕像被发现时已是零落的碎块，\n后来经过组合后复原，\n但头部和双臂已缺失。",
+      "EUde": "Eine Statue der Siegesgöttin Nike,\ngefunden auf Samothraki. Ihre\nGestalt erinnert an eine Galionsfigur.\nDie Statue wurde aus Fragmenten\nzusammengesetzt, wobei Arme und\nKopf noch immer verschollen sind.",
+      "EUen": "A statue of the goddess of victory,\nNike, found on Samothrace. It shows\nNike alighting on the prow of a ship.\nOriginally found in separate pieces,\nit has largely been restored, but the\narms and head are still missing.",
+      "EUes": "Estatua hallada en Samotracia que\nmuestra a Niké, diosa de la victoria,\nposada sobre la proa de un barco.\nSe descubrió en siete fragmentos\nseparados y, posteriormente, se\nreconstruyó.\nCon todo, nunca llegaron a\nencontrarse la cabeza ni los brazos.",
+      "EUfr": "Cette statue de Niké, déesse de\nla victoire, a été mise au jour à\nSamothrace.\nElle représente la déesse ailée\nau moment où elle vient se poser\nsur la proue d'un navire.\nElle a été reconstituée à partir de\npièces éparses, mais la tête et les\nbras n'ont jamais été retrouvés.",
+      "EUit": "Statua rinvenuta a Samotracia che\nritrae Nike, dea della vittoria, mentre\nsi posa sulla prua di una nave.\nOriginariamente riportata alla luce\nin frammenti separati, venne poi\nricostruita successivamente.\nNonostante ciò, la testa e le braccia\nnon furono mai ritrovate.",
+      "EUnl": "Een standbeeld van Nikè, de godin\nvan de overwinning, die op de boeg\nvan een schip lijkt te landen.\nHet standbeeld is gevonden op\nhet eiland Samothrake.\nHet beeld is samengesteld uit\ngevonden fragmenten, maar de\narmen en het hoofd ontbreken nog.",
+      "EUru": "Статуя Ники, богини победы,\nнайденная на острове Самофраки.\nВозможно, украшала нос корабля.\nСтатую нашли по частям\nи восстановили, но голова\nи руки так и не были найдены.",
+      "JPja": "サモトラケ島で発見された像。勝利の女神\nニケが、船の舳先に舞い降りた様子が表現\nされている。\n発見当時ばらばらだったものを組み合わせて\n復元されているが、頭部と両腕は見つかって\nいない。",
+      "KRko": "사모트라케에서 발견된 조각상.\n승리의 여신 니케가 뱃머리에 내려선 모습이\n표현되어 있다.\n발견 당시에 조각조각으로 흩어져 있던 것을\n끼워 맞춰 복원했지만,\n머리와 양팔은 발견되지 않았다.",
+      "TWzh": "這是在薩莫色雷斯島上發現的勝利女神\n尼克的雕像。呈現出女神\n降落在船頭的樣子。\n雕像被發現時支離破碎，後來才組合復原，\n不過頭部和兩隻手仍尚未找到。",
+      "USen": "A statue of the goddess of victory,\nNike, found on Samothrace. It shows\nNike alighting on the prow of a ship.\nOriginally found in separate pieces,\nit has largely been restored, but the\narms and head are still missing.",
+      "USes": "Estatua hallada en Samotracia que\nmuestra a Niké, diosa de la victoria,\nposada sobre la proa de un barco.\nSe descubrió en siete fragmentos\nseparados y, posteriormente, se\nreconstruyó.\nSin embargo, nunca llegaron a\nencontrarse la cabeza ni los brazos.",
+      "USfr": "Cette statue de Niké, déesse de\nla victoire, a été mise au jour à\nSamothrace.\nElle représente la déesse ailée\nau moment où elle vient se poser\nsur la proue d'un navire.\nElle a été reconstituée à partir de\npièces éparses, mais la tête et les\nbras n'ont jamais été retrouvés."
+    }
+  },
+  {
+    "label": "art_12533",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "奥尔梅克巨石头像\n作者不明\n公元前1000年左右　[玄武岩、安山岩]",
+      "EUde": "Olmekischer Kolossalkopf\nUnbekannt, um 1000 v. Chr.\nBasalt, Andesit",
+      "EUen": "Olmec Colossal Head\n 　 Artist Unknown, circa 1000 BCE\n 　 　Basalt, andesite",
+      "EUes": "Cabeza colosal olmeca\nAnónimo, hacia 1000 a. C.\nBasalto y andesita",
+      "EUfr": "Tête colossale olmèque\nArtiste inconnu, vers 1000 av. è. c.\nBasalte et andésite",
+      "EUit": "Testa colossale olmeca\nArtista sconosciuto, 1000 a. C. ca.\nBasalto e andesite",
+      "EUnl": "Olmeeks reuzenhoofd\nOnbekende kunstenaar, omstreeks 1000 v.C.\nBasalt, andesiet",
+      "EUru": "Гигант. каменная голова ольмеков\nНеизвестный скульптор, около 1000 до н. э.\nБазальт, андезит",
+      "JPja": "巨石人頭像\n作者不明\n紀元前1000年頃　[玄武岩、安山岩]",
+      "KRko": "거대 두상\n작자 미상\n기원전 1000년경　[현무암, 안산암]",
+      "TWzh": "奧爾梅克巨型頭顱\n作者不明\n西元前1000年左右　 [玄武岩、安山岩]",
+      "USen": "Olmec Colossal Head\n 　 Artist Unknown, circa 1000 BCE\n 　 　Basalt, andesite",
+      "USes": "Cabeza colosal olmeca\nAnónimo, hacia 1000 a. C.\nBasalto y andesita",
+      "USfr": "Tête colossale olmèque\nArtiste inconnu, vers 1000 av. è. c.\nBasalte et andésite"
+    }
+  },
+  {
+    "label": "art_12533_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "在古代墨西哥奥尔梅克文明的遗迹\n被发现的巨大石像。\n也被称为奥尔梅克头。\n其中大的头像，高度达到3米。\n一般认为当时只制作了头部，没有躯体。",
+      "EUde": "Ein gigantischer Steinkopf aus\nMesoamerika, vermutlich erschaffen\nvom Volk der Olmeken.\nEs existieren Exemplare, die bis zu\ndrei Meter hoch sind.\nWissenschaftler gehen davon aus,\ndass die Olmeken nur Köpfe, jedoch\nkeine Körper anfertigten.",
+      "EUen": "Giant stone head thought to be\nfrom the ancient Mesoamerican\nOlmec civilization.\nThe larger ones can reach three\nmeters in height. Scholars think they\nonly crafted heads, no bodies.",
+      "EUes": "Esta cabeza gigante es obra de\nlos olmecas, una civilización\nmesoamericana.\nLas más grandes que se han hallado\nllegan a alcanzar los tres metros de\naltura.\nTodo parece indicar que nunca\niban acompañadas de un cuerpo.",
+      "EUfr": "Cette tête en pierre géante\nest probablement l'œuvre de la\ncivilisation mésoaméricaine olmèque.\nCertaines de ces têtes atteignent\n3 m de haut. On suppose qu'ils n'ont\npas sculpté de corps en proportion.",
+      "EUit": "Questa testa gigantesca è opera\ndegli Olmechi, un'antica civiltà\nmesoamericana.\nLe più grandi rinvenute raggiungono\ni tre metri di altezza. Tutto fa pensare\nche fossero sprovviste di corpi.",
+      "EUnl": "Gigantisch stenen hoofd dat door\nhet Meso-Amerikaanse Olmeekse\nvolk gemaakt lijkt te zijn.\nDe grootste hoofden zijn wel drie\nmeter hoog. Er lijken alleen hoofden\nen geen lichamen te zijn gemaakt.",
+      "EUru": "Огромная каменная голова.\nСчитается, что эти головы создала\nдревняя мезоамериканская\nцивилизация ольмеков.\nКрупные достигают 3 метров\nв высоту. Ученые считают,\nчто тел у статуй не было.",
+      "JPja": "古代メキシコ・オルメカ文明の遺跡に見られ\nる巨大石像。オルメカヘッドとも呼ばれる。\n　\n大きいものは、高さが3メートルにもなる。\n胴体は存在せず、頭部だけが作られたものと\n思われる。",
+      "KRko": "고대 멕시코 지역에 존재한 올메카 문명의\n유적에서 발견된 거대 석상.\n올메크 두상이라고도 불린다.\n큰 것은 높이가 3미터나 되는 것도 있다.\n몸통은 존재하지 않으며, 머리만 만들어진\n것으로 추정되고 있다.",
+      "TWzh": "這是在墨西哥的奧爾梅克古文明遺跡中發現的\n巨大石像。因此被稱為奧爾梅克頭顱。\n最大的高達3公尺。一般認為\n當時只建造了頭部，沒有軀體。",
+      "USen": "Giant stone head thought to be\nfrom the ancient Mesoamerican\nOlmec civilization.\nThe larger ones can reach three\nmeters in height. Scholars think they\nonly crafted heads, no bodies.",
+      "USes": "Esta cabeza gigante es obra de\nlos olmecas, una civilización\nmesoamericana.\nLas más grandes que se han hallado\nllegan a alcanzar los tres metros de\naltura.\nTodo parece indicar que nunca\niban acompañadas de un cuerpo.",
+      "USfr": "Ces têtes en pierre géantes\nsont probablement l'œuvre de la\ncivilisation mésoaméricaine olmèque.\nLes plus imposantes atteignent\n3 m de haut. On suppose qu'ils n'ont\npas sculpté de corps en proportion."
+    }
+  },
+  {
+    "label": "art_12535",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "罗塞塔石碑\n作者不明\n公元前196年　[花岗闪长岩]",
+      "EUde": "Stein von Rosette\nUnbekannt, 196 v. Chr.\nGranodiorit",
+      "EUen": "Rosetta Stone\n　 　  Artist Unknown, 196 BCE\n　 　 Granodiorite",
+      "EUes": "Piedra de Rosetta\nAnónimo, 196 a. C.\nGranodiorita",
+      "EUfr": "Pierre de Rosette\nArtiste inconnu, 196 av. è. c.\nGranodiorite",
+      "EUit": "Stele di Rosetta\nArtista sconosciuto, 196 a. C.\nGranodiorite",
+      "EUnl": "Steen van Rosetta\nOnbekende kunstenaar, 196 v.C.\nGranodioriet",
+      "EUru": "Розеттский камень\nНеизвестный скульптор, 196 до н. э.\nГранодиорит",
+      "JPja": "ロゼッタ・ストーン\n作者不明\n紀元前196年　[花崗閃緑岩]",
+      "KRko": "로제타 스톤\n작자 미상\n기원전 196년　[화강 섬록암]",
+      "TWzh": "羅塞塔石碑\n作者不明\n西元前196年　[花崗閃長岩]",
+      "USen": "Rosetta Stone\n　 　  Artist Unknown, 196 BCE\n　 　 Granodiorite",
+      "USes": "Piedra de Rosetta\nAnónimo, 196 a. C.\nGranodiorita",
+      "USfr": "Pierre de Rosette\nArtiste inconnu, 196 av. è. c.\nGranodiorite"
+    }
+  },
+  {
+    "label": "art_12535_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "1799年于埃及罗塞塔被发现的石碑。\n是解读古埃及圣书体（一种象形文字）\n的重要线索。\n几乎相同的一段文章用三种文字记载，\n上段为圣书体，中段为世俗体，\n下段为古希腊文。",
+      "EUde": "Eine Steinscheibe, die 1799 in\nRosette, Ägypten, gefunden wurde.\nDer Stein von Rosette erwies sich\nbei der Entschlüsselung altägyp-\ntischer Hieroglyphen als große Hilfe.\nAuf ihm ist nahezu identischer Text\nin Hieroglyphen, demotischer Schrift\nund Griechisch zu lesen.",
+      "EUen": "A stone slab found in Rosetta, Egypt\nin 1799. Helped efforts to decipher\nancient Egyptian hieroglyphs.\nAlmost identical text is written in\nhieroglyphs at the top, then Demotic\nscript, and lastly Greek script.",
+      "EUes": "Este fragmento de piedra hallado en\nRosetta, Egipto, en 1799, sirvió para\ndescifrar los jeroglíficos egipcios.\nDebajo de estos, un texto casi\nidéntico está escrito en egipcio\ndemótico y en griego.",
+      "EUfr": "Cette tablette en pierre trouvée\nen 1799 à Rosette (Égypte) a permis\nde déchiffrer les hiéroglyphes.\nUn texte quasiment identique y est\nrédigé d'abord en hiéroglyphes, puis\nen égyptien démotique, puis en grec.",
+      "EUit": "Lastra di pietra, rinvenuta a Rosetta,\nin Egitto, nel 1799. Ha consentito di\ndecifrare gli antichi geroglifici egizi.\nAl di sotto di essi, è riportato un\ntesto pressoché identico scritto\nin demotico e in greco.",
+      "EUnl": "In 1799 in Rosetta in Egypte\ngevonden en bij het ontcijferen van\nEgyptische hiërogliefen gebruikt.\nEr staan drie haast identieke versies\nvan een tekst op: in hiërogliefen, in\nhet Demotisch en in het Grieks.",
+      "EUru": "Каменная плита, найденная\nв городе Розетта в Египте\nв 1799 году.\nПомогла расшифровать древние\nегипетские иероглифы.\nНа ней схожий текст, написанный\nиероглифами, демотическим\nписьмом и по-гречески.",
+      "JPja": "1799年にエジプトのロゼッタで発見された\n石版。古代エジプトの神聖文字（象形文字の\n一種）を解読するための手がかりとなった。\nほぼ同じ文章が上段に神聖文字、中段に民衆\n文字、下段にギリシア文字で記されている。",
+      "KRko": "1799년 이집트의 로제타 마을에서 발견된 석판.\n고대 이집트의 신성문자(상형문자의 일종)를\n해독하는 열쇠가 되었다.\n거의 똑같은 문장이 상단에는 신성 문자,\n중단에는 민중 문자, 하단에는 그리스 문자로\n기록되어 있다.",
+      "TWzh": "這是1799年於埃及羅塞塔發現的石碑。\n是解讀古埃及神聖文字\n（一種象形文字）的重要線索。\n類似的文章以三種文字記載，上段為\n神聖文字聖書體，中段為平民文字世俗體，\n下段為古希臘文。",
+      "USen": "A stone slab found in Rosetta, Egypt\nin 1799. Helped efforts to decipher\nancient Egyptian hieroglyphs.\nAlmost identical text is written in\nhieroglyphs at the top, then Demotic\nscript, and lastly Greek script.",
+      "USes": "Este fragmento de piedra hallado en\nRosetta, Egipto, en 1799, sirvió para\ndescifrar los jeroglíficos egipcios.\nDebajo de estos, un texto casi\nidéntico está escrito en egipcio\ndemótico y en griego.",
+      "USfr": "Cette tablette en pierre trouvée\nen 1799 à Rosette (Égypte) a permis\nde déchiffrer les hiéroglyphes.\nUn texte quasiment identique y est\nrédigé d'abord en hiéroglyphes, puis\nen égyptien démotique, puis en grec."
+    }
+  },
+  {
+    "label": "art_12537",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "后母戊鼎\n作者不明\n公元前1200年　[青铜]",
+      "EUde": "Houmuwu Ding\nUnbekannt, 1200 v. Chr.\nBronze",
+      "EUen": "Houmuwu Ding\n　 Artist Unknown, 1200 BCE\n　 Bronze",
+      "EUes": "Houmuwu ding\nAnónimo, 1200 a. C.\nBronce",
+      "EUfr": "Chaudron de Houmuwu\nArtiste inconnu, 1200 av. è. c.\nBronze",
+      "EUit": "Houmuwu ding\nArtista sconosciuto, 1200 a. C.\nBronzo",
+      "EUnl": "Houmuwu ding\nOnbekende kunstenaar, 1200 v.C.\nBrons",
+      "EUru": "Дин Хоумуу\nНеизвестный скульптор, 1200 до н. э.\nБронза",
+      "JPja": "后母戊鼎\n作者不明\n紀元前1200年　[青銅]",
+      "KRko": "후모무정\n작자 미상\n기원전 1200년　[청동]",
+      "TWzh": "后母戊鼎\n作者不明\n西元前1200年　[青銅]",
+      "USen": "Houmuwu Ding\n　 Artist Unknown, 1200 BCE\n　 Bronze",
+      "USes": "Houmuwu ding\nAnónimo, 1200 a. C.\nBronce",
+      "USfr": "Chaudron de Houmuwu\nArtiste inconnu, 1200 av. è. c.\nBronze"
+    }
+  },
+  {
+    "label": "art_12537_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "中国古代最大且最重的青铜祭祀器具。\n从铜器内壁书写的铭文判断，\n是商王为祭祀自己的母亲而铸造的。",
+      "EUde": "Dieser chinesische Kultgegenstand\naus Bronze, auch „Ding“ genannt,\nzählt zu den schwersten seiner Art.\nDie Inschrift auf der Innenseite lässt\nvermuten, dass er zu Ehren der\nMutter des Königs erschaffen wurde.",
+      "EUen": "This bronze ding from ancient China\nis the largest and heaviest ever\nfound.\nThe script on the inside suggests\nit was created to honor the king's\nmother.",
+      "EUes": "Este objeto de bronce procedente\nde la antigua China es el más grande\ny más pesado jamás encontrado.\nLa inscripción del interior sugiere\nque se realizó en honor a la madre\ndel rey.",
+      "EUfr": "Ce ding (chaudron) en bronze\noriginaire de Chine est le plus grand\net le plus lourd jamais retrouvé.\nLe texte sur la face interne laisse\npenser qu'il fut réalisé en l'honneur\nde la mère du roi.",
+      "EUit": "Questo oggetto di bronzo originario\ndell'antica Cina è il più grande e\npesante mai rinvenuto.\nL'iscrizione all'interno fa pensare\nche venne realizzato in onore della\nmadre del re.",
+      "EUnl": "Deze bronzen ketel uit het oude\nChina is de grootste en zwaarste van\nzijn soort die ooit is gevonden.\nDe tekst aan de binnenkant doet\nvermoeden dat hij ter ere van de\nmoeder van de koning is gemaakt.",
+      "EUru": "Этот ритуальный сосуд из древнего\nКитая — самый большой и тяжелый\nиз всех найденных.\nСудя по надписи внутри, он был\nсоздан в честь матери короля.",
+      "JPja": "古代中国の、最大にして最も重い青銅祭器。\n器の内壁に書かれた銘文から、王が母を祭る\nために鋳造したものとされている。",
+      "KRko": "고대 중국의 가장 크고 무거운 청동 제기.\n그릇의 안쪽 벽에 새겨진 글귀에는 왕이\n어머니의 제사를 위해 주조하였다고 적혀 있다.",
+      "TWzh": "這是中國古代最大且最重的祭祀青銅器。\n鼎的內壁刻有銘文，因此判定是\n君王為祭祀母親而鑄造的。",
+      "USen": "This bronze ding from ancient China\nis the largest and heaviest ever\nfound.\nThe script on the inside suggests\nit was created to honor the king's\nmother.",
+      "USes": "Este objeto de bronce procedente\nde la antigua China es el más grande\ny pesado jamás encontrado.\nLa inscripción del interior sugiere\nque se realizó en honor a la madre\ndel rey.",
+      "USfr": "Ce ding (chaudron) en bronze\noriginaire de Chine est le plus grand\net le plus lourd jamais retrouvé.\nLe texte sur la face interne laisse\npenser qu'il fut réalisé en l'honneur\nde la mère du roi."
+    }
+  },
+  {
+    "label": "art_12539",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "兵马俑\n作者不明\n公元前210年　[陶]",
+      "EUde": "Terrakotta-Armee\nUnbekannt, 210 v. Chr.\nTon",
+      "EUen": "Terracotta Army\n　 Artist Unknown, 210 BCE\n　 　 Earthenware",
+      "EUes": "Ejército de terracota\nAnónimo, 210 a. C.\nCerámica",
+      "EUfr": "Armée de terre cuite\nArtiste inconnu, 210 av. è. c.\nTerre cuite",
+      "EUit": "Esercito di terracotta\nArtista sconosciuto, 210 a. C.\nTerracotta",
+      "EUnl": "Terracottaleger\nOnbekende kunstenaar, 210 v.C.\nAardewerk",
+      "EUru": "Терракотовая армия\nНеизвестный скульптор, 210 до н. э.\nГлина",
+      "JPja": "兵馬俑\n作者不明\n紀元前210年　[陶]",
+      "KRko": "병마용\n작자 미상\n기원전 210년　[도제]",
+      "TWzh": "兵馬俑\n作者不明\n西元前210年　[陶]",
+      "USen": "Terracotta Army\n　 Artist Unknown, 210 BCE\n　 　 Earthenware",
+      "USes": "Ejército de terracota\nAnónimo, 210 a. C.\nCerámica",
+      "USfr": "Armée de terre cuite\nArtiste inconnu, 210 av. è. c.\nTerre cuite"
+    }
+  },
+  {
+    "label": "art_12539_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "为了在死后的世界守护秦始皇而陪葬的\n陶俑士兵。1974年，在经过了2000年的\n时光后，发现了将近8000个兵马俑。\n与真人大小相同的像，并非以某个人像\n为原型，而是一个一个单独手工制作，\n表情、服装和姿势每个都不同。",
+      "EUde": "Diese Terrakotta-Krieger wurden mit\ndem ersten Qin-Kaiser begraben, um\nihn im Jenseits zu beschützen.\nKnapp 2000 Jahre später, im Jahr\n1974, wurden um die 8000 dieser\nKrieger entdeckt.\nJede der Figuren wurde individuell\ngefertigt: Pose, Gesicht sowie\nKleidung sind einzigartig!",
+      "EUen": "These terracotta warriors were\nburied with the first Qin emperor\nto protect him in the afterlife.\nNearly 2,000 years later, in 1974,\nabout 8,000 of them were found.\nEach statue is said to have been\nhandmade with different poses,\nexpressions, and clothing.",
+      "EUes": "Cada uno de estos guerreros fue\nmoldeado a mano, con ropajes,\nposes y expresiones diferentes.\nFueron enterrados junto al primer\nemperador de la dinastía Qin\npara protegerlo en el más allá.\nUnos 2000 años más tarde, en 1974,\nse encontraron alrededor de\n8000 estatuas como estas.",
+      "EUfr": "Ces guerriers en terre cuite furent\nenterrés avec le premier empereur\nQin pour le protéger dans l'au-delà.\nPlus de 2 000 ans plus tard, en 1974,\n8 000 de ces statues furent\nretrouvées.\nChacune aurait été sculptée à la main\net présenterait une pose, une tenue\net une expression distinctes.",
+      "EUit": "Questi guerrieri vennero sotterrati\ncon il primo imperatore della dinastia\nQin per proteggerlo nell'aldilà.\n2000 anni dopo, nel 1974, furono\nritrovate circa 8000 statue come\nquesta.\nSi ritiene che ogni statua fu\nrealizzata a mano, con pose,\nespressioni e abiti diversi.",
+      "EUnl": "Deze terracotta strijders zijn met de\neerste Qin-keizer begraven om hem\nin het hiernamaals te beschermen.\nBijna 2000 jaar later, in 1974, zijn er\nongeveer 8000 van gevonden.\nElke strijder zou handgemaakt zijn,\nmet verschillende houdingen,\nuitdrukkingen en kleding.",
+      "EUru": "Эти терракотовые солдаты были\nзахоронены вместе с первым\nимператором династии Цинь.\nОни должны были защищать его\nв загробном мире. Эти 8000 статуй\nнашли в 1974 году, спустя 2000 лет.\nСчитают, что эти статуи были\nсозданы вручную. У них разные\nпозы, одежда и выражения лиц.",
+      "JPja": "秦の始皇帝を死後の世界で守るために副葬さ\nれた素焼きの兵士像。1974年、2000年もの\n時を経て8000点近くの像が発見された。\n等身大の像は、どれも型取りされたものでは\nなく、ひとつひとつが手作りで、表情や服装\nポーズなど同じものがないという。",
+      "KRko": "진시황제를 사후 세계에서 지키기 위해 부장된\n도제 병사 인형. 2000년의 세월이 지난\n1974년에 8000점 가량이 발견되었다.\n사람 크기의 조각상은 어느 한 점도\n찍어 낸 것이 없고, 하나하나 손수 만들어서\n표정과 복장, 몸짓이 전부 다르다고 한다.",
+      "TWzh": "這座素燒的士兵像是為了在死後的世界\n守護秦始皇而建造的陪葬品。1974年發現了\n將近8000件歷經2000多年的雕像。\n每座雕像都與真人大小相同，\n並且不是以模具製作，而是人工雕刻的，\n因此不論表情、服裝還是姿勢，都有所不同。",
+      "USen": "These terracotta warriors were\nburied with the first Qin emperor\nto protect him in the afterlife.\nNearly 2,000 years later, in 1974,\nabout 8,000 of them were found.\nEach statue is said to have been\nhandmade with different poses,\nexpressions, and clothing.",
+      "USes": "Cada uno de estos guerreros fue\nmoldeado a mano, con vestimentas,\nposes y expresiones diferentes.\nFueron enterrados junto al primer\nemperador de la dinastía Qin\npara protegerlo en el más allá.\nUnos 2000 años después, en 1974,\nse encontraron alrededor de\n8000 estatuas como estas.",
+      "USfr": "Ces guerriers en terre cuite furent\nenterrés avec le premier empereur\nQin pour le protéger dans l'au-delà.\nPlus de 2 000 ans plus tard, en 1974,\n8 000 de ces statues furent\nretrouvées.\nChacune aurait été sculptée à la main\net présenterait une pose, une tenue\net une expression distinctes."
+    }
+  },
+  {
+    "label": "art_12541",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "思想者\n奥古斯特·罗丹／作\n1902年　[青铜]",
+      "EUde": "Der Denker\nAuguste Rodin, 1902\nBronze",
+      "EUen": "The Thinker\n　 Auguste Rodin, 1902\n　 　 Bronze",
+      "EUes": "El pensador\nAuguste Rodin, 1902\nBronce",
+      "EUfr": "Le Penseur\nAuguste Rodin, 1902\nBronze",
+      "EUit": "Il pensatore\nAuguste Rodin, 1902\nBronzo",
+      "EUnl": "De denker\nAuguste Rodin, 1902\nBrons",
+      "EUru": "Мыслитель\nОгюст Роден, 1902\nБронза",
+      "JPja": "考える人\nオーギュスト・ロダン／作\n1902年　[ブロンズ]",
+      "KRko": "생각하는 사람\n오귀스트 로댕 작품\n1902년　[청동]",
+      "TWzh": "沉思者\n奧古斯特‧羅丹\n1902年　[青銅]",
+      "USen": "The Thinker\n　 Auguste Rodin, 1902\n　 　 Bronze",
+      "USes": "El pensador\nAuguste Rodin, 1902\nBronce",
+      "USfr": "Le penseur\nAuguste Rodin, 1902\nBronze"
+    }
+  },
+  {
+    "label": "art_12541_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "近代雕刻之父、法国雕刻家罗丹\n最有名的青铜雕像。\n　\n原型在法国，共铸造了20多尊\n存放在各国，但全都被视为真品。\n在日本的上野和京都的户外也有展示。",
+      "EUde": "Skulptur aus Bronze, erschaffen vom\nfranzösischen Bildhauer Rodin, der\nals Vater der modernen Plastik gilt.\nDas weltberühmte Original, von dem\nmehr als 20 Abgüsse angefertigt\nwurden, befindet sich in Frankreich.\nDie authentischen Nachbildungen\nkönnen heute überall auf der ganzen\nWelt bewundert werden.",
+      "EUen": "This bronze sculpture was crafted by\nthe French sculptor Rodin, known as\nthe father of modern sculpture.\nThe incredibly famous original is\nlocated in France. The sculpture was\ncasted over 20 times.\nAs such, authentic pieces can be\nfound all around the world.",
+      "EUes": "Esta estatua de bronce es obra del\nescultor francés Rodin, considerado\nel padre de la escultura moderna.\nLa original está en París, pero se han\nhecho más de 20 fundiciones, que se\nhallan en diversos puntos del mundo.",
+      "EUfr": "Cette sculpture en bronze fut\nréalisée par le sculpteur français\nRodin, père de la sculpture moderne.\nSi l'original, mondialement célèbre,\nse situe en France, cette statue a été\nreproduite plus de 20 fois.\nDe nombreux exemplaires\nparfaitement authentiques peuvent\ndonc être admirés de par le monde.",
+      "EUit": "Questa statua di bronzo è opera del\nfrancese Rodin, considerato il padre\ndella scultura moderna.\nL'originale è conservato a Parigi,\nma se ne contano più di 20 copie\npresenti in varie parti del mondo.",
+      "EUnl": "Dit bronzen beeld is gemaakt door\nRodin, beschouwd als de vader van\nde moderne beeldhouwkunst.\nHet beroemde origineel bevindt zich\nin Frankrijk en er is meer dan 20 keer\neen afgietsel van gemaakt.\nJe kunt het daarom op meerdere\nplekken ter wereld bewonderen.",
+      "EUru": "Эту бронзовую скульптуру создал\nфранцузский скульптор Роден.\nОн считается основоположником\nсовременного скульптурного\nискусства.\nСтатуя очень известна. Оригинал\nнаходится во Франции, но в целом\nее отливали более 20 раз.\nПоэтому подлинные экземпляры\nможно найти по всему миру.",
+      "JPja": "近代彫刻の父、フランスの彫刻家ロダンの、\nあまりにも有名なブロンズ像。\n　\n原型はフランスにあり、20体以上が鋳造さ\nれて世界各国にあるがどれも本物とされる。\n日本では上野と京都に屋外展示されている。",
+      "KRko": "근대 조각의 아버지라고 불리는\n프랑스의 조각가 로댕의 너무나 유명한 동상.\n \n원형은 프랑스에 있으며,\n20점 이상 주조되어 세계 각국에 흩어져 있는데\n모두 진품으로 취급된다.",
+      "TWzh": "這座舉世聞名的銅像是近代雕刻之父，\n法國雕刻家羅丹建造的。\n原雕塑位於法國，被鑄造超過20件，\n所以世界各地的展示品都被視為真品。\n在日本的上野和京都也都有戶外展示。",
+      "USen": "This bronze sculpture was crafted by\nthe French sculptor Rodin, known as\nthe father of modern sculpture.\nThe incredibly famous original is\nlocated in France. The sculpture was\ncasted over 20 times.\nAs such, authentic pieces can be\nfound all around the world.",
+      "USes": "Esta estatua de bronce es obra del\nescultor francés Rodin, considerado\nel padre de la escultura moderna.\nLa original está en París, pero se han\nhecho más de 20 fundiciones, que se\nhallan en diversos puntos del mundo.",
+      "USfr": "Cette sculpture en bronze fut\nréalisée par le sculpteur français\nRodin, père de la sculpture moderne.\nSi l'original, mondialement célèbre,\nse situe en France, cette statue a été\nreproduite plus de 20 fois.\nDe nombreux exemplaires\nparfaitement authentiques peuvent\ndonc être admirés de par le monde."
+    }
+  },
+  {
+    "label": "art_12570",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "风神雷神图屏风（雷神）\n俵屋宗达／作\n宽永年间左右　[纸本金地着色]",
+      "EUde": "Wandschirm mit Fūjin und Raijin (L)\nTawaraya Sōtatsu, 17. Jh.\nBlattgold und Tusche auf Papier",
+      "EUen": "Folding Screen of Fūjin and Raijin (L)\n Tawaraya Sōtatsu, 17th century\n Gold leaf and ink on paper",
+      "EUes": "Biombo de Fūjin y Raijin (izquierda)\nTawaraya Sōtatsu, siglo XVII\nOro y tinta sobre papel",
+      "EUfr": "Paravent de Fūjin et Raijin (G)\nTawaraya Sōtatsu, XVIIe siècle\nFeuille d'or et encre sur papier",
+      "EUit": "Paravento di Fūjin e Raijin (parte sx)\nTawaraya Sōtatsu, XVII sec.\nFoglie d'oro e inchiostro su carta",
+      "EUnl": "Vouwscherm met Fūjin en Raijin (l)\nTawaraya Sōtatsu, 17e eeuw\nBladgoud en inkt op papier",
+      "EUru": "Фудзин и Райдзин: боги ветра\nи грома (левая часть)\nТаварая Сотацу, XVII век, тушь, золото, бумага",
+      "JPja": "風神雷神図屏風（雷神）\n俵屋宗達／作\n寛永年間頃　[紙本金地著色]",
+      "KRko": "풍신뇌신도 병풍(뇌신)\n다와라야 소타쓰 작품\n칸에이 시대　[금지 설채]",
+      "TWzh": "風神雷神圖屏風（雷神）\n俵屋宗達\n寛永年間左右　[紙本金地著色]",
+      "USen": "Folding Screen of Fūjin and Raijin (L)\n Tawaraya Sōtatsu, 17th century\n Gold leaf and ink on paper",
+      "USes": "Biombo de Fūjin y Raijin (izquierda)\nTawaraya Sōtatsu, siglo XVII\nOro y tinta sobre papel",
+      "USfr": "Paravent de Fūjin et Raijin (G)\nTawaraya Sōtatsu, XVIIe siècle\nFeuille d'or et encre sur papier"
+    }
+  },
+  {
+    "label": "art_12570_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "用金箔涂满背景，以充满跃动感的笔触\n描绘出风神雷神的二曲一双屏风图，\n是江户时代初期画家俵屋宗达的杰作。\n题材的简略化与形式化，省略背景的\n设计感风格被后来的尾形光琳继承，\n作为琳派流传到现代。",
+      "EUde": "Dieser Wandschirm zeigt eine\nSzene mit Fūjin und Raijin auf\neinem Hintergrund aus Blattgold.\nEr gilt als das Meisterwerk von\nTawaraya Sōtatsu, einem Künstler\naus der frühen Edo-Zeit.\nDer hier zum Einsatz kommende Stil\nder vereinfachten Darstellung wurde\nmaßgeblich von Ogata Kōrin geprägt.\nDieser Stil, genannt Rinpa, ist auch\nheute noch Bestandteil der Schule\nder japanischen Malerei.",
+      "EUen": "This folding screen shows dynamic\nbrushwork of Fūjin and Raijin on\na gold-leaf background.\nIt is thought to be the masterpiece of\nTawaraya Sōtatsu, an early-Edo-\nperiod artist.\nThe simplification of the subjects is\na style that was carried on by\nOgata Kōrin.\nIt's a style still in use today in the\nRinpa school of Japanese painting.",
+      "EUes": "Este biombo muestra, con pinceladas\ndinámicas, a los dioses Fūjin y Raijin\nsobre un fondo de pan de oro.\nMuchos lo consideran la obra\nmaestra de Tawaraya Sōtatsu, quien\nvivió a principios del periodo Edo.\nLa simplificación de los motivos\npictóricos es un estilo que luego\ncontinuó Ogata Korin.\nRinpa, una de las escuelas más\nimportantes de pintura japonesa,\nsigue usando ese estilo aún hoy.",
+      "EUfr": "Il s'agit d'une représentation très\ndynamique de Fūjin et Raijin sur fond\nde feuille d'or.\nOn considère que c'est là le chef-\nd'œuvre de Tawaraya Sōtatsu, un\nartiste du début de l'époque d'Edo.\nLa simplification des sujets constitue\nun style initié par Ogata Kōrin.\nIl est toujours en vogue de nos jours\ndans l'école de peinture japonaise\nRinpa.",
+      "EUit": "Questo paravento ritrae, con delle\npennellate dinamiche, gli dei Fūjin\ne Raijin su uno sfondo di foglie d'oro.\nÈ considerata da molti come l'opera\nmaestra di Tawaraya Sōtatsu, che\nvisse agli inizi del periodo Edo.\nLa semplificazione dei soggetti\nincarna uno stile che venne\nripreso poi da Ogata Kōrin.\nÈ ancora in voga ai giorni nostri\nnella scuola di pittura giapponese\nRinpa.",
+      "EUnl": "Dit vouwscherm toont in dynamische\npenseelstreken Fūjin and Raijin op\neen achtergrond van bladgoud.\nHet wordt als het meesterwerk\ngezien van Tawaraya Sōtatsu, die\nleefde in de vroege Edoperiode.\nDe stijl waarin onderwerpen\nvereenvoudigd worden afgebeeld, is\nvoortgezet door Ogata Kōrin.\nDeze stijl wordt nog steeds gebruikt\ndoor de Japanse Rinpa-school van\nde schilderkunst.",
+      "EUru": "На этой ширме на позолоченном\nфоне изображены бог ветра\nи бог грома.\nОна считается шедевром Тавараи\nСотацу, художника раннего\nпериода Эдо.\nПозже такое упрощенное\nизображение персонажей\nперенял Огата Корин.\nЭтот стиль до сих пор\nиспользуется японской\nшколой Ринпа.",
+      "JPja": "背景を金箔で埋め尽くし、躍動感ある筆致で\n風神雷神を配した二曲一双の屏風図は、江戸\n時代初期の画家、俵屋宗達による傑作。\n題材の簡略化やパターン化、背景を省略した\nデザイン的なスタイルは後の尾形光琳に受け\n継がれ、琳派として現代にも繋がっている。",
+      "KRko": "배경을 금박으로 가득 채우고 역동적인 필치로\n풍신과 뇌신을 그린 한 쌍의 병풍. 에도 시대\n초기의 화가인 다와라야 소타쓰의 걸작이다.\n주제의 간략화 및 패턴화, 배경을 생략하는\n디자인 기법은 후에 오가타 고린이 계승하여,\n린파라는 화풍으로 이어졌다.",
+      "TWzh": "這是江戶時代初期畫家俵屋宗達的大作，\n在兩扇一對的屏風上貼滿金箔作為背景，\n以流動感強烈的筆鋒畫上風神和雷神。\n題材簡略化、形式化和省略背景的設計風格\n為之後的尾形光琳所繼承，\n並以「琳派」流傳到現代。",
+      "USen": "This folding screen shows dynamic\nbrushwork of Fūjin and Raijin on\na gold-leaf background.\nIt is thought to be the masterpiece of\nTawaraya Sōtatsu, an early-Edo-\nperiod artist.\nThe simplification of the subjects is\na style that was carried on by\nOgata Kōrin.\nIt's a style still in use today in the\nRinpa school of Japanese painting.",
+      "USes": "Este biombo muestra, con pinceladas\ndinámicas, a los dioses Fūjin y Raijin\nsobre un fondo de pan de oro.\nMuchos lo consideran la obra\nmaestra de Tawaraya Sōtatsu, quien\nvivió a principios del periodo Edo.\nLa simplificación de los motivos\npictóricos es un estilo que luego\ncontinuó Ogata Kōrin.\nRinpa, una de las escuelas más\nimportantes de pintura japonesa,\nsigue usando ese estilo aún hoy.",
+      "USfr": "Il s'agit d'une représentation très\ndynamique de Fūjin et Raijin sur fond\nde feuille d'or.\nOn considère que c'est là le chef-\nd'œuvre de Tawaraya Sōtatsu, un\nartiste du début de l'époque d'Edo.\nLa simplification des sujets constitue\nun style initié par Ogata Kōrin.\nIl est toujours en vogue de nos jours\ndans l'école de peinture japonaise\nRinpa."
+    }
+  },
+  {
+    "label": "art_12618",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "星月夜\n文森特·威廉·梵高／作\n1889年　[油画·布面]",
+      "EUde": "Sternennacht\nVincent van Gogh, 1889\nÖl auf Leinwand",
+      "EUen": "The Starry Night\n　 　 　Vincent van Gogh, 1889\n　 　 Oil on canvas",
+      "EUes": "La noche estrellada\nVincent van Gogh, 1889\nÓleo sobre lienzo",
+      "EUfr": "La Nuit étoilée\nVincent van Gogh, 1889\nHuile sur toile",
+      "EUit": "Notte stellata\nVincent van Gogh, 1889\nOlio su tela",
+      "EUnl": "De sterrennacht\nVincent van Gogh, 1889\nOlieverf op doek",
+      "EUru": "Звездная ночь\nВинсент Ван Гог, 1889\nХолст, масло",
+      "JPja": "星月夜\nフィンセント・ファン・ゴッホ／作\n1889年　[油彩・キャンバス]",
+      "KRko": "별이 빛나는 밤\n빈센트 반 고흐 작품\n1889년　[유채・캔버스]",
+      "TWzh": "星夜\n文森‧威廉‧梵谷\n1889年左右　[油彩‧畫布]",
+      "USen": "The Starry Night\n　 　 　Vincent van Gogh, 1889\n　 　 Oil on canvas",
+      "USes": "La noche estrellada\nVincent van Gogh, 1889\nÓleo sobre lienzo",
+      "USfr": "La nuit étoilée\nVincent van Gogh, 1889\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_12618_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "梵高因精神原因而入院疗养时所作的\n晚年作品。并不只是描绘了从病房中\n能见到的风景，还包含了记忆和空想。\n在寄给其他画家的信中，\n梵高把这幅作品称为失败之作，\n可见他本人并不满意。",
+      "EUde": "Bekanntes Werk von Van Gogh,\ndas er während seines Aufenthalts\nin einer Nervenheilanstalt malte.\nDas gemalte Motiv, die Aussicht aus\nseinem Zimmer, beruht auf Erinne-\nrungen und erdachten Elementen.\nIn einem Brief an seine Freunde\nbezeichnete Van Gogh dieses Werk\nals „Misserfolg“.",
+      "EUen": "Van Gogh's signature piece, painted\nwhile he was hospitalized at an\nasylum.\nThis view from his room includes\nmemories and imaginations. In letters\nto friends, the artist called it a failure.",
+      "EUes": "Van Gogh pintó esta obra, su más\nemblemática, mientras estuvo\nhospitalizado en un asilo.\nLa vista desde su habitación fusiona\nrecuerdos y fantasías.\nEn cartas a sus amigos, Van Gogh\nse refiere a este cuadro como\nun fracaso.",
+      "EUfr": "L'œuvre emblématique de van Gogh,\npeinte alors qu'il était à l'asile.\nL'artiste a peint sa chambre de\nmémoire, y introduisant certaines\nfantaisies.\nIl a évoqué ce chef-d'œuvre dans sa\ncorrespondance... et considérait qu'il\ns'agissait d'un échec.",
+      "EUit": "L'opera emblematica di Van Gogh,\ndipinta mentre si trovava ricoverato\nin un istituto psichiatrico.\nLa vista dalla sua stanza fonde tra\nloro ricordi e fantasie.\nNelle lettere inviate ai suoi amici,\nl'artista si riferisce a quest'opera\ncome a un fallimento.",
+      "EUnl": "Een meesterwerk van Van Gogh,\ndat hij schilderde terwijl hij in een\npsychiatrisch ziekenhuis verbleef.\nDit uitzicht vanuit zijn kamer is\nverweven met herinneringen en\nfantasieën.\nIn een brief aan een kunstenaars-\nvriend noemde Van Gogh dit\nwerk zelf een mislukking.",
+      "EUru": "Самая знаменитая картина\nВан Гога, написанная им\nв психиатрической клинике.\nВ этот вид из своего окна он\nвплел воспоминания и фантазии.\nВ письмах друзьям художник писал,\nчто считает картину неудачной.",
+      "JPja": "精神を病んで入院・療養中に描いた、ゴッホ\n晩年の代表作。病室から見える風景そのまま\nではなく、記憶や空想も含まれている。\nほかの画家に宛てた手紙の中で、この作品に\nついて失敗作だと述べており、ゴッホ自身は\n満足していなかったことがうかがえる。",
+      "KRko": "정신병으로 입원해서 요양 중일 때 그린,\n말년 고흐의 대표작. 병실에서 보이는 풍경\n그대로가 아니라, 기억과 상상이 더해져 있다.\n다른 화가에게 보낸 편지에서 이 작품을\n실패작이라고 언급하고 있어, 고흐 스스로는\n작품에 만족하지 못했다는 것을 알 수 있다.",
+      "TWzh": "這是梵谷在精神病院療養時\n所繪製的晚年代表作。但這並不是真實呈現\n從病房看到的風景，而是包含了記憶和幻想。\n梵谷在寫信給其他畫家時提到\n這幅畫是一件失敗的作品，\n可見梵谷當時對自己相當不滿意。",
+      "USen": "Van Gogh's signature piece, painted\nwhile he was hospitalized at an\nasylum.\nThis view from his room includes\nmemories and imaginations. In letters\nto friends, the artist called it a failure.",
+      "USes": "Van Gogh pintó esta obra, su más\nemblemática, mientras estuvo\nhospitalizado en un asilo.\nLa vista desde su habitación fusiona\nrecuerdos y fantasías.\nEn cartas a sus amigos, Van Gogh\nse refiere a este cuadro como\nun fracaso.",
+      "USfr": "L'œuvre emblématique de van Gogh,\npeinte alors qu'il était à l'asile.\nL'artiste a peint sa chambre de\nmémoire, y introduisant certaines\nfantaisies.\nIl a évoqué ce chef-d'œuvre dans sa\ncorrespondance... et considérait qu'il\ns'agissait d'un échec."
+    }
+  },
+  {
+    "label": "art_12619",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "维特鲁威人\n列奥纳多·达·芬奇／作\n1487年左右　[钢笔和墨水·纸]",
+      "EUde": "Der vitruvianische Mensch\nLeonardo da Vinci, um 1487\nFeder und Tinte auf Papier",
+      "EUen": "Vitruvian Man\n　 　Leonardo da Vinci, circa 1487\n　 　 Pen and ink on paper",
+      "EUes": "Hombre de Vitruvio\nLeonardo da Vinci, hacia 1487\nPluma y tinta sobre papel",
+      "EUfr": "L'Homme de Vitruve\nLeonard de Vinci, vers 1487\nEncre et lavis sur papier",
+      "EUit": "Uomo Vitruviano\nLeonardo da Vinci, 1487 ca.\nPenna e inchiostro su carta",
+      "EUnl": "Vitruviusman\nLeonardo da Vinci, omstreeks 1487\nInkt op papier",
+      "EUru": "Витрувианский человек\nЛеонардо да Винчи, около 1487\nПеро, чернила, бумага",
+      "JPja": "ウィトルウィウス的人体図\nレオナルド・ダ・ヴィンチ／作\n1487年頃　[ペンとインク・紙]",
+      "KRko": "인체 비례도\n레오나르도 다 빈치 작품\n1487년경　[펜과 잉크・종이]",
+      "TWzh": "維特魯威人\n李奧納多‧達文西\n1487年左右　[筆與墨水‧紙張]",
+      "USen": "Vitruvian Man\n　 　Leonardo da Vinci, circa 1487\n　 　 Pen and ink on paper",
+      "USes": "Hombre de Vitruvio\nLeonardo da Vinci, hacia 1487\nPluma y tinta sobre papel",
+      "USfr": "L'homme de Vitruve\nLéonard de Vinci, vers 1487\nEncre et lavis sur papier"
+    }
+  },
+  {
+    "label": "art_12619_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "以公元前1世纪的建筑家维特鲁威的\n著作《建筑十书》为基础，\n就理想的人体比例而绘制出来的。",
+      "EUde": "Diese Zeichnung basiert auf den\n„idealen“ Körperproportionen,\nbeschrieben in „De architectura“.\nVerfasst wurde diese Abhandlung\nvon Vitruvius, einem Architekten\naus dem frühen 1. Jh. v. Chr.",
+      "EUen": "This drawing is based on the \"ideal\"\nhuman-body ratio, as stated in\n\"De architectura.\"\n\"De architectura\" was a treatise by\nVitruvius, an architect from the early\n1st century BCE.",
+      "EUes": "Este dibujo se basa en el canon del\ncuerpo humano, según lo establecía\nel tratado «De architectura».\nEl autor de dicho tratado es\nVitruvio, un arquitecto que\nvivió en el siglo I a. C.",
+      "EUfr": "Ce dessin représente les proportions\nidéales du corps humain, telles que\ndécrites dans « De architectura ».\nIl s'agit d'un traité rédigé par\nVitrivius, un architecte du premier\nsiècle avant J.-C.",
+      "EUit": "Questo disegno rappresenta le\nproporzioni ideali del corpo umano\ncome descritte nel \"De architectura\".\nEra un trattato redatto da Vitruvio,\nun architetto del I secolo a. C.",
+      "EUnl": "Deze tekening is gebaseerd op de\nideale menselijke lichaamsverhoudin-\ngen beschreven in \"De architectura\".\n\"De architectura\" is een verhandeling\nvan Vitruvius, een architect uit de\neerste eeuw v.C.",
+      "EUru": "Рисунок основан на «идеальных»\nпропорциях человеческого тела\nиз трактата «De architectura».\nТрактат был написан Витрувием,\nархитектором I века до н. э.",
+      "JPja": "紀元前１世紀の建築家、ウィトルウィウスの\n著書「建築論」をもとに、理想的な人体の\n比率について可視化したドローイング。",
+      "KRko": "기원전 1세기의 건축가, 비트루비우스의\n저서 '건축 10서'를 바탕으로, 이상적인\n인체의 비율을 시각화한 드로잉.",
+      "TWzh": "這幅人體圖是參考西元前１世紀的建築師\n維特魯威的著作《建築書》後，\n按照人體的理想比例所繪製出來的。",
+      "USen": "This drawing is based on the \"ideal\"\nhuman-body ratio, as stated in\n\"De architectura.\"\n\"De architectura\" was a treatise by\nVitruvius, an architect from the early\n1st century BCE.",
+      "USes": "Este dibujo se basa en la proporción\n\"ideal\" del cuerpo humano, según lo\nestablecido por \"De architectura\".\nEl autor de dicho tratado es\nVitruvio, un arquitecto que\nvivió en el siglo I a. C.",
+      "USfr": "Ce dessin représente les proportions\nidéales du corps humain, telles que\ndécrites dans « De architectura ».\nIl s'agit d'un traité rédigé par\nVitrivius, un architecte du premier\nsiècle avant J.-C."
+    }
+  },
+  {
+    "label": "art_12621",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "奥菲莉娅\n约翰·埃弗里特·米莱斯／作\n1852年　[油画·布面]",
+      "EUde": "Ophelia\nJohn Everett Millais, 1852\nÖl auf Leinwand",
+      "EUen": "Ophelia\n　 　John Everett Millais, 1852\n　 　 　 Oil on canvas",
+      "EUes": "Ofelia\nJohn Everett Millais, 1852\nÓleo sobre lienzo",
+      "EUfr": "Ophélie\nJohn Everett Millais, 1852\nHuile sur toile",
+      "EUit": "Ofelia\nJohn Everett Millais, 1852\nOlio su tela",
+      "EUnl": "Ophelia\nJohn Everett Millais, 1852\nOlieverf op doek",
+      "EUru": "Офелия\nДжон Эверетт Милле, 1852\nХолст, масло",
+      "JPja": "オフィーリア\nジョン・エヴァレット・ミレイ／作\n1852年　[油彩・キャンバス]",
+      "KRko": "오필리아\n존 에버렛 밀레이 작품\n1852년　[유채・캔버스]",
+      "TWzh": "奧菲莉亞\n約翰‧艾佛雷特‧米萊\n1852年　[油彩‧畫布]",
+      "USen": "Ophelia\n　 　John Everett Millais, 1852\n　 　 　 Oil on canvas",
+      "USes": "Ofelia\nJohn Everett Millais, 1852\nÓleo sobre lienzo",
+      "USfr": "Ophélie\nJohn Everett Millais, 1852\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_12621_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "奥菲莉娅是在莎士比亚著名戏剧\n《哈姆雷特》中登场的悲剧女主角。\n　\n在细腻而美丽的自然场景中，女子失魂般\n落入河中，脸上流露出勘破生死的\n庄严表情，吸引着观者的心。",
+      "EUde": "Ophelia ist eine tragische Figur in\nShakespeares Stück „Hamlet“.\nIhr Gesichtsausdruck wirkt entrückt,\nwährend sie ohnmächtig in einem\nFluss treibt.\nUmgeben von der Schönheit der\nNatur scheint sie zwischen Leben\nund Tod zu schweben.",
+      "EUen": "Ophelia is a tragic figure in the\nShakespearean play \"Hamlet.\"\nThere is an otherworldly expression\non her face as she lies unconscious\nin a river.\nShe is surrounded by the beauty of\nnature as she floats between life and\ndeath.",
+      "EUes": "La trágica figura de Ofelia es\nla heroína en la obra de teatro\n«Hamlet» de Shakespeare.\nAl yacer inconsciente en el río,\nsu expresión tiene algo inquietante,\ncomo sobrenatural.\nMientras flota etéreamente\nentre la vida y la muerte, su única\nacompañante es la bella naturaleza.",
+      "EUfr": "Ophélie est un personnage au destin\ntragique apparaissant dans la pièce\nHamlet, de William Shakespeare.\nElle affiche une expression hors\ndu temps et déjà hors du monde,\nétendue inconsciente dans l'eau.\nEntourée par la beauté d'une nature\nflorissante, elle vogue entre la vie et\nla mort.",
+      "EUit": "Ofelia è un personaggio tragico\nche appare nell'Amleto di William\nShakespeare.\nMentre giace incosciente nel fiume,\nla sua espressione assume un che\ndi inquietante, quasi soprannaturale.\nCircondata dalla bellezza della\nnatura, viene trascinata dai flutti\nsospesa tra la vita e la morte.",
+      "EUnl": "Ophelia is de tragische heldin\nin \"Hamlet\", een toneelstuk van\nShakespeare.\nZe ligt in een rivier met een\nonwezenlijke uitdrukking op\nhaar gezicht.\nTerwijl ze tussen leven en dood\nzweeft, wordt ze omringd door\nnatuurlijke schoonheid.",
+      "EUru": "Офелия — трагический персонаж\nв пьесе Шекспира «Гамлет».\nОна изображена лежащей в водах\nреки без сознания, с отрешенным\nвыражением лица.\nОкруженная красотой природы,\nона плывет по течению на грани\nжизни и смерти.",
+      "JPja": "オフィーリアは、シェイクスピアの戯曲\n『ハムレット』に登場する悲劇のヒロイン。\n　\n緻密で美しい自然描写の中、正気を失って川\nに落ち、生と死の間で見せる彼女の神々しい\nまでの表情は、観る者の心を引きつける。",
+      "KRko": "오필리아는 셰익스피어의 희곡\n\"햄릿\"에 등장하는 비극의 히로인이다.\n \n치밀하고 아름답게 묘사된 자연 속, 이성을 잃고\n강물에 뛰어든 그녀가 생사의 경계에서 보이는\n숭고한 표정은 보는 이의 마음을 사로잡는다.",
+      "TWzh": "奧菲莉亞是莎士比亞名劇\n「哈姆雷特」中的女主角。\n在描繪得精美且細緻的大自然中，\n女子如失了魂般倒在河川裡，臉上帶著\n看破生死的莊嚴表情，牽動著鑑賞者的心。",
+      "USen": "Ophelia is a tragic figure in the\nShakespearean play \"Hamlet.\"\nThere is an otherworldly expression\non her face as she lies unconscious\nin a river.\nShe is surrounded by the beauty of\nnature as she floats between life and\ndeath.",
+      "USes": "La trágica figura de Ofelia es\nla heroína en la obra de teatro\n\"Hamlet\" de Shakespeare.\nAl yacer inconsciente en el río,\nsu expresión tiene algo inquietante,\ncomo sobrenatural.\nMientras flota etéreamente\nentre la vida y la muerte, su única\nacompañante es la bella naturaleza.",
+      "USfr": "Ophélie est un personnage au destin\ntragique apparaissant dans la pièce\nHamlet, de William Shakespeare.\nElle affiche une expression hors\ndu temps et déjà hors du monde,\nétendue inconsciente dans l'eau.\nEntourée par la beauté d'une nature\nflorissante, elle vogue entre la vie et\nla mort."
+    }
+  },
+  {
+    "label": "art_12622",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "紫阳花双鸡图\n伊藤若冲／作\n18世纪　[绢本着色]",
+      "EUde": "Ajisai Sōkeizu\nItō Jakuchū, 18. Jh.\nBedruckte Seide",
+      "EUen": "Ajisai Sōkeizu\n 　 　 　Itō Jakuchū, 18th century \n　 Dyed silk",
+      "EUes": "Ajisai Sōkeizu\nItō Jakuchū, siglo XVIII\nEstampado sobre seda",
+      "EUfr": "Ajisai Sōkeizu\nItō Jakuchū, XVIIIe siècle\nSoie teinte",
+      "EUit": "Ajisai Sōkeizu\nItō Jakuchū, XVIII sec.\nPittura su seta",
+      "EUnl": "Ajisai Sōkeizu\nItō Jakuchū, 18e eeuw\nGekleurde zijde",
+      "EUru": "Петух и курица на фоне гортензий\nИто Дзякутю, XVIII век\nКраски, шелк",
+      "JPja": "紫陽花双鶏図\n伊藤若冲／作\n18世紀　[絹本着色]",
+      "KRko": "자양화 쌍계도\n이토 쟈쿠츄 작품\n18세기　[견본 착색]",
+      "TWzh": "紫陽花雙雞圖\n伊藤若沖\n18世紀　[絹本著色]",
+      "USen": "Ajisai Sōkeizu\n 　 　 　Itō Jakuchū, 18th century \n　 Dyed silk",
+      "USes": "Ajisai Sōkeizu\nItō Jakuchū, siglo XVIII\nEstampado sobre seda",
+      "USfr": "Ajisai Sōkeizu\nItō Jakuchū, XVIIIe siècle\nSoie teinte"
+    }
+  },
+  {
+    "label": "art_12622_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "江户时代中期活跃于京都的奇想画家\n伊藤若冲所绘制的，精致而生动、\n色彩鲜艳的鸡的画作。\n200多年前绘制的作品直至今日仍保持着\n鲜艳的色彩，原因之一就是采用了\n品质非常高（昂贵）的矿物颜料和画布。",
+      "EUde": "Ein detailreiches, farbenfrohes und\nenergiegeladenes Werk von Itō\nJakuchū, einem Künstler aus Kyoto.\nDieser Seidendruck entstand unter\nVerwendung von qualitativ hoch-\nwertigen Farben.\nWomöglich ist dies der Grund, wes-\nhalb sie selbst nach 200 Jahren noch\ndieselbe Brillanz besitzen.",
+      "EUen": "A detailed, colorful, and dynamic\npiece by Itō Jakuchū, a successful\nKyoto artist in the mid-Edo period.\nHigh-quality paints on silk help it\nmaintain its brilliant color even now,\n200 years after its creation.",
+      "EUes": "Itō Jakuchū fue un exitoso artista\nde Kioto que vivió a mediados\ndel periodo Edo.\nEsta obra sobre seda destaca\npor su nivel de detalle, colorido\ny dinamismo.\nPor la gran calidad de sus materiales,\nconserva su brillo y color aún hoy,\n200 años después de su creación.",
+      "EUfr": "Cette toile dynamique et colorée est\nl'œuvre d'Itō Jakuchū, peintre vivant\nà Kyoto au milieu de l'époque d'Edo.\nLes pigments de grande qualité et\nla soie ont conservé la vivacité des\ncouleurs même après 200 ans.",
+      "EUit": "Itō Jakuchū fu un famoso artista di\nKyoto che visse a cavallo del periodo\nEdo.\nQuesta sua opera si contraddistingue\nper il livello di dettaglio, i colori e il\nsuo dinamismo.\nL'elevata qualità dei pigmenti e la\nseta hanno mantenuto la vivacità\ndei colori anche dopo 200 anni.",
+      "EUnl": "Een gedetailleerd, dynamisch, kleur-\nrijk werk van Itō Jakuchū, die succes\ngenoot in Kioto in de Edoperiode.\nDankzij hoogwaardige pigmenten op\nzijde heeft het nu, 200 jaar later,\nnog steeds zijn heldere kleuren.",
+      "EUru": "Детализированное, яркое\nи динамичное произведение\nавторства Ито Дзякутю.\nОн был признанным художником\nиз Киото в среднем периоде Эдо.\nКачественные краски на шелке\nостаются яркими даже сейчас,\nспустя 200 лет.",
+      "JPja": "江戸時代中期に京都で活躍した奇想の画家、\n伊藤若冲による、緻密にしてダイナミック、\n色彩鮮やかな鶏の絵。\n200年以上も前の作品が今もなお色鮮やかな\n理由のひとつに、岩絵具や画絹などの画材が\n極めて高品質(高価)なことがあげられる。",
+      "KRko": "에도 시대 중기에 교토에서 활약한 화가\n이토 쟈쿠츄가 그렸다. 치밀하고 역동적이며\n색채가 풍부한 닭 묘사가 특징.\n200년도 더 된 작품임에도 선명한 색을 유지하는\n비결 중 하나로, 그림에 사용한 천연 안료와\n비단 등 고품질(고가)의 재료가 꼽힌다.",
+      "TWzh": "這幅畫是由江戶時代中期活躍於京都的\n奇想畫家伊藤若沖所創作的雞圖。\n畫中色彩鮮艷的雞相當精緻且栩栩如生。\n200多年前的作品至今仍然色彩鮮艷，\n據說其中一個原因是因為採用了\n極高品質（昂貴）的礦石顏料和畫布。",
+      "USen": "A detailed, colorful, and dynamic\npiece by Itō Jakuchū, a successful\nKyoto artist in the mid-Edo period.\nHigh-quality paints on silk help it\nmaintain its brilliant color even now,\n200 years after its creation.",
+      "USes": "Itō Jakuchū fue un exitoso artista\nde Kioto que vivió a mediados\ndel periodo Edo.\nEsta obra sobre seda se destaca\npor su nivel de detalle, colorido\ny dinamismo.\nPor la gran calidad de sus materiales,\nconserva su brillo y color aún hoy,\n200 años después de su creación.",
+      "USfr": "Cette toile dynamique et colorée est\nl'œuvre d'Itō Jakuchū, peintre vivant\nà Kyoto au milieu de l'époque d'Edo.\nLes pigments de grande qualité et\nla soie ont conservé la vivacité des\ncouleurs même après 200 ans."
+    }
+  },
+  {
+    "label": "art_12624",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "被拖去解体的战舰无畏号\n约瑟夫·玛罗德·威廉·透纳／作\n1839年　[油画·布面]",
+      "EUde": "Die letzte Fahrt der Temeraire\nJoseph Mallord William Turner, 1839\nÖl auf Leinwand",
+      "EUen": "The Fighting Temeraire\n Joseph Mallord William Turner, 1839\n 　 　 Oil on canvas",
+      "EUes": "El Temerario\nJoseph Mallord William Turner, 1839\nÓleo sobre lienzo",
+      "EUfr": "Le Dernier Voyage du Téméraire\nJoseph Mallord William Turner, 1839\nHuile sur toile",
+      "EUit": "La valorosa Téméraire\nJoseph Mallord William Turner, 1839\nOlio su tela",
+      "EUnl": "De vechtende Temeraire\nJoseph Mallord William Turner, 1839\nOlieverf op doek",
+      "EUru": "Последний рейс корабля\n«Отважный»\nДжозеф М. Уильям Тёрнер, 1839, холст, масло",
+      "JPja": "戦艦テメレール号\nジョゼフ・マロード・ウィリアム・ターナー／作\n1839年　[油彩・キャンバス]",
+      "KRko": "전함 테메레르\n조셉 말로드 윌리엄 터너 작품\n1839년　[유채・캔버스]",
+      "TWzh": "勇莽號戰艦\n約瑟夫‧瑪羅德‧威廉‧特納\n1839年　[油彩‧畫布]",
+      "USen": "The Fighting Temeraire\n Joseph Mallord William Turner, 1839\n 　 　 Oil on canvas",
+      "USes": "El Temerario\nJoseph Mallord William Turner, 1839\nÓleo sobre lienzo",
+      "USfr": "Le dernier voyage du téméraire\nJoseph Mallord William Turner, 1839\nHuile sur toile"
+    }
+  },
+  {
+    "label": "art_12624_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "尼尔森将军所率领的英国海军战舰\n在完成任务被拖去解体场的样子，\n被光之画家透纳生动地描绘出来。",
+      "EUde": "Ein bekanntes Werk von Turner,\neinem „Maler des Lichts“.\nEs zeigt ein britisches Marineschiff\nunter dem Kommando von Admiral\nNelson kurz vor dem Abwracken.",
+      "EUen": "A famous piece by Turner, a \"painter\nof light.\"\nIt shows an English Navy ship\ncommanded by Admiral Nelson as it's\nbeing tugged toward its dismantling.",
+      "EUes": "Esta famosa obra de Turner, uno de\nlos «maestros de la luz», representa\nun navío de guerra inglés.\nEl barco, otrora bajo el mando\ndel Almirante Nelson, es remolcado\npara ser desguazado.",
+      "EUfr": "Ce célèbre tableau est signé Turner,\nun « peintre de la lumière ».\nIl représente un navire anglais de la\nflotte de l'amiral Nelson, mettant le\ncap sur le port où il sera démonté.",
+      "EUit": "Questa famosa opera di Turner, uno\ndei \"maestri della luce\", raffigura una\nnave da guerra inglese.\nLa nave, facente parte della flotta\ncomandata dall'ammiraglio Nelson,\nviene trainata per essere smantellata.",
+      "EUnl": "Een beroemd werk van Turner,\neen \"schilder van het licht\".\nEen Engels marineschip waarop\nadmiraal Nelson het bevel heeft\ngevoerd, gaat gesloopt worden.",
+      "EUru": "Знаменитое полотно «художника\nсвета» Уильяма Тёрнера.\nНа нем изображен корабль\nанглийского флота, которым\nкомандовал адмирал Нельсон.\nКорабль буксируется в док,\nчтобы быть разобранным.",
+      "JPja": "ネルソン提督率いるイギリス海軍の戦艦が、\n役目を終え解体場へ引かれていく姿を、光の\n画家ターナーがダイナミックに描いた名作。",
+      "KRko": "넬슨 제독이 지휘하던 영국 해군의 전함이\n제 역할을 마치고 해체장으로 견인되는 모습을\n빛의 화가 터너가 다이내믹하게 그려낸 명작.",
+      "TWzh": "這是光的畫家特納的名作。由納爾遜將軍\n率領的英國海軍戰艦，在完成最後的任務後，\n被拖向拆船廠的情景被描繪得栩栩如生。",
+      "USen": "A famous piece by Turner, a \"painter\nof light.\"\nIt shows an English Navy ship\ncommanded by Admiral Nelson as it's\nbeing tugged toward its dismantling.",
+      "USes": "Esta famosa obra de Turner, uno de\nlos \"maestros de la luz\", representa\nun barco de guerra inglés.\nEl barco, que estaba bajo el mando\ndel Almirante Nelson, es remolcado\npara ser desarmado.",
+      "USfr": "Ce célèbre tableau est signé Turner,\nun « peintre de la lumière ».\nIl représente un navire anglais de la\nflotte de l'amiral Nelson, mettant le\ncap sur le port où il sera démonté."
+    }
+  },
+  {
+    "label": "art_12625",
+    "attribute": "0x000029",
+    "locale": {
+      "CNzh": "死之岛\n阿诺德·勃克林／作\n1883年　[油画·布面]",
+      "EUde": "Die Toteninsel\nArnold Böcklin, 1883\nÖl auf Holz",
+      "EUen": "Isle of the Dead\n　 　 Arnold Böcklin, 1883\n 　 Oil on wood",
+      "EUes": "La isla de los muertos\nArnold Böcklin, 1883\nÓleo sobre madera",
+      "EUfr": "L'Île des morts\nArnold Böcklin, 1883\nHuile sur bois",
+      "EUit": "L'isola dei morti\nArnold Böcklin, 1883\nOlio su tavola",
+      "EUnl": "Het dodeneiland\nArnold Böcklin, 1883\nOlieverf op hout",
+      "EUru": "Остров мертвых\nАрнольд Бёклин, 1883\nДерево, масло",
+      "JPja": "死の島\nアルノルト・ベックリン／作\n1883年　[油彩・キャンバス]",
+      "KRko": "죽음의 섬\n아놀드 뵈클린 작품\n1883년　[유채・캔버스]",
+      "TWzh": "死之島\n阿諾德‧勃克林\n1883年　[油彩‧畫布]",
+      "USen": "Isle of the Dead\n　 　 Arnold Böcklin, 1883\n 　 Oil on wood",
+      "USes": "La isla de los muertos\nArnold Böcklin, 1883\nÓleo sobre madera",
+      "USfr": "L'île des morts\nArnold Böcklin, 1883\nHuile sur bois"
+    }
+  },
+  {
+    "label": "art_12625_1",
+    "attribute": "0x00002A",
+    "locale": {
+      "CNzh": "漂浮在如镜面般静谧的海上，四周被悬崖\n峭壁所包围的墓地小岛，载着遗体的小船\n悄无声息地靠近。恐怖却又安宁的氛围。\n这幅象征主义画家勃克林的作品\n并非如实描绘眼前所见景象，\n而是要呈现人类隐藏的内心世界和观念。",
+      "EUde": "Ein kleines Boot mit einem Leichnam\ngleitet still über einen See zu einer\nklippenumsäumten Insel mit Gräbern.\nDie Atmosphäre, die das Werk des\nSymbolisten Böcklin ausstrahlt, ist\nunheimlich, aber dennoch ruhig.\nDie Intention des Künstlers war\nhierbei die Darstellung der inneren\nGefühlswelt des Menschen.",
+      "EUen": "A small boat carrying a corpse glides\nquietly over a still sea to an island of\ngraves surrounded by cliffs.\nThe air of this piece by symbolist\npainter Böcklin is chilling, but also\nsomehow calm.\nBöcklin worked here to capture\nnot what he could see, but some of\nhumanity's inner contemplations.",
+      "EUes": "El pequeño bote flota suavemente,\nportando un cadáver hacia una\nisla rodeada de acantilados.\nEsta cuadro, del pintor simbolista\nBöcklin, es sin duda tétrico, aunque\na su modo transmite cierta paz.\nEl artista no reflejó aquí algo que\nveía, sino una de las inquietudes\nmás introspectivas de la humanidad.",
+      "EUfr": "Un frêle esquif acheminant un corps\nsans vie flotte en silence sur une mer\nd'huile vers une île-cimetière...\nL'atmosphère de cette toile du\nsymboliste Böcklin est à la fois\nlugubre et curieusement apaisante.\nL'artiste n'a pas voulu représenter ce\nqu'il voyait, mais plutôt dresser le\ntableau d'une méditation intérieure.",
+      "EUit": "Una piccola barca con a bordo un\ncadavere scivola lenta su un mare\npiatto verso un'isola cimitero...\nL'atmosfera di questa tela del pittore\nsimbolista Böcklin è lugubre, eppure\ncuriosamente rilassante.\nL'artista non volle rappresentare\nciò che vedeva, bensì alcune delle \ninquietudini dell'animo umano.",
+      "EUnl": "Een bootje met een dood lichaam\nglijdt over een stille zee naar een\neiland vol graven, met kliffen rondom.\nDit werk van de symbolist Böcklin\nmaakt een onheilspellende, maar\ntegelijkertijd kalme indruk.\nBöcklin schilderde hier niet wat hij\nzag, maar beeldde het innerlijke\ngevoelsleven van de mens uit.",
+      "EUru": "Маленькая лодка с телом усопшего\nтихо скользит по спокойному морю\nк скалистому острову могил.\nЭта картина символиста Бёклина\nсоздает жутковатую, но странно\nуспокаивающую атмосферу.\nБёклин старался изобразить не\nреальные объекты, а внутренние\nразмышления человека.",
+      "JPja": "鏡のように静かな海に浮かぶ、岸壁に囲まれ\nた墓地の島に、遺体を載せた小舟が音もなく\n近づく。怖さと安らかさが同居する雰囲気。\n見たままを写実的に描くのではなく、目には\n見えない人間の内面や観念を、表現しようと\nした象徴主義の画家ベックリンの作品。",
+      "KRko": "거울처럼 고요한 바다 위, 절벽으로 둘러싸인\n묘지 섬에 시체를 실은 작은 배가 소리 없이\n다가간다. 공포와 평온함이 공존하는 분위기.\n본 것을 사실적으로 묘사하지 않고,\n눈에 보이지 않는 인간의 내면과 관념을\n표현하려고 했던 상징주의 화가 뵈클린의 작품.",
+      "TWzh": "這座墳墓之島漂浮在如鏡子般幽靜的海上，\n四周環繞著懸崖峭壁，而承載屍體的小船\n無聲地靠近。整幅畫帶有恐怖卻平靜的氣氛。\n這幅畫是象徵主義畫家勃克林的作品，\n並非真實描繪眼前所見景象，而是想要\n呈現出人類隱藏的內心和想法。",
+      "USen": "A small boat carrying a corpse glides\nquietly over a still sea to an island of\ngraves surrounded by cliffs.\nThe air of this piece by symbolist\npainter Böcklin is chilling, but also\nsomehow calm.\nBöcklin worked here to capture\nnot what he could see, but some of\nhumanity's inner contemplations.",
+      "USes": "El pequeño bote flota suavemente,\nllevando un cadáver hacia una\nisla rodeada de acantilados.\nEste cuadro, del pintor simbolista\nBöcklin, es sin duda tétrico, aunque\na su modo transmite cierta paz.\nEl artista no reflejó aquí algo que\nveía, sino una de las inquietudes\nmás introspectivas de la humanidad.",
+      "USfr": "Un frêle esquif acheminant un corps\nsans vie flotte en silence sur une mer\nd'huile vers une île-cimetière...\nL'atmosphère de cette toile du\nsymboliste Böcklin est à la fois\nlugubre et curieusement apaisante.\nL'artiste n'a pas voulu représenter ce\nqu'il voyait, mais plutôt dresser le\ntableau d'une méditation intérieure."
+    }
+  }
+]

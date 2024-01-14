@@ -1,0 +1,1962 @@
+﻿[
+  {
+    "label": "001",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "嗯？这是……",
+      "EUde": "Oho!",
+      "EUen": "Yes!",
+      "EUes": "A ver qué tenemos aquí...",
+      "EUfr": "Super !",
+      "EUit": "Evvai!",
+      "EUnl": "Goed zo!",
+      "EUru": "Ого!",
+      "JPja": "ん？　コレは・・・",
+      "KRko": "응? 이건...",
+      "TWzh": "嗯？這是……",
+      "USen": "Yes!",
+      "USes": "A ver qué tenemos aquí...",
+      "USfr": "Super!"
+    }
+  },
+  {
+    "label": "002",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "嗯？\n这是……",
+      "EUde": "Hmm...\nDas bedeutet jetzt...",
+      "EUen": "Huh?\nSo that means...",
+      "EUes": "Un momento...\nEso significa...",
+      "EUfr": "Oh !\nAlors, si j'ai bien compté...",
+      "EUit": "Eh? Quindi...",
+      "EUnl": "Wauw...",
+      "EUru": "Что?\nПолучается...",
+      "JPja": "ん？\nってコトは・・・",
+      "KRko": "어?\n나, 혹시...",
+      "TWzh": "嗯？\n這代表……",
+      "USen": "Huh?\nSo that means...",
+      "USes": "Un momento...\nEso significa que...",
+      "USfr": "Oh!\nAlors, si j'ai bien compté..."
+    }
+  },
+  {
+    "label": "003",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "太好啦！！\n所有种类的虫子\n都收集全了！",
+      "EUde": "Juchhuuuu!\nIch habe jede einzelne Insektenart\ngefangen!",
+      "EUen": "I did it!\nI caught all the bugs!\nWhat do I do with this net now?",
+      "EUes": "¡Lo he conseguido!\n¡He atrapado bichos de todas clases!",
+      "EUfr": "Tu as réussi !\nTu as attrapé un insecte\nde chaque espèce !",
+      "EUit": "Ce l'ho fatta!\nHo preso tutti gli insetti!\nE ora che ci faccio con questo retino?",
+      "EUnl": "Het is je gelukt!\nJe hebt alle soorten insecten\ngevangen!",
+      "EUru": "Получилось!\nВсе насекомые пойманы!",
+      "JPja": "やったぁあ！！\nすべてのムシを　つかまえたー！",
+      "KRko": "야호오!!\n곤충을 전부 잡았다～!",
+      "TWzh": "好～耶～！！\n所有種類的蟲子\n都被我抓到了～！",
+      "USen": "I did it!\nI caught all the bugs!\nWhat do I do with this net now?",
+      "USes": "¡Lo logré!\n¡Atrapé insectos de todas clases!",
+      "USfr": "Tu as réussi!\nTu as attrapé un insecte\nde chaque espèce!"
+    }
+  },
+  {
+    "label": "Insect_00601",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到暮蝉了！\n它的鸣叫声听起来好凄凉啊～;\n 捉到暮蝉了！\n晴天的时候，它就会叫得很凄凉～",
+      "EUde": "Eine Abendzikade!\nIhr Gesang klingt so wehmütig...;\n Eine Abendzikade!\nBei klarem Wetter lässt sie ihr\nwehmütiges Lied erklingen...",
+      "EUen": "I caught an evening cicada!\nBetter than an odding cicada...;\n I caught an evening cicada!\nThis time it's WETTER than\nan odding cicada.",
+      "EUes": "¡He atrapado una cigarrilla!\n¡Uso la red de maravilla!;\n ¡He atrapado una cigarrilla!\nCuando llueve, se encasquilla.",
+      "EUfr": "Tu as attrapé une cigale higurashi !\nSon chant a quelque chose de\nmélancolique...;\n Tu as attrapé une cigale higurashi !\nSon chant a quelque chose de\nmélancolique, par temps clair...",
+      "EUit": "Ho preso una cicala notturna!\nLe piace fare le ore piccole!;\n Ho preso una cicala notturna!\nNe esisterà una diurna?",
+      "EUnl": "Je hebt een avondcicade gevangen!\nWat klinkt zijn roep weemoedig...;\n Je hebt een avondcicade gevangen!\nOok op heldere dagen klinkt hij\nweemoedig.",
+      "EUru": "В сачок попалась ночная цикада!\nУ нее такой печальный стрекот.;\n В сачок попалась ночная цикада!\nВ ясную погоду слышно ее песню.",
+      "JPja": "ヒグラシを　つかまえた！\n切ない声で　鳴くんだなぁ～;\n ヒグラシを　つかまえた！\n晴れてたら　切ない声で鳴くんだよなぁ～",
+      "KRko": "쓰르라미를 잡았다!\n울음소리가 왠지 구슬퍼～;\n 쓰르라미를 잡았다!\n날씨가 맑았으면 구슬프게 울었을 텐데～",
+      "TWzh": "抓到暮蟬了！\n叫聲好悽涼啊～;\n 抓到暮蟬了！\n晴天的時候，就會叫得很悽涼呢～",
+      "USen": "I caught an evening cicada!\nBetter than an odding cicada...;\n I caught an evening cicada!\nThis time it's WETTER than\nan odding cicada.",
+      "USes": "¡Atrapé una cigarra!\n¿Tocará bien la guitarra?;\n ¡Una cigarra en mi mano!\n¿Será contralto o soprano?",
+      "USfr": "Tu as attrapé une cigale higurashi!\nSon chant a quelque chose de\nmélancolique...;\n Tu as attrapé une cigale higurashi!\nSon chant a quelque chose de\nmélancolique, par temps clair..."
+    }
+  },
+  {
+    "label": "Insect_00618",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到熊蝉了！\n咋——咋——！;\n 捉到熊蝉了！\n一到雨天就消停了呢。",
+      "EUde": "Eine Riesenzikade!\nGanz schöner Brummer, im wahrsten\nSinne des Wortes...;\n Eine Riesenzikade! \nMit Regen hat sie es nicht so...",
+      "EUen": "I caught a giant cicada!\nI guess it's PRETTY big...;\n I caught a giant cicada!\nGuess it doesn't feel like\nsinging in the rain!",
+      "EUes": "¡He atrapado una cigarra gigante!\nHace buen tiempo, ¡que cante!;\n ¡He atrapado una cigarra gigante!\nYa se ha mojado bastante.",
+      "EUfr": "Tu as attrapé une cigale géante !\nSon nom dit vrai, elle est énorme !;\n Tu as attrapé une cigale géante !\nElles se laissent attraper,\nquand il pleut !",
+      "EUit": "Ho preso una cicala gigante!\nDirei che è piuttosto grande...;\n Ho preso una cicala gigante! \nChi oserebbe mai dirle di tacere?",
+      "EUnl": "Je hebt een reuzencicade gevangen!\nDie is voor geen kleintje vervaard!;\n Je hebt een reuzencicade gevangen!\nIn de regen is het een makkie!",
+      "EUru": "В сачок попалась гигантская\nцикада! Она действительно гигант!;\n В сачок попалась гигантская\nцикада! Они такие тихие в дождь!",
+      "JPja": "クマゼミを　つかまえた！\nシャンシャンシャンシャン！;\n クマゼミを　つかまえた！\n雨の日は　おとなしいのね",
+      "KRko": "곰매미를 잡았다!\n울음소리가 우렁차네!;\n 곰매미를 잡았다!\n비 오는 날에는 조용하구나...",
+      "TWzh": "抓到熊蟬了！\n唧唧唧唧唧唧唧唧！;\n 抓到熊蟬了！\n下雨天的時候就安分多了呢。",
+      "USen": "I caught a giant cicada!\nI guess it's PRETTY big...;\n I caught a giant cicada!\nGuess it doesn't feel like\nsinging in the rain!",
+      "USes": "¡Atrapé una cigarra gigante!\nHace buen tiempo, ¡que cante!;\n ¡Atrapé una cigarra gigante!\nYa se ha mojado bastante.",
+      "USfr": "Tu as attrapé une cigale géante!\nSon nom dit vrai, elle est énorme!;\n Tu as attrapé une cigale géante!\nElles se laissent attraper,\nquand il pleut!"
+    }
+  },
+  {
+    "label": "Insect_00621",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到斑透翅蝉了！\n很有活力，非常好！;\n 捉到斑透翅蝉了！\n一到雨天就消停了呢。",
+      "EUde": "Eine Hyalessa-Zikade!\nHüah, kleine Zikade!;\n Eine Hyalessa-Zikade!\nMit Regen hat sie es nicht so...",
+      "EUen": "I caught a robust cicada!\nIt DOES seem pretty lively!;\n I caught a robust cicada!\nNot so energetic in the rain, huh?",
+      "EUes": "¡He atrapado una cigarra oriental!\nPues me parece genial.;\n ¡He atrapado una cigarra oriental!\nLa lluvia le sienta mal.",
+      "EUfr": "Tu as attrapé une cigale hyalessa !\nCet insecte est plein de vie !;\n Tu as attrapé une cigale hyalessa !\nElles sont plus dociles\npar temps pluvieux.",
+      "EUit": "Ho preso una cicala robusta!\nMeglio non mettersi contro di lei!;\n Ho preso una cicala robusta!\nPerò se non ha fatto molta\nresistenza...",
+      "EUnl": "Je hebt een minmin-cicade\ngevangen! Minmin voor de win-win!;\n Je hebt een minmin-cicade\ngevangen! In de regen is het een\nmakkie!",
+      "EUru": "В сачок попалась певчая цикада!\nСпой мне что-нибудь!;\n В сачок попалась певчая цикада!\nОни такие тихие в дождь!",
+      "JPja": "ミンミンゼミを　つかまえた！\n元気があって　よろしい！;\n ミンミンゼミを　つかまえた！\n雨の日は　おとなしいのね",
+      "KRko": "참매미를 잡았다!\n활기차서 보기 좋아!;\n 참매미를 잡았다!\n비 오는 날에는 조용하구나...",
+      "TWzh": "抓到斑透翅蟬了！\n很有精神，非常好！;\n 抓到斑透翅蟬了！\n下雨天的時候就安分多了呢。",
+      "USen": "I caught a robust cicada!\nIt DOES seem pretty lively!;\n I caught a robust cicada!\nNot so energetic in the rain, huh?",
+      "USes": "¡Atrapé una cigarra oriental!\nY me parece genial.;\n ¡Atrapé una cigarra oriental!\nLa lluvia le sienta mal.",
+      "USfr": "Tu as attrapé une cigale hyalessa!\nCet insecte est plein de vie!;\n Tu as attrapé une cigale hyalessa!\nElles sont plus dociles\npar temps pluvieux."
+    }
+  },
+  {
+    "label": "Insect_00649",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到寒蝉了！\n它的叫声真有意思！;\n 捉到寒蝉了！\n一到雨天就消停了呢。",
+      "EUde": "Eine Bergzikade!\nIhr Gesang klingt lustig!;\n Eine Bergzikade!\nMit Regen hat sie es nicht so...",
+      "EUen": "I caught a walker cicada!\nPffft. I walk all the time and no one\ncalls me \"Walker (player name).\";\n I caught a walker cicada!\nIt must hate getting its feet wet.",
+      "EUes": "¡He atrapado una cigarra común!\n¡Me acerco con la red y catapum!;\n ¡He atrapado una cigarra común!\nLa lluvia le da repelús.",
+      "EUfr": "Tu as attrapé une cigale cicadelle !\nLeur chant a quelque chose\nde spécial !;\n Tu as attrapé une cigale cicadelle !\nElles sont plus dociles\npar temps pluvieux.",
+      "EUit": "Ho preso una cicala sputacchina!\nQui bisogna essere pronti a schivare!;\n Ho preso una cicala sputacchina!\nFarà a gara con i suoi simili a chi\nsputa più lontano?",
+      "EUnl": "Je hebt een bergcicade gevangen!\nBerg hem maar goed op!;\n Je hebt een bergcicade gevangen!\nIn de regen is het een makkie!",
+      "EUru": "В сачок попалась горная цикада!\nУ нее такой странный стрекот!;\n В сачок попалась горная цикада!\nОни такие тихие в дождь!",
+      "JPja": "ツクツクホウシを　つかまえた！\n鳴き方が　オモシロイの！;\n ツクツクホウシを　つかまえた！\n雨の日は　おとなしいのね",
+      "KRko": "애매미를 잡았다!\n울음소리가 재밌어!;\n 애매미를 잡았다!\n비 오는 날에는 조용하구나...",
+      "TWzh": "抓到寒蟬了！\n叫聲真是有趣！;\n 抓到寒蟬了！\n下雨天的時候就安分多了呢。",
+      "USen": "I caught a walker cicada!\nPffft. I walk all the time and no one\ncalls me \"Walker (player name).\";\n I caught a walker cicada!\nIt must hate getting its feet wet.",
+      "USes": "¡Atrapé una cigarra común!\nMe acerqué con la red, ¡y pum!;\n Atrapé una cigarra común, ¡viva!\n¡Qué cigarra más festiva!",
+      "USfr": "Tu as attrapé une cigale cicadelle!\nLeur chant a quelque chose\nde spécial!;\n Tu as attrapé une cigale cicadelle!\nElles sont plus dociles\npar temps pluvieux."
+    }
+  },
+  {
+    "label": "200",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到幽幽的魂魄了！\n感觉凉凉的呢～",
+      "EUde": "Ein Buhu-Seelenfragment!\nBrrr, das fühlt sich irgendwie kalt an!",
+      "EUen": "I caught a Wisp spirit piece!\nBrrrr—it's kinda cold!",
+      "EUes": "¡He encontrado una voluta de Buh!\nEstá como fría...",
+      "EUfr": "Tu as attrapé un fragment d'esprit\nde Follet ! Brrrr... En fait, c'est froid !",
+      "EUit": "Ho preso un pezzo spirituale di\nSpirideo! Mi vengono i brividi...",
+      "EUnl": "Je hebt een flard van Wisps geest\ngevangen! Brr, dat voelt best koud\naan!",
+      "EUru": "В сачок попалась частица духа\nУиспа! Она холодная на ощупь!",
+      "JPja": "ゆうたろうのたましいを　つかまえた！\nひんやりしてるぅ～",
+      "KRko": "깨빈의 영혼을 잡았다!\n왠지 차가워～",
+      "TWzh": "抓到幽幽的靈魂了！\n我感受到一陣涼意～",
+      "USen": "I caught a Wisp spirit piece!\nBrrrr—it's kinda cold!",
+      "USes": "¡Encontré una voluta de Buh!\nEstá como fría...",
+      "USfr": "Tu as attrapé un fragment d'esprit\nde Follet! Brrrr... En fait, c'est froid!"
+    }
+  },
+  {
+    "label": "201",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到幽幽的魂魄了！\n这是第2只了！",
+      "EUde": "Ein Buhu-Seelenfragment!\nDas ist jetzt das zweite!",
+      "EUen": "I caught a Wisp spirit piece!\nThat's the second piece.",
+      "EUes": "¡He encontrado una voluta de Buh!\nYa tengo dos.",
+      "EUfr": "Tu as attrapé un fragment d'esprit\nde Follet ! Ça t'en fait deux !",
+      "EUit": "Ho preso un pezzo spirituale di\nSpirideo! E sono a due.",
+      "EUnl": "Je hebt een flard van Wisps geest\ngevangen! Dit is het tweede stukje.",
+      "EUru": "В сачок попалась частица духа\nУиспа! Это уже вторая частица!",
+      "JPja": "ゆうたろうのたましいを　つかまえた！\nこれで　２たまめだ",
+      "KRko": "깨빈의 영혼을 잡았다!\n이제 두 개째!",
+      "TWzh": "抓到幽幽的靈魂了！\n這是第２塊啦。",
+      "USen": "I caught a Wisp spirit piece!\nThat's the second piece.",
+      "USes": "¡Encontré una voluta de Buh!\nYa tengo dos.",
+      "USfr": "Tu as attrapé un fragment d'esprit\nde Follet! Ça t'en fait deux!"
+    }
+  },
+  {
+    "label": "202",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到幽幽的魂魄了！\n终于收集到第3只了！",
+      "EUde": "Ein Buhu-Seelenfragment!\nDas war das dritte!",
+      "EUen": "I caught a Wisp spirit piece!\nThat makes three!",
+      "EUes": "¡He encontrado una voluta de Buh!\nEs la tercera.",
+      "EUfr": "Tu as attrapé un fragment d'esprit\nde Follet ! C'est le troisième !",
+      "EUit": "Ho preso un pezzo spirituale di\nSpirideo! Il terzo, finalmente!",
+      "EUnl": "Je hebt een flard van Wisps geest\ngevangen! Eindelijk, het derde\nstukje!",
+      "EUru": "В сачок попалась частица духа\nУиспа! Уже третья!",
+      "JPja": "ゆうたろうのたましいを　つかまえた！\nやっと　３たまだ",
+      "KRko": "깨빈의 영혼을 잡았다!\n드디어 세 개째다!",
+      "TWzh": "抓到幽幽的靈魂了！\n終於收集到第３塊啦。",
+      "USen": "I caught a Wisp spirit piece!\nThat makes three!",
+      "USes": "¡Encontré una voluta de Buh!\nEs la tercera.",
+      "USfr": "Tu as attrapé un fragment d'esprit\nde Follet! C'est le troisième!"
+    }
+  },
+  {
+    "label": "203",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到幽幽的魂魄了！\n呼……还差最后1只了！",
+      "EUde": "Ein Buhu-Seelenfragment!\nJetzt fehlt nur noch eines!",
+      "EUen": "I caught a Wisp spirit piece!\nWhew... One more to go!",
+      "EUes": "¡He encontrado una voluta de Buh!\nVan cuatro, ¡solo me falta una!",
+      "EUfr": "Tu as attrapé un fragment d'esprit\nde Follet ! Allez, encore un !",
+      "EUit": "Ho preso un pezzo spirituale di\nSpirideo! Uff... ne manca ancora uno!",
+      "EUnl": "Je hebt een flard van Wisps geest\ngevangen! Hèhè... nog maar één\nstukje te gaan!",
+      "EUru": "В сачок попалась частица духа\nУиспа! Осталось найти последнюю!",
+      "JPja": "ゆうたろうのたましいを　つかまえた！\nふぅ・・・　あと１たま",
+      "KRko": "깨빈의 영혼을 잡았다!\n휴… 이제 하나 남았어!",
+      "TWzh": "抓到幽幽的靈魂了！\n呼……還剩下１塊。",
+      "USen": "I caught a Wisp spirit piece!\nWhew... One more to go!",
+      "USes": "¡Encontré una voluta de Buh!\nVan cuatro, ¡solo me falta una!",
+      "USfr": "Tu as attrapé un fragment d'esprit\nde Follet! Allez, encore un!"
+    }
+  },
+  {
+    "label": "204",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到幽幽的魂魄了！\n太好啦！这是最后1只了！\n去把它们还给幽幽吧！",
+      "EUde": "Ein Buhu-Seelenfragment!\nJuchhu! Das war das letzte!\nJetzt schnell zurück zu Buhu!",
+      "EUen": "I caught a Wisp spirit piece!\nYay! That's the last one!\nLet's go return them to Wisp!",
+      "EUes": "¡He encontrado una voluta de Buh!\n¡Esta es la última! Voy a llevárselas.",
+      "EUfr": "Tu as attrapé un fragment d'esprit\nde Follet ! Super, c'est le dernier !\nRetourne voir Follet !",
+      "EUit": "Ho preso un pezzo spirituale di\nSpirideo! Evvai, è l'ultimo! Ora\nbisogna ridarli al legittimo spirito!",
+      "EUnl": "Je hebt een flard van Wisps geest\ngevangen! Dat was de laatste!\nBreng ze maar snel terug naar Wisp!",
+      "EUru": "В сачок попалась частица духа\nУиспа! Ура! Это была последняя!\nТеперь их нужно вернуть Уиспу!",
+      "JPja": "ゆうたろうのたましいを　つかまえた！\nやった！　これで最後だ！\nゆうたろうに　返しに行こう！",
+      "KRko": "깨빈의 영혼을 잡았다!\n야호! 드디어 끝이야!\n깨빈에게 돌려주러 가자!",
+      "TWzh": "抓到幽幽的靈魂了！\n太好了！這是最後一塊了！\n帶去還給幽幽吧！",
+      "USen": "I caught a Wisp spirit piece!\nYay! That's the last one!\nLet's go return them to Wisp!",
+      "USes": "¡Encontré una voluta de Buh!\n¡Esta es la última! Voy a llevárselas.",
+      "USfr": "Tu as attrapé un fragment d'esprit\nde Follet! Super, c'est le dernier!\nRetourne voir Follet!"
+    }
+  },
+  {
+    "label": "301",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到了！\n……不过是在梦里！",
+      "EUde": "!\nEin Traumfang! Leider im wahrsten\nSinne des Wortes...",
+      "EUen": "I caught !\n...But I'm still dreaming.",
+      "EUes": "¡!\nPero no es más que un sueño...",
+      "EUfr": "Tu as attrapé  !\n... Mais ce n'est qu'un rêve.",
+      "EUit": "Ho preso !\nMa sto ancora sognando...",
+      "EUnl": "Je hebt \ngevangen! Jammer dat dit een droom\nis...",
+      "EUru": "В сачок попался !\nНо только во сне.",
+      "JPja": "を　つかまえた！\n・・・夢だけどね！",
+      "KRko": "을 잡았다!\n...이건 꿈이지만!",
+      "TWzh": "捕到了！\n……雖然是夢境！",
+      "USen": "I caught !\n...But I'm still dreaming.",
+      "USes": "¡!\nPero no es más que un sueño...",
+      "USfr": "Tu as attrapé !\n... Mais ce n'est qu'un rêve."
+    }
+  },
+  {
+    "label": "302",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捕到了！\n……不过是在梦里！",
+      "EUde": "!\nEin Traumfang! Leider im wahrsten\nSinne des Wortes...",
+      "EUen": "I got !\n...But I'm still dreaming.",
+      "EUes": "¡!\nPero no es más que un sueño...",
+      "EUfr": "Tu as attrapé  !\n... Mais ce n'est qu'un rêve.",
+      "EUit": "Ho preso !\nMa sto ancora sognando...",
+      "EUnl": "Je hebt \ngevangen! Jammer dat dit een droom\nis...",
+      "EUru": "В сачок попал !\nНо только во сне.",
+      "JPja": "を　とった！\n・・・夢だけどね！",
+      "KRko": "을 잡았다!\n...이건 꿈이지만!",
+      "TWzh": "抓到了！\n……雖然是夢境！",
+      "USen": "I got !\n...But I'm still dreaming.",
+      "USes": "¡!\nPero no es más que un sueño...",
+      "USfr": "Tu as attrapé !\n... Mais ce n'est qu'un rêve."
+    }
+  },
+  {
+    "label": "AutumnLeaf_07374",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "枫叶好红呀～\n浸染着秋天的颜色～",
+      "EUde": "Ein Herbstblatt!\nWas für ein schönes Rot!\nSo sieht der Herbst aus!",
+      "EUen": "This maple leaf is such a pretty red.\nIt's like the exact color of fall!",
+      "EUes": "Una hoja de arce\nde un bonito color rojo,\n¡el símbolo del otoño!",
+      "EUfr": "Cette feuille d'érable est d'un rouge\nsi intense ! Ça rappelle vraiment\nl'automne.",
+      "EUit": "Questa foglia d'acero è di un rosso\nacceso. Fiamme d'autunno!",
+      "EUnl": "Dit esdoornblad is zo mooi rood.\nHet is precies de kleur van de herfst!",
+      "EUru": "У этого кленового листа красивый\nкрасный цвет. Это цвет осени!",
+      "JPja": "もみじのはっぱ　真っ赤だな～\n秋の色に染まってる",
+      "KRko": "단풍잎이다! 새빨갛고 예뻐～\n가을빛으로 물들었네!",
+      "TWzh": "紅通通的楓葉耶～\n已經是一片秋色了。",
+      "USen": "This maple leaf is such a pretty red.\nIt's like the exact color of fall!",
+      "USes": "Una hoja de arce\nde un bonito color rojo,\n¡el símbolo del otoño!",
+      "USfr": "Cette feuille d'érable est d'un rouge\nsi intense! Ça rappelle vraiment\nl'automne."
+    }
+  },
+  {
+    "label": "Feather_03541",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "获得红色羽毛了！\n热情洋溢～",
+      "EUde": "Eine Rubinfeder!\nSo stilvoll, so strahlend...",
+      "EUen": "I caught a red feather!\nThe passion! It is overwhelming!",
+      "EUes": "¡He atrapado una pluma roja\ny se la queda quien la coja!",
+      "EUfr": "Tu as attrapé une plume rouge !\nLa couleur de la passion !\nC'est exaltant !",
+      "EUit": "Ho preso una piuma rossa!\nCome il fuoco della passione!",
+      "EUnl": "Je hebt een rode veer gevangen!\nDe kleur staat voor passie!",
+      "EUru": "Я поймал красное перо.\nЦвет страсти! Я в восторге!",
+      "JPja": "あかいはね　ゲット！\n情熱的だなぁ～",
+      "KRko": "빨간색 깃털이야!\n정열적인걸～",
+      "TWzh": "獲得紅色羽毛了！\n熱情如火～",
+      "USen": "I caught a red feather!\nThe passion! It is overwhelming!",
+      "USes": "¡Atrapé una pluma roja!\n¡Me la quedo porque se me antoja!",
+      "USfr": "Tu as attrapé une plume rouge!\nLa couleur de la passion!\nC'est exaltant!"
+    }
+  },
+  {
+    "label": "Feather_03542",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "获得蓝色羽毛了！\n淡雅清新～",
+      "EUde": "Eine Azurfeder!\nSo erfrischend, so exquisit...",
+      "EUen": "I caught a blue feather!\nAs cool as it is hot!",
+      "EUes": "¡He atrapado una pluma azul!\n¡Es un color bastante «cool»!",
+      "EUfr": "Tu as attrapé une plume bleue !\nTombée du ciel... elle en a la couleur.",
+      "EUit": "Ho preso una piuma blu!\nBollente come il ghiaccio!",
+      "EUnl": "Je hebt een blauwe veer gevangen!\nDe kleur staat voor koelte!",
+      "EUru": "Я поймал синее перо.\nХолодный расчет привел к успеху!",
+      "JPja": "あおいはね　ゲット！\nクールだなぁ～",
+      "KRko": "파란색 깃털이야!\n아주 쿨한걸～",
+      "TWzh": "獲得藍色羽毛了！\n冷酷的顏色～",
+      "USen": "I caught a blue feather!\nAs cool as it is hot!",
+      "USes": "¡Atrapé una pluma azul!\n¡No me digan que no es \"cool\"!",
+      "USfr": "Tu as attrapé une plume bleue!\nTombée du ciel... elle en a la couleur."
+    }
+  },
+  {
+    "label": "Feather_03543",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "获得绿色羽毛了！\n保护视力～",
+      "EUde": "Eine Smaragdfeder!\nSo weich, so wunderschön...",
+      "EUen": "I caught a green feather!\nSo smooth, so soothing...",
+      "EUes": "¡He atrapado una pluma verde!\n¡Esta ya no se me pierde!",
+      "EUfr": "Tu as attrapé une plume verte !\nQuelle couleur apaisante...",
+      "EUit": "Ho preso una piuma verde!\nÈ così soffice e rilassante!",
+      "EUnl": "Je hebt een groene veer gevangen!\nDe kleur staat voor harmonie!",
+      "EUru": "Я поймал зеленое перо.\nЭтот цвет так успокаивает нервы...",
+      "JPja": "みどりのはね　ゲット！\n目に優しい～",
+      "KRko": "초록색 깃털이야!\n눈에 좋을 것 같아～",
+      "TWzh": "獲得綠色羽毛了！\n對眼睛很好喔～",
+      "USen": "I caught a green feather!\nSo smooth, so soothing...",
+      "USes": "¡Atrapé una pluma verde!\n¡Esta no se me pierde!",
+      "USfr": "Tu as attrapé une plume verte!\nQuelle couleur apaisante..."
+    }
+  },
+  {
+    "label": "Feather_03545",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "获得紫色羽毛了！\n嗯～魅力四射～",
+      "EUde": "Eine Lilafeder!\nSo zerbrechlich, so zauberhaft...",
+      "EUen": "I caught a purple feather!\nHow flirty and fabulous!",
+      "EUes": "¡He atrapado una pluma morada!\n¡Se está dando bien la jornada!",
+      "EUfr": "Tu as attrapé une plume violette !\nDe quel oiseau peut-elle bien venir ?",
+      "EUit": "Ho preso una piuma viola!\nGuarda com'è accattivante!",
+      "EUnl": "Je hebt een paarse veer gevangen!\nDe kleur staat voor luxe!",
+      "EUru": "Я поймал фиолетовое перо.\nЗагадочный и роскошный цвет!",
+      "JPja": "むらさきのはね　ゲット！\nう～ん　セクシー",
+      "KRko": "보라색 깃털이야!\n음～ 오묘한 느낌",
+      "TWzh": "獲得紫色羽毛了！\n嗯～神秘的顏色～",
+      "USen": "I caught a purple feather!\nHow flirty and fabulous!",
+      "USes": "¡Atrapé una pluma morada!\n¡Le cantaré una balada!",
+      "USfr": "Tu as attrapé une plume mauve!\nDe quel oiseau peut-elle bien venir?"
+    }
+  },
+  {
+    "label": "Insect_00582",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到油蝉了！\n怎么总是你！",
+      "EUde": "Eine Braunzikade!\nDa zieh ich die Brauen hoch!",
+      "EUen": "I caught a brown cicada!\nNow it probably feels blue, cicada.",
+      "EUes": "¡Una cigarra marrón!\n¡Qué subidón!",
+      "EUfr": "Tu as attrapé une cigale cercope !\nTu t'es fait une nouvelle cercopine !",
+      "EUit": "Ho preso una cicala marrone!\nSperiamo non le venga il magone!",
+      "EUnl": "Je hebt een bruine cicade\ngevangen! Zou hij lekker in de zon\nhebben liggen bakken?",
+      "EUru": "В сачок попалась коричневая\nцикада! Характерно стрекочет.",
+      "JPja": "アブラゼミを　つかまえちゃった！\nお前、たくさんいすぎ！",
+      "KRko": "유지매미를 잡았다!\n너, 너무 흔해!",
+      "TWzh": "抓到油蟬了！\n你們的數量未免也太多了！",
+      "USen": "I caught a brown cicada!\nNow it probably feels blue, cicada.",
+      "USes": "¡Una cigarra marrón!\n¡Me muero de la emoción!",
+      "USfr": "Tu as attrapé une cigale cercope!\nTu t'es fait une nouvelle cercopine!"
+    }
+  },
+  {
+    "label": "Insect_00583",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到凤蝶了！\n好兴奋啊～！",
+      "EUde": "Ein Schwalbenschwanz!\nZwitschern die nicht immer zu zweit\nzwischen zwei Zweigen?",
+      "EUen": "I caught a tiger butterfly!\nI've earned my stripes!",
+      "EUes": "¡He atrapado una mariposa tigre!\n¡No hay bicho que no peligre!",
+      "EUfr": "Tu as attrapé un machaon !\nC'est quoi, ce machin ?",
+      "EUit": "Ho preso una farfalla tigre!\nUn successo ruggente!",
+      "EUnl": "Je hebt een koninginnenpage\ngevangen! Maak maar een buiging!",
+      "EUru": "В сачок попался махаон!\nКрылышками машет он!",
+      "JPja": "アゲハチョウを　つかまえた！\nアゲアゲだ～っ！",
+      "KRko": "호랑나비를 잡았다!\n오예～ 호랑나비!",
+      "TWzh": "抓到鳳蝶了！\n龍飛鳳舞～！",
+      "USen": "I caught a tiger butterfly!\nI've earned my stripes!",
+      "USes": "¡Atrapé una mariposa tigre!\n¡No hay insecto que no peligre!",
+      "USfr": "Tu as attrapé un machaon!\nC'est quoi, ce machin?"
+    }
+  },
+  {
+    "label": "Insect_00584",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到红颈凤蝶了！\n小小的红色领子超可爱！",
+      "EUde": "Ein Troides brookiana!\nMeiner Treu!",
+      "EUen": "I caught a Rajah Brooke's birdwing! \nNothing else I'd rajah be doing!",
+      "EUes": "¡Una mariposa alas de Brooke\nen toda su magnitud!",
+      "EUfr": "Tu as attrapé un troides brookiana !\nQuel nom bizarre pour un si joli\npapillon !",
+      "EUit": "Ho preso una farfalla Raja Brooke! \nUna varietà davvero \"rajante\"!",
+      "EUnl": "Je hebt een Rajah Brooke-vlinder\ngevangen! Raadde je het al?",
+      "EUru": "В сачок попалась трогоноптера\nБрука! Ее придется вернуть Бруку.",
+      "JPja": "アカエリトリバネアゲハを　つかまえた！\nちっちゃな　赤いエリがキュート！",
+      "KRko": "붉은목도리비단나비를 잡았다!\n작고 빨간 목이 귀여워!",
+      "TWzh": "抓到紅頸鳳蝶了！\n小小的紅領子真可愛！",
+      "USen": "I caught a Rajah Brooke's birdwing! \nNothing else I'd rajah be doing!",
+      "USes": "¡Una mariposa alas de Brooke\nen toda su magnitud!",
+      "USfr": "Tu as attrapé un troides brookiana!\nQuel nom bizarre pour un si joli\npapillon!"
+    }
+  },
+  {
+    "label": "Insect_00585",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到红蜻蜓了！\n像晚霞一样的红色！",
+      "EUde": "Eine Feuerlibelle!\nEin brandheißer Fang!",
+      "EUen": "I caught a red dragonfly!\nDidn't even have to roll for initiative!",
+      "EUes": "¡He atrapado una libélula roja!\n¡Cazo cuanto bicho se me antoja!",
+      "EUfr": "Tu as attrapé un sympetrum !\nSympatroche !",
+      "EUit": "Ho preso una libellula rossa!\nHa il colore di un bel tramonto!",
+      "EUnl": "Je hebt een rode libel gevangen!\nJe zou er haast een kleur van\nkrijgen!",
+      "EUru": "В сачок попалась красная\nстрекоза! Она все еще поет!",
+      "JPja": "アキアカネを　つかまえた！\n夕焼け、小焼けの　アカネ色！",
+      "KRko": "고추잠자리를 잡았다!\n저녁노을 같은 붉은색!",
+      "TWzh": "抓到紅蜻蜓了！\n美麗的晚霞色！",
+      "USen": "I caught a red dragonfly!\nDidn't even have to roll for initiative!",
+      "USes": "¡Atrapé una libélula roja!\n¡Cazo cuanto insecto se me antoja!",
+      "USfr": "Tu as attrapé une libellule rouge!\nSympatrique!"
+    }
+  },
+  {
+    "label": "Insect_00586",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到亚历山大凤蝶了！\nOh！亚历山大～！！",
+      "EUde": "Ein Vogelfalter!\nMacht der Origami-Vögel?",
+      "EUen": "I caught a Queen Alexandra's\nbirdwing! That's a feather in my cap!",
+      "EUes": "¡Una mariposa alas de pájaro!\n¡Vaya colores, son un escándalo!",
+      "EUfr": "Tu as attrapé un troides alexandrae !\nIl a une allure royale !",
+      "EUit": "Ho preso una farfalla\ndella regina Alessandra!\nHa un aspetto così... regale!",
+      "EUnl": "Je hebt een Alexandra's\nvogelvlinder gevangen! Die heeft\nvast een identiteitscrisis!",
+      "EUru": "В сачок попалась птицекрылка\nАлександры! Возьму под крыло!",
+      "JPja": "アレキサンドラトリバネアゲハを　つかまえた！\nOh！ アレキサンドラァ～！！",
+      "KRko": "알렉산드라비단제비나비를 잡았다!\nOh! 알렉산드라～!!",
+      "TWzh": "抓到亞歷山大鳳蝶了！\nOh！亞歷山大～！！",
+      "USen": "I caught a Queen Alexandra's\nbirdwing! That's a feather in my cap!",
+      "USes": "¡Una mariposa alas de pájaro atrapé!\n¡Y de inmediato la adopté!",
+      "USfr": "Tu as attrapé un troides alexandrae!\nIl a une allure royale!"
+    }
+  },
+  {
+    "label": "Insect_00587",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到水黾了！\n你不怕溺水！",
+      "EUde": "Ein Wasserläufer!\nDas Laufen hat dir nix genützt, du\nhättest dich nicht hetzen müssen!",
+      "EUen": "I caught a pondskater!\nWonder if it can do a pond ollie...",
+      "EUes": "¡He atrapado un zapatero!\n¿Cómo trabajará el cuero?",
+      "EUfr": "Tu as attrapé un patineur !\nTu crois qu'il est plutôt « artistique »\nou « de vitesse » ?",
+      "EUit": "Ho preso un gerride!\nChissà come scivola sull'acqua...",
+      "EUnl": "Je hebt een schaatsenrijder\ngevangen! Op hele kleine\nklapschaatsjes...",
+      "EUru": "В сачок попалась водомерка!\nСколько воды ты уже померила?",
+      "JPja": "アメンボを　つかまえた！\nキミは　おぼれない！",
+      "KRko": "소금쟁이를 잡았다!\n물 위를 걸어 다녀!",
+      "TWzh": "抓到水黽了！\n你會輕功水上飄！",
+      "USen": "I caught a pondskater!\nWonder if it can do a pond ollie...",
+      "USes": "¡Atrapé un zapatero!\n¿Cómo trabajará el cuero?",
+      "USfr": "Tu as attrapé un patineur!\nTu crois qu'il est plutôt « artistique »\nou « de vitesse »?"
+    }
+  },
+  {
+    "label": "Insect_00588",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蚂蚁了！\n也有毒蚂蚁的，要留神哦！",
+      "EUde": "Eine Ameise!\nVon wegen stark... Das Mehrfache\nihres Gewichts schaffe ich auch!",
+      "EUen": "I caught an ant!\nTELL ME WHERE THE QUEEN IS!",
+      "EUes": "¡He atrapado una hormiga!\n¡Espero que sea mi amiga!",
+      "EUfr": "Tu as attrapé une fourmi !\nTu savais que la fourmi croonde ?",
+      "EUit": "Ho preso una formica!\nSembra in ottima... forma!",
+      "EUnl": "Je hebt een mier gevangen! En waar\ner één is, zijn er mier!",
+      "EUru": "В сачок попался муравей!\nОчень трудолюбивое насекомое!",
+      "JPja": "アリを　つかまえた！\n毒のあるアリもあるから　注意する必要あり",
+      "KRko": "개미를 잡았다!\n독이 있는 개미도 있으니까 조심해야 돼!",
+      "TWzh": "抓到螞蟻了！\n有些螞蟻有毒性，要小心注意。",
+      "USen": "I caught an ant!\nTELL ME WHERE THE QUEEN IS!",
+      "USes": "¡Atrapé una hormiga!\n¡Espero que sea mi amiga!",
+      "USfr": "Tu as attrapé une fourmi!\nTu savais que la fourmi cro-onde?"
+    }
+  },
+  {
+    "label": "Insect_00590",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到鼠妇了！\n就算你缩成一个球也没用的！",
+      "EUde": "Eine Kugelassel!\nDas hast du vermasselt!",
+      "EUen": "I caught a pill bug!\nThat's a tough act to swallow!",
+      "EUes": "¡He atrapado una cochinilla!\n¡No seas tímida, chiquilla!",
+      "EUfr": "Tu as attrapé un cloporte !\nEst-ce un cloporte bonheur ?",
+      "EUit": "Ho preso un porcellino di terra!\nC'è anche quello di mare?",
+      "EUnl": "Je hebt een rolpissebed gevangen!\nZou hij nog meer kunstjes kunnen?",
+      "EUru": "В сачок попалась мокрица!\nОна хочет напиться водицы!",
+      "JPja": "ダンゴムシを　つかまえた！\n丸まったって　ムダなのだ！",
+      "KRko": "공벌레를 잡았다!\n동그랗게 말아도 소용없다!",
+      "TWzh": "抓到鼠婦了！\n就算你捲起身子也是逃不掉的！",
+      "USen": "I caught a pill bug!\nThat's a tough act to swallow!",
+      "USes": "¡Atrapé una cochinilla!\n¡Lústrala bien y brilla!",
+      "USfr": "Tu as attrapé un cloporte!\nEst-ce un cloporte bonheur?"
+    }
+  },
+  {
+    "label": "Insect_00591",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到海蟑螂了！\n打扫海滩辛苦你啦！",
+      "EUde": "Eine Ligia exotica!\nEine ganz andere Liga!",
+      "EUen": "I caught a wharf roach!\nThis water-loving roach has no pier!",
+      "EUes": "¡He atrapado una cochinilla de arena,\nasí como suena!",
+      "EUfr": "Tu as attrapé une ligie !\nElle est moche comme\nun pou de mer !",
+      "EUit": "Ho preso una ligia exotica!\nQuesto coleottero adora le spiagge!",
+      "EUnl": "Je hebt een strandpissebed\ngevangen! Als hij dat maar niet op\njouw strandbed doet!",
+      "EUru": "В сачок попался морской таракан.\nЭто же ледниковый реликт!",
+      "JPja": "フナムシを　つかまえた！\nビーチのおそうじ　ご苦労様！",
+      "KRko": "갯강구를 잡았다!\n해변을 청소하느라 수고가 많아!",
+      "TWzh": "抓到海蟑螂了！\n海灘的打掃工作真是辛苦你了！",
+      "USen": "I caught a wharf roach!\nThis water-loving roach has no pier!",
+      "USes": "¡Atrapé una cochinilla de arena,\nasí como suena!",
+      "USfr": "Tu as attrapé une ligie!\nElle est laide comme\nun pou de mer!"
+    }
+  },
+  {
+    "label": "Insect_00592",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到飞蛾了！！\n不怕、不怕……",
+      "EUde": "Eine Motte!\nZum Kugeln!",
+      "EUen": "I caught a moth!\nAnd I had a ball doing it!",
+      "EUes": "¡He atrapado una polilla!\nLa he atraído cual bombilla...",
+      "EUfr": "Tu as attrapé un papillon de nuit !\nDire qu'il passe sa journée à dormir...",
+      "EUit": "Ho preso una falena!\nÈ meno ingombrante di una balena!",
+      "EUnl": "Je hebt een mot gevangen! Als je\ndaar maar geen mot mee krijgt!",
+      "EUru": "В сачок попалась павлиноглазка!\nЧем же павлины смотреть будут?",
+      "JPja": "ガを　つかまえちゃった！！\nコワくない、コワくない・・・",
+      "KRko": "나방을 잡아버렸다!!\n안 무서워, 안 무서워...",
+      "TWzh": "抓到飛蛾了！！\n不可怕，一點都不可怕……",
+      "USen": "I caught a moth!\nAnd I had a ball doing it!",
+      "USes": "¡Atrapé una polilla!\n¡Pues mira qué maravilla!",
+      "USfr": "Tu as attrapé un papillon de nuit!\nDire qu'il passe sa journée à dormir..."
+    }
+  },
+  {
+    "label": "Insect_00594",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到龙虱了！\n它的尾部会吹出气泡？！",
+      "EUde": "Ein Schwimmkäfer!\nDass ich dich gefangen habe, ist \nhoffentlich nicht schlimm, Käfer...",
+      "EUen": "I caught a diving beetle!\nNow I'm making a splash!",
+      "EUes": "¡He atrapado un escarabajo nadador!\n¿Dónde tiene el bañador?",
+      "EUfr": "Tu as attrapé un dytique !\nIl aime les vers dithyrambiques !",
+      "EUit": "Ho preso un ditisco!\nOra voglio anche il... braccisco!",
+      "EUnl": "Je hebt een waterroofkever\ngevangen! Een echte\nzoetwaterpiraat!",
+      "EUru": "В сачок попался плавунец!\nНе уплыл бы!",
+      "JPja": "ゲンゴロウを　つかまえた！\nおしりに　あぶくが？！",
+      "KRko": "물방개를 잡았다!\n엉덩이로도 숨을 쉰다고?!",
+      "TWzh": "抓到龍蝨了！\n尾部冒出了氣泡！？",
+      "USen": "I caught a diving beetle!\nNow I'm making a splash!",
+      "USes": "¡Atrapé un escarabajo nadador!\n¡Y tiene pinta de ganador!",
+      "USfr": "Tu as attrapé un dytique!\nIl aime les vers dithyrambiques!"
+    }
+  },
+  {
+    "label": "Insect_00595",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到绿胸晏蜓了！\n它不是金色的哦！",
+      "EUde": "Eine Königslibelle! \nDie Krönung des Tages!",
+      "EUen": "I caught a darner dragonfly!\nIt better watch its mouth!",
+      "EUes": "¡Una libélula caballito del diablo!\n¿Se ha escapado de su establo?",
+      "EUfr": "Tu as attrapé un anax napolitain !\nS'il est insensible à la douleur, est-ce\ntoujours un anax ? J'hésite...",
+      "EUit": "Ho preso una libellula depressa!\nLe farò tornare il buonumore!",
+      "EUnl": "Je hebt een zuidelijke keizerlibel\ngevangen! Zou hij nieuwe kleren\nnodig hebben?",
+      "EUru": "В сачок попался дозорщик!\nМимо него не проскользнешь!",
+      "JPja": "ギンヤンマを　つかまえた！\n銀色じゃ　ないけどね",
+      "KRko": "왕잠자리를 잡았다!\n왕은 아니지만 말이야!",
+      "TWzh": "抓到綠胸晏蜓了！\n但下半身就不綠了。",
+      "USen": "I caught a darner dragonfly!\nIt better watch its mouth!",
+      "USes": "¡Una libélula caballito del diablo!\n¿Se habrá escapado de su establo?",
+      "USfr": "Tu as attrapé un anax napolitain!\nComme quoi les ananas sont polis,\ntiens!"
+    }
+  },
+  {
+    "label": "Insect_00596",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到歌利亚大角花金龟了！\n嗯……歌利亚！！",
+      "EUde": "Ein Goliathkäfer!\nImmer noch relativ klein...",
+      "EUen": "I caught a goliath beetle!\nAm I a legend or what?",
+      "EUes": "¡He atrapado un goliat!\nYo tan joven, ¡a mi edad!",
+      "EUfr": "Tu as attrapé un scarabée Goliath !\nY a-t-il aussi des scarabées David ?",
+      "EUit": "Ho preso uno scarabeo Golia!\nUn'impresa leggendaria!",
+      "EUnl": "Je hebt een goliathkever gevangen!\nReusachtig!",
+      "EUru": "В сачок попался жук-голиаф!\nОн заслуживает свое название...",
+      "JPja": "ゴライアスオオツノハナムグリを　つかまえた！\nう～ん・・・ゴライアス！！",
+      "KRko": "골리앗왕꽃무지를 잡았다!\n흐～음... 골리앗이래!!",
+      "TWzh": "抓到哥利亞大角花金龜了！\n嗯……哥利亞！！",
+      "USen": "I caught a goliath beetle!\nAm I a legend or what?",
+      "USes": "¡Un goliat, qué emoción!\n¡Le cantaré una canción!",
+      "USfr": "Tu as attrapé un scarabée Goliath!\nY a-t-il aussi des scarabées David?"
+    }
+  },
+  {
+    "label": "Insect_00597",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到苍蝇了……\n嗡嗡响个不停，好吵啊！",
+      "EUde": "Eine Fliege!\nFliegen dir noch weitere Fliegen\nhinterher?",
+      "EUen": "I caught a fly!\nI was just wingin' it...",
+      "EUes": "¡He atrapado una mosca!\nVe la red y no se cosca.",
+      "EUfr": "Tu as attrapé une mouche !\nTouche la bouche de la mouche\nlouche qui se douche et se couche.",
+      "EUit": "Ho preso una mosca!\nOra non se ne sente volare una!",
+      "EUnl": "Je hebt een vlieg gevangen! Die heb\nje mooi niet laten vliegen!",
+      "EUru": "В сачок попалась муха!\nХорошо, что я мухи не обижу!",
+      "JPja": "ハエを　つかまえちゃった・・・\nだって、ブンブン　うるさいし！",
+      "KRko": "파리를 잡아버렸다...\n윙윙～ 너무 시끄럽길래!",
+      "TWzh": "抓到蒼蠅了……\n嗡嗡叫的，吵死人了！",
+      "USen": "I caught a fly!\nI was just wingin' it...",
+      "USes": "¡Vaya, atrapé una mosca!\n¡Y no creo que me conozca!",
+      "USfr": "Tu as attrapé une mouche!\nTouche la bouche de la mouche\nlouche qui se douche et se couche."
+    }
+  },
+  {
+    "label": "Insect_00598",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到兰花螳螂了！\n在兰花上守株待兔的狩猎者！",
+      "EUde": "Eine Orchideenmantis!\nIch sehe unsere Freundschaft\nschon erblühen!",
+      "EUen": "I caught an orchid mantis! \nOur friendship is blooming!",
+      "EUes": "¡He atrapado una mantis orquídea!\nMira qué quieta se queda...",
+      "EUfr": "Tu as attrapé une mante orchidée !\nEn voilà, un nom fleuri !",
+      "EUit": "Ho preso una mantide orchidea!\nChe profumino!",
+      "EUnl": "Je hebt een orchidee-bidsprinkhaan\ngevangen! Hij was tussen de\nbloemen ingebed.",
+      "EUru": "В сачок попался орхидейный\nбогомол! Не отличить от орхидеи!",
+      "JPja": "ハナカマキリを　つかまえた！\n花で待ち受ける　ハンター！",
+      "KRko": "연꽃사마귀를 잡았다!\n꽃 속에서 기회를 노리는 사냥꾼!",
+      "TWzh": "抓到蘭花螳螂了！\n在花朵中蓄勢待發的獵人！",
+      "USen": "I caught an orchid mantis! \nOur friendship is blooming!",
+      "USes": "Es una mantis orquídea,\n¡no hay quien lo niegue!\n¿Necesitará que la riegue?",
+      "USfr": "Tu as attrapé une mante orchidée!\nEn voilà, un nom fleuri!"
+    }
+  },
+  {
+    "label": "Insect_00599",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到虎甲虫了！\n绝妙的翅膀挥动方式！",
+      "EUde": "Ein Sandlaufkäfer!\nNachdem ich dich gefangen habe,\nbist du erst mal nur Handlaufkäfer!",
+      "EUen": "I caught a tiger beetle!\nI pounced first!",
+      "EUes": "¡He atrapado un escarabajo tigre!\n¡Un bicho de gran calibre!",
+      "EUfr": "Tu as attrapé une cicindèle !\nEst-ce que quelqu'un\nse soucie d'elle ?",
+      "EUit": "Ho preso una cicindela!\nNessuna lamentela!",
+      "EUnl": "Je hebt een zandloopkever\ngevangen! Zou hij wel tijd hebben?",
+      "EUru": "В сачок попался жук-скакун!\nПоскакали!",
+      "JPja": "ハンミョウを　つかまえた！\nゼツミョウな　ハネさばき！",
+      "KRko": "길앞잡이를 잡았다!\n나 어디로 가면 돼?",
+      "TWzh": "抓到虎甲蟲了！\n猛虎出閘！",
+      "USen": "I caught a tiger beetle!\nI pounced first!",
+      "USes": "¡Atrapé un escarabajo tigre!\n¡Un insecto de gran calibre!",
+      "USfr": "Tu as attrapé une cicindèle!\nEst-ce que quelqu'un\nse soucie d'elle?"
+    }
+  },
+  {
+    "label": "Insect_00600",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到长戟大兜虫了！\n世界上最大的独角仙！",
+      "EUde": "Ein Herkuleskäfer!\nMein Kescher war wohl stärker...",
+      "EUen": "I caught a horned hercules!\nGuess I was stronger!",
+      "EUes": "¡Un escarabajo astado hércules!\nEs verdad, ¡no digo embustes!",
+      "EUfr": "Tu as attrapé un scarabée Hercule !\nJe le croyais plus fort !",
+      "EUit": "Ho preso uno scarabeo Ercole!\nSono più forte io!",
+      "EUnl": "Je hebt een herculeskever\ngevangen! Sterk staaltje!",
+      "EUru": "В сачок попался жук-геркулес!\nСъел много каши, наверное!",
+      "JPja": "ヘラクレスオオカブトを　つかまえた！\n世界一　でかい　カブト！",
+      "KRko": "헤라클레스장수풍뎅이를 잡았다!\n세계에서 가장 큰 풍뎅이!",
+      "TWzh": "抓到長戟大兜蟲了！\n世上最大的獨角仙！",
+      "USen": "I caught a horned hercules!\nGuess I was stronger!",
+      "USes": "¡Un escarabajo astado hércules es!\n¡Es muy fuerte! ¿Ves?",
+      "USfr": "Tu as attrapé un scarabée Hercule!\nJe le croyais plus fort!"
+    }
+  },
+  {
+    "label": "Insect_00602",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到细身赤锹形虫了！\n苗条的身材，好美～！",
+      "EUde": "Ein Cyclommatus!\nÜber diesen Fang sollte man\neinen Gedichtzyklus verfassen!",
+      "EUen": "I caught a cyclommatus stag!\nThose mandibles are a mouthful!",
+      "EUes": "¡Un escarabajo ciervo cyclommatus!\n¡Es un bicho de alto estatus!",
+      "EUfr": "Tu as attrapé un lucane\ncyclommatus ! Tu as vu\ncomme il fait le beau ?",
+      "EUit": "Ho preso un coleottero\ncyclommatus! Che mandibole!",
+      "EUnl": "Je hebt een vliegend hert gevangen!\nSpan hem snel voor je arrenslee!",
+      "EUru": "В сачок попался жук-рогач!\nМне бы такие рога!",
+      "JPja": "ホソアカクワガタを　つかまえた！\nスリムボディが　美しい～っ！",
+      "KRko": "엘라푸스가위사슴벌레를 잡았다!\n저 멋진 몸을 봐～!",
+      "TWzh": "抓到細身赤鍬形蟲了！\n美麗的窈窕身材～！",
+      "USen": "I caught a cyclommatus stag!\nThose mandibles are a mouthful!",
+      "USes": "¡Un escarabajo ciervo cyclommatus!\n¡Es un insecto de alto estatus!",
+      "USfr": "Tu as attrapé un lucane\ncyclommatus! Tu as vu\ncomme il fait le beau?"
+    }
+  },
+  {
+    "label": "Insect_00603",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到萤火虫了！\n微弱的萤光好浪漫啊……",
+      "EUde": "Ein Leuchtkäfer!\nDem hab ich heimgeleuchtet!",
+      "EUen": "I caught a firefly!\nI'm on fire now!",
+      "EUes": "¡He atrapado una luciérnaga!\n¡Igual brilla que se apaga!",
+      "EUfr": "Tu as attrapé une luciole !\nTu n'auras plus jamais peur\ndans le noir !",
+      "EUit": "Ho preso una lucciola!\nChe splendore!",
+      "EUnl": "Je hebt een vuurvliegje gevangen!\nEr ging ineens een lichtje bij je op!",
+      "EUru": "В сачок попался светлячок!\nХоть в темноте не будет страшно.",
+      "JPja": "ホタルを　つかまえた！\nほのかな　光がロマンチック・・・",
+      "KRko": "반디를 잡았다!\n은은한 빛이 낭만적이야...",
+      "TWzh": "抓到螢火蟲了！\n微弱的螢光，充滿了浪漫……",
+      "USen": "I caught a firefly!\nI'm on fire now!",
+      "USes": "¡Atrapé una luciérnaga!\n¡Y brilla como una linterna!",
+      "USfr": "Tu as attrapé une luciole!\nTu n'auras plus jamais peur\ndans le noir!"
+    }
+  },
+  {
+    "label": "Insect_00604",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蜣螂了！\n它们为什么要滚这种东西！",
+      "EUde": "Ein Mistkäfer!\nKeine Sammlung ist komplett,\nwenn sie den vermisst!",
+      "EUen": "I caught a dung beetle!\nThis species likes feces!",
+      "EUes": "¡He atrapado un escarabajo pelotero,\nfamoso en el mundo entero!",
+      "EUfr": "Tu as attrapé un bousier !\nChacun son truc. Lui, c'est\nles boules de bouse !",
+      "EUit": "Ho preso uno scarabeo stercorario!\nMeglio non sapere cosa mangia!",
+      "EUnl": "Je hebt een mestkever gevangen!\nVieze gewoontes houdt die erop na...",
+      "EUru": "В сачок попался жук-навозник!\nЭти жуки любят навоз. Надо же...",
+      "JPja": "フンコロガシを　つかまえた！\n転がすモノが　違うでしょ！",
+      "KRko": "쇠똥구리를 잡았다!\n쇠똥은 안 굴리고 뭘 굴리는 거야!",
+      "TWzh": "抓到糞金龜了！\n怎麼會滾那種東西呢！",
+      "USen": "I caught a dung beetle!\nThis species likes feces!",
+      "USes": "¡Atrapé un escarabajo pelotero,\nfamoso en el mundo entero!",
+      "USfr": "Tu as attrapé un bousier!\nChacun son truc. Lui, c'est\nles boules de bouse!"
+    }
+  },
+  {
+    "label": "Insect_00605",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到稻蝗了！\n不要吃田里的稻子啊！",
+      "EUde": "Eine Heuschrecke!\nSchrecke ahoi!",
+      "EUen": "I caught a rice grasshopper!\nI've been looking for a\ngluten-free alternative...",
+      "EUes": "¡He atrapado una langosta!\n¡La busqué de costa a costa!",
+      "EUfr": "Tu as attrapé un criquet !\nTiens, je croyais que c'était\nun sport !",
+      "EUit": "Ho preso una locusta!\nEra pure bella... robusta!",
+      "EUnl": "Je hebt een rijstsprinkhaan\ngevangen! Als hij maar niet in je\nbord nasi springt!",
+      "EUru": "В сачок попалась рисовая кобылка!\nА бывает гречневая кобылка?",
+      "JPja": "イナゴを　つかまえた！\n田んぼのイネを　食べないで！",
+      "KRko": "메뚜기를 잡았다!\n가을의 미식가!",
+      "TWzh": "抓到稻蝗了！\n別吃田裡的水稻！",
+      "USen": "I caught a rice grasshopper!\nI've been looking for a\ngluten-free alternative...",
+      "USes": "¡Atrapé una langosta!\n¡La busqué de costa a costa!",
+      "USfr": "Tu as attrapé un criquet!\nTiens, je croyais que c'était\nun sport!"
+    }
+  },
+  {
+    "label": "Insect_00606",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蚊子了！\n把你吸走的血还回来！",
+      "EUde": "Eine Mücke!\nMit dem Fang kann man sich\nnicht so recht schmücken...",
+      "EUen": "I caught a mosquito!\nIt's itching for a fight!",
+      "EUes": "¡He atrapado un mosquito!\nPor si tenía apetito...",
+      "EUfr": "Tu as attrapé un moustique !\nEnfin, je te tiens !",
+      "EUit": "Ho preso una zanzara!\nMi prudevano le mani.",
+      "EUnl": "Je hebt een mug gevangen! Maak er\ngeen olifant van!",
+      "EUru": "В сачок попался комар!\nТут комар носу не подточит!",
+      "JPja": "カを　つかまえた！\n吸ったモノ、返して！",
+      "KRko": "모기를 잡았다!\n내 피 내놔!",
+      "TWzh": "抓到蚊子了！\n把你吸走的血還來！",
+      "USen": "I caught a mosquito!\nIt's itching for a fight!",
+      "USes": "¡Atrapé un mosquito!\nPor si tenía apetito...",
+      "USfr": "Tu as attrapé un moustique!\nEnfin, je te tiens!"
+    }
+  },
+  {
+    "label": "Insect_00607",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到螳螂了！\n它的镰刀真酷～！",
+      "EUde": "Eine Gottesanbeterin!\nDu bist ein guter Fang, Schrecke!",
+      "EUen": "I caught a mantis!\nMan, 'tis so cool!",
+      "EUes": "¡He atrapado una mantis religiosa!\nEs una bicha famosa.",
+      "EUfr": "Tu as attrapé une mante religieuse !\nIl va falloir trouver un insectarium\ncouvent !",
+      "EUit": "Ho preso una mantide!\nChe bella posa!",
+      "EUnl": "Je hebt een bidsprinkhaan\ngevangen! Je gebeden zijn verhoord!",
+      "EUru": "В сачок попался богомол!\nА показалось, что это часть\nрастения.",
+      "JPja": "カマキリを　つかまえた！\nいいカマ　してるぅ～！",
+      "KRko": "사마귀를 잡았다!\n얼굴 진짜 작다～!",
+      "TWzh": "抓到螳螂了！\n好帥的鐮刀啊～！",
+      "USen": "I caught a mantis!\nMan, 'tis so cool!",
+      "USes": "¡Atrapé una mantis religiosa!\n¡Una criatura muy famosa!",
+      "USfr": "Tu as attrapé une mante religieuse!\nIl va falloir trouver un insectarium\ncouvent!"
+    }
+  },
+  {
+    "label": "Insect_00608",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到椿象了！\n好臭！",
+      "EUde": "Eine Stinkwanze!\nKein sehr netter Name,\naber immerhin deutlich!",
+      "EUen": "I caught a stinkbug!\nIt lives up to its name!",
+      "EUes": "¡He atrapado una chinche!\nSe habrá pillado un berrinche...",
+      "EUfr": "Tu as attrapé une punaise !\nC'est quoi, cette odeur ?!",
+      "EUit": "Ho preso una cimice!\nChe puzza!",
+      "EUnl": "Je hebt een schildwants gevangen!\nWat zou hij in zijn schild voeren?",
+      "EUru": "В сачок попался щитник!\nА мечника тоже можно поймать?",
+      "JPja": "カメムシを　つかまえた！\nくさ～い！",
+      "KRko": "노린재를 잡았다!\n아이구～ 냄새야!",
+      "TWzh": "抓到椿象了！\n臭死了～！",
+      "USen": "I caught a stinkbug!\nIt lives up to its name!",
+      "USes": "¡Atrapé una chinche!\nHabrá tenido un berrinche...",
+      "USfr": "Tu as attrapé une punaise!\nC'est quoi, cette odeur?!"
+    }
+  },
+  {
+    "label": "Insect_00609",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到星天牛了！\n不要弄破捕虫网啊！",
+      "EUde": "Ein Fichtenbock!\nDa habe ich wohl einen\nBock geschossen!",
+      "EUen": "I caught a citrus long-horned beetle!\nOrange you happy for me?",
+      "EUes": "¡He atrapado un longicornio asiático!\nY me ha caído simpático.",
+      "EUfr": "Tu as attrapé un capricorne\ndes agrumes ! Il est plutôt\norange, ou citron ?",
+      "EUit": "Ho preso un tarlo asiatico!\nViene da molto lontano!",
+      "EUnl": "Je hebt een Aziatische boktor\ngevangen! Je liep niet zomaar wat te\ngeiten!",
+      "EUru": "В сачок попался цитрусовый усач!\nЦитрусы я люблю, а усы — нет.",
+      "JPja": "ゴマダラカミキリを　つかまえた！\nあみを　カミ切らないでね！",
+      "KRko": "알락하늘소를 잡았다!\n잠자리채를 자르지 마!",
+      "TWzh": "抓到星天牛了！\n別把網子咬破囉！",
+      "USen": "I caught a citrus long-horned beetle!\nOrange you happy for me?",
+      "USes": "¡Atrapé un longicornio asiático!\nY me cayó simpático.",
+      "USfr": "Tu as attrapé un capricorne des\nagrumes! Il est plutôt orange,\nou citron?"
+    }
+  },
+  {
+    "label": "Insect_00610",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到乌鸦凤蝶了！\n在漆黑的环境里就看不到它们了吧。",
+      "EUde": "Ein Ritterfalter!\nKannst du mit der Rüstung\nnoch fliegen?",
+      "EUen": "I caught a peacock butterfly!\nNow it's my turn to strut my stuff!",
+      "EUes": "¡He atrapado una mariposa bianor!\nLa trataré con amor.",
+      "EUfr": "Tu as attrapé un papilio bianor !\nRegarde comme il fait le beau !",
+      "EUit": "Ho preso una farfalla vanessa io!\nL'ho presa proprio... io!",
+      "EUnl": "Je hebt een pauwenpage gevangen!\nDaar mag je best trots op zijn!",
+      "EUru": "В сачок попался бианор!\nКакая необычная бабочка!",
+      "JPja": "カラスアゲハを　つかまえた！\n真っ暗やみなら　見えないカモ",
+      "KRko": "제비나비를 잡았다!\n깜깜한 밤에는 안 보이겠는걸?",
+      "TWzh": "抓到烏鴉鳳蝶了！\n在一片漆黑中也許就看不見了。",
+      "USen": "I caught a peacock butterfly!\nNow it's my turn to strut my stuff!",
+      "USes": "¡Atrapé una mariposa bianor!\nLa trataré con amor.",
+      "USfr": "Tu as attrapé un papilio bianor!\nRegarde comme il fait le beau!"
+    }
+  },
+  {
+    "label": "Insect_00611",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蜗牛了！\n慢慢地，爬呀爬！",
+      "EUde": "Eine Schnecke!\nWas genau macht dich\ndenn zur Schnecke?",
+      "EUen": "I caught a snail!\nIt's...not much to brag about.",
+      "EUes": "¡He atrapado un caracol!\nQue no le dé mucho el sol...",
+      "EUfr": "Tu as attrapé un escargot !\nBravo, tu as été plus rapide que lui !",
+      "EUit": "Ho preso una chiocciola!\nEra lenta come una lumaca.",
+      "EUnl": "Je hebt een slak gevangen!\nRazendsnelle actie!",
+      "EUru": "В сачок попалась улитка! Она тоже\nвсе свое носит с собой.",
+      "JPja": "カタツムリを　つかまえた！\nでんでん、むしむし！",
+      "KRko": "달팽이를 잡았다!\n달팽이 요리나 해볼까?",
+      "TWzh": "抓到蝸牛了！\n背上是沉重卻甜蜜的負擔！",
+      "USen": "I caught a snail!\nIt's...not much to brag about.",
+      "USes": "¡Atrapé un caracol!\nQue no le dé mucho el sol...",
+      "USfr": "Tu as attrapé un escargot!\nBravo, tu as été plus rapide que lui!"
+    }
+  },
+  {
+    "label": "Insect_00612",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到独角仙了！\n强悍、坚硬、力气大！",
+      "EUde": "Ein Nashornkäfer!\nDem war ich eine Nasenlänge voraus!",
+      "EUen": "I caught a horned dynastid!\nI'd hate to hear it honk that schnoz!",
+      "EUes": "¡Un escarabajo astado japonés!\nLo trataré como a un marqués.",
+      "EUfr": "Tu as attrapé un scarabée kabuto !\nJe me demande s'il peut souffler\ndans sa trompe...",
+      "EUit": "Ho preso uno scarabeo kabutomushi!\nAttenzione al corno!",
+      "EUnl": "Je hebt een neushoornkever\ngevangen! Je wist niet dat je\nmet je neus kon horen, hè?",
+      "EUru": "В сачок попался дупляк! Надеюсь,\nон не будет трубить в свой рог.",
+      "JPja": "カブトムシを　つかまえた！\n強くて、かたくて、力持ち！",
+      "KRko": "장수풍뎅이를 잡았다!\n강하고 딱딱한 천하장사!",
+      "TWzh": "抓到獨角仙了！\n強大、堅硬、有力！",
+      "USen": "I caught a horned dynastid!\nI'd hate to hear it honk that schnoz!",
+      "USes": "¡Un escarabajo astado japonés!\nLo trataré como a un marqués.",
+      "USfr": "Tu as attrapé un scarabée kabuto!\nJe me demande s'il peut souffler\ndans sa trompe..."
+    }
+  },
+  {
+    "label": "Insect_00613",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蚱蜢了！\n趁着夏天，努力工作吧！",
+      "EUde": "Ein Grashüpfer!\nDiese Hüpferei scheint gerade\nzu grassieren...",
+      "EUen": "I caught a grasshopper!\nThey're a grass act!",
+      "EUes": "¡He atrapado un saltamontes!\n¡Mi red no conoce horizontes!",
+      "EUfr": "Tu as attrapé une sauterelle !\nElle sait comment prendre\nde la hauteur !",
+      "EUit": "Ho preso una cavalletta!\nSiamo a cavallo!",
+      "EUnl": "Je hebt een sprinkhaan gevangen!\nDie was zeker op weg naar de wipkip\nin de speeltuin!",
+      "EUru": "В сачок попался кузнечик!\nЯ про него песенку знаю!",
+      "JPja": "キリギリスを　つかまえた！\n夏の間に　働こう！",
+      "KRko": "여치를 잡았다!\n여름에 일합시다!",
+      "TWzh": "抓到蚱蜢了！\n要趁夏天時努力工作喔！",
+      "USen": "I caught a grasshopper!\nThey're a grass act!",
+      "USes": "¡Atrapé un saltamontes!\n¿Buscaría nuevos horizontes?",
+      "USfr": "Tu as attrapé une sauterelle!\nElle sait comment prendre\nde la hauteur!"
+    }
+  },
+  {
+    "label": "Insect_00614",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到雪隐金龟了！\n闪闪发亮的金属光泽～",
+      "EUde": "Ein Gold-Mistkäfer!\nTja, Gegensätze ziehen sich an!",
+      "EUen": "I caught an earth-boring dung\nbeetle! It's not boring at all!",
+      "EUes": "¡Un escarabajo geotrúpido!\nSuena mal, pero no está pútrido.",
+      "EUfr": "Tu as attrapé un geotrupidae !\nC'est le genre d'insectes qui restent\ncollés aux terres !",
+      "EUit": "Ho preso un geotrupidae!\nSi è scavato la fossa da solo!",
+      "EUnl": "Je hebt een echte mestkever\ngevangen! Voor kunstmest haalt hij\nzijn neus op!",
+      "EUru": "В сачок попался навозник-\nземлерой! Полезный санитар леса!",
+      "JPja": "オオセンチコガネを　つかまえた！\nメタリックな輝き",
+      "KRko": "보라금풍뎅이를 잡았다!\n마치 금속처럼 반짝거려!",
+      "TWzh": "抓到雪隱金龜了！\n閃閃發亮的金屬光輝！",
+      "USen": "I caught an earth-boring dung\nbeetle! It's not boring at all!",
+      "USes": "¡Un escarabajo geotrúpido!\nSuena mal, pero no está pútrido.",
+      "USfr": "Tu as attrapé un géotrupe!\nC'est le genre d'insectes qui restent\ncollés aux terres!"
+    }
+  },
+  {
+    "label": "Insect_00615",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到高卡萨斯南洋大兜虫了！\n黑得发亮，感觉很强呢～！",
+      "EUde": "Ein Atlaskäfer!\nAuf dem finde ich\nmich nicht zurecht...",
+      "EUen": "I caught a horned atlas!\nI didn't even need a map!",
+      "EUes": "¡Un escarabajo astado atlas!\n¡Tiene cara, astas y alas!",
+      "EUfr": "Tu as attrapé un scarabée Atlas !\nEt tu n'as même pas eu besoin\nde carte !",
+      "EUit": "Ho preso uno scarabeo atlas!\nNon mi è servito neanche l'atlante!",
+      "EUnl": "Je hebt een atlaskever gevangen!\nEn dat zonder routekaart!",
+      "EUru": "В сачок попался жук-атлас!\nТеперь мне больше не нужна карта!",
+      "JPja": "コーカサスオオカブトを　つかまえた！\n黒光りして　強そ～っ！",
+      "KRko": "코카서스장수풍뎅이를 잡았다!\n까맣고 반짝거려서 세 보여～!",
+      "TWzh": "抓到高卡薩斯南洋大兜蟲了！\n又黑又亮，感覺好強喔～！",
+      "USen": "I caught a horned atlas!\nI didn't even need a map!",
+      "USes": "¡Un escarabajo astado atlas!\n¡Tiene cara, astas y alas!",
+      "USfr": "Tu as attrapé un scarabée Atlas!\nEt tu n'as même pas eu besoin\nde carte!"
+    }
+  },
+  {
+    "label": "Insect_00616",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到叶竹节虫了！\n忍术“隐于叶”～！",
+      "EUde": "Eine Blattschrecke!\nHab dich! Da bist du Blatt, was?",
+      "EUen": "I caught a walking leaf!\nIt seems to be taking it in stride!",
+      "EUes": "¡He atrapado un insecto hoja!\n¿Un animal vegetal? ¡Qué paradoja!",
+      "EUfr": "Tu as attrapé une phyllie !\nElle est dure de la feuille !",
+      "EUit": "Ho preso un insetto foglia!\nHa mangiato la foglia tardi, stavolta!",
+      "EUnl": "Je hebt een wandelend blad\ngevangen! Als hij maar geen loopje\nmet je neemt!",
+      "EUru": "В сачок попался листотел!\nКакое подходящее название!",
+      "JPja": "コノハムシを　つかまえた！\nにんぽう、木の葉がくれ～っ！",
+      "KRko": "잎사귀벌레를 잡았다!\n잎사귀로 변신～!",
+      "TWzh": "抓到葉竹節蟲了！\n忍術，樹葉隱身術～！",
+      "USen": "I caught a walking leaf!\nIt seems to be taking it in stride!",
+      "USes": "¡Atrapé un insecto hoja!\n¿Animal o vegetal? ¡Qué paradoja!",
+      "USfr": "Tu as attrapé une phyllie!\nElle est dure de la feuille!"
+    }
+  },
+  {
+    "label": "Insect_00617",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蟋蟀了！\n秋日的音乐家！",
+      "EUde": "Eine Grille!\nWarst du unterwegs zu\neiner Grillparty?",
+      "EUen": "I caught a cricket!\nWhat a chirp thrill!",
+      "EUes": "¡He atrapado un grillo común!\n¡Sigue aún con su runrún!",
+      "EUfr": "Tu as attrapé un grillon des prés !\nJe connaissais son cousin germain\ndes prés !",
+      "EUit": "Ho preso un grillo!\nNon era molto sveglio.",
+      "EUnl": "Je hebt een krekel gevangen! Wat\neen kleine rekel!",
+      "EUru": "В сачок попался сверчок!\nПолучилась рифма!",
+      "JPja": "コオロギを　つかまえた！\n秋の日の　音楽家！",
+      "KRko": "귀뚜라미를 잡았다!\n가을날의 음악가!",
+      "TWzh": "抓到蟋蟀了！\n秋季的音樂家！",
+      "USen": "I caught a cricket!\nWhat a chirp thrill!",
+      "USes": "Un grillo común, ¡me encanta!\nY además, ¡qué bien canta!",
+      "USfr": "Tu as attrapé un grillon des prés!\nJe connaissais son cousin germain\ndes prés!"
+    }
+  },
+  {
+    "label": "Insect_00619",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蜘蛛了！\nSpider Catched！！",
+      "EUde": "Eine Spinne! \nAcht Beine, und ich hab\ndich trotzdem erwischt!",
+      "EUen": "I caught a spider! \nI spied 'er first!",
+      "EUes": "¡He atrapado una araña!\n¡Es que me doy mucha maña!",
+      "EUfr": "Tu as attrapé une araignée !\nOK, allez, range-la vite !",
+      "EUit": "Ho preso un ragno!\nL'ho cavato dal buco!",
+      "EUnl": "Je hebt een spin gevangen! Daar\nspin je goed garen bij!",
+      "EUru": "В сачок попался паук!\nНе такой уж он и страшный!",
+      "JPja": "クモを　つかまえた！\nスパイダー・キャッチ！！",
+      "KRko": "거미를 잡았다!\n스파이더 캐치!!",
+      "TWzh": "抓到蜘蛛了！\nSpider！Catch！",
+      "USen": "I caught a spider! \nI spied 'er first!",
+      "USes": "¡Atrapé una araña!\n¡Es que me doy mucha maña!",
+      "USfr": "Tu as attrapé une araignée!\nOK, allez, range-la vite!"
+    }
+  },
+  {
+    "label": "Insect_00620",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到彩袄蛱蝶了！\n绚丽的色彩耀眼夺目！",
+      "EUde": "Ein Agrias-Falter!\nDu treibst es ja ganz schön bunt!",
+      "EUen": "I caught an agrias butterfly! \nI wonder if it finds me disagrias-able?",
+      "EUes": "¡He atrapado una mariposa narciso!\n¡Bajé la red en el instante preciso!",
+      "EUfr": "Tu as attrapé un agrias !\nOn ne peut pas rater\nses couleurs vives !",
+      "EUit": "Ho preso una farfalla agrias!\nChe colori vividi!",
+      "EUnl": "Je hebt een agriasvlinder gevangen!\nJe bent vast in je sas met je agrias!",
+      "EUru": "В сачок попался агриас клаудина!\nМне понравилась его окраска!",
+      "JPja": "ミイロタテハを　つかまえた！\nビビッドカラーが　目にマブシイ！",
+      "KRko": "아그리아스나비를 잡았다!\n강렬한 색 때문에 눈부셔!",
+      "TWzh": "抓到彩襖蛺蝶了！\n鮮豔的色彩真耀眼！",
+      "USen": "I caught an agrias butterfly! \nI wonder if it finds me disagrias-able?",
+      "USes": "¡Atrapé una mariposa narciso!\n¡Bajé la red en el instante preciso!",
+      "USfr": "Tu as attrapé un agrias!\nOn ne peut pas rater\nses couleurs vives!"
+    }
+  },
+  {
+    "label": "Insect_00622",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蓑衣虫了！\n它的衣服看起来好暖和！",
+      "EUde": "Ein Sackträger!\nJetzt hab ich dich eingesackt!",
+      "EUen": "I caught a bagworm!\nGuess I'm a bragworm!",
+      "EUes": "¡He atrapado una oruga de bolsón!\nMe subyuga, ¡qué emoción!",
+      "EUfr": "Tu as attrapé une psyché !\nDélire !",
+      "EUit": "Ho preso un bruco dal fodero!\nÈ bello imbottito!",
+      "EUnl": "Je hebt een zakjesdrager gevangen!\nDie is zeker flink aan het winkelen\ngeweest?",
+      "EUru": "В сачок попалась мешочница!\nИнтересно, что у нее в мешке?",
+      "JPja": "ミノムシを　つかまえた！\nその服、あったかそー！",
+      "KRko": "도롱이벌레를 잡았다!\n주머니 안이 따뜻해 보여!",
+      "TWzh": "抓到蓑衣蟲了！\n那身衣服感覺好暖和喔～！",
+      "USen": "I caught a bagworm!\nGuess I'm a bragworm!",
+      "USes": "¡Atrapé una oruga de bolsón!\nMe conmueve, ¡qué emoción!",
+      "USfr": "Tu as attrapé une psyché!\nDélire!"
+    }
+  },
+  {
+    "label": "Insect_00623",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蜜蜂了！\n蜂蜜、蜂蜜！",
+      "EUde": "Eine Honigbiene!\nWas für ein süßer Fang!",
+      "EUen": "I caught a honeybee!\nAh, sweet success!",
+      "EUes": "¡He atrapado una abeja melífera!\nNo es dulce por dentro ni por fuera.",
+      "EUfr": "Tu as attrapé une abeille naine !\nPrends garde à son dard !",
+      "EUit": "Ho preso un'ape operaia!\nHo lavorato più di lei!",
+      "EUnl": "Je hebt een honingbij gevangen!\nWat een zoeteke!",
+      "EUru": "В сачок попалась восковая пчела!\nОчень подвижная, хотя и восковая.",
+      "JPja": "ミツバチを　つかまえた！\nハチミツ、ハチミツ！",
+      "KRko": "꿀벌을 잡았다!\n벌꿀, 벌꿀!",
+      "TWzh": "抓到蜜蜂了！\n蜂蜜，我要蜂蜜！",
+      "USen": "I caught a honeybee!\nAh, sweet success!",
+      "USes": "¡Atrapé una abeja melífera!\n¡Qué caza más fructífera!",
+      "USfr": "Tu as attrapé une abeille naine!\nPrends garde à son dard!"
+    }
+  },
+  {
+    "label": "Insect_00624",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到深山锹形虫了！\n哇！好帅的头冠！",
+      "EUde": "Ein Hirschkäfer!\nWenn einen diese Zangen packen,\nist man dem Untergang geweiht!",
+      "EUen": "I caught a miyama stag!\nIts mandibles are jaw-dropping!",
+      "EUes": "¡Un escarabajo ciervo Miyama!\n¡Es cierto, así se llama!",
+      "EUfr": "Tu as attrapé un lucane miyama !\nTu as déjà vu un lucane miyama\nà moto ?",
+      "EUit": "Ho preso un coleottero lucanide!\nHa delle mandibole incredibili!",
+      "EUnl": "Je hebt een Miyama-hertkever\ngevangen! Wat een krachtige\nkaaklijn!",
+      "EUru": "В сачок попался горный жук-олень!\nВот так мандибулы! Завидую!",
+      "JPja": "ミヤマクワガタを　つかまえた！\nくぅーっ！　カンムリが　ご立派です！",
+      "KRko": "사슴벌레를 잡았다!\n집게가 예술이십니다!",
+      "TWzh": "抓到深山鍬形蟲了！\n嗚！頭冠好氣派！",
+      "USen": "I caught a miyama stag!\nIts mandibles are jaw-dropping!",
+      "USes": "¡Un escarabajo ciervo Miyama!\n¡Es cierto, así se llama!",
+      "USfr": "Tu as attrapé un lucane miyama!\nTu as déjà vu un lucane miyama\nà moto?"
+    }
+  },
+  {
+    "label": "Insect_00625",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到斑缘点粉蝶了！\n黄色的，好可爱！",
+      "EUde": "Ein ZitronenfaIter!\nSei nicht sauer, weil ich\ndich gefangen habe!",
+      "EUen": "I caught a yellow butterfly!\nShouldn't all BUTTERflies be yellow?",
+      "EUes": "¡He atrapado una mariposa colias!\n¡La amas o la odias!",
+      "EUfr": "Tu as attrapé un citrin !\nIl te manque encore une oringe\net un pimplemousse !",
+      "EUit": "Ho preso una farfalla gialla!\nÈ delicata, sarà fatta di burro?",
+      "EUnl": "Je hebt een citroenvlinder\ngevangen! Zou hij daarom zo zuur\nkijken?",
+      "EUru": "В сачок попалась желтушка!\nЕе так назвали из-за окраски.",
+      "JPja": "モンキチョウを　つかまえた！\n黄色くて　キュート！",
+      "KRko": "노랑나비를 잡았다!\n노랗고 귀여워!",
+      "TWzh": "抓到斑緣點粉蝶了！\n黃黃的好可愛！",
+      "USen": "I caught a yellow butterfly!\nShouldn't all BUTTERflies be yellow?",
+      "USes": "¡Atrapé una mariposa colias!\n¡Pues la amas o la odias!",
+      "USfr": "Tu as attrapé un citrin!\nIl te manque encore une oringe\net un pimplemousse!"
+    }
+  },
+  {
+    "label": "Insect_00626",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到白粉蝶了！\n那么洁白，好漂亮！",
+      "EUde": "Ein Kohlweißling!\nVon dir lass ich mich\nnicht verkohlen!",
+      "EUen": "I caught a common butterfly!\nThey often flutter by!",
+      "EUes": "¡He atrapado una mariposa común!\nIba revoloteando al tuntún.",
+      "EUfr": "Tu as attrapé une piéride de la rave !\nC'est une drôle de bête rave !",
+      "EUit": "Ho preso una farfalla comune!\nIn genere sfarfalla un po' in volo!",
+      "EUnl": "Je hebt een koolwitje gevangen! Of\nhad je liever een wit kooltje?",
+      "EUru": "В сачок попалась белянка!\nОни встречаются довольно часто.",
+      "JPja": "モンシロチョウを　つかまえた！\n白くて　チャーミング！",
+      "KRko": "배추흰나비를 잡았다!\n하얗고 매력적이야!",
+      "TWzh": "抓到白粉蝶了！\n潔白無暇，好有魅力！",
+      "USen": "I caught a common butterfly!\nThey often flutter by!",
+      "USes": "Una mariposa común, ¡qué guapa!\n¡Si la suelto se me escapa!",
+      "USfr": "Tu as attrapé une piéride de la rave!\nC'est une drôle de bête rave!"
+    }
+  },
+  {
+    "label": "Insect_00627",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到大蓝闪蝶了！\n像宝石般闪耀！！",
+      "EUde": "Ein Himmelsfalter!\nMein Kescher war wie ein\nBlitz aus heiterem Himmel!",
+      "EUen": "I caught an emperor butterfly!\nIt's not your average monarch!",
+      "EUes": "¡He atrapado una mariposa celeste!\nEspero que no le moleste...",
+      "EUfr": "Tu as attrapé un morpho bleu !\nSa couleur est hypnotisante !",
+      "EUit": "Ho preso una farfalla morfo blu!\nMorfologicamente bella!",
+      "EUnl": "Je hebt een blauwe morpho\ngevangen! Die heeft een kleurrijke\nmetamorfose ondergaan!",
+      "EUru": "В сачок попался морфо менелай!\nМенелай, ты к нам еще залетай!",
+      "JPja": "モルフォチョウを　つかまえた！\nブリリアントだね！！",
+      "KRko": "몰포나비를 잡았다!\n환상적으로 아름다운 나비!!",
+      "TWzh": "抓到大藍閃蝶了！\n光鮮亮麗！！",
+      "USen": "I caught an emperor butterfly!\nIt's not your average monarch!",
+      "USes": "¡Atrapé una mariposa celeste!\nOjalá no se moleste...",
+      "USfr": "Tu as attrapé un morpho bleu!\nSa couleur est hypnotisante!"
+    }
+  },
+  {
+    "label": "Insect_00628",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蜈蚣了！\n绝对不可以摸！",
+      "EUde": "Ein Hundertfüßer!\nDu hast deine Laufschuhe wohl\nnicht schnell genug angezogen!",
+      "EUen": "I caught a centipede!\n99 more and I'll have a dollarpede!",
+      "EUes": "¡He atrapado un ciempiés!\nNo pienso contarlos, ¡qué estrés!",
+      "EUfr": "Tu as attrapé un mille-pattes !\nTu n'as plus qu'à lui trouver\n500 paires de chaussures !",
+      "EUit": "Ho preso un centopiedi!\nAvrà una scarpiera immensa!",
+      "EUnl": "Je hebt een duizendpoot gevangen!\nEcht, tel maar na!",
+      "EUru": "В сачок попалась многоножка!\nОна очень долго обувается!",
+      "JPja": "ムカデを　つかまえた！\n触っちゃダメ、ゼッタイ！",
+      "KRko": "지네를 잡았다!\n절대로 만지면 안 돼!",
+      "TWzh": "抓到蜈蚣了！\n絕對不能碰！",
+      "USen": "I caught a centipede!\n99 more and I'll have a dollarpede!",
+      "USes": "¡Atrapé un ciempiés!\nNo haré la cuenta, ¡qué estrés!",
+      "USfr": "Tu as attrapé un mille-pattes!\nTu n'as plus qu'à lui trouver\n500 paires de souliers!"
+    }
+  },
+  {
+    "label": "Insect_00630",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到竹节虫了！\n一节、两节、三节……\n咦？\n数到哪儿了？！",
+      "EUde": "Eine Stabschrecke!\nJetzt musst du den Stab jemand\nanders übergeben!\nWie?\nDu hast den schon mal gehört?",
+      "EUen": "I caught a walking stick!\nCheck out its walking schtick!\nLook, these are the jokes, OK?",
+      "EUes": "¡He atrapado un insecto palo!\nY ahora toca un chiste malo...",
+      "EUfr": "Tu as attrapé un phasme !\nUne brindille qui bouge toute seule,\nje croyais perdre la tête !",
+      "EUit": "Ho preso un insetto stecco!\nDeve seguire una dieta ferrea!",
+      "EUnl": "Je hebt een wandelende tak\ngevangen! Is dat net zoiets als een\nwandelstok?",
+      "EUru": "В сачок попался палочник! Будешь\nмоей палочкой-выручалочкой!\nЧто? Ты это уже где-то слышал?",
+      "JPja": "ナナフシを　つかまえた！\nフシが　ひい、ふう、みい・・・\nあれ？\nどこまで　数えたっけ？！",
+      "KRko": "긴수염대벌레를 잡았다!\n마디가 하나, 둘, 셋...\n어라?\n어디까지 셌더라?!",
+      "TWzh": "抓到竹節蟲了！\n總共有一節、兩節、三節……\n咦？\n數到第幾節了啊！？",
+      "USen": "I caught a walking stick!\nCheck out its walking schtick!\nLook, these are the jokes, OK?",
+      "USes": "¡Atrapé un insecto palo!\nY no es un chiste malo...",
+      "USfr": "Tu as attrapé un phasme!\nUne brindille qui bouge toute seule,\nje croyais perdre la tête!"
+    }
+  },
+  {
+    "label": "Insect_00631",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到彩虹锹形虫了！\n七彩的盔甲好耀眼！",
+      "EUde": "Ein Pracht-Hirschkäfer!\nMit dem Aussehen könntest du\nauch ein „Platzhirschkäfer“ sein!",
+      "EUen": "I caught a rainbow stag!\nIts rainbow armor is so shiny!",
+      "EUes": "¡Un escarabajo ciervo arcoíris!\nEl color depende de cómo lo mires...",
+      "EUfr": "Tu as attrapé un lucane copris irisé !\nCet insecte est très prisé !",
+      "EUit": "Ho preso un coleottero arcobaleno!\nEsce solo dopo un bell'acquazzone?",
+      "EUnl": "Je hebt een regenbooghertkever\ngevangen! Hij is fascinerend\niriserend!",
+      "EUru": "В сачок попался радужный жук-\nолень! Радужный ему привет!",
+      "JPja": "ニジイロクワガタを　つかまえた！\nレインボーなヨロイが　目に　まぶしい！",
+      "KRko": "뮤엘러리사슴벌레를 잡았다!\n무지개색 등딱지가 너무 눈부셔!",
+      "TWzh": "抓到彩虹鍬形蟲了！\n七彩繽紛的盔甲好亮眼！",
+      "USen": "I caught a rainbow stag!\nIts rainbow armor is so shiny!",
+      "USes": "Un escarabajo ciervo arcoíris, ¡mira!\n¡Su brillo me encandila!",
+      "USfr": "Tu as attrapé un lucane copris irisé!\nCet insecte est très prisé!"
+    }
+  },
+  {
+    "label": "Insect_00632",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到锯锹形虫了！\n上颚的线条真是让人难以言喻！",
+      "EUde": "Ein Sägezahn-Hirschkäfer!\nSeine Zangen sind unsäglich lang!",
+      "EUen": "I caught a saw stag! \nNow I can't unsee it!",
+      "EUes": "¡Un escarabajo ciervo sierra!\nLa cornamenta me aterra...",
+      "EUfr": "Tu as attrapé un lucane inclinatus !\nJ'ai un certain penchant pour\ncet insecte !",
+      "EUit": "Ho preso un coleottero cervo! \nPiù piccolo sarebbe cervello!",
+      "EUnl": "Je hebt een zaaghertkever\ngevangen! Handig in je\ngereedschapskist, bij de hamerhaai!",
+      "EUru": "В сачок попался жук-олень!\nОн одновременно и жук, и олень!",
+      "JPja": "ノコギリクワガタを　つかまえた！\nアゴの曲がり具合が　たまりません！",
+      "KRko": "톱사슴벌레를 잡았다!\n턱 선을 봐! 반하지 않을 수 없어!",
+      "TWzh": "抓到鋸鍬形蟲了！\n大顎的曲線實在是難以言喻！",
+      "USen": "I caught a saw stag! \nNow I can't unsee it!",
+      "USes": "¡Un escarabajo ciervo sierra!\nSemejante cuerno me aterra...",
+      "USfr": "Tu as attrapé un lucane inclinatus!\nJ'ai un certain penchant pour\ncet insecte!"
+    }
+  },
+  {
+    "label": "Insect_00633",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "是跳蚤！\n　 唔，好痒啊！",
+      "EUde": "Ein Floh!\n 　 Hab ich ihn gefangen? Oder er mich?",
+      "EUen": "I caught a flea!\n The curse is lifted.",
+      "EUes": "¡He atrapado una pulga!\nPero mejor si la noticia no se divulga...",
+      "EUfr": "Tu as attrapé une puce !\nNon merci, tu peux la garder !",
+      "EUit": "Ho preso una pulce!\n Che prurito...",
+      "EUnl": "Je hebt een vlo gevangen!\n Of had hij jou te pakken?",
+      "EUru": "В сачок попалась блоха!\nИли это она меня поймала?",
+      "JPja": "ノミだーっ！\n　 あー、かゆっ！",
+      "KRko": "벼룩이닷～!\n　 아～ 간지러워!",
+      "TWzh": "是跳蚤～！\n　 啊～好癢！",
+      "USen": "I caught a flea!\n The curse is lifted.",
+      "USes": "¡Atrapé una pulga!\nEs mejor si no se divulga...",
+      "USfr": "Tu as attrapé une puce!\nNon merci, tu peux la garder!"
+    }
+  },
+  {
+    "label": "Insect_00634",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蝼蛄了！\n你会“咕咕”叫吗？",
+      "EUde": "Eine Maulwurfsgrille!\nDu hättest wohl besser\n'ne Schippe draufgelegt!",
+      "EUen": "I caught a mole cricket!\nI really dug it!",
+      "EUes": "¡He atrapado un grillo cebollero!\nY me lo guardo porque quiero.",
+      "EUfr": "Tu as attrapé un taupe-grillon !\nCet insecte a bien fait son trou !",
+      "EUit": "Ho preso un grillotalpa!\nSi sentirà il suo canto da sottoterra?",
+      "EUnl": "Je hebt een veenmol gevangen! Pas\nop dat hij je niet molt!",
+      "EUru": "В сачок попалась медведка!\nОна тоже ведает, где мед?",
+      "JPja": "オケラを　つかまえた！\nキミ、一文無しなの？",
+      "KRko": "땅강아지를 잡았다!\n너, 강아지야?",
+      "TWzh": "抓到螻蛄了！\n你是身無分文嗎？",
+      "USen": "I caught a mole cricket!\nI really dug it!",
+      "USes": "¡Atrapé un grillo cebollero!\nY me lo guardo porque quiero.",
+      "USfr": "Tu as attrapé un taupe-grillon!\nCet insecte a bien fait son trou!"
+    }
+  },
+  {
+    "label": "Insect_00635",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "太好了！！\n刚才的看到了吗？看到了吗？\n捉到无霸勾蜓啦！",
+      "EUde": "Ich hab's geschafft!\nEine Quelljungfer!\nHab ich dich, du Quälgeist!",
+      "EUen": "I did it!\nDid you see that?\nI caught a banded dragonfly!",
+      "EUes": "¡He atrapado una libélula tigre!\nEs una hazaña increíble.",
+      "EUfr": "Bravo !\nTu as attrapé un cordulégastre !\nJoli exploit !",
+      "EUit": "Ce l'ho fatta!\nHo preso una libellula striata!",
+      "EUnl": "Hebbes!\nKijk nou! Je hebt een bronlibel\ngevangen!",
+      "EUru": "У меня получилось!\nТы видел? В сачок попался\nкордулегастер!",
+      "JPja": "やったぁーっ！！\n今の　見た？　見た？\nオニヤンマを　つかまえたぞーっ！",
+      "KRko": "야호～!!\n지금 봤어? 봤어?\n장수잠자리를 잡았어～!",
+      "TWzh": "好耶～！！\n看到了嗎？你看到了嗎？\n我抓到無霸勾蜓了喔～！",
+      "USen": "I did it!\nDid you see that?\nI caught a banded dragonfly!",
+      "USes": "¡Atrapé una libélula tigre!\nEs una hazaña increíble.",
+      "USfr": "Bravo!\nTu as attrapé un cordulégastre!\nJoli exploit!"
+    }
+  },
+  {
+    "label": "Insect_00636",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到大桦斑蝶了！\n能够飞跃千里的蝴蝶！",
+      "EUde": "Ein Monarchfalter!\nNa? Wer ist jetzt hier\nder Monarch, Alter?",
+      "EUen": "I caught a monarch butterfly!\nGuess the butterflies are\na democracy now!",
+      "EUes": "¡He atrapado una mariposa monarca!\nCon ese color, ¡se desmarca!",
+      "EUfr": "Tu as attrapé un monarque !\nTu as plus d'une corde au tien !",
+      "EUit": "Ho preso una farfalla monarca!\nMa non erano già in democrazia?",
+      "EUnl": "Je hebt een monarchvlinder\ngevangen! Die kunnen wel\nduizenden kilometers afleggen!",
+      "EUru": "В сачок попался монарх!\nКто тут из нас монарх?",
+      "JPja": "オオカバマダラを　つかまえた！\n何千キロも　旅するチョウ！",
+      "KRko": "왕나비를 잡았다!\n수천 킬로를 여행하는 나비!",
+      "TWzh": "抓到大樺斑蝶了！\n能夠遠渡千里的蝴蝶！",
+      "USen": "I caught a monarch butterfly!\nGuess the butterflies are\na democracy now!",
+      "USes": "¡Atrapé una mariposa monarca!\n¡La reina de la comarca!",
+      "USfr": "Tu as attrapé un monarque!\nTu as plus d'une corde au tien!"
+    }
+  },
+  {
+    "label": "Insect_00637",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "啊啊啊——！！\n捉到大锹形虫啦！\n漆黑强壮的外形，好帅啊！",
+      "EUde": "Wow!\nEin Riesen-Hirschkäfer!\nEin Riesenschritt auf dem Weg zu\nhöheren Insektensammler-Weihen!",
+      "EUen": "Whoaaa!\nI caught a giant stag!\nI'm gonna need way\nbigger pockets...",
+      "EUes": "¡Alucina! ¡Le he echado el guante\na un escarabajo ciervo gigante!",
+      "EUfr": "Impressionnant !\nTu as attrapé un lucane cerf-volant !\nApparemment, il n'y a pas que\nson cerveau qui est lent !",
+      "EUit": "Wooow!\nHo preso un coleottero gigante!\nMi serviranno tasche più grandi!",
+      "EUnl": "Hoepla!\nJe hebt een reuzenhertkever\ngevangen! Wat een gigantische\nprestatie!",
+      "EUru": "Вот это да!\nВ сачок попался гигантский\nжук-олень! Какой гигантский успех!",
+      "JPja": "うぉぉぉぉ！！\nオオクワガタを　つかまえたー！\n黒くって　ごつくってカッコいいーーっ！",
+      "KRko": "우오오오오!!\n왕사슴벌레를 잡았다～!\n까맣고 단단한 모습이 멋있어～～～!",
+      "TWzh": "喔喔喔喔喔！！\n抓到大鍬形蟲了～！\n又黑又大，帥呆了～～！",
+      "USen": "Whoaaa!\nI caught a giant stag!\nI'm gonna need way\nbigger pockets...",
+      "USes": "¡Vaya! ¡Qué interesante!\n¡Un escarabajo ciervo gigante!",
+      "USfr": "Impressionnant!\nTu as attrapé un lucane cerf-volant!\nApparemment, il n'y a pas que\nson cerveau qui est lent!"
+    }
+  },
+  {
+    "label": "Insect_00638",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "啊啊啊——！！\n捉到黄金鬼锹形虫啦！\n好耀眼！",
+      "EUde": "Oooooooh!\nEin Allotopus rosenbergi!\nIch versteh nur „Rose“...",
+      "EUen": "Wooooow!\nI caught a golden stag!\nDoes this mean I can retire?",
+      "EUes": "¡Qué pericia! ¡Qué control!\n¡Un escarabajo ciervo tornasol!",
+      "EUfr": "Fantastique !\nTu as attrapé un lucane lamprima !\nIl brille de mille feux !",
+      "EUit": "Wooow!\nHo preso un coleottero dorato!\nSono ricco!",
+      "EUnl": "Waaauw!\nJe hebt een gouden hertkever\ngevangen! Pas maar op dat hij niet\ngestolen wordt!",
+      "EUru": "Ух ты!\nВ сачок попалась ламприма! Это\nже драгоценный камень на ножках!",
+      "JPja": "くわぁーーーーっ！！\nオウゴンオニクワガタを　つかまえたー！\nまっ、まぶしーっ！",
+      "KRko": "우와아～～～～!!\n황금사슴벌레를 잡았다～!\n눈이 부셔～!",
+      "TWzh": "哇啊～～～～！！\n抓到黃金鬼鍬形蟲了～！\n好、好耀眼啊～！",
+      "USen": "Wooooow!\nI caught a golden stag!\nDoes this mean I can retire?",
+      "USes": "¡Qué pericia! ¡Qué control!\n¡Un escarabajo ciervo tornasol!",
+      "USfr": "Fantastique!\nTu as attrapé un lucane lamprima!\nIl brille de mille feux!"
+    }
+  },
+  {
+    "label": "Insect_00639",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到宝石金龟了！\n大自然创造出的纯天然宝石！",
+      "EUde": "Ein Goldskarabäus!\nEin Juwel auf Beinen!",
+      "EUen": "I caught a scarab beetle!\nIt's just a dung beetle with better hobbies.",
+      "EUes": "¡He atrapado un escarabajo oro!\n¡A la colección lo incorporo!",
+      "EUfr": "Tu as attrapé un scarabée !\nC'est pas une prise au rabais !",
+      "EUit": "Ho preso un chrysina resplendens!\nBella maglia da calcio!",
+      "EUnl": "Je hebt een scarabee gevangen!\nGa je mee, scarabee?",
+      "EUru": "В сачок попался золотой скарабей!\nВообще-то, это жук-навозник с другим хобби.",
+      "JPja": "プラチナコガネを　つかまえた！\n天然・自然の　ジュエル！",
+      "KRko": "보석풍뎅이를 잡았다!\n천연 보석이야!",
+      "TWzh": "抓到寶石金龜了！\n自然界的天然寶石！",
+      "USen": "I caught a scarab beetle!\nIt's just a dung beetle with better hobbies.",
+      "USes": "¡Atrapé un escarabajo oro!\n¡A la colección lo incorporo!",
+      "USfr": "Tu as attrapé un scarabée!\nC'est pas une prise au rabais!"
+    }
+  },
+  {
+    "label": "Insect_00640",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到蝎子了！\n它是有毒的，不可以碰哦！",
+      "EUde": "Ein Skorpion!\nUi, schaut der giftig...",
+      "EUen": "I caught a scorpion!\nIt was a sting operation!",
+      "EUes": "¡He atrapado un escorpión!\n¡Cuidado con el aguijón!",
+      "EUfr": "Tu as attrapé un scorpion !\nIl ne se sert pas de son aiguille\npour tricoter !",
+      "EUit": "Ho preso uno scorpione!\nSi sarà sentito punto nell'onore!",
+      "EUnl": "Je hebt een schorpioen gevangen!\nWat kijkt hij giftig!",
+      "EUru": "В сачок попался скорпион!\nХорошо, что он меня не ужалил!",
+      "JPja": "サソリを　つかまえた！\n毒があるから　触っちゃダメ～！",
+      "KRko": "전갈을 잡았다!\n독이 있으니까 만지면 안 돼～!",
+      "TWzh": "抓到蠍子了！\n這可是有毒的，千萬不能碰～！",
+      "USen": "I caught a scorpion!\nIt was a sting operation!",
+      "USes": "¡Atrapé un escorpión!\n¡Cuidado con el aguijón!",
+      "USfr": "Tu as attrapé un scorpion!\nIl se sert de son dard pour\nfrapper dans le mille!"
+    }
+  },
+  {
+    "label": "Insect_00641",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "发现蝉蜕了！\n专属夏天的回忆！",
+      "EUde": "Eine Zikadenlarvenhaut!\nNur eine Hülle ihres früheren\nSelbst...",
+      "EUen": "I found a cicada shell!\nI'm glad the little guy\ncame out of it!",
+      "EUes": "¡He encontrado una muda de cigarra!\nLa dejó y se fue de farra.",
+      "EUfr": "Tu as trouvé une mue de cigale !\nJe connais quelqu'un qui se sentait\nà l'étroit !",
+      "EUit": "Ho trovato un'esuvia di cicala!\nSono felice che ne sia venuta fuori!",
+      "EUnl": "Je hebt een cicadehuid gevonden!\nIs er ergens een cicade uit zijn vel\ngesprongen?",
+      "EUru": "Кокон цикады!\nКокон остался, а цикада улетела!",
+      "JPja": "セミのぬけがらを　見つけた！\n夏の思い出！",
+      "KRko": "매미 허물이네?\n여름의 추억이야!",
+      "TWzh": "發現蟬蛻了！\n夏日的回憶！",
+      "USen": "I found a cicada shell!\nI'm glad the little guy\ncame out of it!",
+      "USes": "¡Una carcasa de cigarra encontré!\nSu dueña, ¿a dónde fue?",
+      "USfr": "Tu as trouvé une mue de cigale!\nJe connais quelqu'un qui se sentait\nà l'étroit!"
+    }
+  },
+  {
+    "label": "Insect_00642",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到铃虫了！\n叮铃铃♪小小的音乐家♪",
+      "EUde": "Eine Singgrille! \nDu musst nicht mehr alles allein\nmachen. Du singst, ich grille!",
+      "EUen": "I found a bell cricket!\nIt would make a great bellhop!",
+      "EUes": "¡He atrapado un grillo campana!\nMe lo quedo porque me da la gana.",
+      "EUfr": "Tu as attrapé un grillon du Midi !\nCherche encore les spécimens\ndu Matin et du Soir !",
+      "EUit": "Ho trovato un suzumushi!\nSembra un nuovo tipo di sushi!",
+      "EUnl": "Je hebt een belkrekel gevonden!\nHandig als je je telefoon kwijt bent.",
+      "EUru": "Домашний сверчок!\nСверчок, где твой домик?",
+      "JPja": "スズムシを　つかまえた！\nリンリン♪　小さな音楽家♪",
+      "KRko": "방울벌레를 잡았다!\n방울 소리를 내는 음악가♪",
+      "TWzh": "抓到鈴蟲了！\n鈴鈴♪小小音樂家♪",
+      "USen": "I found a bell cricket!\nIt would make a great bellhop!",
+      "USes": "¡Atrapé un grillo campana!\nMe lo quedo porque me da la gana.",
+      "USfr": "Tu as attrapé un grillon du Midi!\nCherche encore les spécimens\ndu Matin et du Soir!"
+    }
+  },
+  {
+    "label": "Insect_00643",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到黄蜂了！\n嗡！嗡！嗡！\n（不可以用手捉哦！）",
+      "EUde": "Eine Wespe!\nDich steck ich glatt in\ndie Wespentasche!",
+      "EUen": "I caught a wasp!\nThat's gotta sting...",
+      "EUes": "¡He atrapado una avispa!\nMe quería picar, ¡pues va lista!",
+      "EUfr": "Tu as attrapé une guêpe !\nAttention aux piqûres !",
+      "EUit": "Ho preso una vespa!\nSpero non abbia amiche nei paraggi!",
+      "EUnl": "Je hebt een wesp gevangen! Poeh!\nGelukkig ben je niet gestoken!",
+      "EUru": "В сачок попалась оса!\nЗ-з-з! З-з-з! З-з-з!\nИли все-таки жу-жу-жу?",
+      "JPja": "ハチを　つかまえた！\nブン！　ブン！　ブン！\n（手づかみ　しないでね）",
+      "KRko": "벌을 잡았다!\n붕! 붕! 붕!\n맨손으로 잡지 말자!",
+      "TWzh": "抓到黃蜂了！\n嗡！嗡！嗡！\n（千萬不要用手抓喔。）",
+      "USen": "I caught a wasp!\nThat's gotta sting...",
+      "USes": "¡Atrapé una avispa! \n¡Tenía mucha chispa!",
+      "USfr": "Tu as attrapé une guêpe!\nAttention aux piqûres!"
+    }
+  },
+  {
+    "label": "Insect_00644",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到中华剑角蝗了！\n蚱蜢？蝗虫？",
+      "EUde": "Eine Nasenschrecke! \nHab dich! Jetzt kann ich\ndir eine lange Nase drehen!",
+      "EUen": "I caught a long locust! \nOr, as I call it, a looooocust.",
+      "EUes": "¡He atrapado una langosta alargada!\n¡No se me escapa nada!",
+      "EUfr": "Tu as attrapé une acrida cinerea !\nDrôle de nom pour une petite\nbestiole !",
+      "EUit": "Ho preso un'acrida cinerea!\nCampionessa di salto in lungo!",
+      "EUnl": "Je hebt een veldsprinkhaan\ngevangen! Een echte spring-in-'t-\nveld!",
+      "EUru": "В сачок попалась акрида!\nОна носит джемпер из акрила?",
+      "JPja": "ショウリョウバッタを　つかまえた！\nチキチキバ～ッタ？",
+      "KRko": "방아깨비를 잡았다!\n타타타～!",
+      "TWzh": "抓到中華劍角蝗了！\n是蚱蜢嗎？",
+      "USen": "I caught a long locust! \nOr, as I call it, a looooocust.",
+      "USes": "¡Atrapé una langosta alargada!\n¡No se me escapa nada!",
+      "USfr": "Tu as attrapé une acrida cinerea!\nDrôle de nom pour une petite\nbestiole!"
+    }
+  },
+  {
+    "label": "Insect_00645",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到吉丁虫了！\n今天好运大吉！",
+      "EUde": "Ein Prachtkäfer!\nEin wahres Schmuckstück!",
+      "EUen": "I caught a jewel beetle!\nIt's a real gem!",
+      "EUes": "¡He atrapado un escarabajo joya\ncon unos colores que se te va la olla!",
+      "EUfr": "Tu as attrapé un bupreste !\nEt tout à coup, le bupreste ment !",
+      "EUit": "Ho preso una stigmodera!\nUn vero gioiello!",
+      "EUnl": "Je hebt een prachtkever gevangen!\nHij doet zijn naam eer aan!",
+      "EUru": "В сачок попалась златка!\nНастоящая драгоценность!",
+      "JPja": "タマムシを　つかまえた！\nまぁ、たまたまですよ！",
+      "KRko": "비단벌레를 잡았다!\n헷, 운이 좋았어!",
+      "TWzh": "抓到吉丁蟲了！\n嗯，大吉大利！",
+      "USen": "I caught a jewel beetle!\nIt's a real gem!",
+      "USes": "Un escarabajo joya, ¡qué emoción!\nY esos colores, ¡qué lindos son!",
+      "USfr": "Tu as attrapé un bupreste!\nEt tout à coup, le bupreste ment!"
+    }
+  },
+  {
+    "label": "Insect_00646",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到狼蛛了！\n（绝对不可以模仿哦！！）",
+      "EUde": "Eine Vogelspinne!\nDas war richtig haarsträubend!",
+      "EUen": "I caught a tarantula!\nThis situation just got hairy!",
+      "EUes": "¡He atrapado una tarántula!\n¡Ya no se la ve tan fatua!",
+      "EUfr": "Tu as attrapé une tarentule !\nJ'en ai les poils qui se hérissent !",
+      "EUit": "Ho preso una tarantola!\nLe cose si fanno... pelose!",
+      "EUnl": "Je hebt een vogelspin gevangen!\nNiet alleen van zijn harige poten\nkrijg je de kriebels!",
+      "EUru": "В сачок попался паук-птицеед!\nУ меня даже волосы дыбом встали!",
+      "JPja": "タランチュラを　つかまえた！\n（マネしないでね！！）",
+      "KRko": "타란툴라를 잡았다!\n(착한 어린이는 따라 하지 말기!!)",
+      "TWzh": "抓到狼蛛了！\n（千萬不要模仿喔！！）",
+      "USen": "I caught a tarantula!\nThis situation just got hairy!",
+      "USes": "¡Atrapé una tarántula!\n¿Será noctámbula?",
+      "USfr": "Tu as attrapé une tarentule!\nJ'en ai les poils qui se hérissent!"
+    }
+  },
+  {
+    "label": "Insect_00647",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到瓢虫了！\n小小一只，好可爱啊！！",
+      "EUde": "Ein Marienkäfer!\nPunktlandung im Kescher!",
+      "EUen": "I caught a ladybug!\nSorry to disturb you, ma'am.",
+      "EUes": "¡He atrapado una mariquita!\n¡Su belleza es exquisita!",
+      "EUfr": "Tu as attrapé une coccinelle !\n♪Coccinelle, demoiselle...♪",
+      "EUit": "Ho preso una coccinella!\nHo voglia di mangiare un'anguria...",
+      "EUnl": "Je hebt een lieveheersbeestje\ngevangen! Zou hij echt nooit stout\nzijn?",
+      "EUru": "В сачок попалась божья коровка!\nКакая хорошенькая!",
+      "JPja": "テントウムシを　つかまえた！\nちっちゃ　カワイイ！！",
+      "KRko": "무당벌레를 잡았다!\n앙증맞고 귀여워!!",
+      "TWzh": "抓到瓢蟲了！\n小小的好可愛！！",
+      "USen": "I caught a ladybug!\nSorry to disturb you, ma'am.",
+      "USes": "¡Atrapé una catarina!\n¡Qué hermosura! ¡Es divina!",
+      "USfr": "Tu as attrapé une coccinelle!\n♪ Coccinelle, tu es si belle... ♪"
+    }
+  },
+  {
+    "label": "Insect_00648",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到飞蝗了！\n蝗虫之王！",
+      "EUde": "Eine Wanderschrecke!\nDu wanderst jetzt in meine\nSammlung!",
+      "EUen": "I caught a migratory locust!\nThings just went south for this guy!",
+      "EUes": "¡He atrapado una langosta migratoria\ny me he quedado en la gloria!",
+      "EUfr": "Tu as attrapé un criquet pèlerin !\nJe me demande bien où il allait.",
+      "EUit": "Ho preso una locusta migratoria!\nÈ una gran vagabonda...",
+      "EUnl": "Je hebt een treksprinkhaan\ngevangen! Zou je ook\nduwsprinkhanen hebben?",
+      "EUru": "В сачок попалась перелетная\nсаранча! Лети в мою коллекцию!",
+      "JPja": "トノサマバッタを　つかまえた！\nバッタのキング！",
+      "KRko": "섬풀무치를 잡았다!\n메뚜기과의 왕!",
+      "TWzh": "抓到飛蝗了！\n蝗蟲之王！",
+      "USen": "I caught a migratory locust!\nThings just went south for this guy!",
+      "USes": "¡Atrapé una langosta migratoria\ny ahora estoy en la gloria!",
+      "USfr": "Tu as attrapé un criquet pèlerin!\nJe me demande bien où il allait."
+    }
+  },
+  {
+    "label": "Insect_00650",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到提琴虫了！\n是要来举办音乐会吗？",
+      "EUde": "Ein Geigenkäfer!\nDer sieht aus, als wollte er mir\ntüchtig die Meinung geigen...",
+      "EUen": "I caught a violin beetle!\nApparently I'm as fit as a fiddle!",
+      "EUes": "¡He atrapado un escarabajo violín!\n¡Es un bicho de postín!",
+      "EUfr": "Tu as attrapé un mormolyce !\nOn raconte qu'il joue divinement\ndu violon !",
+      "EUit": "Ho preso un carabo violino!\nChissà che sviolinate alle partner!",
+      "EUnl": "Je hebt een vioolkever gevangen!\nStop die maar in je vioolkoffer!",
+      "EUru": "В сачок попалась листовидная\nжужелица! Прожужжи что-нибудь!",
+      "JPja": "バイオリンムシを　つかまえた！\n演奏会でも　しにきたの？",
+      "KRko": "바이올린벌레를 잡았다!\n설마 연주하러 온 거야?",
+      "TWzh": "抓到提琴蟲了！\n是要來開演奏會的嗎？",
+      "USen": "I caught a violin beetle!\nApparently I'm as fit as a fiddle!",
+      "USes": "¡Atrapé un escarabajo violín!\n¡Qué felicidad sin fin!",
+      "USfr": "Tu as attrapé un mormolyce!\nOn raconte qu'il joue divinement\ndu violon!"
+    }
+  },
+  {
+    "label": "Insect_00651",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到寄居蟹了！\n这房子刚好够它一只蟹住。",
+      "EUde": "Ein Einsiedlerkrebs!\nDer wollte wohl nur seine Ruhe...",
+      "EUen": "I caught a hermit crab!\nI think it wanted to be left alone!",
+      "EUes": "¡He atrapado un cangrejo ermitaño!\nParece bastante huraño...",
+      "EUfr": "Tu as attrapé un bernard-l'ermite !\nJe crois qu'il préfère rester\ndans son coin.",
+      "EUit": "Ho preso un granchio paguro!\nNo, non è stato un errore...",
+      "EUnl": "Je hebt een heremietkreeft\ngevangen! Je hebt hem gestoord in\nzijn kluizenaarsbestaan!",
+      "EUru": "В сачок попался рак-отшельник!\nОн хотел покоя.",
+      "JPja": "ヤドカリを　つかまえた！\n身の丈に合った　住まいです",
+      "KRko": "소라게를 잡았다!\n집이 몸에 꼭 맞아요!",
+      "TWzh": "抓到寄居蟹了！\n牠一個人住恰恰好呢。",
+      "USen": "I caught a hermit crab!\nI think it wanted to be left alone!",
+      "USes": "¡Atrapé un cangrejo ermitaño!\nParece bastante huraño...",
+      "USfr": "Tu as attrapé un bernard-l'ermite!\nJe crois qu'il préfère rester\ndans son coin."
+    }
+  },
+  {
+    "label": "Insect_00652",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到皇蛾了！\n这到底是漂亮，还是可怕呢？",
+      "EUde": "Ein Atlasspinner!\nEr mag zwar spinnen, aber er\nverfliegt sich bestimmt nie!",
+      "EUen": "I caught an Atlas moth!\nI bet it never gets lost!",
+      "EUes": "¡He atrapado una polilla atlas!\nNo se pierde, ¡va con mapa!",
+      "EUfr": "Tu as attrapé un attacus Atlas !\nIl ne serait pas un peu agressif ?",
+      "EUit": "Ho preso una farfalla cobra!\nMa non è un serpente con le ali!",
+      "EUnl": "Je hebt een atlasvlinder gevangen!\nDie heeft geen navigatiesysteem\nnodig!",
+      "EUru": "В сачок попалась павлиноглазка\nатлас. Она никогда не заблудится!",
+      "JPja": "ヨナグニサンを　つかまえた！\n美しいのか　コワイのか？",
+      "KRko": "아틀라스나방을 잡았다!\n아름다운 건지, 징그러운 건지!",
+      "TWzh": "抓到皇蛾了！\n到底是美麗，還是恐怖呢？",
+      "USen": "I caught an Atlas moth!\nI bet it never gets lost!",
+      "USes": "¡Atrapé una polilla atlas!\n¡Le cantaré serenatas!",
+      "USfr": "Tu as attrapé un attacus Atlas!\nIl ne serait pas un peu agressif?"
+    }
+  },
+  {
+    "label": "Insect_00653",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到象兜虫了！\n拥有象鼻子一样的触角！",
+      "EUde": "Ein Elefantenkäfer!\nIst das ein großer Käfer oder\nein sehr kleiner Elefant?",
+      "EUen": "I caught a horned elephant!\nI think it's too small to ride...",
+      "EUes": "¡Un escarabajo astado elefante!\n¿La trompa es lo de delante?",
+      "EUfr": "Tu as attrapé un scarabée éléphant !\nIl arrive que ce scarabée sans\ndéfense se trompe...",
+      "EUit": "Ho preso uno scarabeo elefante!\nDeve avere una memoria formidabile!",
+      "EUnl": "Je hebt een olifantkever gevangen!\nEens zien of hij ook kan\ntrompetteren...",
+      "EUru": "В сачок попался жук-слон!\nЭто жук или слон?",
+      "JPja": "ゾウカブトを　つかまえた！\nスーパーヘビー級だゾウ！",
+      "KRko": "코끼리장수풍뎅이를 잡았다!\n슈퍼 헤비급이야!",
+      "TWzh": "抓到象兜蟲了！\n穩重如象的兜蟲！",
+      "USen": "I caught a horned elephant!\nI think it's too small to ride...",
+      "USes": "¡Un escarabajo astado elefante!\n¿La trompa es lo de adelante?",
+      "USfr": "Tu as attrapé un scarabée éléphant!\nIl arrive que ce scarabée sans\ndéfense se trompe..."
+    }
+  },
+  {
+    "label": "Insect_03477",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到青带凤蝶了！\n蓝色的带状花纹好时尚啊！",
+      "EUde": "Ein Kolibrifalter!\nMacht der Faltkolibris?",
+      "EUen": "I caught a common bluebottle!\nI'll put it in a rare green jar!",
+      "EUes": "¡Una mariposa triángulo azul!\nBonita, ¡vas al baúl!",
+      "EUfr": "Tu as attrapé un graphium sarpedon !\nSaperlipopette !",
+      "EUit": "Ho preso una graphium sarpedon!\nCon un nome così dev'essere\nspeciale!",
+      "EUnl": "Je hebt een blauwe driehoek\ngevangen! Wat een prachtig grafisch\nontwerp!",
+      "EUru": "В сачок попался графиум\nсарпедон! Ваше сиятельство!",
+      "JPja": "アオスジアゲハを　つかまえた！\nブルーのラインが　オシャレ",
+      "KRko": "청띠제비나비를 잡았다!\n파란 선이 멋스러워!",
+      "TWzh": "抓到青帶鳳蝶了！\n藍色的紋路好時尚。",
+      "USen": "I caught a common bluebottle!\nI'll put it in a rare green jar!",
+      "USes": "Una mariposa triángulo azul, ¡genial!\n¡A mí no me va tan mal!",
+      "USfr": "Tu as attrapé un graphium sarpedon!\nSaperlipopette!"
+    }
+  },
+  {
+    "label": "Insect_03478",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到大白斑蝶了！\n漫漫飞舞的样子，多么优雅！",
+      "EUde": "Eine Weiße Baumnymphe!\nNymphen habe ich mir ja\nschon anders vorgestellt...",
+      "EUen": "I caught a paper kite butterfly!\nDo I read it, fly it, or spread\nit on toast?",
+      "EUes": "¡Una mariposa cometa de papel!\n¡Esta vuela a otro nivel!",
+      "EUfr": "Tu as attrapé un grand planeur !\nJe ne savais pas que les papillons\npouvaient planer !",
+      "EUit": "Ho preso una farfalla carta di riso!\nPosso usarla per fare découpage?",
+      "EUnl": "Je hebt een papiervlinder gevangen!\nDaar kun je mooi een kraanvogel van\nvouwen! Of een vlinder!",
+      "EUru": "В сачок попалась идея левконоя!\nСветлая и элегантная!",
+      "JPja": "オオゴマダラを　つかまえた！\nふわりふわりと　優雅だな",
+      "KRko": "왕얼룩나비를 잡았다!\n하늘하늘～ 우아해!",
+      "TWzh": "抓到大白斑蝶了！\n輕飄飄地飛著，真是優雅呢。",
+      "USen": "I caught a paper kite butterfly!\nDo I read it, fly it, or spread\nit on toast?",
+      "USes": "¡Una mariposa papel de arroz!\n¡No parece muy feroz!",
+      "USfr": "Tu as attrapé un grand planeur!\nJe ne savais pas que les papillons\npouvaient planer!"
+    }
+  },
+  {
+    "label": "Insect_03479",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到大紫蛱蝶了！\n这是日本的国蝶哦！",
+      "EUde": "Ein Japan-Schillerfalter!\nDu hast eine schillernde Zukunft\nin meiner Sammlung!",
+      "EUen": "I caught a great purple emperor!\nIts purple reign is over now!",
+      "EUes": "¡Una mariposa emperador japonés!\nYo diría «emperatriz», ¿cómo lo ves?",
+      "EUfr": "Tu as attrapé un sasakia charonda !\nIl danse le cha-cha-cha !",
+      "EUit": "Ho preso una farfalla imperatore\nviola! Ora il suo regno del terrore\nviola è finito!",
+      "EUnl": "Je hebt een paarse keizervlinder\ngevangen! Dat is het einde van het\npaarse keizerrijk!",
+      "EUru": "В сачок попалась сасакия харонда!\nКакая экзотика!",
+      "JPja": "オオムラサキを　つかまえた！\n日本の　国蝶なのだ",
+      "KRko": "왕오색나비를 잡았다!\n아주 귀한 나비야!",
+      "TWzh": "抓到大紫蛺蝶了！\n牠還是日本的國蝶呢。",
+      "USen": "I caught a great purple emperor!\nIts purple reign is over now!",
+      "USes": "¡Una mariposa emperador japonés!\nYo diría \"emperatriz\", ¿cómo lo ves?",
+      "USfr": "Tu as attrapé un grand\nempereur pourpre!\nC'est la classe... impériale!"
+    }
+  },
+  {
+    "label": "Insect_03480",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到日铜锣花金龟了！\n它并不是弄乱院子里花草的犯人！",
+      "EUde": "Ein Japan-Rosenkäfer!\nUnd, wo sind die Rosen?",
+      "EUen": "I caught a drone beetle!\nShouldn't you have more propellers?",
+      "EUes": "¡Un escarabajo verde japonés!\nVerde de la cabeza a los pies.",
+      "EUfr": "Tu as attrapé un\npseudotorynorrhina !\nMaintenant, cherches-en un vrai !",
+      "EUit": "Ho preso una cetonia dorata!\nSembra avere una corazza di metallo!",
+      "EUnl": "Je hebt een bladsprietkever\ngevangen! Raad eens waar hij zich\ngraag parkeert?",
+      "EUru": "В сачок попалась бронзовка!\nТеперь завоюй серебро!",
+      "JPja": "カナブンを　つかまえた！\n庭の草花を荒らすのは　コイツではない",
+      "KRko": "풍이를 잡았다!\n정원 풀꽃을 망가뜨리는 건 얘가 아니야!",
+      "TWzh": "抓到日銅鑼花金龜了！\n破壞庭園花草的犯人不是牠。",
+      "USen": "I caught a drone beetle!\nShouldn't you have more propellers?",
+      "USes": "¡Un escarabajo verde japonés!\nVerde de la cabeza a los pies.",
+      "USfr": "Tu as attrapé une\ncétoine dorée!\nPourtant, c'est elle qui est dorée!"
+    }
+  },
+  {
+    "label": "Insect_03482",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到长颈鹿锯锹形虫了！\n它的上颚那么大、那么长！",
+      "EUde": "Ein Giraffenhirschkäfer!\nDas sind mal laaange Zangen!",
+      "EUen": "I caught a giraffe stag!\nDoes that make it a longhorn?",
+      "EUes": "¡Un escarabajo ciervo jirafa!\nTres animales en uno, ¡cómo se pasa!",
+      "EUfr": "Tu as attrapé un lucane girafe !\nOn ne voit pas son cou,\nmais quelles mandibules !",
+      "EUit": "Ho preso un coleottero giraffa!\nVivrà anche lui nella savana?",
+      "EUnl": "Je hebt een girafhertkever\ngevangen! Moet je die lange kaken\nzien!",
+      "EUru": "В сачок попался рогач-жираф!\nЕго мандибулы так хорошо развиты!",
+      "JPja": "ギラファノコギリクワガタを　つかまえた！\n大アゴが　長～い！",
+      "KRko": "기라파톱사슴벌레를 잡았다!\n턱이 크고 길～다!",
+      "TWzh": "抓到長頸鹿鋸鍬形蟲了！\n牠的大顎好長～！",
+      "USen": "I caught a giraffe stag!\nDoes that make it a longhorn?",
+      "USes": "¡Un escarabajo ciervo jirafa!\nTres animales en uno, ¡qué ventaja!",
+      "USfr": "Tu as attrapé un lucane girafe!\nOn ne voit pas son cou,\nmais quelles mandibules!"
+    }
+  },
+  {
+    "label": "Insect_03483",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到人面椿象了！\n它背上的花纹完全就是一张人脸嘛！",
+      "EUde": "Eine Gesichtswanze!\nAn wen erinnert mich die...",
+      "EUen": "I caught a man-faced stink bug!\nReminds me of my uncle!",
+      "EUes": "¡Una chinche con rostro humano!\nRecuerda a cierto aldeano...",
+      "EUfr": "Tu as attrapé un catacanthus !\nIl me rappelle mon tonton !",
+      "EUit": "Ho preso un catacanthus!\nMi ricorda molto qualcuno...",
+      "EUnl": "Je hebt een gezichtschildwants\ngevangen! Lijkt hij nou op jou of is\ndat gezichtsbedrog?",
+      "EUru": "В сачок попался щитник с лицом!\nНа моего дядю похож!",
+      "JPja": "ジンメンカメムシを　つかまえた！\n人の顔にしか見えない",
+      "KRko": "인면노린재를 잡았다!\n아무리 봐도 사람 얼굴이야!",
+      "TWzh": "抓到人面椿象了！\n怎麼看都覺得好像人的臉。",
+      "USen": "I caught a man-faced stink bug!\nReminds me of my uncle!",
+      "USes": "¡Una chinche con rostro humano!\nMe recuerda a cierto aldeano...",
+      "USfr": "Tu as attrapé un catacanthus!\nIl me rappelle mon tonton!"
+    }
+  },
+  {
+    "label": "Insect_03484",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到日落蛾了！\n看起来比很多蝴蝶都要漂亮呢！",
+      "EUde": "Ein Regenbogenfalter!\nDer ist so schön, da gehen mir\ndie Sprüche aus...",
+      "EUen": "I caught a Madagascan sunset moth!\nWow, you're not from around here!",
+      "EUes": "¡He atrapado una polilla crepuscular!\n¡Qué belleza singular!",
+      "EUfr": "Tu as attrapé un chrysiridia\nrhipheus ! C'est un des plus beaux\npapillons du monde !",
+      "EUit": "Ho preso un'urania del Madagascar!\nUhm, da dove verrà mai?",
+      "EUnl": "Je hebt een adriandolo gevangen!\nWat is die ongekend mooi!",
+      "EUru": "В сачок попалась урания\nмадагаскарская! Какая красота!",
+      "JPja": "ニシキオオツバメガを　つかまえた！\nそこらへんのチョウより　キレイ！",
+      "KRko": "마다가스카르비단제비나방을 잡았다!\n나비보다도 예뻐!",
+      "TWzh": "抓到日落蛾了！\n看起來比其他的蝴蝶還漂亮！",
+      "USen": "I caught a Madagascan sunset moth!\nWow, you're not from around here!",
+      "USes": "¡Atrapé una polilla crepuscular!\n¡Qué belleza singular!",
+      "USfr": "Tu as attrapé un adriandolo!\nC'est un des plus beaux\npapillons du monde!"
+    }
+  },
+  {
+    "label": "Insect_03485",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到宝石象鼻虫了！\n简直就是一颗会动的宝石啊～",
+      "EUde": "Ein Blaurüsselkäfer!\nDeine Augen sind blau wie ein\nBlaurüsselkäfer...",
+      "EUen": "I caught a blue weevil beetle!\nIt's the lesser of blue weevils!",
+      "EUes": "¡He atrapado un gorgojo azul!\nNo hacía nada el muy gandul...",
+      "EUfr": "Tu as attrapé un charançon bleu !\nSon camouflage est plutôt voyant !",
+      "EUit": "Ho preso un coleottero Schoenherr!\nBitteschoen!",
+      "EUnl": "Je hebt een blauwe snuitkever\ngevangen! Welke kleur zou zijn\nzakdoek zijn?",
+      "EUru": "В сачок попался синий долгоносик!\nКакое говорящее название!",
+      "JPja": "ホウセキゾウムシを　つかまえた！\n生きた宝石やぁ～",
+      "KRko": "유포루스바구미를 잡았다!\n살아 있는 보석이다～!",
+      "TWzh": "抓到寶石象鼻蟲了！\n簡直就像有生命的寶石啊～",
+      "USen": "I caught a blue weevil beetle!\nIt's the lesser of blue weevils!",
+      "USes": "Un gorgojo azul, ¡qué bonito!\nMe lo guardo rapidito.",
+      "USfr": "Tu as attrapé un charançon bleu!\nSon camouflage est plutôt voyant!"
+    }
+  },
+  {
+    "label": "Insect_03487",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到琉璃星天牛了！\n据说这颜色只在它活着的时候才有！",
+      "EUde": "Ein Alpenbock!\nDer hatte wohl keinen Bock\nmehr auf die Alpen...",
+      "EUen": "I caught a rosalia batesi beetle!\nThat's easier to do than say!",
+      "EUes": "¡Un escarabajo rosalia batesi!\n¿Me lo quedo? ¡Creo que sí!",
+      "EUfr": "Tu as attrapé une rosalia batesi !\nSa jolie couleur bleue est un signe\nde vie.",
+      "EUit": "Ho preso un coleottero rosalia\nbatesi! Catturarlo è più facile che\npronunciarne il nome...",
+      "EUnl": "Je hebt een alpenboktor gevangen!\nHij is helderblauw, net als de lucht\nboven de bergen!",
+      "EUru": "В сачок попалась розалия!\nОна все спрашивает: «Роза ли я?»",
+      "JPja": "ルリボシカミキリを　つかまえた！\nこの色は　生きてる間だけ",
+      "KRko": "루리하늘소를 잡았다!\n살아 있을 때만 볼 수 있는 빛깔!",
+      "TWzh": "抓到琉璃星天牛了！\n這種花色只有牠活著時才看得到。",
+      "USen": "I caught a rosalia batesi beetle!\nThat's easier to do than say!",
+      "USes": "Un escarabajo rosalia batesi. ¡Bravo!\n¡Y no me costó ni un centavo!",
+      "USfr": "Tu as attrapé une rosalia batesi!\nSa jolie couleur bleue est un signe\nde vie."
+    }
+  },
+  {
+    "label": "Insect_05157",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到田鳖了！\n它可是水中的恶霸。\n被咬到的话会超痛的～！",
+      "EUde": "Eine Riesenwanze!\nEs ist nie gut, wenn ein Insekt\n„Riesen-“ im Namen trägt...",
+      "EUen": "I caught a giant water bug!\nIt should've stayed in the water!",
+      "EUes": "¡Una chinche acuática gigante!\nQue se chinche y no se soliviante.",
+      "EUfr": "Tu as attrapé une punaise d'eau\ngéante ! Elle aurait mieux fait de\nrester dans l'eau !",
+      "EUit": "Ho preso una cimice d'acqua\ngigante! Forse avrei dovuto\nlasciarla dov'era!",
+      "EUnl": "Je hebt een reuzenwaterwants\ngevangen! Dat was vast niet in een\nklein poeltje...",
+      "EUru": "В сачок попался водяной клоп-\nгигант! Сидел бы он лучше в воде!",
+      "JPja": "タガメを　つかまえた！\n水中のギャング\n刺されたら　ちょ～イタイ！",
+      "KRko": "물장군을 잡았다!\n물속의 무법자!\n쏘이면 엄～청 아파!",
+      "TWzh": "抓到田鱉了！\n牠是水裡的惡霸，\n被刺到可是超～痛的！",
+      "USen": "I caught a giant water bug!\nIt should've stayed in the water!",
+      "USes": "¡Una chinche acuática gigante!\n¡Es un poco espeluznante!",
+      "USfr": "Tu as attrapé une punaise d'eau\ngéante! Elle aurait mieux fait de\nrester dans l'eau!"
+    }
+  },
+  {
+    "label": "Insect_05339",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "捉到豆娘了！\n它的腹部又细又长。",
+      "EUde": "Eine Wasserjungfer!\nHat dich dein Jungfernflug in\nmeinen Kescher geführt?",
+      "EUen": "I caught a damselfly!\nNow it's a damselfly in distress!",
+      "EUes": "¡He atrapado una libélula damisela,\nuna señorita de la vieja escuela!",
+      "EUfr": "Tu as attrapé une demoiselle !\nVite ! Une demoiselle en détresse !",
+      "EUit": "Ho preso uno zigottero!\nBel colore al neon!",
+      "EUnl": "Je hebt een juffer gevangen!\nHet is al een hele jongedame!",
+      "EUru": "В сачок попалась равнокрылая\nстрекоза! А кривокрылые бывают?",
+      "JPja": "イトトンボを　つかまえた！\nお腹が細長い",
+      "KRko": "실잠자리를 잡았다!\n배가 가늘고 길어!",
+      "TWzh": "抓到豆娘了！\n牠的腹部又細又長。",
+      "USen": "I caught a damselfly!\nNow it's a damselfly in distress!",
+      "USes": "¡Atrapé una libélula damisela,\nuna señorita de la vieja escuela!",
+      "USfr": "Tu as attrapé une demoiselle!\nVite! Une demoiselle en détresse!"
+    }
+  },
+  {
+    "label": "RainbowFeather_03548",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "哇～！\n获得彩虹羽毛了！\n好难得哦～！",
+      "EUde": "TOLL!\nEine Regenbogenfeder!\nViva Karneval!",
+      "EUen": "WOO-HOO!\nI caught a rainbow feather!\nViva Festivale!",
+      "EUes": "¡Toma ya!\n¡He atrapado una pluma arcoíris!\n¡Viva el Carnaval, amiguis!",
+      "EUfr": "Waouh !\nTu as attrapé une plume irisée !\nVive le carnaval !",
+      "EUit": "Wooow!\nHo preso una piuma arcobaleno!\nViva il Carnevale!",
+      "EUnl": "HOERA!\nJe hebt een regenboogveer\ngevangen! Leve carnaval!",
+      "EUru": "Ура!!!\nЯ поймал радужное перо!\nВива Карнавал!",
+      "JPja": "わ～い！\nにじいろのはね　ゲット！\nこれは　めずらしい～！",
+      "KRko": "야호～!\n무지개 깃털이야!\n아주 희귀한 건데～!",
+      "TWzh": "哇～！\n獲得彩虹羽毛了！\n這很稀有～！",
+      "USen": "WOO-HOO!\nI caught a rainbow feather!\nViva Festivale!",
+      "USes": "¡Miraaa!\n¡Atrapé una pluma arcoíris!\n¡Viva el Carnaval, amiguis!",
+      "USfr": "Waouh!\nTu as attrapé une plume irisée!\nVive le carnaval!"
+    }
+  },
+  {
+    "label": "Sakurapetal_05859",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "樱花花瓣好漂亮呀～\n要轻轻地触碰它，小心不要弄坏了！",
+      "EUde": "Eine Kirschblüte!\nSo schön und so vergänglich...\nEin Leben im Jetzt.",
+      "EUen": "This cherry-blossom petal is so\nlovely! Pink is really its color!",
+      "EUes": "¡He atrapado un pétalo de cerezo!\nY es real, ¡no está de atrezo!",
+      "EUfr": "Ce pétale de cerisier est si délicat !\nFais-y bien attention !",
+      "EUit": "Questo petalo di ciliegio è stupendo!\nIl rosa gli dona tantissimo!",
+      "EUnl": "Wat is dit kersenbloesemblaadje\nmooi. Roze staat het echt goed!",
+      "EUru": "Какой красивый и нежный лепесток\nвишни! Постараюсь не смять его.",
+      "JPja": "さくらのはなびら　キレイだな～\nつぶさないように　そっと触ろう！",
+      "KRko": "벚꽃잎 정말 예쁘다～\n찢어지지 않게 살살 만지자!",
+      "TWzh": "櫻花花瓣好漂亮啊！\n要輕輕地摸才不會捏壞喔！",
+      "USen": "This cherry-blossom petal is so\nlovely! Pink is really its color!",
+      "USes": "¡Atrapé un pétalo de cerezo!\nMe enamora, lo confieso.",
+      "USfr": "Ce pétale de cerisier est si délicat!\nFais-y bien attention!"
+    }
+  },
+  {
+    "label": "SnowCrystal_03539",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "哇～是雪花～！\n要轻轻地去触碰它，小心别让它化掉！",
+      "EUde": "Eine Schneeflocke!\nIch jauchze und frohlocke!",
+      "EUen": "Wow, it's a snowflake!\nIt's like a tiny, beautiful sculpture!",
+      "EUes": "¡Mira, es un copo de nieve!\n¿Se derretirá cuando me lo lleve?",
+      "EUfr": "Ouah, un flocon de neige !\nTouche-le délicatement pour\néviter qu'il ne fonde !",
+      "EUit": "Wow, è un fiocco di neve!\nSembra una piccolissima scultura!",
+      "EUnl": "Wauw, een sneeuwvlokje!\nWat een schitterende vorm!",
+      "EUru": "Снежинка!\nНадеюсь, она не растает!",
+      "JPja": "わ～、ゆきのけっしょうだ～！\nとけないように　そっと触ろう！",
+      "KRko": "와～ 눈의 결정이야～!\n녹지 않게 조심해야 해!",
+      "TWzh": "哇～是雪花～！\n要輕輕地摸才不會融化喔！",
+      "USen": "Wow, it's a snowflake!\nIt's like a tiny, beautiful sculpture!",
+      "USes": "¡Mira, es un copo de nieve!\n¿Se derretirá cuando me lo lleve?",
+      "USfr": "Ouah, un flocon de neige!\nTouche-le délicatement pour\néviter qu'il ne fonde!"
+    }
+  }
+]

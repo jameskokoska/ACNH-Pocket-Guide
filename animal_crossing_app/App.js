@@ -242,6 +242,14 @@ class App extends Component {
       let defaultLanguage = getDefaultLanguage();
       global.language = await getStorage("Language",defaultLanguage);
 
+      const usesSpecialCharacters = [
+        "Chinese",
+        "Japanese",
+        "Korean",
+        "Chinese (Traditional)",
+      ]
+      global.languageUsesSpecialCharacters = usesSpecialCharacters.includes(global.language)
+      
       //Load Fonts
       await Font.loadAsync({
         "ArialRounded": require('./assets/fonts/arialRound.ttf'),

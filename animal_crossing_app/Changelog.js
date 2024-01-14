@@ -4,7 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you for your continued support, I really appreciate it!
+-Added all translations for catchphrases and museum descriptions
+-Fixed text formatting cut-off with logogram languages
+-
 -Bug fixes:
 -Fixed importing data file
 -Fixed scroll when selecting icon

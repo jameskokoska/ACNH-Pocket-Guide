@@ -59,7 +59,7 @@ class BugPopup extends Component {
         />
       </View>
       <View style={{height:15}}/>
-      <InfoDescription text={this.props.item["Description"]}/>
+      <InfoDescription text={this.props.item["Description"]} type="Insect" id={this.props.item["Internal ID"]}/>
       <PopupSeparator>
         <InfoLine
           image={require("../assets/icons/hatching.png")} 

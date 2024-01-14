@@ -1,0 +1,1802 @@
+﻿[
+  {
+    "label": "001",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "嗯？这是……",
+      "EUde": "Jaaa!",
+      "EUen": "Yes!",
+      "EUes": "¡Bien!",
+      "EUfr": "Bien joué !",
+      "EUit": "Sì!",
+      "EUnl": "Woehoe!",
+      "EUru": "Ура!",
+      "JPja": "ん？　コレは・・・",
+      "KRko": "응? 이건...",
+      "TWzh": "嗯？這是……",
+      "USen": "Yes!",
+      "USes": "¡Bien!",
+      "USfr": "Bien joué!"
+    }
+  },
+  {
+    "label": "002",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "嗯？\n也就是说……",
+      "EUde": "Hmmm...\nDas würde ja heißen...",
+      "EUen": "Wait a minute.\nThat means...",
+      "EUes": "¡Un momento!\nEso significa...",
+      "EUfr": "Attends un peu... mais alors...",
+      "EUit": "Aspetta un attimo.\nQuesto vuol dire che...",
+      "EUnl": "Dat betekent...",
+      "EUru": "Секундочку! Это значит...",
+      "JPja": "んんっ？\nってコトは・・・",
+      "KRko": "어?\n나, 혹시...",
+      "TWzh": "嗯嗯？\n也就是說……",
+      "USen": "Wait a minute.\nThat means...",
+      "USes": "¡Un momento!\nQuiere decir que...",
+      "USfr": "Attends un peu... mais alors..."
+    }
+  },
+  {
+    "label": "003",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "太好啦！！\n能钓到的所有品种的鱼，\n已经全部钓到了！",
+      "EUde": "Juhuuuuuu!\nIch habe alle Fischarten geangelt!",
+      "EUen": "WOO-HOO!!!\nI've caught ALL of the fish!\nYou'd think I'd have a pun for this occasion...",
+      "EUes": "¡Yujuuu!\n¡He pescado absolutamente\ntodos los tipos de pez!",
+      "EUfr": "YOUHOU !!\nTu as réussi à attraper au moins\nune fois TOUS les poissons !",
+      "EUit": "UAAAAHHH!\nHo preso ogni tipo di pesce!",
+      "EUnl": "HOERA!\nJe hebt alle soorten vissen\ngevangen!",
+      "EUru": "Ура!!!\nЯ поймал все виды рыб!\nНа радостях даже все шутки позабылись...",
+      "JPja": "うぉっシャー！！\n釣って　とる　サカナたち\nぜんぶ　釣り上げたー！",
+      "KRko": "야호～!!\n잡을 수 있는 물고기는\n전부 잡았다～!",
+      "TWzh": "好～耶～！！\n所有種類的魚\n都被我釣到了～！",
+      "USen": "WOO-HOO!!!\nI've caught ALL of the fish!\nYou'd think I'd have a pun for this occasion...",
+      "USes": "¡Yujuuu!\n¡Pesqué absolutamente\ntodos los tipos de peces!",
+      "USfr": "YOUHOU!!\nTu as réussi à attraper au moins\nune fois TOUS les poissons!"
+    }
+  },
+  {
+    "label": "Fish_02224",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鳖了！\n光溜溜的鳖！;\n 钓到鳖了！\n和月亮一样能反光的鳖！",
+      "EUde": "Eine Weichschildkröte!\nWeiche Schale, harter Kern?;\n Eine Weichschildkröte!\nHast du jetzt weiche Knie?",
+      "EUen": "I caught a soft-shelled turtle!\nI should take a shellfie!;\n I caught a soft-shelled turtle!\nIt's more sensitive than other turtles.",
+      "EUes": "¡Una tortuga caparazón blando!\nCreo que no va a salir pitando...;\n ¡Una tortuga caparazón blando!\n¡Mira que es lenta nadando!",
+      "EUfr": "Tu as attrapé une tortue trionyx !\nAttention, elle n'est pas commode !;\n Tu as attrapé une tortue trionyx !\nIl existe aussi des lièvres trionyx ?",
+      "EUit": "Ho preso un'apalone ferox!\nHai visto, oggi c'è brutto tempo.;\n Ho preso un'apalone ferox!\nA me sembra bonacciona!",
+      "EUnl": "Je hebt een weekschildpad\ngevangen! Dat schild gaat zeker\niedere week in de was.;\n Je hebt een weekschildpad\ngevangen! Het schild glanst in het\nmaanlicht.",
+      "EUru": "На удочку попался трионикс!\nНе трио никс, а всего одна\nчерепаха!;\n На удочку попался трионикс!\nНе три оникса, а всего одна\nчерепаха!",
+      "JPja": "スッポンを　釣り上げた！\nスッポンポン！;\n スッポンを　釣り上げた！\n月と　スッポン！",
+      "KRko": "자라를 잡았다!\n자라야, 빨리 자라라!;\n 자라를 잡았다!\n달덩이 같은 자라!",
+      "TWzh": "釣到鱉了！\n光溜溜的鱉！;\n 釣到鱉了！\n天差地鱉！",
+      "USen": "I caught a soft-shelled turtle!\nI should take a shellfie!;\n I caught a soft-shelled turtle!\nIt's more sensitive than other turtles.",
+      "USes": "¡Una tortuga caparazón blando!\nYo siempre salgo ganando...;\n ¡Una tortuga caparazón blando!\n¡Mira que es lenta nadando!",
+      "USfr": "Tu as attrapé une tortue trionyx!\nAttention, elle n'est pas commode!;\n Tu as attrapé une tortue trionyx!\nIl existe aussi des lièvres trionyx?"
+    }
+  },
+  {
+    "label": "Fish_02270",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鱿鱼了！\n美味的鱿鱼须！;\n 钓到鱿鱼了！\n鱿鱼，请多关照——！;\n 钓到鱿鱼了！\n鱿鱼，请多关照啦～～～",
+      "EUde": "Ein Kalmar!\nNa, wer hat hier die besseren\nFangarme?;\n Ein Kalmar!\nEcht tentacool!;\n Ein Kalmar!\nJetzt brauchen wir nur noch etwas\nAioli und Limone dazu...",
+      "EUen": "I caught a squid!\nDo they...not actually \"bloop\"?;\n I caught a squid!\nI had an inkling I might!;\n I caught a squid!\nIt's off the hook!",
+      "EUes": "¡He pescado un calamar!\n¡Es de armas tomar!;\n ¡He pescado un calamar!\n¡No me ando con medias tintas!;\n ¡He pescado un calamar!\n¡Arriba esos tentáculos!",
+      "EUfr": "Tu as pris un calmar !\nBloups, bloups !;\n Tu as pris un calmar !\nÀ plus tard, calmars !;\n Tu as pris un calmar !\nÀ plus tard, calmars...",
+      "EUit": "Ho preso un calamaro!\nEra meglio un caladolce?;\n Ho preso un calamaro!\nEra meglio un caladolce?;\n Ho preso un calamaro!\nEra meglio un caladolce?",
+      "EUnl": "Je hebt een pijlinktvis gevangen!\nEen schot in de roos!;\n Je hebt een pijlinktvis gevangen!\nWat een verse vangst!;\n Je hebt een pijlinktvis gevangen!\nHandig voor als je pen leeg is!",
+      "EUru": "На удочку попался кальмар!\nБлуп-блуп!;\n На удочку попался кальмар!\nДа это же целый инклинг!;\n На удочку попался кальмар!\nНи крючка, ни сачка!",
+      "JPja": "イカを　釣り上げた！\nゲッソー！;\n イカを　釣り上げた！\nイカ、よろしくーーー！;\n イカを　釣り上げた！\nイカ、よろしく～～～",
+      "KRko": "오징어를 잡았다!\n먹물도 먹을 수 있다며?;\n 오징어를 잡았다!\n오징어야, 잘 부탁해～!;\n 오징어를 잡았다!\n오징어야, 잘 부탁해～",
+      "TWzh": "釣到魷魚了！\n是魷魷！;\n 釣到魷魚了！\n魷魚好～～～！;\n 釣到魷魚了！\n魷魚好～～～",
+      "USen": "I caught a squid!\nDo they...not actually \"bloop\"?;\n I caught a squid!\nI had an inkling I might!;\n I caught a squid!\nIt's off the hook!",
+      "USes": "¡Pesqué un calamar!\n¡Es de armas tomar!;\n ¡Pesqué un calamar!\nQué dices, ¿sabrá cantar?;\n ¡Pesqué un calamar!\n¡Conmigo lo voy a llevar!",
+      "USfr": "Tu as pris un calmar!\nBloups, bloups!;\n Tu as pris un calmar!\nÀ plus tard, calmars!;\n Tu as pris un calmar!\nIl a l'air plutôt cool!"
+    }
+  },
+  {
+    "label": "011",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到泥鳅了！\n……是一条帅泥鳅！",
+      "EUde": "Eine Bachschmerle!\nDas Leben im Bach ist beschmerlich.",
+      "EUen": "I caught a loach!\nIt's...looking at me with reproach.",
+      "EUes": "¡He pescado una locha!\n¡Esto es la repanocha!",
+      "EUfr": "Tu as pris une loche d'étang !\nÇa vaut mieux que de boire l'étang\nà la louche !",
+      "EUit": "Ho preso un cobite!\nPer fortuna non ho preso la colite!",
+      "EUnl": "Je hebt een modderkruiper\ngevangen! Je ziet geen spat van\nzijn modderbad!",
+      "EUru": "На удочку попался вьюн!\nТак и вертится!",
+      "JPja": "ドジョウを　釣り上げた！\n・・・二匹目のドジョウだ！",
+      "KRko": "미꾸라지를 잡았다!\n...미꾸라지 두 마리째야!",
+      "TWzh": "釣到泥鰍了！\n……到處是泥鰍！",
+      "USen": "I caught a loach!\nIt's...looking at me with reproach.",
+      "USes": "¡Pesqué una locha!\n¡Y nadie me lo reprocha!",
+      "USfr": "Tu as pris une loche d'étang!\nTu savais que la loche détend?"
+    }
+  },
+  {
+    "label": "021",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到了！\n……不过是在梦里！",
+      "EUde": "!\nEin Traumfang! Leider im wahrsten\nSinne des Wortes...",
+      "EUen": "I caught !\n...But I'm still dreaming.",
+      "EUes": "¡!\nPero no es más que un sueño...",
+      "EUfr": "Tu as attrapé  !\n... Mais ce n'est qu'un rêve.",
+      "EUit": "Ho preso !\nMa sto ancora sognando...",
+      "EUnl": "Je hebt  gevangen! Jammer dat dit een droom is...",
+      "EUru": "На удочку попался !\nНо только во сне.",
+      "JPja": "を　釣り上げた！\n・・・夢だけどね！",
+      "KRko": "을 잡았다!\n...이건 꿈이지만!",
+      "TWzh": "釣到了！\n……雖然是夢境！",
+      "USen": "I caught !\n...But I'm still dreaming.",
+      "USes": "¡!\nPero no es más que un sueño...",
+      "USfr": "Tu as attrapé !\n... Mais ce n'est qu'un rêve."
+    }
+  },
+  {
+    "label": "EasterEgg_12514",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到彩蛋了！\n用来做什么好呢……？",
+      "EUde": "Ich habe ein Glücksei geangelt!\nWas mache ich damit...?",
+      "EUen": "That's an egg, not a fish!\nWhat should I do with it...",
+      "EUes": "Esto no es un pez, ¡es un huevo!\n¿Qué hago con él?",
+      "EUfr": "Tu as pêché un œuf !\nQui pêche un œuf pêche un bœuf ?",
+      "EUit": "Questo è un uovo, non un pesce!\nChe ci potrei fare?",
+      "EUnl": "Dat is geen vis... Dat is een ei!\nWaar kun je dat nou kwijt?",
+      "EUru": "Это яйцо, а не рыба!\nИ что с ним делать...",
+      "JPja": "たまごを　釣り上げた！\n何に使おうかな・・・？",
+      "KRko": "달걀을 낚았다!\n어디에 사용하는 걸까...?",
+      "TWzh": "釣到蛋了！\n要用來做什麼呢……？",
+      "USen": "That's an egg, not a fish!\nWhat should I do with it...",
+      "USes": "Esto no es un pez, ¡es un huevo!\n¿Qué hago con él?",
+      "USfr": "Tu as pêché un œuf, pas un poisson!\nÇa va pas bien dans le coco?"
+    }
+  },
+  {
+    "label": "Fish_00328",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲫鱼了！\n鲫鱼！鲫鱼！",
+      "EUde": "Eine Karausche!\nKarausch mit dir aus dem Wasser!",
+      "EUen": "I caught a crucian carp!\nMy skills are sharp!",
+      "EUes": "¡He pescado un carpín!\n¡Me lo quedo de botín!",
+      "EUfr": "Tu as pris un carassin !\nTu sais que c'est un cousin\nde la carpe ?",
+      "EUit": "Ho preso un carassio!\nCaro carassio, ora sei mio!",
+      "EUnl": "Je hebt een kroeskarper gevangen!\nMet onzichtbaar kleine krulletjes?",
+      "EUru": "На удочку попался карась!\nРечи карася-идеалиста не спасли\nего ни от щуки, ни от меня!",
+      "JPja": "フナを　釣り上げた！\nフナっこ　フナっこ！",
+      "KRko": "붕어를 잡았다!\n붕어다! 붕어야!",
+      "TWzh": "釣到鯽魚了！\n可愛的小鯽魚！",
+      "USen": "I caught a crucian carp!\nMy skills are sharp!",
+      "USes": "¡Pesqué un carpín!\n¡Me lo guardo en el calcetín!",
+      "USfr": "Tu as pris un carassin!\nTu sais que c'est un cousin\nde la carpe?"
+    }
+  },
+  {
+    "label": "Fish_00329",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到金鱼了！\n全身都是红色的！",
+      "EUde": "Ein Goldfisch!\nEr ist sein Gewicht in Fisch wert!",
+      "EUen": "I caught a goldfish!\nIt's worth its weight in fish!",
+      "EUes": "¡He pescado un pez dorado!\n¡Aunque está un poco colorado!",
+      "EUfr": "Tu as pris un poisson rouge !\nPourtant, les petits pois sont verts !",
+      "EUit": "Ho preso un pesce rosso!\nÈ davvero timido, eh?",
+      "EUnl": "Je hebt een goudvis gevangen!\nDie is zijn gewicht in vis waard!",
+      "EUru": "На удочку попалась золотая рыбка!\nИсполнилось мое желание!",
+      "JPja": "キンギョが　釣れた！\n真っ赤な　おベベだー！",
+      "KRko": "금붕어를 잡았다!\n새빨간 꼬까옷이다～!",
+      "TWzh": "釣到金魚了！\n全身紅通通的～！",
+      "USen": "I caught a goldfish!\nIt's worth its weight in fish!",
+      "USes": "¡Pesqué un pez dorado!\n¡Aunque está un poco colorado!",
+      "USfr": "Tu as pris un poisson rouge!\nPourtant, les petits pois sont verts!"
+    }
+  },
+  {
+    "label": "Fish_02215",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到红目鲫了！\n小小的，很可爱！",
+      "EUde": "Ein Bitterling!\nBitte sei nicht verbittert...",
+      "EUen": "I caught a bitterling!\nIt's mad at me, but only a little.",
+      "EUes": "¡He pescado un amarguillo!\nPero no le noto el saborcillo...",
+      "EUfr": "Tu as pris une bouvière !\nC'est pas la femelle du bouvier ?",
+      "EUit": "Ho preso un rodeo!\nSono un vero cowboy!",
+      "EUnl": "Je hebt een bittervoorn gevangen!\nWat kijkt hij verbitterd!",
+      "EUru": "На удочку попался горчак!\nНадеюсь, он не очень огорчился.",
+      "JPja": "タナゴを　釣り上げた！\n小さくて　キュート！",
+      "KRko": "납줄개를 잡았다!\n작고 귀여워!",
+      "TWzh": "釣到紅目鯽了！\n小小的好可愛！",
+      "USen": "I caught a bitterling!\nIt's mad at me, but only a little.",
+      "USes": "¡Pesqué un amarguillo!\nPues le construiré un castillo...",
+      "USfr": "Tu as pris une bouvière!\nC'est pas la femelle du bouvier?"
+    }
+  },
+  {
+    "label": "Fish_02216",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到溪哥了！\n嗯，好像也叫阔嘴郎！",
+      "EUde": "Ein Döbel!\nSchau nicht so bedöbelt!",
+      "EUen": "I caught a pale chub!\nThat name seems a bit judgy...",
+      "EUes": "¡He pescado un cacho!\n¡Pues de la lista lo tacho!",
+      "EUfr": "Tu as pris un chevaine !\nIl irait bien sur mon chevet !",
+      "EUit": "Ho preso uno zacco!\nL'ho proprio colto sul fatto!",
+      "EUnl": "Je hebt een Japanse drakenvis\ngevangen! Daar moet je niet\nde draak mee steken!",
+      "EUru": "На удочку попался светлый закко!\nЕму бы не в воде сидеть,\nа на берегу позагорать.",
+      "JPja": "オイカワを　釣り上げた！\nふむふむ、ヤマベとも言うのか",
+      "KRko": "피라미를 잡았다!\n흠흠, 조어라고도 한다지?",
+      "TWzh": "釣到溪哥了！\n嗯～這也叫做平頜鱲吧。",
+      "USen": "I caught a pale chub!\nThat name seems a bit judgy...",
+      "USes": "¡Pesqué un cacho!\n¡Pues de la lista lo tacho!",
+      "USfr": "Tu as pris un chevaine!\nIl irait bien sur ma table de chevet!"
+    }
+  },
+  {
+    "label": "Fish_02217",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到雅罗鱼了！\n好像是个很小众的品种吧？",
+      "EUde": "Ein Hasel!\nHaselein, hüpf!",
+      "EUen": "I caught a dace!\nHope I have some space!",
+      "EUes": "¡He pescado un leucisco!\n¡Y parece un poco arisco!",
+      "EUfr": "Tu as pris une vandoise !\nTu crois qu'elle aime les framboises ?",
+      "EUit": "Ho preso una lasca!\nMe la metterò in tasca!",
+      "EUnl": "Je hebt een serpeling gevangen!\nSurprise!",
+      "EUru": "На удочку попался елец!\nКто поймал, тот молодец!",
+      "JPja": "ウグイを　釣り上げた！\nなんか、マイナー？",
+      "KRko": "황어를 잡았다!\n왠지 마이너해!",
+      "TWzh": "釣到珠星三塊魚了！\n這種魚，好像很少有人知道？",
+      "USen": "I caught a dace!\nHope I have some space!",
+      "USes": "¡Pesqué un leucisco!\n¡Y parece un poco arisco!",
+      "USfr": "Tu as pris une vandoise!\nTu crois qu'elle aime les framboises?"
+    }
+  },
+  {
+    "label": "Fish_02219",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲤鱼了！\n真是太帅了！",
+      "EUde": "Ein Karpfen!\nMeine karpfhafte Suche ist beendet!",
+      "EUen": "I caught a carp!\nIf I catch another, they can carpool!",
+      "EUes": "¡He pescado una carpa!\n¡Le he echado encima la zarpa!",
+      "EUfr": "Tu as pris une carpe !\nElle ne te dira pas grand-chose !",
+      "EUit": "Ho preso una carpa!\nCarpe diem!",
+      "EUnl": "Je hebt een karper gevangen!\nDie reizen soms samen in een\nkarppoel.",
+      "EUru": "На удочку попался сазан!\nНесказанный улов!",
+      "JPja": "コイを　釣り上げた！\nカッコイーッ！",
+      "KRko": "잉어를 잡았다!\n엄청 멋있다～!",
+      "TWzh": "釣到鯉魚了！\n酷斃～鯉！",
+      "USen": "I caught a carp!\nIf I catch another, they can carpool!",
+      "USes": "¡Pesqué una carpa!\n¡Se movía a ritmo de arpa!",
+      "USfr": "Tu as pris une carpe!\nElle ne te dira pas grand-chose!"
+    }
+  },
+  {
+    "label": "Fish_02220",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到锦鲤了！\n应、应该很贵吧！",
+      "EUde": "Ein Koi-Karpfen!\nWar anstrengend, ich musste\nrichtig koichen!",
+      "EUen": "I caught a koi!\nI don't know why it's so shy...\nor such a bad speller...",
+      "EUes": "¡He pescado un koi!\n¡Hay que ver cómo estoy hoy!",
+      "EUfr": "Tu as pris une carpe koï !\nÇa reste une carpe... quoi.",
+      "EUit": "Ho preso una koi!\nÈ un pesce koi fiocchi!",
+      "EUnl": "Je hebt een koikarper gevangen!\nDie past beter in een vijver dan in\neen kooi...",
+      "EUru": "На удочку попался карп кои!\nВ кои-то веки такой улов!",
+      "JPja": "ニシキゴイを　釣り上げた！\nたっ　たかそーっ！",
+      "KRko": "비단잉어를 잡았다!\n비, 비싸 보여!",
+      "TWzh": "釣到錦鯉了！\n好、好像很貴～！",
+      "USen": "I caught a koi!\nI don't know why it's so shy...\nor such a bad speller...",
+      "USes": "¡Pesqué un koi!\nVaya, ¡cómo estoy hoy!",
+      "USfr": "Tu as pris une carpe koï!\nÇa reste une carpe... quoi."
+    }
+  },
+  {
+    "label": "Fish_02221",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到龙睛金鱼了！\n它的眼睛好大啊！",
+      "EUde": "Ein Teleskopauge!\nEigentlich hättest du mich\nkommen sehen müssen.",
+      "EUen": "I got a pop-eyed goldfish!\nIt looks so...surprised!",
+      "EUes": "¡He pescado un pez telescopio!\n¡Para ver las estrellas es lo propio!",
+      "EUfr": "Tu as pris un cyprin doré !\nTu as vu ses grands yeux ?",
+      "EUit": "Ho preso un pesce telescopio!\nChissà che stelle riesce a vedere?!",
+      "EUnl": "Je hebt een telescoopooggoudvis\ngevangen! Met zulke ogen kan hij de\nsterren vast enorm goed zien!",
+      "EUru": "На удочку попался телескоп!\nКакая удача для астронома-\nлюбителя!",
+      "JPja": "デメキンが　釣れた！\n目元　パッチリ！",
+      "KRko": "툭눈금붕어를 잡았다!\n눈이 너무 또렷해!",
+      "TWzh": "釣到龍睛金魚了！\n又大又圓的眼睛！",
+      "USen": "I got a pop-eyed goldfish!\nIt looks so...surprised!",
+      "USes": "¡Pesqué un pez telescopio!\n¡Ya lo siento como propio!",
+      "USfr": "Tu as pris un cyprin doré!\nTu as vu ses grands yeux?"
+    }
+  },
+  {
+    "label": "Fish_02222",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到稻田鱼了！\n看来还是小学生啊。",
+      "EUde": "Ein Killifisch!\nKlingt gefährlicher, als er ist...",
+      "EUen": "I caught a killifish!\nThe streams are safe again.",
+      "EUes": "¡He pescado un killi!\n¿Será pariente de Pili y Mili?",
+      "EUfr": "Tu as pris un fondule barré !\nÇa fait un de moins sur la liste !",
+      "EUit": "Ho preso un killifish!\nSecondo me, non pesa dei chili...",
+      "EUnl": "Je hebt een killivis gevangen!\nDat kietelt!",
+      "EUru": "На удочку попалась оризия!\nИ где ж моя провизия?",
+      "JPja": "メダカを　釣り上げた！\nまだ　小学生だな",
+      "KRko": "송사리를 잡았다!\n아직 애송이로군!",
+      "TWzh": "釣到稻田魚了！\n好像還是小學生呢。",
+      "USen": "I caught a killifish!\nThe streams are safe again.",
+      "USes": "¡Pesqué un killi!\n¿Será pariente de Pili y Mili?",
+      "USfr": "Tu as pris un fondule barré!\nÇa fait un de moins sur la liste!"
+    }
+  },
+  {
+    "label": "Fish_02223",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到淡水龙虾了！\n不可以夹啊！",
+      "EUde": "Ein Flusskrebs!\nSchluss mit Fluss, jetzt krebst\ndu an meiner Angel rum!",
+      "EUen": "I caught a crawfish!\nOr else it's a lobster,\nand I'm a giant!",
+      "EUes": "¡He pescado un cangrejo de río!\n¡De esas pinzas no me fío!",
+      "EUfr": "Tu as pris une écrevisse !\nElle est rouge de honte !",
+      "EUit": "Ho preso un gambero!\nChissà se cammina all'indietro...",
+      "EUnl": "Je hebt een rode rivierkreeft\ngevangen! Die was er bijna\ntussenuit geknepen!",
+      "EUru": "На удочку попался рак!\nНа безрыбье и рак рыба!",
+      "JPja": "ザリガニを　釣り上げた！\nはさまないでー！",
+      "KRko": "가재를 잡았다!\n꼬집지 마～!",
+      "TWzh": "釣到淡水龍蝦了！\n拜託不要夾我～！",
+      "USen": "I caught a crawfish!\nOr else it's a lobster,\nand I'm a giant!",
+      "USes": "¡Pesqué un cangrejo de río!\n¡De esas pinzas no me fío!",
+      "USfr": "Tu as pris une écrevisse!\nElle est rouge de honte!"
+    }
+  },
+  {
+    "label": "Fish_02225",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到蝌蚪了！\n它们是青蛙的孩子！",
+      "EUde": "Eine Kaulquappe!\nKlein, aber nicht von Pappe!",
+      "EUen": "I caught a tadpole...\nIt's just a tad small.",
+      "EUes": "¡He pescado un renacuajo!\n¡Hay que ver qué desparpajo!",
+      "EUfr": "Tu as pris un têtard !\nC'est pas trop tôt !",
+      "EUit": "Ho preso un girino...\nEri andato a farti un giro?",
+      "EUnl": "Je hebt een kikkervisje gevangen!\nWat een grappig dik kopje heb jij!",
+      "EUru": "На удочку попался головастик...\nУмный, наверное.",
+      "JPja": "オタマジャクシを　釣り上げた！\nカエルの子は　オタマジャクシ！",
+      "KRko": "올챙이를 잡았다!\n언제 커서 개구리가 될까?",
+      "TWzh": "釣到蝌蚪了！\n蝌蚪是青蛙的孩子！",
+      "USen": "I caught a tadpole...\nIt's just a tad small.",
+      "USes": "¡Pesqué un renacuajo!\nMíralo, ¡qué desparpajo!",
+      "USfr": "Tu as pris un têtard!\nC'est pas trop tôt!"
+    }
+  },
+  {
+    "label": "Fish_02226",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到青蛙了！\n跳啊跳！",
+      "EUde": "Ein Frosch!\nIch hab dich gefangen, die Kröte\nmusst du jetzt schlucken!",
+      "EUen": "I caught a frog!\nOr it's a new neighbor...and I have\nsome apologizing to do.",
+      "EUes": "¡He pescado una rana!\n¡Qué verde y qué lozana!",
+      "EUfr": "Tu as pris une grenouille !\nJ'y croâ pas !",
+      "EUit": "Ho preso una rana!\nPotrebbe essere un principe!",
+      "EUnl": "Je hebt een kikker gevangen!\nBeter één kikker in je hand\ndan tien in je keel!",
+      "EUru": "На удочку попалась лягушка!\nСмотри-ка, лягается!",
+      "JPja": "カエルを　釣り上げた！\nぴょこぴょこ！",
+      "KRko": "개구리를 잡았다!\n폴짝폴짝!",
+      "TWzh": "釣到青蛙了！\n跳啊跳！",
+      "USen": "I caught a frog!\nOr it's a new neighbor...and I have\nsome apologizing to do.",
+      "USes": "¡Pesqué una rana!\n¡Qué verde y qué lozana!",
+      "USfr": "Tu as pris une grenouille!\nJ'y croâ pas!"
+    }
+  },
+  {
+    "label": "Fish_02227",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到塘鳢鱼了！\n虽然个头很小，但是脸长得很有威严！",
+      "EUde": "Eine Flussgrundel!\nDie ist mir grundelich auf den\nLeim gegangen!",
+      "EUen": "I caught a freshwater goby!\nTime to go bye-bye!",
+      "EUes": "¡He pescado un gobio de río!\n¡Qué careto más sombrío!",
+      "EUfr": "Tu as pris un gobie d'eau douce !\nGo, go ! Le gobie !",
+      "EUit": "Ho preso un ghiozzo!\nNon sembra un tipo rozzo...",
+      "EUnl": "Je hebt een zoetwatergrondel\ngevangen! Net toen hij bezig was met\neen grondelvaart!",
+      "EUru": "На удочку попался одонтобутис!\nФу ты! Не выговорить!",
+      "JPja": "ドンコが　釣れた！\nちっちゃいけれど、顔はイカツイ",
+      "KRko": "동사리를 잡았다!\n작은 게 얼굴은 우락부락!",
+      "TWzh": "釣到塘鱧魚了！\n雖然個子小，但是長得很硬派！",
+      "USen": "I caught a freshwater goby!\nTime to go bye-bye!",
+      "USes": "¡Pesqué un gobio de río!\n¡Qué aspecto más sombrío!",
+      "USfr": "Tu as pris un gobie d'eau douce!\nGo, go! Le gobie!"
+    }
+  },
+  {
+    "label": "Fish_02228",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到泥鳅了！\n哎呀，好滑呀～！",
+      "EUde": "Eine Bachschmerle!\nDas Leben im Bach ist beschmerlich.",
+      "EUen": "I caught a loach!\nIt's...looking at me with reproach.",
+      "EUes": "¡He pescado una locha!\n¡Esto es la repanocha!",
+      "EUfr": "Tu as pris une loche d'étang !\nTu savais que la loche détend ?",
+      "EUit": "Ho preso un cobite!\nPer fortuna non ho preso la colite!",
+      "EUnl": "Je hebt een modderkruiper\ngevangen! Hij is verbazingwekkend\nschoon!",
+      "EUru": "На удочку попался вьюн!\nТак и извивается!",
+      "JPja": "ドジョウを　釣り上げた！\nあら　エッサッサ～！",
+      "KRko": "미꾸라지를 잡았다!\n추어탕 먹고 싶어!",
+      "TWzh": "釣到泥鰍了！\n哎呀，一起來抓泥鰍～！",
+      "USen": "I caught a loach!\nIt's...looking at me with reproach.",
+      "USes": "¡Pesqué una locha!\n¡Y nadie me lo reprocha!",
+      "USfr": "Tu as pris une loche d'étang!\nTu savais que la loche détend?"
+    }
+  },
+  {
+    "label": "Fish_02229",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲶鱼了！\n好长的胡须啊！",
+      "EUde": "Ein Katzenwels!\nFällst du auch immer auf die Flossen?",
+      "EUen": "I caught a catfish!\nI'm more of a dogfish person...",
+      "EUes": "¡He pescado un siluro!\nQué pez más raro y oscuro...",
+      "EUfr": "Tu as pris un silure !\nJ'en suis pas si sûr...",
+      "EUit": "Ho preso un pesce gatto!\nE ora cerchiamo il pesce cane!",
+      "EUnl": "Je hebt een meerval gevangen!\nSoms valt het meer en soms valt\ner regen.",
+      "EUru": "На удочку попался сом!\nКак в вершу ввалился!",
+      "JPja": "ナマズを　釣り上げた！\n立派なヒゲだー！",
+      "KRko": "메기를 잡았다!\n멋진 수염이군～!",
+      "TWzh": "釣到鯰魚了！\n好壯觀的鬍鬚啊～！",
+      "USen": "I caught a catfish!\nI'm more of a dogfish person...",
+      "USes": "¡Pesqué un siluro!\nQué pez más raro y oscuro...",
+      "USfr": "Tu as pris une barbotte!\nC'est mieux qu'une paire de bottes!"
+    }
+  },
+  {
+    "label": "Fish_02231",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到黑鱼了！\n它有个别名叫蛇头鱼哦！",
+      "EUde": "Ein Schlangenkopf!\nDas ist nichts Halbes\nund nichts Ganzes...",
+      "EUen": "I caught a giant snakehead!\nUm...but I asked for a medium?",
+      "EUes": "¡He pescado un pez\ncabeza de serpiente!\n¡No es nada corriente!",
+      "EUfr": "Tu as pris un tête-de-serpent !\nEt son corps, alors ?!",
+      "EUit": "Ho preso un pesce serpente!\nBasta che non sia un serpente vero!",
+      "EUnl": "Je hebt een rode slangenkopvis\ngevangen! Maar waar is zijn\nslangenlijf gebleven?",
+      "EUru": "На удочку попался змееголов!\nА где же остальная змея?",
+      "JPja": "ライギョを　釣り上げた！\n別名　スネークヘッドだー！",
+      "KRko": "가물치를 잡았다!\n머리가 뱀같이 생겼어～!",
+      "TWzh": "釣到鱧魚了！\n別名「蛇頭魚」！",
+      "USen": "I caught a giant snakehead!\nUm...but I asked for a medium?",
+      "USes": "¡Pesqué un pez cabeza de serpiente!\n¡Pues no es un pez corriente!",
+      "USfr": "Tu as pris un tête-de-serpent!\nEt son corps, alors?!"
+    }
+  },
+  {
+    "label": "Fish_02232",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到蓝腮太阳鱼了！\n别那么嫌弃好不好！",
+      "EUde": "Ein Sonnenbarsch!\nWie kann man bei\nSonne barsch sein?",
+      "EUen": "I caught a bluegill!\nDo you think it calls me \"pinklung\"?",
+      "EUes": "¡He pescado un pez sol!\n¡Ya no necesitaré farol!",
+      "EUfr": "Tu as pris un crapet !\nTu l'as bien attrapé !",
+      "EUit": "Ho preso un pesce persico!\nUau! Proviene dall'antica Persia!",
+      "EUnl": "Je hebt een zonnebaars gevangen!\nJe hebt altijd baars boven baars!",
+      "EUru": "На удочку попался солнечник!\nДаже на душе светлее стало!",
+      "JPja": "ブルーギルを　釣り上げた！\n釣れちゃったって　言わないで",
+      "KRko": "블루길을 잡았다!\n파란 붕어 같아!",
+      "TWzh": "釣到藍鰓太陽魚了！\n別說怎麼又釣到了！",
+      "USen": "I caught a bluegill!\nDo you think it calls me \"pinklung\"?",
+      "USes": "¡Pesqué un pez sol!\n¡Ya no necesitaré farol!",
+      "USfr": "Tu as pris un crapet!\nTu l'as bien attrapé!"
+    }
+  },
+  {
+    "label": "Fish_02233",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到黄鲈鱼了！\n它看起来也不是很黄啊。",
+      "EUde": "Ein Flussbarsch!\nBist du leicht beeinflussbarsch?",
+      "EUen": "I caught a yellow perch!\nThose yellow birds have\nto sit somewhere!",
+      "EUes": "¡He pescado una perca amarilla!\n¡Le pasa por acercarse a la orilla!",
+      "EUfr": "Tu as pris une perche jaune !\nL'opération perche jaune a été\nun succès !",
+      "EUit": "Ho preso una perca dorata!\nÈ meglio di quella argentata!",
+      "EUnl": "Je hebt een jackbaars gevangen!\nJACKPOT!",
+      "EUru": "На удочку попался желтый окунь!\nЭх ты, желторотик!",
+      "JPja": "イエローパーチを　釣り上げた！\nそんなに　黄色くもない",
+      "KRko": "옐로우퍼치를 잡았다!\n별로 노랗지도 않잖아?!",
+      "TWzh": "釣到黃鱸魚了！\n但顏色其實沒有很黃。",
+      "USen": "I caught a yellow perch!\nThose yellow birds have\nto sit somewhere!",
+      "USes": "¡Pesqué una perca amarilla!\n¡Le pasa por acercarse a la orilla!",
+      "USfr": "Tu as pris une perche jaune!\nL'opération perche jaune a été\nun succès!"
+    }
+  },
+  {
+    "label": "Fish_02234",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到黑鲈鱼了！\n有几厘米？几厘米啊？",
+      "EUde": "Ein Barsch!\nAbmarsch, Barsch!",
+      "EUen": "I caught a black bass!\nThe most metal of all fish!",
+      "EUes": "¡He pescado una perca!\n¡Da impresión verla de cerca!",
+      "EUfr": "Tu as pris un bar !\nSur un bateau, le bar barre !",
+      "EUit": "Ho preso un boccalone!\nCredi sempre proprio a tutto, eh?",
+      "EUnl": "Je hebt een forelbaars gevangen!\nOf is het gewoon een verbaarsde\nforel?",
+      "EUru": "На удочку попался большеротый\nокунь! Очевидно, зазевался!",
+      "JPja": "ブラックバスを　釣り上げた！\n何センチ？　何センチ？",
+      "KRko": "큰입배스를 잡았다!\n몇 센티? 몇 센티?",
+      "TWzh": "釣到黑鱸魚了！\n幾公分？有幾公分大？",
+      "USen": "I caught a black bass!\nThe most metal of all fish!",
+      "USes": "¡Pesqué una perca!\n¡Qué impresión da verla de cerca!",
+      "USfr": "Tu as pris un bar!\nSur un bateau, le bar barre!"
+    }
+  },
+  {
+    "label": "Fish_02235",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到白斑狗鱼了！\n小心它尖锐的牙齿哦！",
+      "EUde": "Ein Hecht!\nSchon recht, Hecht!",
+      "EUen": "I caught a pike!\nThink a swordfish would be up\nfor a duel?",
+      "EUes": "¡He pescado un lucio!\n¡Y no está nada sucio!",
+      "EUfr": "Tu as pris un brochet !\nIl se cachait derrière un rocher ?",
+      "EUit": "Ho preso un luccio nordico!\nMi sembra un tipo un po' freddo...",
+      "EUnl": "Je hebt een snoek gevangen!\nAls je hem teruggooit, maakt hij vast\neen snoekduik voor je!",
+      "EUru": "На удочку попалась щука! Карась\nсорвется — щука навернется.",
+      "JPja": "パイクを　釣り上げた！\n鋭い歯に　ご用心！",
+      "KRko": "강꼬치고기를 잡았다!\n날카로운 이빨을 조심해!",
+      "TWzh": "釣到白斑狗魚了！\n小心尖牙！",
+      "USen": "I caught a pike!\nThink a swordfish would be up\nfor a duel?",
+      "USes": "¡Pesqué un lucio!\n¡Y no está nada sucio!",
+      "USfr": "Tu as pris un brochet!\nIl se cachait derrière un rocher?"
+    }
+  },
+  {
+    "label": "Fish_02236",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到西太公鱼了！\n就算不去冰上垂钓，也能钓到！",
+      "EUde": "Ein Stint!\nJetzt sitzt du in der Stinte!",
+      "EUen": "I caught a pond smelt!\nWhoever smelt it dealt it!",
+      "EUes": "¡He pescado un eperlano!\n¡Suena a nombre de humano!",
+      "EUfr": "Tu as pris un éperlan !\nIl n'était pas dans un bon jour !",
+      "EUit": "Ho preso un pingo!\nVa matto per la tombola!",
+      "EUnl": "Je hebt een spiering gevangen!\nVoel je je al gespierder?",
+      "EUru": "На удочку попалась малая\nкорюшка! Она еще подрастет?",
+      "JPja": "ワカサギを　釣り上げた！\n氷がなくても　釣れるのね",
+      "KRko": "빙어를 잡았다!\n얼음이 없어도 잡히는구나!",
+      "TWzh": "釣到西太公魚了！\n水沒結冰也釣得到呢。",
+      "USen": "I caught a pond smelt!\nWhoever smelt it dealt it!",
+      "USes": "¡Pesqué un eperlano!\n¡Suena a nombre de humano!",
+      "USfr": "Tu as pris un éperlan!\nIl n'était pas dans un bon jour!"
+    }
+  },
+  {
+    "label": "Fish_02237",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到香鱼了！\n相遇香鱼？",
+      "EUde": "Ein Ayu!\nAyu, was soll man da sagen?",
+      "EUen": "I caught a sweetfish!\nHope it's not artificially sweet!",
+      "EUes": "¡He pescado un ayu!\n¡Hoy ya no ayu-no!",
+      "EUfr": "Tu as pris un ayu !\nUne pensée pour mes parents\net mes ayus !",
+      "EUit": "Ho preso un ayu!\nMi guarda male! Ayu-to!",
+      "EUnl": "Je hebt een ayu gevangen!\nZeg maar dag tegen de ayu!",
+      "EUru": "На удочку попался айю!\nАй-яй-яй!",
+      "JPja": "アユを　釣り上げた！\nAre you アユ？",
+      "KRko": "은어를 잡았다!\n소금에 구워서 먹고 싶어～!!",
+      "TWzh": "釣到香魚了！\n香香的嗎？",
+      "USen": "I caught a sweetfish!\nHope it's not artificially sweet!",
+      "USes": "¡Pesqué un ayu!\n¡Que alguien me ayu-de!",
+      "USfr": "Tu as pris un ayu!\nUne pensée pour mes parents\net mes ayus!"
+    }
+  },
+  {
+    "label": "Fish_02238",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到樱花钩吻鲑了！\n这条鱼真不错！",
+      "EUde": "Ein Masulachs!\nDas ist ja kaum masuzuhalten!",
+      "EUen": "I caught a cherry salmon!\nIt's the perfect topper\nfor a marlin sundae!",
+      "EUes": "¡He pescado un salmón japonés!\n¡Otro pez para mi palmarés!",
+      "EUfr": "Tu as pris un saumon masou !\nJe crois avoir vu un saumon\nquelque part, masou ?",
+      "EUit": "Ho preso un salmone giapponese!\nStava leggendo un manga!",
+      "EUnl": "Je hebt een Japanse zalm gevangen!\nDat is er eentje uit het land van de\nreizende zalm!",
+      "EUru": "На удочку попалась сима!\nТы Серафим или Серафима?",
+      "JPja": "ヤマメを　釣り上げた！\nなかなか　いいヤマメだ",
+      "KRko": "산천어를 잡았다!\n꽤 통통한 산천어로군!",
+      "TWzh": "釣到櫻花鉤吻鮭了！\n這條真不錯。",
+      "USen": "I caught a cherry salmon!\nIt's the perfect topper\nfor a marlin sundae!",
+      "USes": "¡Pesqué un salmón japonés!\n¡Se nota su madurez!",
+      "USfr": "Tu as pris un saumon masou!\nJe crois avoir vu un saumon\nquelque part, masou?"
+    }
+  },
+  {
+    "label": "Fish_02239",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到花羔红点鲑了！\n不知道这条鱼多少岁了？",
+      "EUde": "Ein Saibling!\nDa hat dir alles Saiblrasseln\nnichts genützt!",
+      "EUen": "I caught a char!\nNow I'm gonna sit on it!",
+      "EUes": "¡He pescado una trucha!\n¡Qué cosa más flacucha!",
+      "EUfr": "Tu as pris un omble !\nPourtant, aucun omble au tableau !",
+      "EUit": "Ho preso un salmerino alpino!\nLo metterò con la mia stella alpina!",
+      "EUnl": "Je hebt een bronforel gevangen!\nOnvoorstelbaar!",
+      "EUru": "На удочку попался голец!\nСовсем без одежды!",
+      "JPja": "オオイワナを　釣り上げた！\nこいつは　何年モノかな？",
+      "KRko": "열목어를 잡았다!\n과연 몇 살일까?",
+      "TWzh": "釣到花羔紅點鮭了！\n這條魚已經活幾年了呢？",
+      "USen": "I caught a char!\nNow I'm gonna sit on it!",
+      "USes": "¡Pesqué una trucha!\n¡Qué cosa más flacucha!",
+      "USfr": "Tu as pris un omble!\nPourtant, aucun omble au tableau!"
+    }
+  },
+  {
+    "label": "Fish_02241",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "啊——？！\n钓到远东哲罗鱼了！\n这可是传说中的梦幻之鱼啊！！",
+      "EUde": "HUCH!\nEin Huchen!\nNach denen muss man suchen!",
+      "EUen": "OH MY GOSH!\nI caught a stringfish!\nFive more and I'll have a guitarfish!",
+      "EUes": "¡No me lo puedo creer!\n¡He pescado un taimén!\n¡Ahora será mi rehén!",
+      "EUfr": "Waouh !\nTu as pris un dai yu !\nJ'en avais pas vu depuis dai yustres !",
+      "EUit": "UAU, ANZI, UAU!\nHo preso un taimen!\nQuasi non ci speravo!",
+      "EUnl": "WAUW!\nJe hebt een Donauzalm gevangen!\nSehr schön!",
+      "EUru": "Ничего себе!!!\nНа удочку попался таймень!\nСдвину шляпу набекрень!",
+      "JPja": "うぉぉぉーーーっ？！\nイトウを　釣り上げた！\n幻の　サカナだーーー！！",
+      "KRko": "우와～～～앗!!\n일본연어를 잡았다!\n전설의 물고기～～～!!",
+      "TWzh": "喔喔喔喔～～～～！？\n釣到遠東哲羅魚了！\n傳說中的夢幻之魚～～～～！！",
+      "USen": "OH MY GOSH!\nI caught a stringfish!\nFive more and I'll have a guitarfish!",
+      "USes": "¡No lo puedo creer!\n¡Pesqué un taimén!\n¡Ojalá fueran cien!",
+      "USfr": "Waouh!\nTu as pris un dai yu!\nJ'en avais pas vu depuis dai yustres!"
+    }
+  },
+  {
+    "label": "Fish_02242",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲑鱼了！\n欢迎回家！",
+      "EUde": "Ein Lachs!\nDa war er wohl zu lax!",
+      "EUen": "I caught a salmon!\nIt's all upstream from here!",
+      "EUes": "¡He pescado un salmón!\n¡No te me escapes, bribón!",
+      "EUfr": "Tu as pris un saumon !\nC'est mieux qu'un sermon !",
+      "EUit": "Ho preso un salmone!\nQuelli piccoli si chiamano salmini!",
+      "EUnl": "Je hebt een zalm gevangen!\nMet een spreekwoordelijk neusje!",
+      "EUru": "На удочку попался лосось!\nЗдоровый как лось!",
+      "JPja": "サケを　釣り上げた！\nお帰りなさーい！",
+      "KRko": "연어를 잡았다!\n안녕히 다녀오셨어요～?!",
+      "TWzh": "釣到鮭魚了！\n歡迎歸來～！",
+      "USen": "I caught a salmon!\nIt's all upstream from here!",
+      "USes": "¡Pesqué un salmón!\n¡No te me escapes, campeón!",
+      "USfr": "Tu as pris un saumon!\nC'est mieux qu'un sermon!"
+    }
+  },
+  {
+    "label": "Fish_02243",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "太棒了～～！\n钓到帝王鲑了！\n帝王！帝王！\n帝王鲑～",
+      "EUde": "Ein Königslachs!\nHat dir der Hoffnarr einen\nguten Witz erzählt?",
+      "EUen": "WOO-HOO!\nI caught a king salmon!\nCheckmate!",
+      "EUes": "¡Chachiiii!\n¡He pescado un salmón real!\n¡Fíjate qué porte más señorial!",
+      "EUfr": "Waouh ! Bravo !\nTu as pris un saumon roi !\nÉchec et mat !",
+      "EUit": "Yuppi! Yuhuuu!\nHo preso un salmone reale!\nPensa se ne pescavo uno finto!",
+      "EUnl": "Woehoe!\nJe hebt een chinookzalm gevangen!\nOp een of andere manier doet hij\ndenken aan een wasbeer...",
+      "EUru": "Ура! На удочку попалась чавыча!\nВот это добыча!",
+      "JPja": "やったぁ～～～！\nキングサーモンを　釣り上げたぞ！\nキング！　キング！\nキングサーモンだ～",
+      "KRko": "예이～～～!\n왕연어를 잡았다!\n왕! 왕!\n왕연어다～",
+      "TWzh": "太棒了～～～！\n釣到帝王鮭了！\n帝王！帝王！\n帝王鮭～",
+      "USen": "WOO-HOO!\nI caught a king salmon!\nCheckmate!",
+      "USes": "¡Mira!\n¡Pesqué un salmón real!\n¡Fíjate qué porte más señorial!",
+      "USfr": "Waouh! Bravo!\nTu as pris un saumon royal!\nÉchec et mat!"
+    }
+  },
+  {
+    "label": "Fish_02244",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到中华绒螯蟹了！\n可以享用美味了！",
+      "EUde": "Eine Wollhandkrabbe!\nFast hätten wir zwei uns\nin die Wolle gekriegt...",
+      "EUen": "I caught a mitten crab!\nOne more and I'm ready for winter!",
+      "EUes": "¡He pescado\nun cangrejo de Shanghái!\n¡Qué crustáceo más guay!",
+      "EUfr": "Tu as pris un crabe chinois !\nC'est le plus asiatique\ndes crustacés !",
+      "EUit": "Ho preso un granchio guantato!\nMa dove avrà trovato quei guanti?",
+      "EUnl": "Je hebt een wolhandkrab gevangen!\nDat vechtersbaasje weet wel\nvan wanten!",
+      "EUru": "На удочку попался мохнорукий\nкраб! Не такой он уж и мохнатый!",
+      "JPja": "シャンハイガニを　釣り上げた！\nおいしく　いただいちゃう！",
+      "KRko": "참게를 잡았다!\n쪄서 먹을까, 게장을 담가 먹을까?",
+      "TWzh": "釣到中華絨螯蟹了！\n煮成美食享用吧！",
+      "USen": "I caught a mitten crab!\nOne more and I'm ready for winter!",
+      "USes": "¡Pesqué un cangrejo de\nShanghái! ¡Se parece a un bonsái!",
+      "USfr": "Tu as pris un crabe chinois!\nC'est le plus asiatique\ndes crustacés!"
+    }
+  },
+  {
+    "label": "Fish_02245",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到孔雀鱼了！\n好漂亮啊！",
+      "EUde": "Ein Guppy!\nSuper, denn ich bin ein\nechtes Guppy-Groupie!",
+      "EUen": "I caught a guppy!\nWelcome to the team, newbie!",
+      "EUes": "¡He pescado un gupi!\n¡Qué pequeñito, yupi!",
+      "EUfr": "Tu as pris un guppy !\nIl plairait à mon papy !",
+      "EUit": "Ho preso un guppy!\nPippi-duppi-tippi-tu!",
+      "EUnl": "Je hebt een guppy gevangen!\nHelemaal in je uppie!",
+      "EUru": "На удочку попалась гуппи!\nКакая прелесть!",
+      "JPja": "グッピーが　釣れた！\n輝いてるね！",
+      "KRko": "구피가 잡혔다!\n반짝반짝!",
+      "TWzh": "釣到孔雀魚了！\n顏色好漂亮呢！",
+      "USen": "I caught a guppy!\nWelcome to the team, newbie!",
+      "USes": "¡Pesqué un gupi!\n¡Qué pequeñito, yupi!",
+      "USfr": "Tu as pris un guppy!\nIl plairait à mon papi!"
+    }
+  },
+  {
+    "label": "Fish_02246",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到温泉医生鱼了！\n河里的保健医生！",
+      "EUde": "Eine Saugbarbe!\nSo eine Saugbarbarei!",
+      "EUen": "I caught a nibble fish!\nCome to think of it, I could use a bite!",
+      "EUes": "¡He pescado un pez doctor!\n¡Ya me siento mucho mejor!",
+      "EUfr": "Tu as pris un poisson docteur !\nMets-le dans un aquarium hôpital !",
+      "EUit": "Ho preso una garra rufa!\nSe sgarra, mi stufa!",
+      "EUnl": "Je hebt een knabbelvisje gevangen!\nKnibbel, knabbel, knaas, wie\nknabbelde er aan je aas?",
+      "EUru": "На удочку попалась рыба-доктор!\nНа что жалуемся?",
+      "JPja": "ドクターフィッシュを　釣り上げた！\n川のエステティシャン！",
+      "KRko": "닥터피시를 잡았다!\n강에 사는 미용사!",
+      "TWzh": "釣到溫泉醫生魚了！\n河川界的美容師！",
+      "USen": "I caught a nibble fish!\nCome to think of it, I could use a bite!",
+      "USes": "¡Pesqué un pez doctor!\n¡Ya me siento mucho mejor!",
+      "USfr": "Tu as pris un poisson-docteur!\nMets-le dans un aquarium-hôpital!"
+    }
+  },
+  {
+    "label": "Fish_02247",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到神仙鱼了！\n你就是神仙下凡！",
+      "EUde": "Ein Skalar!\nAlles kalar!",
+      "EUen": "I caught an angelfish!\nThat other fish told me to do it!",
+      "EUes": "¡He pescado un pez ángel!\n¡Es difícil echarle el guante!",
+      "EUfr": "Tu as pris un poisson-ange !\nC'est l'ennemi du poisson-démon !",
+      "EUit": "Ho preso un pesce angelo!\nSe ne stava lì, buono buono...",
+      "EUnl": "Je hebt een maanvis gevangen!\nDat bedoelen ze dus met een\n\"wassende maan\"!",
+      "EUru": "На удочку попалась скалярия!\nИли это вектория?",
+      "JPja": "エンゼルフィッシュが　釣れた！\nキミは　天使だ！",
+      "KRko": "천사어가 잡혔다!\n당신은 천사!",
+      "TWzh": "釣到神仙魚了！\n真是美若天仙！",
+      "USen": "I caught an angelfish!\nThat other fish told me to do it!",
+      "USes": "¡Un pez ángel pesqué!\n¡Y ni siquiera lo intenté!",
+      "USfr": "Tu as pris un poisson-ange!\nC'est l'ennemi du poisson-démon!"
+    }
+  },
+  {
+    "label": "Fish_02248",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到霓虹灯鱼了！\n真的像霓虹灯一样漂亮！",
+      "EUde": "Ein Neonsalmler!\nEin leuchtendes Beispiel\nfür schlechte Tarnung!",
+      "EUen": "I caught a neon tetra!\nWasn't hard to track.",
+      "EUes": "¡He pescado un tetra neón!\n¡Tiene nombre de canción!",
+      "EUfr": "Tu as pris un néon bleu !\nTu n'auras plus jamais peur du noir !",
+      "EUit": "Ho preso un pesce neon!\nChe pacco, non fa mica luce!",
+      "EUnl": "Je hebt een neontetra gevangen!\nMet zo'n naam kun je reclame maken!",
+      "EUru": "На удочку попался голубой неон!\nРазве неоновые огни не красные?",
+      "JPja": "ネオンテトラを　釣り上げた！\nネオンみたいに　ピッカピカ！",
+      "KRko": "네온테트라를 잡았다!\n네온사인처럼 반짝반짝!",
+      "TWzh": "釣到霓虹燈魚了！\n就像霓虹燈一樣閃亮！",
+      "USen": "I caught a neon tetra!\nWasn't hard to track.",
+      "USes": "¡Pesqué un tetra neón!\n¡Tiene nombre de canción!",
+      "USfr": "Tu as pris un néon bleu!\nTu n'auras plus jamais peur du noir!"
+    }
+  },
+  {
+    "label": "Fish_02249",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到食人鱼了！\n不可以咬啊！",
+      "EUde": "Ein Piranha!\nDas hat doch Biss!",
+      "EUen": "I caught a piranha!\nSure hope it was the only one!",
+      "EUes": "¡He pescado una piraña!\n¡Cuidado, es un pez que engaña!",
+      "EUfr": "Tu as pris un piranha !\nReste à une bonne distance\nde ses dents !",
+      "EUit": "Ho preso un pesce piranha!\nPer poco non era lui a prendere me!",
+      "EUnl": "Je hebt een piranha gevangen!\nDe vissen bijten goed vandaag!",
+      "EUru": "На удочку попалась пиранья!\nНадеюсь, она позавтракала!",
+      "JPja": "ピラニアが　釣れた！\nかじっちゃ　ヤーよ",
+      "KRko": "피라니아가 잡혔다!\n날 물지 마...!",
+      "TWzh": "釣到食人魚了！\n我可不想被咬到。",
+      "USen": "I caught a piranha!\nSure hope it was the only one!",
+      "USes": "¡Pesqué una piraña!\n¡Cuidado, es un pez que engaña!",
+      "USfr": "Tu as pris un piranha!\nReste à une bonne distance\nde ses dents!"
+    }
+  },
+  {
+    "label": "Fish_02250",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到骨舌鱼了！\n金灿灿的，好华丽！",
+      "EUde": "Ein Arowana!\nDer Arowahnsinn!",
+      "EUen": "I caught an arowana!\nI'd make a joke, but I don't 'wana.",
+      "EUes": "¡He pescado un arowana!\n¡El acontecimiento de la semana!",
+      "EUfr": "Tu as pris un arowana !\nOn dirait un fruit exotique !",
+      "EUit": "Ho preso un arowana!\nLo chiamerò Giovana!",
+      "EUnl": "Je hebt een arowana gevangen!\nHopelijk is het geen arowana-fata-\nmorgana.",
+      "EUru": "На удочку попалась аравана!\nМеня ждет удача!",
+      "JPja": "アロワナが　釣れた！\n金ピカで　ゴージャス！",
+      "KRko": "아로와나가 잡혔다!\n너무 럭셔리해!!",
+      "TWzh": "釣到骨舌魚了！\n金光閃閃，超華麗！",
+      "USen": "I caught an arowana!\nI'd make a joke, but I don't 'wana.",
+      "USes": "¡Pesqué un arowana!\n¡La noticia de la semana!",
+      "USfr": "Tu as pris un arowana!\nOn dirait un fruit exotique!"
+    }
+  },
+  {
+    "label": "Fish_02251",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "哇？！\n金色的鱼……？！\n这应该是黄金河虎吧！\n这座岛上竟然也钓得到吗！",
+      "EUde": "Ein Lachssalmler!\nSo wird also Lachssalami hergestellt!",
+      "EUen": "I caught a dorado!\nI say \"dorado,\" you say \"doraydo.\"",
+      "EUes": "¡He pescado un dorado!\n¡Un ejemplar de mucho cuidado!",
+      "EUfr": "Tu as pris un dorado !\nEn grandissant, il deviendra\nun doradulte !",
+      "EUit": "Ho preso un dorado!\nMe lo pagheranno a peso d'oro?",
+      "EUnl": "Je hebt een dorado gevangen!\nDoradomifasolatiso. Toch?",
+      "EUru": "На удочку попался дорадо!\nДородный такой!",
+      "JPja": "うわっ？！\n黄金のサカナ・・・？！\nこれって確か　ドラドだー！\nこの島でも　釣れるのかー！",
+      "KRko": "우왓?!\n황금물고기...?!\n이게 말로만 듣던 도라도?\n이 섬에서도 잡히는구나～!",
+      "TWzh": "哇！？\n金黄色的魚……！？\n這是黃金河虎吧～！\n這座島上居然也能釣到！？",
+      "USen": "I caught a dorado!\nI say \"dorado,\" you say \"doraydo.\"",
+      "USes": "¡Pesqué un dorado!\n¡Un ejemplar de mucho cuidado!",
+      "USfr": "Tu as pris une dorade!\nUn peu plus et c'était une grillade!"
+    }
+  },
+  {
+    "label": "Fish_02252",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到雀鳝了！\n它的嘴好长啊！！",
+      "EUde": "Ein Knochenhecht!\nIch werde dich nicht kochen, echt!",
+      "EUen": "I caught a gar!\nYar! It's a gar! Har har!",
+      "EUes": "¡He pescado un pez caimán!\n¡No me muerdas, rufián!",
+      "EUfr": "Tu as pris un gar !\nIl est venu sans même crier « gar ! »",
+      "EUit": "Ho preso un luccio!\nPensa se si chiamasse Duccio...!",
+      "EUnl": "Je hebt een kaaimansnoek\ngevangen! Kaaigoed van je!",
+      "EUru": "На удочку попалась панцирная\nщука! Она с рыцарского турнира?",
+      "JPja": "ガーを　釣り上げた！\n口が　長ーい！！",
+      "KRko": "가아를 잡았다!\n코가 길～어!!",
+      "TWzh": "釣到雀鱔了！\n嘴巴好～長！！",
+      "USen": "I caught a gar!\nYar! It's a gar! Har har!",
+      "USes": "¡Pesqué un pez caimán!\n¡No me muerdas, rufián!",
+      "USfr": "Tu as pris un gar!\nIl est venu sans même crier « gar! »"
+    }
+  },
+  {
+    "label": "Fish_02253",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到巨骨舌鱼了！\n这体型也太大了吧？！",
+      "EUde": "Ein Arapaima!\nDer Name sagt doch schon alles!",
+      "EUen": "I caught an arapaima!\nHow did it get here? Arapaiknow!",
+      "EUes": "¡He pescado un pirarucú!\n¡Es inmenso, mira tú!",
+      "EUfr": "Tu as pris un arapaïma !\nT'as vu la taille de ce truc ?!",
+      "EUit": "Ho preso un pirarucù!\nOh! Mi ha fatto \"cucù\"!",
+      "EUnl": "Je hebt een arapaima gevangen!\nArapakadabra!",
+      "EUru": "На удочку попалась арапаима!\nЭто просто невообразимо!",
+      "JPja": "ピラルクを　釣り上げた！\nデカすぎて　ギョエーッ？！",
+      "KRko": "피라루쿠를 잡았다!\n너무 커서 깜짝!!",
+      "TWzh": "釣到巨骨舌魚了！\n實在是太大隻了，天啊～！？",
+      "USen": "I caught an arapaima!\nHow did it get here? Arapaiknow!",
+      "USes": "¡Pesqué un pirarucú!\n¡Es inmenso, mira tú!",
+      "USfr": "Tu as pris un arapaïma!\nT'as vu la taille de ce truc?!"
+    }
+  },
+  {
+    "label": "Fish_02254",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "啊……恩氏多鳍鱼……\n钓到恩氏多鳍鱼了！",
+      "EUde": "Ein Flösselhecht!\nAlles, was hecht ist, aber der\nName klingt schon seltsam...",
+      "EUen": "Wow! A saddled bichir!\nAnd me without my tiny riding crop...",
+      "EUes": "¡Rayos! ¡Un bichir ensillado!\n¡Quién lo hubiera pensado!",
+      "EUfr": "Tu as pris un bichir !\nC'est un beau spécimen !",
+      "EUit": "Uau! Un polipteride!\nCerto che hai un nome complicato!",
+      "EUnl": "Je hebt een kwastsnoek gevangen!\nHet zal wel een ver familielid van\nde penseelkrab zijn...",
+      "EUru": "Ух ты! Многопер Эндлихера!\nИли это дракон?",
+      "JPja": "うおぉ・・・　エンドリケリー・・・\nエンドリケリーを　釣り上げた！",
+      "KRko": "우오오... 엔드리케리...\n엔드리케리를 잡았다!",
+      "TWzh": "喔喔……恩氏多鰭魚……\n釣到恩氏多鰭魚了！",
+      "USen": "Wow! A saddled bichir!\nAnd me without my tiny riding crop...",
+      "USes": "¡Rayos! ¡Un bichir ensillado!\n¡Quién lo hubiera pensado!",
+      "USfr": "Tu as pris un bichir!\nC'est un beau spécimen!"
+    }
+  },
+  {
+    "label": "Fish_02255",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到海天使了！\n有一种天使的感觉！",
+      "EUde": "Ein See-Engel!\nNa, wenn's einen Seeteufel gibt...",
+      "EUen": "I caught a sea butterfly!\nTry not to confuse it for a sea moth!",
+      "EUes": "¡He pescado una mariposa marina!\n¡Qué criatura más divina!",
+      "EUfr": "Tu as pris une clione !\nC'est la femelle du clion !",
+      "EUit": "Ho preso una cavolinia!\nCavoli, che bella creatura!",
+      "EUnl": "Je hebt een zeevlinder gevangen!\nZijn er dan ook zeerupsen en zeesla?",
+      "EUru": "На удочку попался морской ангел!\nГде же твой нимб?",
+      "JPja": "クリオネを　釣り上げた！\nちょっと　天使な気分！",
+      "KRko": "클리오네를 잡았다!\n천사가 된 기분이야!",
+      "TWzh": "釣到海天使了！\n有種天使般的感覺！",
+      "USen": "I caught a sea butterfly!\nTry not to confuse it for a sea moth!",
+      "USes": "¡Pesqué una mariposa marina!\n¡Qué criatura más divina!",
+      "USfr": "Tu as pris un papillon de mer!\nEst-il sorti d'un cocon de mer?"
+    }
+  },
+  {
+    "label": "Fish_02256",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到海马了！\n好像一只幼龙！",
+      "EUde": "Ein Seepferdchen!\nMüsste das nicht „Seepony“ heißen?",
+      "EUen": "I caught a sea horse!\nBut...where's its sea jockey?",
+      "EUes": "¡He pescado un caballito de mar!\nPero no creo que pueda cabalgar...",
+      "EUfr": "Tu as pris un hippocampe !\nÀ dada sur mon poisson !",
+      "EUit": "Ho preso un ippocampo!\nPer fortuna non era un ippopotamo!",
+      "EUnl": "Je hebt een zeepaardje gevangen!\nNu moet je nog een piepklein\nzadeltje vinden...",
+      "EUru": "На удочку попался морской конек!\nИ-го-го!",
+      "JPja": "タツノオトシゴを　釣り上げた！\nこどもドラゴン！",
+      "KRko": "해마를 잡았다!\n아기 드래곤!",
+      "TWzh": "釣到海馬了！\n就像一隻幼龍！",
+      "USen": "I caught a sea horse!\nBut...where's its sea jockey?",
+      "USes": "¡Pesqué un caballito de mar!\nPero no creo que pueda cabalgar...",
+      "USfr": "Tu as pris un hippocampe!\nÀ dada sur mon poisson!"
+    }
+  },
+  {
+    "label": "Fish_02257",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到小丑鱼了！\n它们是海葵的好朋友！",
+      "EUde": "Ein Anemonenfisch!\nKomm schon, zeig mir deine\nanemonische Seite!",
+      "EUen": "I caught a clown fish!\nHow many can fit in a carfish?",
+      "EUes": "¡He pescado un pez payaso!\n¡El rey del humor, abran paso!",
+      "EUfr": "Tu as pris un poisson-clown !\nQu'est-ce qu'on se marre,\ndans la mer !",
+      "EUit": "Ho preso un pesce pagliaccio!\nÈ amico del pesce domatore?",
+      "EUnl": "Je hebt een clownvis gevangen!\nDie kan het vast goed vinden met\npoetsvissen en bakvissen!",
+      "EUru": "На удочку попалась рыба-клоун!\nДержи себя в руках, мы не в цирке!",
+      "JPja": "クマノミを　釣り上げた！\nイソギンチャクとは　仲良し！",
+      "KRko": "흰동가리를 잡았다!\n말미잘과 단짝!",
+      "TWzh": "釣到小丑魚了！\n牠跟海葵是好朋友！",
+      "USen": "I caught a clown fish!\nHow many can fit in a carfish?",
+      "USes": "¡Pesqué un pez payaso!\n¡El rey del humor, abran paso!",
+      "USfr": "Tu as pris un poisson-clown!\nQu'est-ce qu'on se marre,\ndans la mer!"
+    }
+  },
+  {
+    "label": "Fish_02258",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到拟刺尾鲷了！\n好漂亮的深蓝色！",
+      "EUde": "Ein Paletten-Doktorfisch!\nDiagnose: Klarer Fall\nvon Angelernährung!",
+      "EUen": "I caught a surgeonfish!\nScalpel! Forceps! Fish hook!",
+      "EUes": "¡He pescado un pez cirujano!\n¡El esfuerzo no ha sido en vano!",
+      "EUfr": "Tu as pris un poisson chirurgien !\nC'était un combat aux forceps !",
+      "EUit": "Ho preso un pesce chirurgo!\nÈ stata un'operazione semplice!",
+      "EUnl": "Je hebt een doktersvis gevangen!\nEn hij is natuurlijk zo gezond als\neen vis!",
+      "EUru": "На удочку попался флаговый\nхирург! Сестра, флаг и скальпель!",
+      "JPja": "ナンヨウハギを　釣り上げた！\nコバルトブルーが　ちょーキレイ！",
+      "KRko": "블루탱을 잡았다!\n코발트블루의 색이 너무 예뻐!",
+      "TWzh": "釣到擬刺尾鯛了！\n蔚藍色的外觀超美麗！",
+      "USen": "I caught a surgeonfish!\nScalpel! Forceps! Fish hook!",
+      "USes": "¡Pesqué un pez cirujano!\n¡El esfuerzo no ha sido en vano!",
+      "USfr": "Tu as pris un poisson-chirurgien!\nC'était un combat aux forceps!"
+    }
+  },
+  {
+    "label": "Fish_02259",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到耳带蝴蝶鱼了！\n这鱼游起来像蝴蝶在翩翩飞舞一样！",
+      "EUde": "Ein Falterfisch!\nNa, wer hat hier wen\nzusammengefaltet?",
+      "EUen": "I caught a butterfly fish!\nDid it change from a caterpillar fish?",
+      "EUes": "¡He pescado un pez mariposa!\n¡Qué mezcla más curiosa!",
+      "EUfr": "Tu as pris un poisson-papillon !\nAvant, c'était un poisson-chenille ?",
+      "EUit": "Ho preso un pesce farfalla!\nSarà spuntato da un pesce crisalide?",
+      "EUnl": "Je hebt een koraalvlinder gevangen!\nZonder insectennet!",
+      "EUru": "На удочку попалась рыба-бабочка!\nДаже сачок не понадобился!",
+      "JPja": "チョウチョウウオを　釣り上げた！\nひらひら　チョウのように泳ぐ　サカナ！",
+      "KRko": "나비고기를 잡았다!\n나풀나풀 나비처럼 헤엄치는 물고기!",
+      "TWzh": "釣到耳帶蝴蝶魚了！\n在水中的行動如蝴蝶般輕盈！",
+      "USen": "I caught a butterfly fish!\nDid it change from a caterpillar fish?",
+      "USes": "¡Pesqué un pez mariposa!\n¡Qué mezcla más curiosa!",
+      "USfr": "Tu as pris un poisson-papillon!\nAvant, c'était un poisson-chenille?"
+    }
+  },
+  {
+    "label": "Fish_02260",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到苏眉鱼了！\n头上的帽子好帅啊！",
+      "EUde": "Ein Napoleonfisch!\nDas ist dein Waterloo!",
+      "EUen": "I caught a Napoleonfish!\nIt's not as big as it thinks!",
+      "EUes": "¡He pescado un pez napoleón!\nTiene aspecto de campeón.",
+      "EUfr": "Tu as pris un napoléon !\nL'empereur de tous les poissons !",
+      "EUit": "Ho preso un pesce napoleone!\nOra non ti dai più tante arie, eh?",
+      "EUnl": "Je hebt een napoleonvis gevangen!\nHopelijk heb je geen zeeslag\nverstoord...",
+      "EUru": "На удочку попалась рыба-\nнаполеон! Ватерлоо!",
+      "JPja": "ナポレオンフィッシュを　釣り上げた！\n頭のぼうしが　カッコイイ！",
+      "KRko": "나폴레옹피시를 잡았다!\n머리 위의 모자가 멋진걸!",
+      "TWzh": "釣到蘇眉魚了！\n頭上的帽子好帥氣！",
+      "USen": "I caught a Napoleonfish!\nIt's not as big as it thinks!",
+      "USes": "¡Pesqué un pez napoleón!\nTiene aspecto de campeón.",
+      "USfr": "Tu as pris un napoléon!\nL'empereur de tous les poissons!"
+    }
+  },
+  {
+    "label": "Fish_02261",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到狮子鱼了！\n鱼鳍上是有毒的，千万不能碰哦！",
+      "EUde": "Ein Rotfeuerfisch!\nBist du sicher, dass du unter\nWasser leben solltest?",
+      "EUen": "I caught a zebra turkeyfish!\nLand, air, water—make up your mind!",
+      "EUes": "¡He pescado un pez león!\nPero ¿dónde está su melenón?",
+      "EUfr": "Tu as pris un poisson-scorpion !\nIl n'y a pas que sa queue qui pique !",
+      "EUit": "Ho preso un leone zebrato!\nPer evitare equivoci: è un pesce!",
+      "EUnl": "Je hebt een koraalduivel gevangen!\nWees maar voorzichtig met die\nstekels!",
+      "EUru": "На удочку попалась крылатка!\nЛети, рыбка, лети!",
+      "JPja": "ミノカサゴを　釣り上げた！\nヒレに毒があるから　触るとキケン！",
+      "KRko": "쏠배감펭을 잡았다!\n예쁜 가시 안에는 독이 있어서 만지면 안 돼!",
+      "TWzh": "釣到獅子魚了！\n魚鰭暗藏毒性，碰到就慘了！",
+      "USen": "I caught a zebra turkeyfish!\nLand, air, water—make up your mind!",
+      "USes": "¡Pesqué un pez león!\nPero ¿dónde está su melenón?",
+      "USfr": "Tu as pris un poisson-scorpion!\nIl n'y a pas que sa queue qui pique!"
+    }
+  },
+  {
+    "label": "Fish_02262",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到河豚了！\n生鱼片、火锅、河豚全餐！",
+      "EUde": "Ein Kugelfisch!\nKein Grund, sich aufzuplustern...",
+      "EUen": "I caught a blowfish!\nI'm blown away!",
+      "EUes": "¡He pescado un pez globo!\n¿Saldrá volando si lo dejo solo?",
+      "EUfr": "Tu as pris un poisson-ballon !\nVoilà le meilleur ami\ndes poissons sportifs !",
+      "EUit": "Ho preso un pesce palla!\nÈ di un pesce calciatore!",
+      "EUnl": "Je hebt een kogelvis gevangen!\nEen van de grootste blaaskaken\nvan de zee!",
+      "EUru": "На удочку попался бурый скалозуб!\nНечего было скалиться!",
+      "JPja": "フグを　釣り上げた！\nてっさ、てっちり、フグざんまい！",
+      "KRko": "복어를 잡았다!\n먹을 땐 전문가와 상담하세요!",
+      "TWzh": "釣到河豚了！\n生魚片、火鍋、河豚全餐！",
+      "USen": "I caught a blowfish!\nI'm blown away!",
+      "USes": "¡Pesqué un pez globo!\n¿Saldrá volando si lo dejo solo?",
+      "USfr": "Tu as pris un poisson-globe!\nVoilà le meilleur ami\ndes poissons-géographes!"
+    }
+  },
+  {
+    "label": "Fish_02263",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到刺豚了！\n好疼、疼、疼……",
+      "EUde": "Ein Igelfisch!\nDu warst wieder schneller, einen\nSeehasen hab ich keinen gefangen!",
+      "EUen": "I caught a puffer fish!\nI thought you would be tougher, fish!",
+      "EUes": "¡He pescado un pez erizo!\n¡Los pinchos no son postizos!",
+      "EUfr": "Tu as pris un poisson-porc-épic !\nFais attention à ses épines !",
+      "EUit": "Ho preso un pesce istrice!\nAttenzione agli aculei!",
+      "EUnl": "Je hebt een egelvis gevangen!\nAu... wat... fijn...",
+      "EUru": "На удочку попалась еж-рыба!\nНу, что ежишься?",
+      "JPja": "ハリセンボンを　釣り上げた！\nイテテテ・・・",
+      "KRko": "가시복을 잡았다!\n아얏～!",
+      "TWzh": "釣到刺河豚了！\n好刺……",
+      "USen": "I caught a puffer fish!\nI thought you would be tougher, fish!",
+      "USes": "¡Pesqué un pez erizo!\n¡Y fue así sin aviso!",
+      "USfr": "Tu as pris un poisson-porc-épic!\nFais attention à ses épines!"
+    }
+  },
+  {
+    "label": "Fish_02264",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到竹荚鱼了！\n不知道味道如何呢？",
+      "EUde": "Eine Makrele!\nDich wollte ich mir schon\nimmer mal krallen!",
+      "EUen": "I caught a horse mackerel!\nOf course, mack...er...el.",
+      "EUes": "¡He pescado un jurel!\n¡No le he dado cuartel!",
+      "EUfr": "Tu as pris un chinchard !\nPlus cabochard que pétochard...",
+      "EUit": "Ho preso uno sgombro!\nVolevo fare piazza pulita...",
+      "EUnl": "Je hebt een horsmakreel gevangen!\nHortsik, makreeltje!",
+      "EUru": "На удочку попалась ставрида!\nМного рыб такого вида!",
+      "JPja": "アジを　釣り上げた！\nさて、味は　いかほどか？",
+      "KRko": "전갱이를 잡았다!\n과연 맛은 어떨는지?",
+      "TWzh": "釣到竹筴魚了！\n滋味到底如何呢？",
+      "USen": "I caught a horse mackerel!\nOf course, mack...er...el.",
+      "USes": "¡Pesqué un jurel!\n¡No le di cuartel!",
+      "USfr": "Tu as pris un chinchard!\nPlus cabochard que pétochard..."
+    }
+  },
+  {
+    "label": "Fish_02265",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到条石鲷了！\n它们是生活在多岩石海滨的王者！！",
+      "EUde": "Ein Schnabelbarsch!\nSei so barsch, wie dir der\nSchnabel gewachsen ist!",
+      "EUen": "I caught a barred knifejaw!\nThey must have a hard time eating!",
+      "EUes": "¡He pescado una dorada japonesa!\n¡Konnichiwa, princesa!",
+      "EUfr": "Tu as pris un ishidai !\nIl se laisse pêcher sans chichi\net sans ail...",
+      "EUit": "Ho preso un ishidai!\nInfatti pensavo: \"Dai che ce la fai!\".",
+      "EUnl": "Je hebt een kraaibek gevangen!\nJe kraaide van plezier!",
+      "EUru": "На удочку попался полосатый\nоплегнат! Весь в полоску!",
+      "JPja": "イシダイを　釣り上げた！\nあらいその　王者だー！！",
+      "KRko": "돌돔을 잡았다!\n거친 바다의 왕자～!!",
+      "TWzh": "釣到條石鯛了！\n生於洶湧浪潮中的王者～！！",
+      "USen": "I caught a barred knifejaw!\nThey must have a hard time eating!",
+      "USes": "¡Pesqué una dorada japonesa!\n¡Konnichiwa, princesa!",
+      "USfr": "Tu as pris un ishidai!\nIl se laisse pêcher sans chichi\net sans ail..."
+    }
+  },
+  {
+    "label": "Fish_02266",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲈鱼了！\n不是鱼露，是鲈鱼哦！",
+      "EUde": "Ein Seebarsch!\nManchmal bist du\nwirklich sehr barsch!",
+      "EUen": "I caught a sea bass!\nNo, wait—it's at least a C+!",
+      "EUes": "¡He pescado una lubina!\nPues mejor que una sardina...",
+      "EUfr": "Tu as pris un bar commun !\nGare au bar à thym !",
+      "EUit": "Ho preso una spigola!\nEppure... non mi sono fatto \"mala\"!",
+      "EUnl": "Je hebt een zeebaars gevangen!\nHoezee... een baars...",
+      "EUru": "На удочку попался морской судак!\nНе суди меня строго!",
+      "JPja": "スズキを　釣り上げた！\n鈴木・・・じゃなくて、鱸なのね！",
+      "KRko": "농어를 잡았다!\n안농, 농어야!",
+      "TWzh": "釣到鱸魚了！\n驢……不對，是鱸魚！",
+      "USen": "I caught a sea bass!\nNo, wait—it's at least a C+!",
+      "USes": "¡Pesqué una lubina!\nPues mejor que una sardina...",
+      "USfr": "Tu as pris un bar commun!\nGare au bar à thym!"
+    }
+  },
+  {
+    "label": "Fish_02267",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲷鱼了！\n看来今天运气不错！！",
+      "EUde": "Ein Kaiserschnapper!\nGut, dass ich kein Kaiser bin.",
+      "EUen": "I caught a red snapper!\nIt looks pretty dapper!",
+      "EUes": "¡He pescado un pargo rojo!\nCreo que me mira de reojo...",
+      "EUfr": "Tu as pris un vivaneau !\nRien à voir avec le vivayaisse !",
+      "EUit": "Ho preso un lutiano rosso!\nL'avrò messo in imbarazzo?",
+      "EUnl": "Je hebt een rode snapper gevangen!\nZo! Die is gevat!",
+      "EUru": "На удочку попался красный луциан!\nЗастенчивый — весь зарделся!",
+      "JPja": "タイを　釣り上げた！\nこりゃ　めでタイ！！",
+      "KRko": "도미를 잡았다!\n레는 어디로 갔지??",
+      "TWzh": "釣到鯛魚了！\n今天的鯛魚運不錯！！",
+      "USen": "I caught a red snapper!\nIt looks pretty dapper!",
+      "USes": "¡Pesqué un pargo rojo!\nCreo que me mira de reojo...",
+      "USfr": "Tu as pris un vivaneau!\nRien à voir avec le vivayaisse!"
+    }
+  },
+  {
+    "label": "Fish_02268",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲽鱼了！\n看到了吗？这华丽的收杆技术！",
+      "EUde": "Eine Kliesche!\nIch verzichte mal auf\nklischeehafte Witze.",
+      "EUen": "I caught a dab!\nNot bad!",
+      "EUes": "¡He pescado un gallo!\nSi canta, yo me callo...",
+      "EUfr": "Tu as pris une limande !\nTu as vu ses deux yeux globuleux ?",
+      "EUit": "Ho preso una platessa!\nSarà la femmina del plato?",
+      "EUnl": "Je hebt een schar gevangen!\nHij is heel flexibel. Zou dat door\nzijn scharniertjes komen?",
+      "EUru": "На удочку попалась камбала!\nНе косись на меня, голубушка!",
+      "JPja": "カレイを　釣り上げたー！\n見た？　カレイな　さおさばき！",
+      "KRko": "가자미를 잡았다～!\n봤어? 내 화려한 낚시 솜씨!",
+      "TWzh": "釣到鰈魚了！\n看到了嗎？我這華麗的釣魚技術！",
+      "USen": "I caught a dab!\nNot bad!",
+      "USes": "¡Pesqué un gallo!\nSi canta, yo me callo...",
+      "USfr": "Tu as pris une limande!\nTu as vu ses deux yeux globuleux?"
+    }
+  },
+  {
+    "label": "Fish_02269",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲽鱼了！\n\n啊，嗯？\n仔细一看，这好像是\n比目鱼……？是比目鱼吗？",
+      "EUde": "Eine Flunder!\nDa bist du pla--\nAch, der Witz ist mir jetzt zu flach.",
+      "EUen": "I caught an olive flounder!\nThat's not the pits!",
+      "EUes": "He pescado un gallo... ¿Eh?\nAh, no, ¡que es un rodaballo!",
+      "EUfr": "Tu as pris un cardeau !\nIl n'a pas l'air embarllé !",
+      "EUit": "Ho preso una sogliola!\nL'acqua era troppo piatta per lei!",
+      "EUnl": "Je hebt bot gevangen...\n\nNee, wacht...\nJe hebt EEN bot gevangen!\nNiet slecht!",
+      "EUru": "На удочку попалась камбала...\nСекундочку!\nДа это же ложный палтус!\nМеня не проведешь, плутишка!",
+      "JPja": "カレイを　釣り上げたー\n\nって、んん？\nこれって　よく見たら\nヒラメ・・・？　ヒラメなの？",
+      "KRko": "가자미를 잡았다～\n\n그런데 응? 응?\n이건 잘 보니\n넙치...? 넙치야?",
+      "TWzh": "釣到鰈魚了～\n\n呃，嗯？\n仔細一看，這條魚好像是比目魚……？\n這是比目魚嗎？",
+      "USen": "I caught an olive flounder!\nThat's not the pits!",
+      "USes": "Pesqué un gallo...\n¿Eh?\nAh, no... ¡es un rodaballo!",
+      "USfr": "Tu as pris un cardeau!\nIl n'a pas l'air embarllé!"
+    }
+  },
+  {
+    "label": "Fish_02271",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到裸胸鳝了！\n要是被咬到就惨了……",
+      "EUde": "Eine Muräne!\nBei Muränenzähnen\nkommen mir die Tränen...",
+      "EUen": "I caught a moray eel!\nWhen you're in love, that's a moray!",
+      "EUes": "¡He pescado una morena!\nAunque no le veo la melena...",
+      "EUfr": "Tu as pris une murène !\nElle habite dans un muchâteau !",
+      "EUit": "Ho preso una murena!\nBeh, cosa ti aspettavi? Una balena?",
+      "EUnl": "Je hebt een murene gevangen!\nDat is de moeraal van dit verhaal!",
+      "EUru": "На удочку попалась мурена!\nУ меня мурашки по коже!",
+      "JPja": "ウツボを　釣り上げた！\nかまれたら　タイヘンだ・・・",
+      "KRko": "곰치를 잡았다!\n물리면 큰일 나…",
+      "TWzh": "釣到裸胸鱔了！\n要是被咬到就糟了……",
+      "USen": "I caught a moray eel!\nWhen you're in love, that's a moray!",
+      "USes": "¡Pesqué una morena!\nAunque no le veo la melena...",
+      "USfr": "Tu as pris une murène!\nElle habite dans un muchâteau!"
+    }
+  },
+  {
+    "label": "Fish_02272",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到五彩鳗了！\n探出砂石打个招呼！",
+      "EUde": "Eine Nasenmuräne!\nDachtest du, du kannst mich\nan der Nase rumführen?",
+      "EUen": "I caught a ribbon eel!\nCan it tie itself into a bow?",
+      "EUes": "¡He pescado\nuna anguila de listón azul!\n¡Es tan ligera que parece tul!",
+      "EUfr": "Tu as pris une murène ruban bleue !\nOn ne trouvera pas de nom\nplus descriptif !",
+      "EUit": "Ho preso una murena a nastro!\nÈ l'antenata della murena a CD!",
+      "EUnl": "Je hebt een lintmurene gevangen!\nHandig voor het inpakken van\ncadeautjes!",
+      "EUru": "На удочку попалась носатая\nмурена! Нечего было нос совать!",
+      "JPja": "ハナヒゲウツボを　釣り上げた！\n砂の底から　コンニチハ！",
+      "KRko": "리본장어를 잡았다!\n모래 속에서 빼꼼!",
+      "TWzh": "釣到五彩鰻了！\n從沙子底下冒出來打招呼了！",
+      "USen": "I caught a ribbon eel!\nCan it tie itself into a bow?",
+      "USes": "¡Pesqué una anguila de listón azul!\n¡Es tan ligera que parece tul!",
+      "USfr": "Tu as pris une murène ruban bleue!\nOn ne trouvera pas de nom\nplus descriptif!"
+    }
+  },
+  {
+    "label": "Fish_02273",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到灯笼鱼了！\n欢迎从海底世界来做客！",
+      "EUde": "Ein Anglerfisch!\nHallo, Kollege!",
+      "EUen": "I caught a football fish!\nSome countries call it a soccer fish!",
+      "EUes": "¡He pescado un pez balón!\n¡Podré hacer una competición!",
+      "EUfr": "Tu as pris un poisson lanterne !\nPourtant, il est plutôt rapide et brillant !",
+      "EUit": "Ho preso un pesce abissale!\nÈ un pesce molto profondo.",
+      "EUnl": "Je hebt een voetbalvis gevangen!\nHandig, zo'n lichtje om in het donker\nte spelen!",
+      "EUru": "На удочку попался гимантолоф!\nПригодится для ночных прогулок.",
+      "JPja": "チョウチンアンコウを　釣り上げた！\n海の底から　ようこそ！",
+      "KRko": "초롱아귀를 잡았다!\n어인 일로 깊은 바다에서 이런 곳까지!",
+      "TWzh": "釣到燈籠魚了！\n歡迎來到海平面！",
+      "USen": "I caught a football fish!\nSome countries call it a soccer fish!",
+      "USes": "¡Pesqué un pez balón!\n¡Podré hacer una competición!",
+      "USfr": "Tu as pris un poisson-lanterne!\nPourtant, il est plutôt rapide et brillant!"
+    }
+  },
+  {
+    "label": "Fish_02274",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲔鱼了！\n它是不是游累了？",
+      "EUde": "Ein Thunfisch!\nTja, hättest du meine Angel\nmal thunlichst vermieden...",
+      "EUen": "I caught a tuna!\nIt's a little off-key!",
+      "EUes": "¡He pescado un atún!\nEn estas aguas no es muy común...",
+      "EUfr": "Tu as pris un thon !\nSi ton thon tond ton tonton...",
+      "EUit": "Ho preso un tonno!\nPesa una tonnellata!",
+      "EUnl": "Je hebt een tonijn gevangen!\nDaar komt de tonijn uit de hoge\nvloed getoverd!",
+      "EUru": "На удочку попался тунец!\nОжиданию конец!",
+      "JPja": "マグロを　釣り上げた！\n泳ぎ疲れたのかな？",
+      "KRko": "다랑어를 잡았다!\n헤엄치다 지쳤나?",
+      "TWzh": "釣到鮪魚了！\n難道是游累了嗎？",
+      "USen": "I caught a tuna!\nIt's a little off-key!",
+      "USes": "¡Pesqué un atún!\nEn estas aguas no es común...",
+      "USfr": "Tu as pris un thon!\nSi ton thon tond ton tonton..."
+    }
+  },
+  {
+    "label": "Fish_02275",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "仅凭一根钓线一个钩就钓到旗鱼了！\n很厉害吧！",
+      "EUde": "Ein Marlin!\nDu wirst die Speerspitze\nmeiner Fischsammlung!",
+      "EUen": "I caught a blue marlin!\nListen to this fish. It's got a point.",
+      "EUes": "¡He pescado un pez espada!\nEspero que no esté mellada...",
+      "EUfr": "Tu as pris un marlin bleu !\nIl fait moins le marlin !",
+      "EUit": "Ho preso un marlin blu!\nAh! Ho capito per che squadra tifa!",
+      "EUnl": "Je hebt een blauwe marlijn\ngevangen! En garde!",
+      "EUru": "На удочку попался голубой марлин!\nЧао, дарлинг!",
+      "JPja": "カジキを　一本釣りだ！\nどんなもんだい！",
+      "KRko": "청새치를 단숨에 잡았다!\n이쯤이야 뭐!",
+      "TWzh": "只靠釣線跟魚鉤就釣到旗魚了！\n厲害吧！",
+      "USen": "I caught a blue marlin!\nListen to this fish. It's got a point.",
+      "USes": "¡Pesqué un pez espada!\nEspero que no esté afilada...",
+      "USfr": "Tu as pris un marlin bleu!\nIl fait moins le marlin!"
+    }
+  },
+  {
+    "label": "Fish_02276",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到白面弄鱼了！\n长得像武士一样？！",
+      "EUde": "Eine Stachelmakrele!\nDa kannst du ruhig herummakrelen,\nich lasse mich nicht aufstacheln!",
+      "EUen": "I caught a giant trevally!\nYeah, I'm pretty well-trevalled.",
+      "EUes": "¡He pescado un jurel gigante!\n¡Vaya bicho más despampanante!",
+      "EUfr": "Tu as pris une carangue grosse tête !\nRegarde madame je-sais-tout !",
+      "EUit": "Ho preso un carango gigante!\nMah... ne ho visti di più grandi!",
+      "EUnl": "Je hebt een reuzenhorsmakreel\ngevangen! Alles reuze, makker?",
+      "EUru": "На удочку попался гигантский\nкаранкс! Тоже мне гигант...",
+      "JPja": "ロウニンアジを　釣り上げた！\nサムライの面構え？！",
+      "KRko": "무명갈전갱이를 잡았다!\n얼굴이 험악한데?!",
+      "TWzh": "釣到浪人鰺了！\n有著武士般的長相！？",
+      "USen": "I caught a giant trevally!\nYeah, I'm pretty well-trevalled.",
+      "USes": "¡Pesqué un jurel gigante!\n¡Qué pez más impactante!",
+      "USfr": "Tu as pris une carangue grosse tête!\nRegarde madame je-sais-tout!"
+    }
+  },
+  {
+    "label": "Fish_02277",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鳐鱼了！\n耶——！！",
+      "EUde": "Ein Rochen!\nEr kam am Meeresboden\nangekrochen!",
+      "EUen": "I caught a ray!\nA few more and I'll have a tan!",
+      "EUes": "¡He pescado una raya!\n¡Me merezco una medalla!",
+      "EUfr": "Tu as pris une raie !\nLa raie était au bout de la ligne !",
+      "EUit": "Ho preso una razza!\nHa una certa stazza!",
+      "EUnl": "Je hebt een rog gevangen!\nHeb je toevallig roggebrood\nals aas gebruikt?",
+      "EUru": "На удочку попался красный\nхвостокол! Не уколоться бы!",
+      "JPja": "エイを　釣り上げた！\nイッエーーーーイ！！",
+      "KRko": "가오리를 잡았다!\n아싸, 가오리!!!",
+      "TWzh": "釣到魟魚了！\n絕對轟～～～～動！！",
+      "USen": "I caught a ray!\nA few more and I'll have a tan!",
+      "USes": "¡Pesqué una raya!\n¡Me merezco una medalla!",
+      "USfr": "Tu as pris une raie!\nLa raie était au bout de la ligne!"
+    }
+  },
+  {
+    "label": "Fish_02278",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到翻车鱼了！\n呜～～翻车鱼～～",
+      "EUde": "Ein Mondfisch!\nMüsste der nicht einen\nAstronautenanzug tragen?",
+      "EUen": "I caught an ocean sunfish!\nGood thing I'm wearing\nocean sunscreen!",
+      "EUes": "¡He pescado un pez luna!\n¡Lo digo sin modestia alguna!",
+      "EUfr": "Tu as pris une lune de mer !\nTu peux mettre les choses au clair !",
+      "EUit": "Ho preso un pesce luna!\nOh! Direi che ha la luna storta!",
+      "EUnl": "Je hebt een klompvis gevangen!\nEen veel betere vangst dan een\noude laars!",
+      "EUru": "На удочку попалась луна-рыба!\nЗавтра буду ловить звезды.",
+      "JPja": "マンボウを　釣り上げた！\nう～～～っ、マンボウ",
+      "KRko": "개복치를 잡았다!\n와～～～ 개복치다!",
+      "TWzh": "釣到翻車魚了！\n嗚～～～曼波！",
+      "USen": "I caught an ocean sunfish!\nGood thing I'm wearing\nocean sunscreen!",
+      "USes": "¡Pesqué un pez luna!\n¡Lo digo sin modestia alguna!",
+      "USfr": "Tu as pris un poisson-lune!\nTu peux mettre les choses au clair!"
+    }
+  },
+  {
+    "label": "Fish_02279",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到双髻鲨了！\n它的脑袋长得像锤子一样！",
+      "EUde": "Ein Hammerhai!\nDer schlimmste Feind\ndes Nagelrochens...",
+      "EUen": "I caught a hammerhead shark!\nI hit the nail on the head!",
+      "EUes": "¡He pescado un pez martillo!\n¡Será útil llevarlo en el bolsillo!",
+      "EUfr": "Tu as pris un requin marteau !\nIl fait travailler sa tête...",
+      "EUit": "Ho preso un pesce martello!\nMah... roba da chiodi!",
+      "EUnl": "Je hebt een hamerhaai gevangen!\nDie was vast spijkers op laag water\naan het zoeken.",
+      "EUru": "На удочку попалась рыба-молот!\nДа это же целая кувалда!",
+      "JPja": "シュモクザメを　釣り上げた！\nハンマーみたいな　頭だー！",
+      "KRko": "귀상어를 잡았다!\n머리가 망치 같아～!",
+      "TWzh": "釣到雙髻鯊了！\n頭長得像槌子一樣～！",
+      "USen": "I caught a hammerhead shark!\nI hit the nail on the head!",
+      "USes": "¡Pesqué un pez martillo!\n¡Lo llevaré en el bolsillo!",
+      "USfr": "Tu as pris un requin-marteau!\nIl fait travailler sa tête..."
+    }
+  },
+  {
+    "label": "Fish_02280",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲨鱼了！\n过程很顺利呢！",
+      "EUde": "Ein Hai!\nEin haikler Fang!",
+      "EUen": "I caught a great white shark!\nWatch out for its jaws!",
+      "EUes": "¡He pescado un tiburón!\n¡Casi me desmayo de la impresión!",
+      "EUfr": "Tu as pris un grand requin blanc !\nCe poisson a les ailes rondes...",
+      "EUit": "Ho preso uno squalo bianco!\nMa sarà il colore giusto?",
+      "EUnl": "Je hebt een witte haai gevangen!\nEh... Hoi, haai...",
+      "EUru": "На удочку попалась акула!\nКто кого поймал?",
+      "JPja": "サメを　釣り上げた！\n上手に釣れたなー！",
+      "KRko": "상어를 잡았다!\n다이너마이트 급이야!!",
+      "TWzh": "釣到鯊魚了！\n真是太順利了～！",
+      "USen": "I caught a great white shark!\nWatch out for its jaws!",
+      "USes": "¡Pesqué un tiburón!\n¡Me desmayo de la impresión!",
+      "USfr": "Tu as pris un grand requin blanc!\nCe poisson a les ailes rondes..."
+    }
+  },
+  {
+    "label": "Fish_02281",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到锯鲨了！\n小心别把钓线锯断了！",
+      "EUde": "Ein Sägehai!\nIch freu mich unsäglich!",
+      "EUen": "I caught a saw shark!\nYou could call it a sea saw!",
+      "EUes": "¡He pescado un pez sierra!\n¡Menudos dientes, qué fiera!",
+      "EUfr": "Tu as pris un requin scie !\nLe fidèle ami du requin ébéniste !",
+      "EUit": "Ho preso uno squalo sega!\nSarà amico del pesce martello...",
+      "EUnl": "Je hebt een zaaghaai gevangen!\nDie kan zo bij je gereedschap!",
+      "EUru": "На удочку попалась акула-пилонос!\nГде тут бревно?",
+      "JPja": "ノコギリザメを　釣り上げちゃった！\n釣り糸　切らないでね！",
+      "KRko": "톱상어를 잡았다!\n낚싯줄은 끊지 마!",
+      "TWzh": "釣到鋸鯊了！\n不要把釣線給鋸斷囉！",
+      "USen": "I caught a saw shark!\nYou could call it a sea saw!",
+      "USes": "¡Pesqué un pez sierra!\nSi se me escapa, ¡trágame tierra!",
+      "USfr": "Tu as pris un requin-scie!\nLe fidèle ami du requin-ébéniste!"
+    }
+  },
+  {
+    "label": "Fish_02282",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "啊——！！！\n钓到鲸鲨了！\n好大！",
+      "EUde": "Du liebe Güte!\nEin Walhai!\nIst das hier deine Walhaimat?",
+      "EUen": "Thar she blows!\nI caught a whale shark!\nI'm tellin' ya, it was thiiiiiiiiiiiiiiiiiiiis big!",
+      "EUes": "¡Repámpanos!\n¡He pescado un tiburón ballena!\n¡Podéis darme la enhorabuena!",
+      "EUfr": "Waouh !\nTu as pris un requin-baleine !\nÇa, c'est un poisson et c'est assez !",
+      "EUit": "Perdindirindina!\nHo preso uno squalo balena!\nPoteva essere lui a prendere me!",
+      "EUnl": "Waaauw!\nJe hebt een walvishaai gevangen!\nDeze enorme vis is qua naam tussen\nde wal en een haai beland...",
+      "EUru": "Ух ты!\nНа удочку попалась китовая акула!\nИли это акулий кит?",
+      "JPja": "ギョエーッ！！！\nジンベエザメを　釣り上げちゃった！\nでっかい！",
+      "KRko": "오옷～!!!\n고래상어를 잡았다!\n엄청 크다!",
+      "TWzh": "天啊～～！！！！\n釣到鯨鯊了！\n好大一隻！",
+      "USen": "Thar she blows!\nI caught a whale shark!\nI'm tellin' ya, it was thiiiiiiiiiiiiiiiiiiiis big!",
+      "USes": "¡Repámpanos!\n¡Pesqué un tiburón ballena!\n¡Esto sí que vale la pena!",
+      "USfr": "Waouh!\nTu as pris un requin-baleine!\nÇa, c'est un poisson et c'est assez!"
+    }
+  },
+  {
+    "label": "Fish_02283",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到皇带鱼了！\n是从龙宫出来迎接的吗？",
+      "EUde": "Ein Riemenfisch!\nDer ist wirklich riemlich groß...",
+      "EUen": "I caught an oarfish!\nI hope I catch morefish!",
+      "EUes": "¡He pescado un pez remo!\n¿Le gustará el deporte extremo?",
+      "EUfr": "Tu as pris un poisson-ruban !\nIl se déplace toujours en bande !",
+      "EUit": "Ho preso un pesce remo!\nOra mi serve una barca!",
+      "EUnl": "Je hebt een riemvis gevangen!\nPas maar op dat je broek er\nniet van afzakt!",
+      "EUru": "На удочку попался сельдяной\nкороль! А где же корона?",
+      "JPja": "リュウグウノツカイを　釣り上げた！\n竜宮城から　お出迎え？",
+      "KRko": "산갈치를 잡았다!\n여긴 바다인데?",
+      "TWzh": "釣到皇帶魚了！\n是從龍宮來迎接我的嗎？",
+      "USen": "I caught an oarfish!\nI hope I catch morefish!",
+      "USes": "¡Pesqué un pez remo!\n¿Le gustará el deporte extremo?",
+      "USfr": "Tu as pris un poisson-ruban!\nIl se déplace toujours en bande!"
+    }
+  },
+  {
+    "label": "Fish_02284",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "诶——？！\n钓到矛尾鱼了！\n原来还有这样的鱼啊？！",
+      "EUde": "Heiliges Fischstäbchen!\nEin Quastenflosser! So einen\nhat man quasi nicht alle Tage!",
+      "EUen": "Blast from the\npast!\nI caught a coelacanth!\nThink positive! Be a coela-CAN!",
+      "EUes": "¡Ostras!\n¡He pescado un celacanto!\nEs viejo, pero tiene encanto...",
+      "EUfr": "Oh oh !\nTu as pris un cœlacanthe !\nTu sais que ça se prononce\n« sé-la-kante » ?",
+      "EUit": "Per mille balene!\nHo preso un celo... un celacont...\nVolevo dire... un celacanto!",
+      "EUnl": "Coooool!\nJe hebt een coelacant gevangen!\nEen historische vangst!",
+      "EUru": "Вот это да!\nНа удочку попалась латимерия!\nСвоим глазам не верю я.",
+      "JPja": "ギョギョォォ？！\nシーラカンスを　釣り上げた！\nこんなのが　いるのかーー？！",
+      "KRko": "꺄아!!\n실러캔스를 잡았다!\n이런 게 있었구나～～!!",
+      "TWzh": "天、天啊～～～！？\n釣到矛尾魚了！\n竟然還有這種魚啊～～！？",
+      "USen": "Blast from the\npast!\nI caught a coelacanth!\nThink positive! Be a coela-CAN!",
+      "USes": "¡Caramba!\n¡Pesqué un celacanto!\nQué estilo, ¡tiene encanto!",
+      "USfr": "Oh oh!\nTu as pris un cœlacanthe!\nTu sais que ça se prononce\n« sé-la-kante »?"
+    }
+  },
+  {
+    "label": "Fish_04189",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鲟鱼了！\n鱼子酱、鱼子酱！",
+      "EUde": "Ein Stör!\nDer bringt mich glatt aus der Ruhe.",
+      "EUen": "I caught a sturgeon!\nWonder if it can perform sturgery...",
+      "EUes": "¡He pescado un esturión!\nMe merezco una ovación.",
+      "EUfr": "Tu as pris un esturgeon !\nOn l'appelle la poule d'eau\naux œufs d'or !",
+      "EUit": "Ho preso uno storione!\nChe storia!",
+      "EUnl": "Je hebt een steur gevangen!\nDoorbreek de sleur met een steur!",
+      "EUru": "На удочку попался осетр!\nНа динозавра похож...",
+      "JPja": "チョウザメを　釣り上げた！\nキャビア　キャビア！",
+      "KRko": "철갑상어를 잡았다!\n캐비아, 캐비아!",
+      "TWzh": "釣到鱘魚了！\n魚子醬、魚子醬！",
+      "USen": "I caught a sturgeon!\nWonder if it can perform sturgery...",
+      "USes": "¡Pesqué un esturión!\nMe merezco una ovación.",
+      "USfr": "Tu as pris un esturgeon!\nOn l'appelle la poule d'eau\naux œufs d'or!"
+    }
+  },
+  {
+    "label": "Fish_04190",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到吴郭鱼了！\n是个什么都吃的大吃货哦！",
+      "EUde": "Ein Tilapia!\nDu glitzerst wie ein Tilapislazuli!",
+      "EUen": "I caught a tilapia!\nIt makes me happy-a!",
+      "EUes": "¡He pescado una tilapia!\nEspero que no necesite terapia.",
+      "EUfr": "Tu as pris un tilapia !\nIl habite dans un ticlapier !",
+      "EUit": "Ho preso una tilapia!\nNon è mai stata in terapia!",
+      "EUnl": "Je hebt een tilapia gevangen!\nVertil je er maar niet aan!",
+      "EUru": "На удочку попалась тилапия!\nХорошо, что я ее не прошляпил!",
+      "JPja": "ティラピアを　釣り上げた！\nなんでも食べる　食いしんぼう",
+      "KRko": "틸라피아를 잡았다!\n뭐든지 먹어치우는 먹보!",
+      "TWzh": "釣到吳郭魚了！\n來者不拒的貪吃鬼。",
+      "USen": "I caught a tilapia!\nIt makes me happy-a!",
+      "USes": "¡Pesqué una tilapia!\nEspero que no necesite terapia.",
+      "USfr": "Tu as pris un tilapia!\nIl habite dans un ticlapier!"
+    }
+  },
+  {
+    "label": "Fish_04191",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到斗鱼了！\n虽然很漂亮，但脾气暴躁。",
+      "EUde": "Ein friedlicher Kampffisch!\nDa habe ich aber Glück!",
+      "EUen": "I caught a betta!\nI betta not drop it!",
+      "EUes": "¡He pescado un betta!\nQuién tuviera esas aletas...",
+      "EUfr": "Tu as pris un combattant !\nIl cherche la bagarre ?",
+      "EUit": "Ho preso una betta!\nIl suo nome completo è Elisabetta?",
+      "EUnl": "Je hebt een Siamese kempvis\ngevangen! Het was nog een heel\ngevecht om hem binnen te halen.",
+      "EUru": "На удочку попался\nсиамский петушок!\nА персидский тоже где-то рядом!",
+      "JPja": "ベタを　釣り上げた！\nキレイだけど　ケンカっ早い",
+      "KRko": "베타를 잡았다!\n예쁘지만 성격은 불같아!",
+      "TWzh": "釣到鬥魚了！\n雖然長得很漂亮，但很愛跟人吵架。",
+      "USen": "I caught a betta!\nI betta not drop it!",
+      "USes": "¡Pesqué un betta!\nQuién tuviera esas aletas...",
+      "USfr": "Tu as pris un combattant!\nIl cherche la bagarre?"
+    }
+  },
+  {
+    "label": "Fish_04192",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到拟鳄龟了！\n小心不要被它咬到哦！",
+      "EUde": "Eine Schnappschildkröte!\nOb sie eingeschnappt ist?",
+      "EUen": "I caught a snapping turtle!\nHow can it snap without fingers?",
+      "EUes": "¡He pescado una tortuga mordedora!\nCuidado con los dedos, ¡que los\ndevora!",
+      "EUfr": "Tu as pris une tortue serpentine !\nOu est-ce un serpent tortueux ?",
+      "EUit": "Ho preso una tartaruga azzannatrice!\nPerò non ha le zanne!",
+      "EUnl": "Je hebt een bijtschildpad gevangen!\nDie is altijd happy met een happie.",
+      "EUru": "На удочку попалась\nкайманова черепаха!\nНа аллигатора вроде не похожа...",
+      "JPja": "カミツキガメを　釣り上げた！\nかみつかれないように　気をつけよう",
+      "KRko": "늑대거북을 잡았다!\n물리지 않게 조심하자",
+      "TWzh": "釣到擬鱷龜了！\n要小心不要被咬到才行。",
+      "USen": "I caught a snapping turtle!\nHow can it snap without fingers?",
+      "USes": "¡Pesqué una tortuga mordedora!\nCuidado con los dedos, ¡que los\ndevora!",
+      "USfr": "Tu as pris une tortue serpentine!\nOu est-ce un serpent tortueux?"
+    }
+  },
+  {
+    "label": "Fish_04193",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到金鳟了！\n多么耀眼夺目的美！",
+      "EUde": "Eine Goldforelle!\nViel größer als ein Silberfischchen...",
+      "EUen": "I caught a golden trout!\nBut the real treasure? Friendship.",
+      "EUes": "¡He pescado una trucha dorada!\nParece muy avispada.",
+      "EUfr": "Tu as pris une truite dorée !\nSa couleur ne laisse aucun doute.",
+      "EUit": "Ho preso una trota dorata!\nÈ davvero un tesoro!",
+      "EUnl": "Je hebt een goudforel gevangen!\nEen zilvervisje is er niets bij.",
+      "EUru": "На удочку попалась золотая\nфорель! Здравствуй, золотце!",
+      "JPja": "ゴールデントラウトを　釣り上げた！\nまばゆい美しさ！",
+      "KRko": "금송어를 잡았다!\n눈부시게 아름다워!",
+      "TWzh": "釣到金鱒了！\n美得令人無法直視！",
+      "USen": "I caught a golden trout!\nBut the real treasure? Friendship.",
+      "USes": "¡Pesqué una trucha dorada!\nParece muy avispada.",
+      "USfr": "Tu as pris une truite dorée!\nSa couleur ne laisse aucun doute."
+    }
+  },
+  {
+    "label": "Fish_04194",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到彩虹鱼了！\n五彩缤纷的金属色彩。",
+      "EUde": "Ein Regenbogenfisch!\nWelch zierliche Schönheit.",
+      "EUen": "I caught a rainbowfish!\nWhere's my pot of goldfish?",
+      "EUes": "¡He pescado un pez arcoíris!\nCuántos colores... ¿Será hippy?",
+      "EUfr": "Tu as pris un poisson arc-en-ciel !\nOù est mon poisson\nmarmite-pleine-d'or ?",
+      "EUit": "Ho preso un pesce arcobaleno!\nDov'è il tesoro, però?",
+      "EUnl": "Je hebt een regenboogvis\ngevangen! Kan die je naar een pot\nmet goudvissen leiden?",
+      "EUru": "На удочку попалась радужница!\nПросто радужные перспективы!",
+      "JPja": "レインボーフィッシュを　釣り上げた！\nカラフルで　メタリック",
+      "KRko": "레인보우피시를 잡았다!\n번쩍번쩍 알록달록!",
+      "TWzh": "釣到彩虹魚了！\n色彩繽紛的金屬光澤。",
+      "USen": "I caught a rainbowfish!\nWhere's my pot of goldfish?",
+      "USes": "¡Un pez arcoíris he pescado!\n¡Tiene cara de cansado!",
+      "USfr": "Tu as pris un poisson-arc-en-ciel!\nOù est mon poisson-\nmarmite-pleine-d'or?"
+    }
+  },
+  {
+    "label": "Fish_04201",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到凤尾鱼了！\n生的凤尾鱼应该不会很咸吧！",
+      "EUde": "Eine Sardelle!\nNein, die kommt nicht auf die Pizza!",
+      "EUen": "I caught an anchovy!\nStay away from my pizza!",
+      "EUes": "¡He pescado un boquerón!\nEs pequeño pero matón.",
+      "EUfr": "Tu as pris un anchois !\nNe t'avise pas de venir sur ma pizza !",
+      "EUit": "Ho preso un'acciuga!\nCi vorrebbe una bella pizza!",
+      "EUnl": "Je hebt een ansjovis gevangen!\nKlein maar fijn!",
+      "EUru": "На удочку попалась хамса!\nВроде не хамит!",
+      "JPja": "アンチョビを　釣り上げた！\n生のアンチョビは　塩辛くないのね",
+      "KRko": "멸치를 잡았다!\n생멸치는 별로 안 짜네!",
+      "TWzh": "釣到鳳尾魚了！\n沒有熟的鳳尾魚應該不會很鹹吧。",
+      "USen": "I caught an anchovy!\nStay away from my pizza!",
+      "USes": "¡Pesqué un boquerón!\nEs pequeño pero glotón.",
+      "USfr": "Tu as pris un anchois!\nNe t'avise pas de venir sur ma pizza!"
+    }
+  },
+  {
+    "label": "Fish_04202",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到鬼头刀了！\n这鱼的别名也叫阴凉鱼！",
+      "EUde": "Eine Goldmakrele!\nSo viel Fisch!",
+      "EUen": "I caught a mahi-mahi!\nIt's all mahine-mahine.",
+      "EUes": "¡He pescado una lampuga!\nCuidado que no se dé a la fuga.",
+      "EUfr": "Tu as pris un coryphène !\nCe n'est pas un médicament\ncontre les douleurs !",
+      "EUit": "Ho preso una lampuga!\nNon era veloce come un lampo.",
+      "EUnl": "Je hebt een goudmakreel gevangen!\nBrons, zilver of goud... Niets is beter\ndan een vriendje dat van je houdt.",
+      "EUru": "На удочку попалась корифена!\nНа каком поприще прославилась?",
+      "JPja": "シイラを　釣り上げた！\nマヒマヒとも言う",
+      "KRko": "만새기를 잡았다!\n마히마히라는 이름도 있어!",
+      "TWzh": "釣到鬼頭刀了！\n牠好像也叫做鯕鰍。",
+      "USen": "I caught a mahi-mahi!\nIt's all mahine-mahine.",
+      "USes": "¡Pesqué una lampuga!\nCuidado que no se dé a la fuga.",
+      "USfr": "Tu as pris un mahi-mahi!\nT'en fais pas, il t'haït pas pour vrai!"
+    }
+  },
+  {
+    "label": "Fish_04203",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到吸盘鱼了！\n这可不是鲨鱼哦！",
+      "EUde": "Ein Schiffshalter!\nJetzt brauche ich nur noch ein Boot!",
+      "EUen": "I caught a suckerfish!\nI thought it was a shark!\nOh, wait—now I get it. \"Sucker\"...",
+      "EUes": "¡He pescado una rémora!\nEn cuanto te despistas se\nte engancha la muy traidora.",
+      "EUfr": "Tu as pris un rémora rayé !\nTu as vu sa ventouse ?",
+      "EUit": "Ho preso una remora!\nPrima ero senza!",
+      "EUnl": "Je hebt een zuigbaars gevangen!\nHou de zeebodem schoon!",
+      "EUru": "На удочку попалась прилипала!\nКак приклеилась!",
+      "JPja": "コバンザメを　釣り上げた！\nサメじゃないのね",
+      "KRko": "빨판상어를 잡았다!\n근데 상어가 아니구나?",
+      "TWzh": "釣到吸盤魚了！\n牠並不是鯊魚喔。",
+      "USen": "I caught a suckerfish!\nI thought it was a shark!\nOh, wait—now I get it. \"Sucker\"...",
+      "USes": "Una rémora, ¡qué alegría!\nSi le canto, ¿bailaría?",
+      "USfr": "Tu as pris un rémora rayé!\nTu as vu sa ventouse?"
+    }
+  },
+  {
+    "label": "Fish_04204",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到太平洋桶眼鱼了！\n透明的脑袋可以看到里面的构造呢！",
+      "EUde": "Ein Glaskopffisch!\nHa, ich habe dich durchschaut!",
+      "EUen": "I caught a barreleye!\nLike eyeing fish in a barrel!",
+      "EUes": "¡He pescado\nun pez cabeza transparente!\n¡Madre mía, si parece un ente!",
+      "EUfr": "Tu as pris un macropinna !\nOn dirait un poisson-aquarium !",
+      "EUit": "Ho preso una macropinna!\nChe pinna grande che ha!",
+      "EUnl": "Je hebt een hemelkijker gevangen!\nValt er nog wat te zien daar boven?",
+      "EUru": "На удочку попался опистопрокт?!\nКто-кто?",
+      "JPja": "デメニギスを　釣り上げた！\n頭の中が　丸見えだー！",
+      "KRko": "데메니기스를 잡았다!\n와～ 머리가 투명해～!",
+      "TWzh": "釣到太平洋桶眼魚了！\n腦袋裡有什麼都被我看光了！",
+      "USen": "I caught a barreleye!\nLike eyeing fish in a barrel!",
+      "USes": "¡Pesqué un pez cabeza transparente!\n¡Pues míralo qué valiente!",
+      "USfr": "Tu as pris un revenant!\nC'est le fantôme de l'aquarium!"
+    }
+  },
+  {
+    "label": "Fish_05254",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到兰寿金鱼了！\n脑袋凸起的金鱼之王！",
+      "EUde": "Ein Ranchu!\nKommst du von der Ranch, du?",
+      "EUen": "I caught a ranchu goldfish!\nBut I prefer balsamicu goldfish!",
+      "EUes": "¡He pescado un ranchú!\n¿Le gustará el tiramisú?",
+      "EUfr": "Tu as pris un ranchu !\nComme les autres petits pois,\ncelui-ci est également rouge.",
+      "EUit": "Ho preso un ranchu!\nNon è la solita pappa pronta!",
+      "EUnl": "Je hebt een buffelrug gevangen!\nEen koetje op het droge!",
+      "EUru": "На удочку попался ранчу!\nКовбойская рыба?",
+      "JPja": "ランチュウを　釣り上げた！\nボコボコ頭の　キングオブキンギョ",
+      "KRko": "난주를 잡았다!\n울퉁불퉁한 머리를 가진 금붕어의 왕!",
+      "TWzh": "釣到蘭壽金魚了！\n頭上一顆一顆的金魚之王。",
+      "USen": "I caught a ranchu goldfish!\nBut I prefer balsamicu goldfish!",
+      "USes": "¡Pesqué un ranchú!\n¿Le gustará el tiramisú?",
+      "USfr": "Tu as pris un ranchu!\nIl vit avec ses amis de la prairue."
+    }
+  },
+  {
+    "label": "Ore_02502",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到石头了！\n竟然连这种都能钓起来……",
+      "EUde": "Ein Stein!\nBesser als nix?",
+      "EUen": "I caught a stone!\nNow it's all mine...ral!",
+      "EUes": "¡He pescado una piedra!\nDudo que alguien la quiera...",
+      "EUfr": "Tu as pris... une pierre !\nIl ne faut pas la jeter aux autres !",
+      "EUit": "Ho preso una pietra!\nAvrà reso l'acqua... minerale?",
+      "EUnl": "Je hebt een steen gevangen! Daar\nmoet je maar niet al te zwaar aan\ntillen...",
+      "EUru": "Мне попался камень!\nЖаль, что не драгоценный.",
+      "JPja": "いしを　釣り上げた！\nこんなのも　釣れるのか・・・",
+      "KRko": "돌을 낚았다!\n이런 것까지 낚이다니…",
+      "TWzh": "釣到石頭了！\n連這種東西也可以釣得到嗎……",
+      "USen": "I caught a stone!\nNow it's all mine...ral!",
+      "USes": "¡Pesqué una piedra!\nAl menos no fue una hiedra...",
+      "USfr": "Tu as pris... une pierre!\nIl ne faut pas la jeter aux autres!"
+    }
+  },
+  {
+    "label": "Trash_03466",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到空罐了！\n不可以随意乱扔啊！！",
+      "EUde": "Eine Dose!\nSeit wann mögen Fische denn\nbitte schön Fertiggerichte?",
+      "EUen": "I caught an empty can!\nAren't you supposed to catch\nthe fish before you can it?",
+      "EUes": "¡He pescado chatarra!\nEs que estoy en la parra...",
+      "EUfr": "Tu as pris... une boîte vide !\nMerci de ne pas la jeter\nn'importe où !",
+      "EUit": "Ho preso una lattina vuota!\nAh, che sfortuna!",
+      "EUnl": "Je hebt een blikje gevangen!\nVerroest!",
+      "EUru": "На удочку попалась жестянка!\nЭх, жизнь моя...",
+      "JPja": "あきカンが　釣れた！\n捨てたら　アカン！！",
+      "KRko": "빈 통조림 캔을 낚았다!\n버리면 안 되지!!",
+      "TWzh": "釣到空罐了！\n不要隨意亂丟！！",
+      "USen": "I caught an empty can!\nAren't you supposed to catch\nthe fish before you can it?",
+      "USes": "¡Pesqué chatarra!\n¿Se deja o se agarra?",
+      "USfr": "Tu as pris... une boîte vide!\nMerci de ne pas la jeter\nn'importe où!"
+    }
+  },
+  {
+    "label": "Trash_03469",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到长靴了！\n我们来打扫一下大海与河流吧！！",
+      "EUde": "Ein Stiefel!\nWer wirft so was denn so\nstiefmütterlich weg?",
+      "EUen": "I caught a boot!\nIt, uh, wasn't made for swimming.",
+      "EUes": "¡He pescado una bota!\n¿Dónde estará la otra?",
+      "EUfr": "Tu as pris... une godasse !\nIl n'y a plus qu'à pêcher l'autre !",
+      "EUit": "Ho preso uno scarpone!\nMmmh, se trovassi anche l'altro...",
+      "EUnl": "Je hebt een laars gevangen!\nAls het er nou nog twee waren\ngeweest...",
+      "EUru": "На удочку попался сапог!\nА где же пара к нему?",
+      "JPja": "ながぐつを　釣り上げた！\n海や川を　キレイにしよう！！",
+      "KRko": "장화를 낚았다!\n강과 바다를 깨끗하게!!",
+      "TWzh": "釣到長靴了！\n一起把大海和河川變乾淨吧！！",
+      "USen": "I caught a boot!\nIt, uh, wasn't made for swimming.",
+      "USes": "¡Pesqué una bota!\n¿Dónde estará la otra?",
+      "USfr": "Tu as pris... un vieux soulier!\nIl n'y a plus qu'à pêcher l'autre!"
+    }
+  },
+  {
+    "label": "Trash_03470",
+    "attribute": "0x000018",
+    "locale": {
+      "CNzh": "钓到轮胎了！\n……是谁车上的轮胎啊？",
+      "EUde": "Ein Reifen!\nDer ist reif für den Müll,\nwürde ich sagen.",
+      "EUen": "I caught an old tire!\nI sure am tired of that!",
+      "EUes": "¡He pescado un neumático!\nQué objeto tan poco acuático...",
+      "EUfr": "Tu as pris... un vieux pneu !\nIl a dû y avoir un carambolage\nsous-marin !",
+      "EUit": "Ho preso un copertone!\nE non ho nemmeno la macchina...",
+      "EUnl": "Je hebt een oude band gevangen!\nVan een auto die op water probeerde\nte rijden?",
+      "EUru": "На удочку попалась старая шина!\nОт машины-амфибии, что ли?",
+      "JPja": "タイヤを　釣り上げた！\n・・・誰のクルマのかなぁ？",
+      "KRko": "타이어를 낚았다!\n...누구 차의 타이어일까?",
+      "TWzh": "釣到輪胎了！\n……是誰的車子掉了輪胎啊？",
+      "USen": "I caught an old tire!\nI sure am tired of that!",
+      "USes": "¡Pesqué un neumático!\nQué objeto tan poco acuático...",
+      "USfr": "Tu as pris... un vieux pneu!\nIl a dû y avoir un carambolage\nsous-marin!"
+    }
+  }
+]

@@ -136,7 +136,17 @@ export class Phrase extends Component {
       text =attemptToTranslateSpecial(text, "catchphrase");
     } else if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Catch phrase"){
       //creature catch phrase
-      text = attemptToTranslateCreatureCatchPhrase(text)
+      let type = ""
+      if(this.props.item["Data Category"]==="Fish"){
+        type="Fish"
+      } else if(this.props.item["Data Category"]==="Insects"){
+        type="Insect"
+      } else if(this.props.item["Data Category"]==="Sea Creatures"){
+        type="DiveFish"
+      } else if(this.props.item["Data Category"]==="Fossils"){
+        type="Fossil"
+      }
+      text = attemptToTranslateCreatureCatchPhrase(text, type,this.props.item["Internal ID"] )
     }
 
     text = capitalizeFirst(text);
@@ -402,7 +412,7 @@ export class InfoDescription extends Component {
   render(){
     return(
       <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 15}}>
-        <TextFont translate={false} style={{lineHeight: 20, fontSize: 16, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text)}</TextFont>
+        <TextFont translate={false} style={{lineHeight: 20, fontSize: 16, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text, this.props.type, this.props.id)}</TextFont>
       </View>
     )
   }

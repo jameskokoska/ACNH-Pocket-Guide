@@ -52,7 +52,7 @@ class SeaPopup extends Component {
         />
       </View>
       <View style={{height:15}}/>
-      <InfoDescription text={this.props.item["Description"]}/>
+      <InfoDescription text={this.props.item["Description"]} type="DiveFish" id={this.props.item["Internal ID"]}/>
       <PopupSeparator>
       <InfoLine
         image={require("../assets/icons/hatching.png")} 

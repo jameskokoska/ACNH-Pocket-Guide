@@ -1521,8 +1521,8 @@ const sourceNotesTranslations = require("./assets/data/Generated/translationsApp
 const cardsTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Cards"];
 const NPCTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["NPCs"];
 const mysteryIslandsTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Mystery Islands"];
-const creatureCatchPhraseTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Catch Phrases"];
-const museumDescriptionTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Museum Descriptions"];
+const creatureCatchPhraseTranslations = require("./assets/data/Generated/translatedCatchphrases.json");
+const museumDescriptionTranslations = require("./assets/data/Generated/translatedMuseumDescriptions.json");
 
 export function attemptToTranslateFromDatabases(text, databases){
   if(text===undefined){
@@ -1593,12 +1593,71 @@ export function attemptToTranslateSourceNotes(text){
   return attemptToTranslateFromDatabases(text, [sourceNotesTranslations])
 }
 
-export function attemptToTranslateCreatureCatchPhrase(text){
-  return attemptToTranslateFromDatabases(text, [creatureCatchPhraseTranslations])
+export function attemptToTranslateCreatureCatchPhrase(text, type, id){
+  if(type==undefined || id==undefined) return text
+  let languages = {
+    "Chinese":"CNzh",
+    "German":"EUde",
+    "English (Europe)":"EUen",
+    "Spanish":"EUes",
+    "French":"EUfr",
+    "Italian":"EUit",
+    "Dutch":"EUnl",
+    "Russian":"EUru",
+    "Japanese":"JPja",
+    "Korean":"KRko",
+    "Chinese (Traditional)":"TWzh",
+    "English":"USen",
+    "Spanish (US)":"USes",
+    "French (US)":"USfr"
+  }
+
+  let maxLength = 5
+  let paddingLength = Math.max(0, maxLength - id.length)
+  let paddedId = id.padStart(id.length + paddingLength, '0')
+  let result = `${type}_${paddedId}`
+  if(languages[global.language]===undefined || 
+    creatureCatchPhraseTranslations[result]===undefined || 
+    creatureCatchPhraseTranslations[result][languages[global.language]]===undefined ||
+    creatureCatchPhraseTranslations[result][languages[global.language]]===""){
+    return text
+  } else {
+    return creatureCatchPhraseTranslations[result][languages[global.language]].replace(/(\r\n|\n|\r)/gm, " ").replace(";", "\n")
+  }
 }
 
-export function attemptToTranslateMuseumDescription(text){
-  return attemptToTranslateFromDatabases(text, [museumDescriptionTranslations])
+export function attemptToTranslateMuseumDescription(text, type, id){
+  if(type==undefined || id==undefined) return text
+  let languages = {
+    "Chinese":"CNzh",
+    "German":"EUde",
+    "English (Europe)":"EUen",
+    "Spanish":"EUes",
+    "French":"EUfr",
+    "Italian":"EUit",
+    "Dutch":"EUnl",
+    "Russian":"EUru",
+    "Japanese":"JPja",
+    "Korean":"KRko",
+    "Chinese (Traditional)":"TWzh",
+    "English":"USen",
+    "Spanish (US)":"USes",
+    "French (US)":"USfr"
+  }
+
+  let maxLength = 5
+  let paddingLength = Math.max(0, maxLength - id.length)
+  let paddedId = id.padStart(id.length + paddingLength, '0')
+  let result = `${type}_${paddedId}`
+
+  if(languages[global.language]===undefined || 
+    museumDescriptionTranslations[result]===undefined || 
+    museumDescriptionTranslations[result][languages[global.language]]===undefined ||
+    museumDescriptionTranslations[result][languages[global.language]]===""){
+    return text
+  } else {
+    return museumDescriptionTranslations[result][languages[global.language]].replace(/(\r\n|\n|\r)/gm, " ")
+  }
 }
 
 export function attemptToTranslate(text, forcedTranslation=false, ){

@@ -26,7 +26,8 @@ class TextFont extends PureComponent {
     }
     var prefix = this.props.prefix === undefined ? "" : this.props.prefix;
     var suffix = this.props.suffix === undefined ? "" : this.props.suffix;
-    return <Text adjustsFontSizeToFit={this.props.adjustsFontSizeToFit} numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} style={[this.props.style,fontFamilyStyles]}>{prefix+text+suffix}</Text>
+    let extraSpacingStyle = global.languageUsesSpecialCharacters ? {borderBottomWidth: 5, borderBottomColor: 'transparent'} : {}
+    return <Text adjustsFontSizeToFit={this.props.adjustsFontSizeToFit} numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} style={[extraSpacingStyle,this.props.style,fontFamilyStyles]}>{prefix+text+suffix}</Text>
   }
 }
 export default TextFont;

@@ -456,7 +456,6 @@ const styles = StyleSheet.create({
   searchText: {
     color: '#292929',
     fontSize: 17,
-    lineHeight: 22,
     marginLeft: 8,
     width:'100%',
     paddingRight: 25,

@@ -121,7 +121,7 @@ class ArtPopup extends Component {
             textProperty={["Tag"]}
           />
         </PopupSeparator>
-        <InfoDescription text={this.props.item["Description"]}/>
+        <InfoDescription text={this.props.item["Description"]} type="art" id={this.props.item["Internal ID"]}/>
       </View>
       <PopupInfoCustom style={{padding:0, margin:0, paddingVertical:20}} ref={(popupReal) => this.popupReal = popupReal} buttonText={"Close"}>
           <View style={{backgroundColor:"white", padding:8, borderRadius:50, position:"absolute", backgroundColor:"white",top:0,right:10,}}>

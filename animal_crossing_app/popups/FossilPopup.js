@@ -24,7 +24,7 @@ class FossilPopup extends Component {
           translateItem={false}
         />
       </PopupSeparator>
-      <InfoDescription text={this.props.item["Description"]}/>
+      <InfoDescription text={this.props.item["Description"]} type="Fossil" id={this.props.item["Internal ID"]}/>
       <PopupSeparator>
         <InfoLine
           image={require("../assets/icons/colorPalette.png")} 
