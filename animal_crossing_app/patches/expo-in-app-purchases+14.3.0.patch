@@ -7,7 +7,7 @@ index d5c40dd..9c39c40 100644
    implementation 'androidx.annotation:annotation:1.1.0'
    implementation project(':expo-modules-core')
 -  api 'com.android.billingclient:billing:4.0.0'
-+  api 'com.android.billingclient:billing:5.0.0'
++  api 'com.android.billingclient:billing:6.0.1'
  
    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getKotlinVersion()}"
  }

@@ -178,7 +178,7 @@ Note: files contained within `.gitignore` will not be uploaded/sent to be built 
 0) Install dependencies `npm install`
 1) Generate native code `npx expo prebuild`
 2) Configure any updates `eas update:configure`
-3) Build using EAS 
+3) Build using EAS (Remove `--local` to build using expo build servers)
     * development: `npx eas build --profile development --platform android --local`
     * production: `eas build --platform android --local`
 

@@ -39,7 +39,7 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 577,
+      "versionCode": 581,
       "runtimeVersion": "1.0.0"
     },
     "web": {
@@ -47,7 +47,15 @@
     },
     "plugins": [
       "sentry-expo",
-      "expo-localization"
+      "expo-localization",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "targetSdkVersion": 34
+          }
+        }
+      ]
     ],
     "hooks": {
       "postPublish": [
