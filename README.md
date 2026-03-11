@@ -2,21 +2,21 @@
 
 <div align="center" style="font-size:18px">
 
-| 300K+ Downloads | 8.0K+ Reviews | 4.9+ Stars |
+| 500K+ Downloads | 12.5K+ Reviews | 4.9+ Stars |
 | :-------------: | :---------: | :--------: |
 
 </div>
 
-<a href="https://play.google.com/store/apps/details?id=com.acnh.pocket_guide">
-  <div align="center">
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.acnh.pocket_guide">
     <img alt="Icon" src="Promotional/icon.png" width="200px">
-  </div>
-</a>
-<a href="https://play.google.com/store/apps/details?id=com.acnh.pocket_guide">
-  <div align="center">
+  </a>
+</div>
+<div align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.acnh.pocket_guide">
     <img alt="Icon" src="Promotional/google-play-badge.png" width="200px">
-  </div>
-</a>
+  </a>
+</div>
 
 With a modern and well polished design, ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!
 
